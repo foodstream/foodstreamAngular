@@ -4,7 +4,7 @@ $itembg: #CCFFD7;
 $border: #F4F4F4;
 $bodybg: #FCF7F8;
 $buttonbg: #0c8183;
-// $buttonaccent: #f06e00;
+$buttonaccent: #f06e00;
 $buttonaccent2: #8bc34a;
 
 body{
@@ -20,20 +20,43 @@ body{
     padding: 2% 2%;
     font-size: 1.5em;
   }
-  .sign-up-form {
-    width: 80%;
-    margin: 2% 10% 5% 10%;
+  .sign-up-title{
+    margin-top: 5%;
+    font-size: 2em;
     text-align: center;
   }
+  .sign-up-form {
+    width: 80%;
+    margin: 10% 10% 5% 10%;
+    text-align: center;
+  }
+  .sign-up-label {
+    display: block;
+    margin-top: 5%;
+    text-align: left;
+  }
   .sign-up-input {
-    border: $border;
-    font-size: 1.5em;
+    width: 100%;
+    border: solid 2px $border;
+    font-size: 1em;
+    line-height: 2;
+    padding: 5px;
     margin-top: 2%;
+    color: black;
   }
   .sign-up-link {
     text-decoration: none;
-    border: $border;
+  }
+  .sign-up-button {
+    border: solid 2px $border;
     background-color: $buttonaccent2;
+    color: white;
+    font-size: 1.5em;
+    width: 30%;
+    margin: 0 35%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
   }
   // .searchwrap{
   //   background-color: lighten($subheaderbg, 25%);
