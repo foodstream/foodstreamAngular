@@ -6,10 +6,14 @@ $bodybg: #FCF7F8;
 $buttonbg: #0c8183;
 $buttonaccent: #f06e00;
 $buttonaccent2: #8bc34a;
+$aubergine: #4a1d3b;
+
+$cardHeight: 20vh;
 
 body{
   background-color: $bodybg;
   font-family: 'overpass', sans-serif;
+  box-sizing: border-box;
   .app-header{
     font-weight: 700;
     height: 40%;
@@ -20,6 +24,7 @@ body{
     padding: 2% 2%;
     font-size: 1.5em;
   }
+//--------------edit profile page styling---------//
   .edit-profile-subheader{
     background-color:lighten($subheaderbg, 25%);
     width: 100%;
@@ -104,6 +109,90 @@ body{
     position: absolute;
     bottom: 0;
     background-color: $buttonaccent2;
+
+//---------sign up page styling------------//
+  .sign-up-title{
+    margin-top: 5%;
+    font-size: 2em;
+    text-align: center;
+  }
+  .sign-up-form {
+    width: 80%;
+    margin: 10% 10% 5% 10%;
+    text-align: center;
+  }
+  .sign-up-label {
+    display: block;
+    margin-top: 5%;
+    text-align: left;
+  }
+  .sign-up-input {
+    width: 100%;
+    border: solid 2px $border;
+    font-size: 1em;
+    line-height: 2;
+    padding: 5px;
+    margin-top: 2%;
+    color: black;
+  }
+  .sign-up-link {
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .sign-up-button {
+    border: solid 2px $border;
+    background-color: $buttonaccent2;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+//------ Home Page/Dashboard ------ //
+
+  .home-card {
+    display: block;
+    height: $cardHeight;
+    // border: solid 5px $border;
+    background-color: lighten($itembg, 10%);
+    width:95%;
+    margin: 5% 0 5% 2.5%;
+    .home-header {
+      height: $cardHeight / 4;
+      background-color: lightgray;
+      span {
+        float: right;
+      }
+    }
+    .home-transaction-details {
+      display: inline-block;
+      width: 60%;
+    }
+    .home-chat {
+      display: inline-block;
+      background-color: $buttonbg;
+      width: 19%;
+      height: $cardHeight * 0.75;
+      position: absolute;
+    }
+    .home-details {
+      display: inline-block;
+      background-color: lighten($buttonaccent, 30%);
+      width: 19%;
+      height: $cardHeight * 0.75;
+      position: absolute;
+      margin-left: 19%;
+    }
+  }
+
+  .home-post {
+    background-color: $buttonaccent2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     font-size: 2.5em;
     line-height: 1.3em;
@@ -114,4 +203,52 @@ body{
       background-color: darken($buttonaccent2, 5%);
     }
   }
+  // .searchwrap{
+  //   background-color: lighten($subheaderbg, 25%);
+  //   width: 100%;
+  //   padding: 5% 2%;
+  //   .searchbar{
+  //     width: 80%;
+  //   }
+  // }
+  // .exampletext{
+  //   width: 100%;
+  //   color: darken($border, 15%);
+  //   text-align: center;
+  //   font-family: sans-serif;
+  //   padding: 2% 0 0 0;
+  // }
+  // .item{
+  //   margin: 2% 2.5%;
+  //   background-color: white;
+  //   // background-color: darken($itembg, 0%);
+  //   width: 90%;
+  //   padding: 2% 2%;
+  //   border: solid 2px darken($border, 10%);
+  //   color: darken($headerbg, 15%);
+  //   font-family: sans-serif;
+  //   .desc {
+  //     background-color: white;
+  //   }
+  // }
+  // .button{
+  //   background-color: lighten($buttonbg, 15%);
+  //   width: 50%;
+  //   position: absolute;
+  //   bottom: 0;
+  //   padding: 2% 0;
+  //   text-align: center;
+  //   color: white;
+  // }
+  // .button2{
+  //   background-color: $buttonaccent2;
+  //   width:50%;
+  //   position: absolute;
+  //   // float: right;
+  //   bottom: 0;
+  //   color: white;
+  //   padding: 2% 0;
+  //   margin: 0 0 0 50%;
+  //   text-align: center;
+  // }
 }
