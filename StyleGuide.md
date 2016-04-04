@@ -29,7 +29,13 @@ $buttonaccent2: #8bc34a
 $aubergine: #4a1d3b
 
 
+
 Darken by 5% every button on hover.
+
+
+
+Bottom button font-size = 2.5 em, line-height = 1.3em.
+
 
 # Class Naming Conventions
 
