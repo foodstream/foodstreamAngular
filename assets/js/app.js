@@ -17,6 +17,11 @@ foodStream.config(function($routeProvider){
       controller : 'editProfileController'
     })
 
+    .when('/create', {
+      templateUrl : '/views/create.html',
+      controller : 'createController'
+    })
+
     .otherwise({
       redirectTo: '/landing'
     });
