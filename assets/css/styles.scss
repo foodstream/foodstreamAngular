@@ -237,6 +237,61 @@ body{
       background-color: darken($buttonaccent2, 5%);
     }
   }
+
+  //-------------search results page styling--------------//
+  .results-subheader{
+    background-color: lighten($subheaderbg, 25%);
+    .results-search{
+      margin: 2% 0 0 2%;
+      width: 80%;
+    }
+    .results-subheader-text{
+      font-size: .75em;
+      margin: 2% 0 0 5%;
+      padding: 0 0 2% 0;
+      .results-distance-search{
+        width: 10%;
+      }
+    }
+  }
+  .results-card {
+    display: block;
+    height: $cardHeight;
+    // border: solid 5px $border;
+    background-color: lighten($itembg, 10%);
+    width:95%;
+    margin: 5% 0 5% 2.5%;
+    .results-header {
+      // height: $cardHeight / 4;
+      background-color: lightgray;
+      padding: 2%;
+      span {
+        float: right;
+      }
+    }
+    .results-transaction-details {
+      display: inline-block;
+      width: 60%;
+      height: $cardHeight * 0.75;
+    }
+    .results-chat {
+      display: inline-block;
+      background-color: $buttonbg;
+      width: 19%;
+      height: $cardHeight * 0.77;
+      position: absolute;
+      text-align: center;
+    }
+    .results-details {
+      display: inline-block;
+      background-color: lighten($buttonaccent, 30%);
+      width: 19%;
+      height: $cardHeight * 0.77;
+      position: absolute;
+      margin-left: 19%;
+      text-align: center;
+    }
+  }
   // .searchwrap{
   //   background-color: lighten($subheaderbg, 25%);
   //   width: 100%;
