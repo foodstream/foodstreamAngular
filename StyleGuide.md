@@ -1,8 +1,13 @@
-Typeface
+# Typeface
+http://overpassfont.org/
+
+Header/Logo = 700
+Body = 300
+Bottom buttons = 200
 
 
 
-Color Scheme
+# Color Scheme
 
 $headerbg: #33691e;
 $subheaderbg: #F2F24D;
@@ -15,6 +20,6 @@ $buttonaccent2: #8bc34a;
 $aubergine: #4a1d3b;
 
 
-Class Naming Conventions
+# Class Naming Conventions
 
 
