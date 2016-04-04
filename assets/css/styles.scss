@@ -6,10 +6,14 @@ $bodybg: #FCF7F8;
 $buttonbg: #0c8183;
 $buttonaccent: #f06e00;
 $buttonaccent2: #8bc34a;
+$aubergine: #4a1d3b;
+
+$cardHeight: 20vh;
 
 body{
   background-color: $bodybg;
   font-family: 'overpass', sans-serif;
+  box-sizing: border-box;
   .app-header{
     font-weight: 700;
     height: 40%;
@@ -58,6 +62,51 @@ body{
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
+  }
+
+//------ Home Page/Dashboard ------ //
+
+  .home-card {
+    display: block;
+    height: $cardHeight;
+    // border: solid 5px $border;
+    background-color: lighten($itembg, 10%);
+    width:95%;
+    margin: 5% 0 5% 2.5%;
+    .home-header {
+      height: $cardHeight / 4;
+      background-color: lightgray;
+      span {
+        float: right;
+      }
+    }
+    .home-transaction-details {
+      display: inline-block;
+      width: 60%;
+    }
+    .home-chat {
+      display: inline-block;
+      background-color: $buttonbg;
+      width: 19%;
+      height: $cardHeight * 0.75;
+      position: absolute;
+    }
+    .home-details {
+      display: inline-block;
+      background-color: lighten($buttonaccent, 30%);
+      width: 19%;
+      height: $cardHeight * 0.75;
+      position: absolute;
+      margin-left: 19%;
+    }
+  }
+
+  .home-post {
+    background-color: $buttonaccent2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
   }
   // .searchwrap{
   //   background-color: lighten($subheaderbg, 25%);
