@@ -22,6 +22,11 @@ foodStream.config(function($routeProvider){
       controller : 'createController'
     })
 
+    .when('/home', {
+      templateUrl : '/views/home.html',
+      controller : 'homeController'
+    })
+
     .otherwise({
       redirectTo: '/landing'
     });
