@@ -71,7 +71,7 @@ body{
 }
 
 
-// STYLING FOR LOGIN-PAGE
+// STYLING FOR LOGIN-VIEW
 .login-container{
     // width: 400px;
     margin: 2% 5%;
@@ -117,6 +117,8 @@ body{
         text-align: center;
     }
 }
+
+// STYLING FOR LOGIN MODAL
 //
 // .login-login-modal {
 //   position: absolute;
@@ -136,3 +138,79 @@ body{
 //     box-sizing: border-box;
 //   }
 // }
+
+// STYLING FOR CREATE-VIEW
+
+.create-container {
+    margin: 2% 0 0 30%;
+    background-color: $bodybg;
+    font-family: 'overpass', sans-serif;
+    .create-labels {
+        margin-top: 50px;
+    }
+    .create-title {
+        margin-top: 50px;
+        width: 300px;
+        background-color: white;
+        padding: 5px 0;
+        border: solid 2px darken($border, 10%);
+        color: darken($headerbg, 15%);
+        font-family: sans-serif;
+    }
+    .create-picture {
+        margin-top: 50px;
+        width: 300px;
+        background-color: white;
+        padding: 5px 0 5px 0;
+        border: solid 2px darken($border, 10%);
+        color: darken($headerbg, 15%);
+        font-family: sans-serif;
+        text-align: center;
+    }
+    .create-location {
+        margin-top: 50px;
+        width: 300px;
+        background-color: white;
+        padding: 5px 0;
+        border: solid 2px darken($border, 10%);
+        color: darken($headerbg, 15%);
+        font-family: sans-serif;
+    }
+    .create-start {
+        width: 75px;
+        display: inline-block;
+        margin: 50px ;
+        color: white;
+        // padding: 5px 10px;
+        color: darken($headerbg, 15%);
+        font-family: sans-serif;
+        input {
+            width: 75px;
+            height:20px;
+            border: solid 2px darken($border, 10%);
+        }
+    }
+    .create-end {
+        width: 75px;
+        display: inline-block;
+        margin-top: 50px;
+        color: white;
+        // padding: 5px 50px 0 0;
+        color: darken($headerbg, 15%);
+        font-family: sans-serif;
+        input {
+            width: 75px;
+            height:20px;
+            border: solid 2px darken($border, 10%);
+        }
+    }
+    .create-description {
+        margin-top: 50px;
+        width:300px;
+        background-color: white;
+        padding: 5px 0;
+        border: solid 2px darken($border, 10%);
+        color: darken($headerbg, 15%);
+        font-family: sans-serif;
+    }
+}
