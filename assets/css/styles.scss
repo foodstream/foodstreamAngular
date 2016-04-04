@@ -46,14 +46,15 @@ body{
   }
   .sign-up-link {
     text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
   .sign-up-button {
     border: solid 2px $border;
     background-color: $buttonaccent2;
     color: white;
     font-size: 1.5em;
-    width: 30%;
-    margin: 0 35%;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
