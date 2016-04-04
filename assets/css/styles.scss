@@ -14,14 +14,15 @@ body{
   background-color: $bodybg;
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
+  font-size: 1em;
   .app-header{
     font-weight: 700;
-    height: 40%;
+    // height: 40%;
     width: 100%;
     background-color: lighten($headerbg, 3%);
     color: white;
     display: inline-block;
-    padding: 2% 2%;
+    padding: 6% 2%;
     font-size: 1.5em;
   }
 //--------------edit profile page styling---------//
@@ -109,7 +110,7 @@ body{
     position: absolute;
     bottom: 0;
     background-color: $buttonaccent2;
-
+  }
 //---------sign up page styling------------//
   .sign-up-title{
     margin-top: 5%;
@@ -152,7 +153,22 @@ body{
   }
 
 //------ Home Page/Dashboard ------ //
+  .home-subheader{
+    background-color: lighten($subheaderbg, 25%);
+    .home-search{
+      margin: 2% 0 0 2%;
+      width: 80%;
 
+    }
+    .home-subheader-text{
+      font-size: .75em;
+      margin: 2% 0 0 5%;
+      padding: 0 0 2% 0;
+      .home-distance-search{
+        width: 10%;
+      }
+    }
+  }
   .home-card {
     display: block;
     height: $cardHeight;
@@ -161,8 +177,9 @@ body{
     width:95%;
     margin: 5% 0 5% 2.5%;
     .home-header {
-      height: $cardHeight / 4;
+      // height: $cardHeight / 4;
       background-color: lightgray;
+      padding: 2%;
       span {
         float: right;
       }
@@ -170,21 +187,24 @@ body{
     .home-transaction-details {
       display: inline-block;
       width: 60%;
+      height: $cardHeight * 0.75;
     }
     .home-chat {
       display: inline-block;
       background-color: $buttonbg;
       width: 19%;
-      height: $cardHeight * 0.75;
+      height: $cardHeight * 0.77;
       position: absolute;
+      text-align: center;
     }
     .home-details {
       display: inline-block;
       background-color: lighten($buttonaccent, 30%);
       width: 19%;
-      height: $cardHeight * 0.75;
+      height: $cardHeight * 0.77;
       position: absolute;
       margin-left: 19%;
+      text-align: center;
     }
   }
 
@@ -199,6 +219,7 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
