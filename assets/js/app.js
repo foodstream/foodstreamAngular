@@ -17,6 +17,11 @@ foodStream.config(function($routeProvider){
       controller : 'editProfileController'
     })
 
+    .when('/create', {
+      templateUrl : '/views/create.html',
+      controller : 'createController'
+    })
+
     .when('/home', {
       templateUrl : '/views/home.html',
       controller : 'homeController'
@@ -26,6 +31,7 @@ foodStream.config(function($routeProvider){
       templateUrl : '/views/searchresults.html',
       controller : 'resultsController'
     })
+
     .otherwise({
       redirectTo: '/landing'
     });
