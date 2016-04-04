@@ -20,52 +20,67 @@ body{
     padding: 2% 2%;
     font-size: 1.5em;
   }
-  .searchwrap{
-    background-color: lighten($subheaderbg, 25%);
-    width: 100%;
-    padding: 5% 2%;
-    .searchbar{
-      width: 80%;
-    }
-  }
-  .exampletext{
-    width: 100%;
-    color: darken($border, 15%);
+  .sign-up-form {
+    width: 80%;
+    margin: 2% 10% 5% 10%;
     text-align: center;
-    font-family: sans-serif;
-    padding: 2% 0 0 0;
   }
-  .item{
-    margin: 2% 2.5%;
-    background-color: white;
-    // background-color: darken($itembg, 0%);
-    width: 90%;
-    padding: 2% 2%;
-    border: solid 2px darken($border, 10%);
-    color: darken($headerbg, 15%);
-    font-family: sans-serif;
-    .desc {
-      background-color: white;
-    }
+  .sign-up-input {
+    border: $border;
+    font-size: 1.5em;
+    margin-top: 2%;
   }
-  .button{
-    background-color: lighten($buttonbg, 15%);
-    width: 50%;
-    position: absolute;
-    bottom: 0;
-    padding: 2% 0;
-    text-align: center;
-    color: white;
-  }
-  .button2{
+  .sign-up-link {
+    text-decoration: none;
+    border: $border;
     background-color: $buttonaccent2;
-    width:50%;
-    position: absolute;
-    // float: right;
-    bottom: 0;
-    color: white;
-    padding: 2% 0;
-    margin: 0 0 0 50%;
-    text-align: center;
   }
+  // .searchwrap{
+  //   background-color: lighten($subheaderbg, 25%);
+  //   width: 100%;
+  //   padding: 5% 2%;
+  //   .searchbar{
+  //     width: 80%;
+  //   }
+  // }
+  // .exampletext{
+  //   width: 100%;
+  //   color: darken($border, 15%);
+  //   text-align: center;
+  //   font-family: sans-serif;
+  //   padding: 2% 0 0 0;
+  // }
+  // .item{
+  //   margin: 2% 2.5%;
+  //   background-color: white;
+  //   // background-color: darken($itembg, 0%);
+  //   width: 90%;
+  //   padding: 2% 2%;
+  //   border: solid 2px darken($border, 10%);
+  //   color: darken($headerbg, 15%);
+  //   font-family: sans-serif;
+  //   .desc {
+  //     background-color: white;
+  //   }
+  // }
+  // .button{
+  //   background-color: lighten($buttonbg, 15%);
+  //   width: 50%;
+  //   position: absolute;
+  //   bottom: 0;
+  //   padding: 2% 0;
+  //   text-align: center;
+  //   color: white;
+  // }
+  // .button2{
+  //   background-color: $buttonaccent2;
+  //   width:50%;
+  //   position: absolute;
+  //   // float: right;
+  //   bottom: 0;
+  //   color: white;
+  //   padding: 2% 0;
+  //   margin: 0 0 0 50%;
+  //   text-align: center;
+  // }
 }
