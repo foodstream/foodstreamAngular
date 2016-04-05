@@ -42,6 +42,21 @@ foodStream.config(function($routeProvider){
       controller : 'resultsController'
     })
 
+    .when('/claimed', {
+      templateUrl : '/views/claimedpost.html',
+      controller : 'claimedController'
+    })
+
+    .when('/profile', {
+      templateUrl : '/views/profile.html',
+      controller : 'profileController'
+    })
+
+    .when('/chat', {
+      templateUrl : '/views/chat.html',
+      controller: 'chatController'
+    })
+
     .otherwise({
       redirectTo: '/landing'
     });
