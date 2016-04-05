@@ -254,7 +254,13 @@ body{
   .post-detail-claim-button {
     background-color: $buttonbg;
     color: white;
-    width: 25%;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
   }
 
   .post-detail-bottom-button {
@@ -265,7 +271,7 @@ body{
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 50%;
   }
 
 
@@ -536,7 +542,7 @@ body{
   		color: darken($headerbg, 15%);
   		font-family: sans-serif;
   	}
-  
+
 
 
   .created-post-title {
