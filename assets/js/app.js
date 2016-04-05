@@ -17,14 +17,30 @@ foodStream.config(function($routeProvider){
       controller : 'editProfileController'
     })
 
+    .when('/create', {
+      templateUrl : '/views/create.html',
+      controller : 'createController'
+    })
+
+    .when('/created', {
+      templateUrl : '/views/created.html',
+      controller : 'createdController'
+    })
+
     .when('/home', {
       templateUrl : '/views/home.html',
       controller : 'homeController'
     })
 
+<<<<<<< HEAD
     .when('/details', {
       templateUrl : '/views/postdetail.html',
       controller : 'detailController'
+=======
+    .when('/results', {
+      templateUrl : '/views/searchresults.html',
+      controller : 'resultsController'
+>>>>>>> 02cf1d56eceda3f7a98a8d1d206a6cda5e46647b
     })
 
     .otherwise({
