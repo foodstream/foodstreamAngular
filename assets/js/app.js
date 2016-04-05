@@ -42,6 +42,11 @@ foodStream.config(function($routeProvider){
       controller : 'resultsController'
     })
 
+    .when('/claimed', {
+      templateUrl : '/views/claimed.html',
+      controller : 'claimedController'
+    })
+
     .otherwise({
       redirectTo: '/landing'
     });
