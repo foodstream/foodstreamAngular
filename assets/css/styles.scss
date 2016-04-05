@@ -339,96 +339,123 @@ body{
   }
   //------ Login View------ //
 
-  .login-container{
-  	// width: 400px;
-  	margin: 2% 5%;
-  	background-color: $bodybg;
-  	font-family: 'overpass', sans-serif;
-  	.login-signup {
-  		margin: 50px 0 0 20%;
-  		background-color: $buttonaccent2;
-  		width:60%;
-  		color: white;
-  		padding: 30px 0;
-  		text-align: center;
-  	}
-
-  	.login-login {
-  		margin: 50px 0 5% 20%;
-  		background-color: lighten($buttonbg, 15%);
-  		width:60%;
-  		color: white;
-  		padding: 30px 0;
-  		text-align: center;
-  	}
-
-  	.login-about {
-  		margin: 50px 2.5%;
-  		background-color: white;
-  		width: 90%;
-  		padding: 2% 2%;
-  		border: solid 2px darken($border, 10%);
-  		color: darken($headerbg, 15%);
-  		font-family: sans-serif;
-  		text-align: center;
-  	}
-
-  	.login-legal {
-  		margin: 50px 2.5%;
-  		// background-color: white;
-  		width: 90%;
-  		padding: 2% 2%;
-  		// border: solid 2px darken($border, 10%);
-  		color: darken($headerbg, 15%);
-  		font-family: sans-serif;
-  		text-align: center;
-  	}
+  .login-signup {
+	margin: 50px 0 0 20%;
+	background-color: $buttonaccent2;
+	width:60%;
+	color: white;
+	padding: 30px 0;
+	text-align: center;
   }
+
+  .login-login {
+	margin: 50px 0 5% 20%;
+	background-color: lighten($buttonbg, 15%);
+	width:60%;
+	color: white;
+	padding: 30px 0;
+	text-align: center;
+  }
+
+  .login-about {
+	margin: 50px 2.5%;
+	background-color: white;
+	width: 90%;
+	padding: 2% 2%;
+	border: solid 2px darken($border, 10%);
+	color: darken($headerbg, 15%);
+	font-family: sans-serif;
+	text-align: center;
+  }
+
+  .login-legal {
+	margin: 50px 2.5%;
+	width: 90%;
+	padding: 2% 2%;
+	color: darken($headerbg, 15%);
+	font-family: sans-serif;
+   	text-align: center;
+  }
+
 
   //--------- Create View -------------//
 
-  .create-container {
-  	margin: 0 15px 0 15px;
-  	max-width: 400px;
-  	background-color: $bodybg;
-  	font-family: 'overpass', sans-serif;
-  	.create-labels {
-  	  //   margin-left: 11%;
-  		margin-top: 50px;
-  	  //   margin-left: 11%;
-  	}
-  	.create-title {
-  	  //   margin-left: 11%;
-  		width:370px;
-  		background-color: white;
-  		padding: 5px 0;
-  		border: solid 2px darken($border, 10%);
-  		color: darken($headerbg, 15%);
-  		font-family: sans-serif;
-  	}
-  	.create-picture {
-  	  //   margin-left: 11%;
-  		margin-left: 20%;
-  		margin-right: 20%;
-  		margin-top: 30px;
-  		width:225px;
-  		background-color: white;
-  		padding: 5px 0 5px 0;
-  		border: solid 2px darken($border, 10%);
-  		color: darken($headerbg, 15%);
-  		font-family: sans-serif;
-  		text-align: center;
-  	}
+  .create-labels {
+    margin-top: 50px;
+  }
+  .create-title {
+    width:370px;
+    background-color: white;
+    padding: 5px 0;
+    border: solid 2px darken($border, 10%);
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+  }
+  .create-picture {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 30px;
+    width:225px;
+    background-color: white;
+    padding: 5px 0 5px 0;
+    border: solid 2px darken($border, 10%);
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .fa-camera-retro{
+    color:darken($border, 25%);
+    font-size: 1em;
+    padding: 15vw ;
+    display: inline-block;
+    border: solid thin darken($border, 25%);
+    background-color: darken($bodybg, 5%);
+    cursor: pointer;
+  }
+  .create-location {
+    width:370px;
+    background-color: white;
+    padding: 5px 0;
+    border: solid 2px darken($border, 10%);
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+  }
+  .create-start {
+    width: 75px;
+    display: inline-block;
+    margin: 30px 30px 0 80px;
+    color: white;
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+      input {
+        width: 75px;
+        height:20px;
+        border: solid 2px darken($border, 10%);
+      }
+  }
+  .create-end {
+    width: 75px;
+    display: inline-block;
+    color: white;
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+      input {
+        width: 75px;
+        height:20px;
+        border: solid 2px darken($border, 10%);
+      }
+  }
+  .create-description {
+    width:370px;
+    background-color: white;
+    padding: 5px 0;
+    border: solid 2px darken($border, 10%);
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+  }
 
-  	.fa-camera-retro{
-  		  color:darken($border, 25%);
-  		  font-size: 1em;
-  		  padding: 15vw ;
-  		  display: inline-block;
-  		  border: solid thin darken($border, 25%);
-  		  background-color: darken($bodybg, 5%);
-  		  cursor: pointer;
-  	}
+    //--------- Create View -------------//
+
 
   	.create-location {
   	  //   margin-left: 11%;
@@ -480,6 +507,152 @@ body{
   	}
   }
 
+
+  .created-post-title {
+    margin-top: 5%;
+    font-size: 2em;
+    text-align: center;
+  }
+  .created-post-description {
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+    display: block;
+    width: 95%;
+    margin: 5% 0 5% 2.5%;
+  }
+  .created-post-images {
+    display: block;
+      .created-post-map {
+        border: 1px solid;
+        display: inline-block;
+        width: 10em;
+        height: 10em;
+        margin: 5% 5% 0 5%;
+      }
+      .created-post-photo {
+        border: 1px solid;
+        display: inline-block;
+        width: 10em;
+        height: 10em;
+        margin: 5% 5% 0 1.5%;
+      }
+  }
+  .created-post-location {
+    margin: 0 0 10px 4%;
+      .created-post-address {
+        display: inline-block;
+        width: 10em;
+        margin: 15px 5% 15px 1.5%;
+      }
+      .created-post-directions-btn {
+        display: inline-block;
+        background-color: $buttonbg;
+        color: white;
+        padding: 8px 0;
+        text-align: center;
+        width: 10em;
+        margin: 15px 3% 0 1.75%;
+      }
+  }
+  .created-post-calendar {
+    margin: 4%;
+    width: 355px;
+    // border: 1px solid;
+    .created-post-time {
+    //   border: 1px solid;
+      display: inline-block;
+      .created-post-start {
+        padding: 5px 0 0 0;
+        width: 180px;
+        margin: 0 0 3px 4%;
+        //   border: 1px solid;
+      }
+      .created-post-end {
+        padding: 5px 0 0 0;
+        width: 180px;
+        margin: 0 0 3px 4%;
+        //   border: 1px solid;
+      }
+    }
+    .created-post-calendar-btns {
+    //   border: 1px solid;
+      vertical-align: top;
+      display: inline-block;
+      margin: 0 0 0 4%;
+      .google-cal {
+        border: 1px solid;
+        display: inline-block;
+        width: 4em;
+        height: 4em;
+        margin-right: 1em;
+      }
+      .ical {
+        border: 1px solid;
+        display: inline-block;
+        width: 4em;
+        height: 4em;
+      }
+    }
+  }
+  .created-post-footer-home {
+    background-color: $buttonaccent2;
+    position: fixed;
+    bottom: 0;
+    width: 33%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+  }
+  .created-post-footer-edit {
+    background-color: $buttonaccent;
+    position: fixed;
+    bottom: 0;
+    width: 33%;
+    margin-left: 33%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+  }
+  .created-post-footer-delete {
+    background-color: $aubergine;
+    position: fixed;
+    bottom: 0;
+    width: 33%;
+    margin-left: 66%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+  }
+    // .created-post-home {
+    //   background-color: $buttonaccent2;
+    //   border: 1px solid;
+    //   width: 115px;
+    //   display: inline-block;
+    // }
+    // .created-post-edit {
+    //   background-color: $buttonaccent2;
+    //   border: 1px solid;
+    //   width: 115px;
+    //   display: inline-block;
+    // }
+    // .created-post-delete {
+    //   background-color: $buttonaccent2;
+    //   border: 1px solid;
+    //   width: 115px;
+    //   display: inline-block;
+    // }
+
+
+// }
   // .searchwrap{
   //   background-color: lighten($subheaderbg, 25%);
   //   width: 100%;
