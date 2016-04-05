@@ -35,6 +35,8 @@ Darken by 5% every button on hover.
 
 Bottom button font-size = 2.5 em, line-height = 1.3em.
 
+BORDER RADIUS? DISCUSS.
+
 
 
 # Class Naming Conventions
