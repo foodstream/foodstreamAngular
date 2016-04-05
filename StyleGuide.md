@@ -42,3 +42,8 @@ Bottom button font-size = 2.5 em, line-height = 1.3em.
 Utilize the page name as prefix for all class names to prevent collisions.
 Ex: class="page-your-class-name"
 
+# Screen Width
+
+Foodstream will be designed mobile-first.
+
+Design with a screen 400px wide in mind. Height will be considered the height of your device's viewport.
