@@ -11,7 +11,6 @@ $aubergine: #4a1d3b;
 $cardHeight: 20vh;
 
 body{
-  background-color: $bodybg;
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
   .app-header{
@@ -296,7 +295,13 @@ body{
   .post-detail-claim-button {
     background-color: $buttonbg;
     color: white;
-    width: 25%;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
   }
 
   .post-detail-bottom-button {
@@ -307,7 +312,7 @@ body{
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 50%;
   }
 
 
@@ -716,6 +721,7 @@ body{
     font-weight: 200;
   }
 
+
 //----------chat page styling----------//
   .chat-subheader{
     background-color: lighten($subheaderbg, 25%);
@@ -792,4 +798,106 @@ body{
     bottom: 0;
   }
 
+// ------------ Your Claimed Posts --------- //
+
+.claimed-title {
+  font-size: 2em;
+  margin: 5% 0 0 5%;
+  display: inline-block;
+  padding: 5px 0;
 }
+
+.claimed-chat {
+  display: inline;
+  margin: 5% 0 0 5%;
+  margin-left: 20%;
+  font-size: 2em;
+  background-color: $buttonaccent2;
+  color: white;
+  padding: 5px;
+}
+
+.claimed-supplier-name {
+  margin: 5% 0 0 5%;
+}
+
+.claimed-image {
+  margin: 5%;
+}
+
+.claimed-details {
+  margin: 5% 5% 0 5%;
+}
+
+.claimed-location {
+  margin: 5% 0 0 5%;
+}
+
+.claimed-location-image {
+  display: inline-block;
+  margin: 5% 0 0 5%;
+}
+
+.claimed-time-calendar-wrap {
+  border: solid 1px red;
+  display: inline-block;
+  margin-left: 10%;
+  .claimed-time-wrap {
+    display: inline;
+    margin: 10px 0;
+    .claimed-start {
+      display: inline;
+      padding: 5px;
+    }
+    .claimed-end {
+      display: inline;
+      padding: 5px;
+    }
+  }
+  .claimed-calendar-wrap {
+    border: solid 1px red;
+    display: block;
+    .claimed-iCal {
+      // border: solid thin black;
+      display: block;
+      margin-top: 10px;
+    }
+    .claimed-googleCal {
+      // border: solid thin black;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+}
+
+.claimed-details-title {
+  margin: 5%;
+}
+
+.claimed-bottom-button {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  color: white;
+  cursor: pointer;
+  background-color: $buttonbg;
+}
+
+.claimed-remove-button {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  margin-left: 50%;
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  color: white;
+  cursor: pointer;
+  background-color: $buttonaccent2;
+}
+
+}
+//close body
