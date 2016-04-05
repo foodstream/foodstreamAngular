@@ -376,68 +376,130 @@ body{
         display: inline-block;
         width: 10em;
         height: 10em;
-        margin: 5% 5% 5% 5%;
+        margin: 5% 5% 0 5%;
       }
       .created-post-photo {
         border: 1px solid;
         display: inline-block;
         width: 10em;
         height: 10em;
-        margin: 5% 5% 5% 1.5%;
+        margin: 5% 5% 0 1.5%;
       }
   }
   .created-post-location {
-      margin-left: 4%;
+    margin: 0 0 10px 4%;
       .created-post-address {
-          display: inline-block;
-          width: 10em;
-          margin: .5% 5% 5% 1.5%;
+        display: inline-block;
+        width: 10em;
+        margin: 15px 5% 15px 1.5%;
       }
       .created-post-directions-btn {
-          display: inline-block;
-          width: 10em;
-          margin: .5% 5% 5% 1.5%;
+        display: inline-block;
+        background-color: $buttonbg;
+        color: white;
+        padding: 8px 0;
+        text-align: center;
+        width: 10em;
+        margin: 15px 3% 0 1.75%;
       }
   }
   .created-post-calendar {
-      border: 1px solid;
-      .created-post-time {
+    margin: 4%;
+    width: 355px;
+    // border: 1px solid;
+    .created-post-time {
+    //   border: 1px solid;
+      display: inline-block;
+      .created-post-start {
+        padding: 5px 0 0 0;
+        width: 180px;
+        margin: 0 0 3px 4%;
+        //   border: 1px solid;
+      }
+      .created-post-end {
+        padding: 5px 0 0 0;
+        width: 180px;
+        margin: 0 0 3px 4%;
+        //   border: 1px solid;
+      }
+    }
+    .created-post-calendar-btns {
+    //   border: 1px solid;
+      vertical-align: top;
+      display: inline-block;
+      margin: 0 0 0 4%;
+      .google-cal {
         border: 1px solid;
         display: inline-block;
-        .created-post-start {
-          border: 1px solid;
-        }
-        .created-post-end {
-          border: 1px solid;
-        }
+        width: 4em;
+        height: 4em;
+        margin-right: 1em;
       }
-      .created-post-calendar-btns {
+      .ical {
         border: 1px solid;
-        .google-cal {
-          border: 1px solid;
-          display: inline-block;
-        }
-        .google-cal {
-          border: 1px solid;
-          display: inline-block;
-        }
+        display: inline-block;
+        width: 4em;
+        height: 4em;
       }
+    }
   }
-  .created-post-footer {
-      border: 1px solid;
-      .created-post-home {
-        border: 1px solid;
-        display: inline-block;
-      }
-      .created-post-edit {
-        border: 1px solid;
-        display: inline-block;
-      }
-      .created-post-delete {
-        border: 1px solid;
-        display: inline-block;
-      }
+  .created-post-footer-home {
+    background-color: $buttonaccent2;
+    position: fixed;
+    bottom: 0;
+    width: 33%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
   }
+  .created-post-footer-edit {
+    background-color: $buttonaccent;
+    position: fixed;
+    bottom: 0;
+    width: 33%;
+    margin-left: 33%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+  }
+  .created-post-footer-delete {
+    background-color: $aubergine;
+    position: fixed;
+    bottom: 0;
+    width: 33%;
+    margin-left: 66%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+  }
+    // .created-post-home {
+    //   background-color: $buttonaccent2;
+    //   border: 1px solid;
+    //   width: 115px;
+    //   display: inline-block;
+    // }
+    // .created-post-edit {
+    //   background-color: $buttonaccent2;
+    //   border: 1px solid;
+    //   width: 115px;
+    //   display: inline-block;
+    // }
+    // .created-post-delete {
+    //   background-color: $buttonaccent2;
+    //   border: 1px solid;
+    //   width: 115px;
+    //   display: inline-block;
+    // }
+
 
 // }
   // .searchwrap{
