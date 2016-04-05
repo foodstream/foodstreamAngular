@@ -408,6 +408,72 @@ body{
    	text-align: center;
   }
 
+    //--------- Profile [public] View-------------//
+
+    .profile-pub-picture {
+      margin: 5% 0 5% 38%;
+      display: block;
+    }
+    .profile-pub-name {
+        margin: 10% 0 10% 18%;
+
+      .profile-pub-firstname {
+        width: 125px;
+        text-align: center;
+        display: inline-block;
+      }
+      .profile-pub-lastname {
+        width: 125px;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+    .profile-pub-info {
+      .profile-pub-org {
+        margin: 5% 0;
+        text-align: center;
+      }
+      .profile-pub-location {
+        margin: 5% 0;
+        text-align: center;
+      }
+      .profile-pub-rating {
+        margin: 5% 0;
+        text-align: center;
+      }
+    }
+    .profile-pub-about {
+      margin: 10% 0;
+    }
+    .profile-pub-footer {
+      .profile-pub-home {
+        display: inline-block;
+        width: 50%;
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        font-size: 2.5em;
+        line-height: 1.3em;
+        color: white;
+        background-color: $buttonaccent2;
+        cursor: pointer;
+        font-weight: 200;
+      }
+      .profile-pub-back {
+        display: inline-block;
+        margin-left: 50%;
+        width: 50%;
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        font-size: 2.5em;
+        line-height: 1.3em;
+        color: white;
+        background-color: $aubergine;
+        cursor: pointer;
+        font-weight: 200;
+      }
+    }
 
   //--------- Create View -------------//
 
@@ -536,7 +602,7 @@ body{
   		color: darken($headerbg, 15%);
   		font-family: sans-serif;
   	}
-  
+
 
 
   .created-post-title {

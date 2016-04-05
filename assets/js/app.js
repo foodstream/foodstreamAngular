@@ -42,6 +42,11 @@ foodStream.config(function($routeProvider){
       controller : 'resultsController'
     })
 
+    .when('/profilePublic', {
+      templateUrl : '/views/publicprofile.html',
+      controller : 'publicProfileController'
+    })
+
     .otherwise({
       redirectTo: '/landing'
     });
