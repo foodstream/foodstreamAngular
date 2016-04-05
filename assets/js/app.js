@@ -22,6 +22,11 @@ foodStream.config(function($routeProvider){
       controller : 'createController'
     })
 
+    .when('/created', {
+      templateUrl : '/views/created.html',
+      controller : 'createdController'
+    })
+
     .when('/home', {
       templateUrl : '/views/home.html',
       controller : 'homeController'
