@@ -14,17 +14,17 @@ body{
   background-color: $bodybg;
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
-  font-size: 1em;
   .app-header{
     font-weight: 700;
-    // height: 40%;
+    height: 40%;
     width: 100%;
     background-color: lighten($headerbg, 3%);
     color: white;
     display: inline-block;
-    padding: 6% 2%;
+    padding: 2% 2%;
     font-size: 1.5em;
   }
+
 //--------------edit profile page styling---------//
   .edit-profile-subheader{
     background-color:lighten($subheaderbg, 25%);
@@ -125,6 +125,7 @@ body{
 
 
 //---------sign up page styling------------//
+
   .sign-up-title{
     margin-top: 5%;
     font-size: 2em;
@@ -166,22 +167,7 @@ body{
   }
 
 //------ Home Page/Dashboard ------ //
-  .home-subheader{
-    background-color: lighten($subheaderbg, 25%);
-    .home-search{
-      margin: 2% 0 0 2%;
-      width: 80%;
 
-    }
-    .home-subheader-text{
-      font-size: .75em;
-      margin: 2% 0 0 5%;
-      padding: 0 0 2% 0;
-      .home-distance-search{
-        width: 10%;
-      }
-    }
-  }
   .home-card {
     display: block;
     height: $cardHeight;
@@ -190,9 +176,8 @@ body{
     width:95%;
     margin: 5% 0 5% 2.5%;
     .home-header {
-      // height: $cardHeight / 4;
+      height: $cardHeight / 4;
       background-color: lightgray;
-      padding: 2%;
       span {
         float: right;
       }
@@ -200,28 +185,174 @@ body{
     .home-transaction-details {
       display: inline-block;
       width: 60%;
-      height: $cardHeight * 0.75;
     }
     .home-chat {
       display: inline-block;
       background-color: $buttonbg;
       width: 19%;
-      height: $cardHeight * 0.77;
+      height: $cardHeight * 0.75;
       position: absolute;
-      text-align: center;
     }
     .home-details {
       display: inline-block;
       background-color: lighten($buttonaccent, 30%);
       width: 19%;
-      height: $cardHeight * 0.77;
+      height: $cardHeight * 0.75;
       position: absolute;
       margin-left: 19%;
-      text-align: center;
     }
   }
 
   .home-post {
+    background-color: $buttonaccent2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+// ---------- Post Detail from Search ---------
+
+  .post-detail-title {
+    font-size: 2em;
+    margin: 5%;
+  }
+
+  .post-detail-supplier-name {
+    margin: 5%;
+  }
+
+  .post-detail-image {
+    margin: 5%;
+  }
+
+  .post-detail-details {
+    margin: 5%;
+  }
+
+  .post-detail-location {
+    margin: 5%;
+    font-weight: bold;
+  }
+
+  .post-detail-location-image {
+    margin: 5%;
+  }
+
+  .post-detail-start {
+    margin: 5%;
+    display: inline;
+    border: solid thin black;
+  }
+
+  .post-detail-end {
+    margin: 5%;
+    display: inline;
+    border: solid thin black;
+  }
+
+  .post-detail-claim-button {
+    background-color: $buttonbg;
+    color: white;
+    width: 25%;
+  }
+
+  .post-detail-bottom-button {
+    background-color: $buttonaccent2;
+    color: white;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+
+  //-------------search results page styling--------------//
+  .results-subheader{
+    background-color: lighten($subheaderbg, 25%);
+    .results-search{
+      margin: 2% 0 0 2%;
+      width: 80%;
+    }
+    .results-subheader-text{
+      font-size: .75em;
+      margin: 2% 0 0 5%;
+      padding: 0 0 2% 0;
+      .results-distance-search{
+        width: 10%;
+      }
+    }
+  }
+  .results-card {
+    display: block;
+    height: $cardHeight;
+    // border: solid 5px $border;
+    background-color: lighten($itembg, 10%);
+    width:95%;
+    margin: 5% 0 5% 2.5%;
+    .results-header {
+      // height: $cardHeight / 4;
+      background-color: lightgray;
+      padding: 2%;
+      span {
+        float: right;
+      }
+    }
+    .results-transaction-details {
+      display: inline-block;
+      width: 50%;
+      height: $cardHeight * 0.75;
+      // border: solid thin black;
+      margin: 0 0 0 25%;
+    }
+    .results-add-picture{
+      position: absolute;
+      margin: -32% 0 0 0;
+      display: inline;
+      // height: 20%;
+      width: 20%;
+      text-align: center;
+      // margin: 2%;
+      // border-bottom : solid thin darken($border, 30%);
+      .fa-camera-retro{
+        color:darken($border, 25%);
+        font-size: 3em;
+        padding: 25% ;
+        border: solid thin darken($border, 25%);
+        background-color: darken($bodybg, 5%);
+        cursor: pointer;
+        .results-add-picture-txt{
+          display: block;
+          font-size: .3em;
+          font-family: 'overpass', sans-serif;
+          font-weight: 200;
+        }
+      }
+    }
+    .results-details {
+      display: inline-block;
+      background-color: lighten($aubergine, 50%);
+      width: 23%;
+      height: $cardHeight * 0.82;
+      position: absolute;
+      margin: -33.25% 0 0 72%;
+      text-align: center;
+      color: white;
+      .fa-info-circle{
+        font-size: 3em;
+        margin: 20% 0 0 0;
+        .search-details-text{
+          display: block;
+          font-family: 'overpass', sans-serif;
+          font-size: .5em;
+        }
+      }
+    }
+  }
+  .results-footer{
     background-color: $buttonaccent2;
     position: fixed;
     bottom: 0;
@@ -237,7 +368,6 @@ body{
       background-color: darken($buttonaccent2, 5%);
     }
   }
-
   //------ Login View------ //
 
   .login-signup {
@@ -356,6 +486,58 @@ body{
   }
 
     //--------- Create View -------------//
+
+
+  	.create-location {
+  	  //   margin-left: 11%;
+  		width:370px;
+  		background-color: white;
+  		padding: 5px 0;
+  		border: solid 2px darken($border, 10%);
+  		color: darken($headerbg, 15%);
+  		font-family: sans-serif;
+  	}
+  	.create-start {
+  	  //   margin-left: 11%;
+  		width: 75px;
+  		display: inline-block;
+  		margin: 30px 30px 0 80px;
+  		color: white;
+  		// padding: 5px 10px;
+  		color: darken($headerbg, 15%);
+  		font-family: sans-serif;
+  		input {
+  			width: 75px;
+  			height:20px;
+  			border: solid 2px darken($border, 10%);
+  		}
+  	}
+  	.create-end {
+  		width: 75px;
+  		display: inline-block;
+  	  //   margin-top: 50px;
+  	  //   margin-right: 25%;
+  		color: white;
+  		// padding: 5px 50px 0 0;
+  		color: darken($headerbg, 15%);
+  		font-family: sans-serif;
+  		input {
+  			width: 75px;
+  			height:20px;
+  			border: solid 2px darken($border, 10%);
+  		}
+  	}
+  	.create-description {
+  	  //   margin-left: 11%;
+  		width:370px;
+  		background-color: white;
+  		padding: 5px 0;
+  		border: solid 2px darken($border, 10%);
+  		color: darken($headerbg, 15%);
+  		font-family: sans-serif;
+  	}
+  }
+
 
   .created-post-title {
     margin-top: 5%;
@@ -481,73 +663,6 @@ body{
     cursor: pointer;
     font-weight: 200;
   }
-    // .created-post-home {
-    //   background-color: $buttonaccent2;
-    //   border: 1px solid;
-    //   width: 115px;
-    //   display: inline-block;
-    // }
-    // .created-post-edit {
-    //   background-color: $buttonaccent2;
-    //   border: 1px solid;
-    //   width: 115px;
-    //   display: inline-block;
-    // }
-    // .created-post-delete {
-    //   background-color: $buttonaccent2;
-    //   border: 1px solid;
-    //   width: 115px;
-    //   display: inline-block;
-    // }
+    
 
-
-// }
-  // .searchwrap{
-  //   background-color: lighten($subheaderbg, 25%);
-  //   width: 100%;
-  //   padding: 5% 2%;
-  //   .searchbar{
-  //     width: 80%;
-  //   }
-  // }
-  // .exampletext{
-  //   width: 100%;
-  //   color: darken($border, 15%);
-  //   text-align: center;
-  //   font-family: sans-serif;
-  //   padding: 2% 0 0 0;
-  // }
-  // .item{
-  //   margin: 2% 2.5%;
-  //   background-color: white;
-  //   // background-color: darken($itembg, 0%);
-  //   width: 90%;
-  //   padding: 2% 2%;
-  //   border: solid 2px darken($border, 10%);
-  //   color: darken($headerbg, 15%);
-  //   font-family: sans-serif;
-  //   .desc {
-  //     background-color: white;
-  //   }
-  // }
-  // .button{
-  //   background-color: lighten($buttonbg, 15%);
-  //   width: 50%;
-  //   position: absolute;
-  //   bottom: 0;
-  //   padding: 2% 0;
-  //   text-align: center;
-  //   color: white;
-  // }
-  // .button2{
-  //   background-color: $buttonaccent2;
-  //   width:50%;
-  //   position: absolute;
-  //   // float: right;
-  //   bottom: 0;
-  //   color: white;
-  //   padding: 2% 0;
-  //   margin: 0 0 0 50%;
-  //   text-align: center;
-  // }
 }
