@@ -1,0 +1,795 @@
+$headerbg: #33691e;
+$subheaderbg: #F2F24D;
+$itembg: #CCFFD7;
+$border: #F4F4F4;
+$bodybg: #FCF7F8;
+$buttonbg: #0c8183;
+$buttonaccent: #f06e00;
+$buttonaccent2: #8bc34a;
+$aubergine: #4a1d3b;
+
+$cardHeight: 20vh;
+
+body{
+  background-color: $bodybg;
+  font-family: 'overpass', sans-serif;
+  box-sizing: border-box;
+  .app-header{
+    font-weight: 700;
+    height: 40%;
+    width: 100%;
+    background-color: lighten($headerbg, 3%);
+    color: white;
+    display: inline-block;
+    padding: 2% 2%;
+    font-size: 1.5em;
+  }
+
+//--------------edit profile page styling---------//
+  .edit-profile-subheader{
+    background-color:lighten($subheaderbg, 25%);
+    width: 100%;
+    height: 20%;
+    color: darken($headerbg, 5%);
+    .edit-profile-subheader-txt{
+      font-size: 2em;
+      line-height: 1.3em;
+      padding: 2% 0 2% 4%;
+      display: inline-block;
+    }
+    .edit-profile-subheader-change-pass{
+      float: right;
+      text-align: center;
+      background-color: lighten($buttonaccent, 35%);
+      padding: 3.2% 2%;
+      display: inline-block;
+      color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: lighten($buttonaccent, 30%);
+      }
+    }
+  }
+  .edit-profile-add-picture{
+    display: block;
+    // height: 20%;
+    width: 100%;
+    text-align: center;
+    margin: 3% 0;
+    // border-bottom : solid thin darken($border, 30%);
+    .fa-camera-retro{
+      color:darken($border, 25%);
+      font-size: 5em;
+      padding: 25vw ;
+      border: solid thin darken($border, 25%);
+      background-color: darken($bodybg, 5%);
+      cursor: pointer;
+      .edit-profile-add-picture-txt{
+        display: block;
+        font-size: .3em;
+        font-family: 'overpass', sans-serif;
+        font-weight: 200;
+      }
+    }
+  }
+  .edit-profile-first-name{
+    margin: 2% 0 2% 2%;
+    width: 45vw;
+    font-size: 1.5em;
+  }
+  .edit-profile-last-name{
+    margin: 2% 0 0 2%;
+    width: 47vw;
+    font-size: 1.5em;
+  }
+  .edit-profile-email{
+    margin: 2%;
+    width: 96vw;
+    font-size: 1.5em;
+  }
+  .edit-profile-organization{
+    margin: 2%;
+    width: 96vw;
+    font-size: 1.5em;
+  }
+  .edit-profile-location{
+    margin: 2%;
+    width: 96vw;
+    font-size: 1.5em;
+  }
+  .edit-profile-description{
+    display: block;
+    margin: 2%;
+    width: 96vw;
+    height: 18vh;
+    font-size: 1.3em;
+  }
+  .edit-profile-footer{
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: $buttonaccent2;
+
+    position: fixed;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
+  }
+
+
+//---------sign up page styling------------//
+
+  .sign-up-title{
+    margin-top: 5%;
+    font-size: 2em;
+    text-align: center;
+  }
+  .sign-up-form {
+    width: 80%;
+    margin: 10% 10% 5% 10%;
+    text-align: center;
+  }
+  .sign-up-label {
+    display: block;
+    margin-top: 5%;
+    text-align: left;
+  }
+  .sign-up-input {
+    width: 100%;
+    border: solid 2px $border;
+    font-size: 1em;
+    line-height: 2;
+    padding: 5px;
+    margin-top: 2%;
+    color: black;
+  }
+  .sign-up-link {
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .sign-up-button {
+    border: solid 2px $border;
+    background-color: $buttonaccent2;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+//------ Home Page/Dashboard ------ //
+  .home-subheader{
+    background-color:lighten($subheaderbg, 25%);
+    width: 100%;
+    height: 20%;
+    color: darken($headerbg, 5%);
+    .home-search{
+      margin: 2% 0 0 2%;
+      width: 80%;
+    }
+    .home-subheader-text{
+      font-size: .75em;
+      margin: 2% 0 0 5%;
+      padding: 0 0 2% 0;
+      .home-distance-search{
+        width: 10%;
+      }
+    }
+  }
+  .home-card {
+    display: block;
+    height: $cardHeight;
+    // border: solid 5px $border;
+    background-color: lighten($itembg, 10%);
+    width:95%;
+    margin: 5% 0 5% 2.5%;
+    .home-header {
+      height: $cardHeight / 4;
+      background-color: lightgray;
+      span {
+        float: right;
+      }
+    }
+    .home-transaction-details {
+      display: inline-block;
+      width: 60%;
+    }
+    .home-chat {
+      display: inline-block;
+      background-color: $buttonbg;
+      width: 19%;
+      height: $cardHeight * 0.75;
+      position: absolute;
+      text-align: center;
+      .fa-comment{
+        margin: 20% 0 0 0;
+        color: white;
+        font-size: 3em;
+        display: block;
+        .home-chat-text{
+          font-size: .5em;
+          font-family: 'overpass', sans-serif;
+        }
+      }
+    }
+    .home-details {
+      display: inline-block;
+      background-color: lighten($buttonaccent, 30%);
+      width: 19%;
+      height: $cardHeight * 0.75;
+      position: absolute;
+      margin-left: 19%;
+      text-align: center;
+      .fa-info-circle{
+        margin: 20% 0 0 0;
+        color: white;
+        font-size: 3em;
+        display: block;
+        .home-details-text{
+          font-size: .5em;
+          font-family: 'overpass', sans-serif;
+        }
+      }
+    }
+  }
+
+  .home-post {
+    background-color: $buttonaccent2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+  }
+
+// ---------- Post Detail from Search ---------
+
+  .post-detail-title {
+    font-size: 2em;
+    margin: 5%;
+  }
+
+  .post-detail-supplier-name {
+    margin: 5%;
+  }
+
+  .post-detail-image {
+    margin: 5%;
+  }
+
+  .post-detail-details {
+    margin: 5%;
+  }
+
+  .post-detail-location {
+    margin: 5%;
+    font-weight: bold;
+  }
+
+  .post-detail-location-image {
+    margin: 5%;
+  }
+
+  .post-detail-start {
+    margin: 5%;
+    display: inline;
+    border: solid thin black;
+  }
+
+  .post-detail-end {
+    margin: 5%;
+    display: inline;
+    border: solid thin black;
+  }
+
+  .post-detail-claim-button {
+    background-color: $buttonbg;
+    color: white;
+    width: 25%;
+  }
+
+  .post-detail-bottom-button {
+    background-color: $buttonaccent2;
+    color: white;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+
+  //-------------search results page styling--------------//
+  .results-subheader{
+    background-color: lighten($subheaderbg, 25%);
+    .results-search{
+      margin: 2% 0 0 2%;
+      width: 80%;
+    }
+    .results-subheader-text{
+      font-size: .75em;
+      margin: 2% 0 0 5%;
+      padding: 0 0 2% 0;
+      .results-distance-search{
+        width: 10%;
+      }
+    }
+  }
+  .results-card {
+    display: block;
+    height: $cardHeight;
+    // border: solid 5px $border;
+    background-color: lighten($itembg, 10%);
+    width:95%;
+    margin: 5% 0 5% 2.5%;
+    .results-header {
+      // height: $cardHeight / 4;
+      background-color: lightgray;
+      padding: 2%;
+      span {
+        float: right;
+      }
+    }
+    .results-transaction-details {
+      display: inline-block;
+      width: 50%;
+      height: $cardHeight * 0.75;
+      // border: solid thin black;
+      margin: 0 0 0 25%;
+      .results-supplier-name-text{
+        line-height: 1.2em;
+        font-weight: 500;
+      }
+      .results-transaction-location{
+        line-height: 1.2em;
+        font-weight: 500;
+      }
+
+    }
+
+    .results-add-picture{
+      position: absolute;
+      margin: 2% 0 0 0;
+      display: inline;
+      // height: 20%;
+      width: 20%;
+      text-align: center;
+      // margin: 2%;
+      // border-bottom : solid thin darken($border, 30%);
+      .fa-camera-retro{
+        color:darken($border, 25%);
+        font-size: 3em;
+        padding: 25% ;
+        border: solid thin darken($border, 25%);
+        background-color: darken($bodybg, 5%);
+        cursor: pointer;
+        .results-add-picture-txt{
+          display: block;
+          font-size: .3em;
+          font-family: 'overpass', sans-serif;
+          font-weight: 200;
+        }
+      }
+    }
+    .results-details {
+      display: inline-block;
+      background-color: lighten($aubergine, 50%);
+      width: 23.8%;
+      height: $cardHeight * 0.82;
+      position: absolute;
+      // margin: -33.25% 0 0 72%;
+      text-align: center;
+      color: white;
+      .fa-info-circle{
+        font-size: 3em;
+        margin: 20% 0 0 0;
+        .search-details-text{
+          display: block;
+          font-family: 'overpass', sans-serif;
+          font-size: .5em;
+        }
+      }
+    }
+  }
+  .results-footer{
+    background-color: $buttonaccent2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
+  }
+  //------ Login View------ //
+
+  .login-signup {
+	margin: 50px 0 0 20%;
+	background-color: $buttonaccent2;
+	width:60%;
+	color: white;
+	padding: 30px 0;
+	text-align: center;
+  }
+
+  .login-login {
+	margin: 50px 0 5% 20%;
+	background-color: lighten($buttonbg, 15%);
+	width:60%;
+	color: white;
+	padding: 30px 0;
+	text-align: center;
+  }
+
+  .login-about {
+	margin: 50px 2.5%;
+	background-color: white;
+	width: 90%;
+	padding: 2% 2%;
+	border: solid 2px darken($border, 10%);
+	color: darken($headerbg, 15%);
+	font-family: sans-serif;
+	text-align: center;
+  }
+
+  .login-legal {
+	margin: 50px 2.5%;
+	width: 90%;
+	padding: 2% 2%;
+	color: darken($headerbg, 15%);
+	font-family: sans-serif;
+   	text-align: center;
+  }
+
+
+  //--------- Create View -------------//
+
+  .create-labels {
+    margin-top: 50px;
+  }
+  .create-title {
+    width:370px;
+    background-color: white;
+    padding: 5px 0;
+    border: solid 2px darken($border, 10%);
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+  }
+  .create-picture {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 30px;
+    width:225px;
+    background-color: white;
+    padding: 5px 0 5px 0;
+    border: solid 2px darken($border, 10%);
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .fa-camera-retro{
+    color:darken($border, 25%);
+    font-size: 1em;
+    padding: 15vw ;
+    display: inline-block;
+    border: solid thin darken($border, 25%);
+    background-color: darken($bodybg, 5%);
+    cursor: pointer;
+  }
+  .create-location {
+    width:370px;
+    background-color: white;
+    padding: 5px 0;
+    border: solid 2px darken($border, 10%);
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+  }
+  .create-start {
+    width: 75px;
+    display: inline-block;
+    margin: 30px 30px 0 80px;
+    color: white;
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+      input {
+        width: 75px;
+        height:20px;
+        border: solid 2px darken($border, 10%);
+      }
+  }
+  .create-end {
+    width: 75px;
+    display: inline-block;
+    color: white;
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+      input {
+        width: 75px;
+        height:20px;
+        border: solid 2px darken($border, 10%);
+      }
+  }
+  .create-description {
+    width:370px;
+    background-color: white;
+    padding: 5px 0;
+    border: solid 2px darken($border, 10%);
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+  }
+
+    //--------- Create View -------------//
+
+
+  	.create-location {
+  	  //   margin-left: 11%;
+  		width:370px;
+  		background-color: white;
+  		padding: 5px 0;
+  		border: solid 2px darken($border, 10%);
+  		color: darken($headerbg, 15%);
+  		font-family: sans-serif;
+  	}
+  	.create-start {
+  	  //   margin-left: 11%;
+  		width: 75px;
+  		display: inline-block;
+  		margin: 30px 30px 0 80px;
+  		color: white;
+  		// padding: 5px 10px;
+  		color: darken($headerbg, 15%);
+  		font-family: sans-serif;
+  		input {
+  			width: 75px;
+  			height:20px;
+  			border: solid 2px darken($border, 10%);
+  		}
+  	}
+  	.create-end {
+  		width: 75px;
+  		display: inline-block;
+  	  //   margin-top: 50px;
+  	  //   margin-right: 25%;
+  		color: white;
+  		// padding: 5px 50px 0 0;
+  		color: darken($headerbg, 15%);
+  		font-family: sans-serif;
+  		input {
+  			width: 75px;
+  			height:20px;
+  			border: solid 2px darken($border, 10%);
+  		}
+  	}
+  	.create-description {
+  	  //   margin-left: 11%;
+  		width:370px;
+  		background-color: white;
+  		padding: 5px 0;
+  		border: solid 2px darken($border, 10%);
+  		color: darken($headerbg, 15%);
+  		font-family: sans-serif;
+  	}
+
+
+
+  .created-post-title {
+    margin-top: 5%;
+    font-size: 2em;
+    text-align: center;
+  }
+  .created-post-description {
+    color: darken($headerbg, 15%);
+    font-family: sans-serif;
+    display: block;
+    width: 95%;
+    margin: 5% 0 5% 2.5%;
+  }
+  .created-post-images {
+    display: block;
+      .created-post-map {
+        border: 1px solid;
+        display: inline-block;
+        width: 10em;
+        height: 10em;
+        margin: 5% 5% 0 5%;
+      }
+      .created-post-photo {
+        border: 1px solid;
+        display: inline-block;
+        width: 10em;
+        height: 10em;
+        margin: 5% 5% 0 1.5%;
+      }
+  }
+  .created-post-location {
+    margin: 0 0 10px 4%;
+      .created-post-address {
+        display: inline-block;
+        width: 10em;
+        margin: 15px 5% 15px 1.5%;
+      }
+      .created-post-directions-btn {
+        display: inline-block;
+        background-color: $buttonbg;
+        color: white;
+        padding: 8px 0;
+        text-align: center;
+        width: 10em;
+        margin: 15px 3% 0 1.75%;
+      }
+  }
+  .created-post-calendar {
+    margin: 4%;
+    width: 355px;
+    // border: 1px solid;
+    .created-post-time {
+    //   border: 1px solid;
+      display: inline-block;
+      .created-post-start {
+        padding: 5px 0 0 0;
+        width: 180px;
+        margin: 0 0 3px 4%;
+        //   border: 1px solid;
+      }
+      .created-post-end {
+        padding: 5px 0 0 0;
+        width: 180px;
+        margin: 0 0 3px 4%;
+        //   border: 1px solid;
+      }
+    }
+    .created-post-calendar-btns {
+    //   border: 1px solid;
+      vertical-align: top;
+      display: inline-block;
+      margin: 0 0 0 4%;
+      .google-cal {
+        border: 1px solid;
+        display: inline-block;
+        width: 4em;
+        height: 4em;
+        margin-right: 1em;
+      }
+      .ical {
+        border: 1px solid;
+        display: inline-block;
+        width: 4em;
+        height: 4em;
+      }
+    }
+  }
+  .created-post-footer-home {
+    background-color: $buttonaccent2;
+    position: fixed;
+    bottom: 0;
+    width: 33%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+  }
+  .created-post-footer-edit {
+    background-color: $buttonaccent;
+    position: fixed;
+    bottom: 0;
+    width: 33%;
+    margin-left: 33%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+  }
+  .created-post-footer-delete {
+    background-color: $aubergine;
+    position: fixed;
+    bottom: 0;
+    width: 33%;
+    margin-left: 66%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+  }
+
+//----------chat page styling----------//
+  .chat-subheader{
+    background-color: lighten($subheaderbg, 25%);
+    font-size: 1.5em;
+    line-height: 1.5em;
+    .chat-other-user-text{
+      font-weight: 700;
+    }
+  }
+  .chat-other-user-response{
+    width: 65%;
+    display: block;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    background-color: white;
+    border-radius: 0 .3em .3em .3em;
+    margin: 2%;
+    padding: 2% 1%;
+  }
+  .chat-current-user-response{
+    float: right;
+    width: 65%;
+    display: block;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    background-color: white;
+    margin: 2%;
+    padding: 2% 1%;
+    border-radius: .3em .3em 0 .3em;
+  }
+  .chat-input-block{
+    margin: 1% 0 1% 2%;
+    position: absolute;
+    bottom: 7%;
+    width: 100%;
+    border-top: darken($border, 30%);
+    .chat-input{
+      width: 85%;
+      font-size: 1.3em;
+      line-height: 1.2em;
+      // margin: 0 0 2% 0;
+      }
+      .fa-paper-plane-o{
+        display: inline-block;
+        font-size: 2em;
+        margin: 0 0 0 -1%;
+        padding: 0 1%;
+        color: lighten($aubergine, 20%);
+        // background-color: $itembg;
+    }
+  }
+
+  .chat-home-btn{
+    display:inline-block;
+    background-color: $buttonaccent2;
+    font-size: 2em;
+    line-height: 1.3em;
+    text-align: center;
+    color: white;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+  }
+  .chat-back-to-post-btn{
+    display:inline-block;
+    background-color: $buttonbg;
+    font-size: 2em;
+    line-height: 1.3em;
+    text-align: center;
+    color: white;
+    width:50%;
+    position: fixed;
+    margin: 0 0 0 50%;
+    bottom: 0;
+  }
+
+}
