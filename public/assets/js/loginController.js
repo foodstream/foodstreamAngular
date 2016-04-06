@@ -1,4 +1,4 @@
-foodStream.controller('loginController', ['$http', '$scope', function($http, $scope){
+foodStream.controller('loginController', ['$http', '$scope', '$location', function($http, $scope, $location){
   console.log('login whydonchya');
 
   $scope.submit = function(){
@@ -11,8 +11,9 @@ foodStream.controller('loginController', ['$http', '$scope', function($http, $sc
     }).then(function successCallback(response){
       console.log('post?')
       console.log(response.data.token)
-      
 
+      localStorage.setItem('token',response.data.token);
+      $location.path('/home');
     }, function errorCallback(response){
       console.log('not post?')
     });
