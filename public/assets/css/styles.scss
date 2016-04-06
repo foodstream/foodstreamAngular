@@ -13,6 +13,10 @@ $cardHeight: 20vh;
 body{
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
+  text-decoration: none;
+  &:visited{
+    text-decoration: none;
+  }
   .app-header{
     font-weight: 700;
     height: 40%;
