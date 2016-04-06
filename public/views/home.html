@@ -8,60 +8,32 @@
   </div>
 </div>
 
-<div class = "home-card">
-  <div class = "home-header">Transaction name
-    <span>Pick-up time</span>
-  </div>
+<div ng-repeat = "post in posts" ng-controller = "homeController">
+  <div class = "home-card">
+    <div class = "home-header">{{post.title}}
+      <span>{{post.end_at}}</span>
+    </div>
 
-  <div class = "home-transaction-details">
-    <div>Transaction location</div>
-    <div>Supplier Name</div>
-    <div>Claimant Name</div>
-  </div>
+    <div class = "home-transaction-details">
+      <div>{{post.location_id}}</div>
+      <div>{{post.supplier_id}}</div>
+      <div>Claimant Name</div>
+    </div>
 
-  <div class = "home-chat">
-    <i class="fa fa-comment">
-      <span class='home-chat-text'>Chat</span>
-    </i>
-  </div>
-  <div class = "home-details">
-    <i class="fa fa-info-circle">
-      <span class='home-details-text'>Details</span>
-    </i>
-  </div>
+    <div class = "home-chat">
+      <i class="fa fa-comment">
+        <span class='home-chat-text'>Chat</span>
+      </i>
+    </div>
+    <div class = "home-details">
+      <i class="fa fa-info-circle">
+        <span class='home-details-text'>Details</span>
+      </i>
+    </div>
 
+  </div>
 </div>
 
-<div class = "home-card">
-  <div class = "home-header">Transaction name
-    <span>Pick-up time</span>
-  </div>
 
-  <div class = "home-transaction-details">
-    <div>Transaction location</div>
-    <div>Supplier Name</div>
-    <div>Claimant Name</div>
-  </div>
-
-  <div class = "home-chat">Chat</div>
-  <div class = "home-details">Details</div>
-
-</div>
-
-<div class = "home-card">
-  <div class = "home-header">Transaction name
-    <span>Pick-up time</span>
-  </div>
-
-  <div class = "home-transaction-details">
-    <div>Transaction location</div>
-    <div>Supplier Name</div>
-    <div>Claimant Name</div>
-  </div>
-
-  <div class = "home-chat">Chat</div>
-  <div class = "home-details">Details</div>
-
-</div>
 
 <div class = "home-post">Create Post</div>
