@@ -1,5 +1,4 @@
 body {
-  background-color: #FCF7F8;
   font-family: 'overpass', sans-serif;
   box-sizing: border-box; }
   body .app-header {
@@ -215,7 +214,13 @@ body {
   body .post-detail-claim-button {
     background-color: #0c8183;
     color: white;
-    width: 25%; }
+    font-size: 2.5em;
+    line-height: 1.3em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 50%; }
   body .post-detail-bottom-button {
     background-color: #8bc34a;
     color: white;
@@ -224,7 +229,7 @@ body {
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 100%; }
+    width: 50%; }
   body .results-subheader {
     background-color: #fbfbc4; }
     body .results-subheader .results-search {
@@ -334,170 +339,285 @@ body {
     color: #162e0d;
     font-family: sans-serif;
     text-align: center; }
-  body .create-labels {
-    margin-top: 50px; }
-  body .create-title {
-    width: 370px;
-    background-color: white;
-    padding: 5px 0;
-    border: solid 2px #dbdbdb;
-    color: #162e0d;
-    font-family: sans-serif; }
-  body .create-picture {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 30px;
-    width: 225px;
-    background-color: white;
-    padding: 5px 0 5px 0;
-    border: solid 2px #dbdbdb;
-    color: #162e0d;
-    font-family: sans-serif;
-    text-align: center; }
-  body .fa-camera-retro {
-    color: #b4b4b4;
-    font-size: 1em;
-    padding: 15vw;
+  body .profile-public-info {
+    position: relative; }
+    body .profile-public-info .profile-pub-picture {
+      position: absolute;
+      top: 20px;
+      left: 75px;
+      display: block; }
+    body .profile-public-info .profile-pub-name {
+      position: absolute; }
+      body .profile-public-info .profile-pub-name .profile-pub-firstname {
+        position: absolute;
+        top: 300px;
+        width: 125px;
+        left: 75px;
+        height: 20px;
+        text-align: center;
+        display: inline-block; }
+      body .profile-public-info .profile-pub-name .profile-pub-lastname {
+        position: absolute;
+        top: 300px;
+        width: 125px;
+        left: 200px;
+        height: 20px;
+        text-align: center;
+        display: inline-block; }
+    body .profile-public-info .profile-pub-data {
+      position: absolute; }
+      body .profile-public-info .profile-pub-data .profile-pub-org {
+        position: absolute;
+        top: 335px;
+        width: 125px;
+        left: 135px;
+        height: 20px;
+        text-align: center; }
+      body .profile-public-info .profile-pub-data .profile-pub-location {
+        position: absolute;
+        position: absolute;
+        top: 360px;
+        width: 125px;
+        left: 135px;
+        height: 20px;
+        text-align: center; }
+      body .profile-public-info .profile-pub-data .profile-pub-rating {
+        position: absolute;
+        position: absolute;
+        top: 390px;
+        width: 125px;
+        left: 135px;
+        height: 20px;
+        text-align: center; }
+    body .profile-public-info .profile-pub-about {
+      position: absolute;
+      top: 435px;
+      width: 385px;
+      left: 15px;
+      height: 20px; }
+  body .profile-pub-footer .profile-pub-home {
     display: inline-block;
-    border: solid thin #b4b4b4;
-    background-color: #f5e4e8;
-    cursor: pointer; }
-  body .create-location {
-    width: 370px;
-    background-color: white;
-    padding: 5px 0;
-    border: solid 2px #dbdbdb;
-    color: #162e0d;
-    font-family: sans-serif; }
-  body .create-start {
-    width: 75px;
-    display: inline-block;
-    margin: 30px 30px 0 80px;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
     color: white;
-    color: #162e0d;
-    font-family: sans-serif; }
-    body .create-start input {
-      width: 75px;
-      height: 20px;
-      border: solid 2px #dbdbdb; }
-  body .create-end {
-    width: 75px;
+    background-color: #8bc34a;
+    cursor: pointer;
+    font-weight: 200; }
+  body .profile-pub-footer .profile-pub-back {
     display: inline-block;
+    margin-left: 50%;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
     color: white;
-    color: #162e0d;
-    font-family: sans-serif; }
-    body .create-end input {
-      width: 75px;
+    background-color: #4a1d3b;
+    cursor: pointer;
+    font-weight: 200; }
+  body .create-info {
+    position: relative; }
+    body .create-info .create-subheader {
+      position: absolute;
+      top: 20px;
+      left: 10%;
+      width: 325px;
       height: 20px;
-      border: solid 2px #dbdbdb; }
-  body .create-description {
-    width: 370px;
-    background-color: white;
-    padding: 5px 0;
-    border: solid 2px #dbdbdb;
-    color: #162e0d;
-    font-family: sans-serif; }
-  body .create-location {
-    width: 370px;
-    background-color: white;
-    padding: 5px 0;
-    border: solid 2px #dbdbdb;
-    color: #162e0d;
-    font-family: sans-serif; }
-  body .create-start {
-    width: 75px;
-    display: inline-block;
-    margin: 30px 30px 0 80px;
-    color: white;
-    color: #162e0d;
-    font-family: sans-serif; }
-    body .create-start input {
-      width: 75px;
+      font-size: 2em;
+      text-align: center; }
+    body .create-info .create-title {
+      position: absolute;
+      top: 60px;
+      left: 10%;
+      width: 325px;
       height: 20px;
-      border: solid 2px #dbdbdb; }
-  body .create-end {
-    width: 75px;
-    display: inline-block;
-    color: white;
-    color: #162e0d;
-    font-family: sans-serif; }
-    body .create-end input {
-      width: 75px;
+      background-color: white;
+      padding: 5px 0;
+      border: solid 2px #dbdbdb;
+      color: #162e0d;
+      font-family: sans-serif; }
+    body .create-info .create-picture {
+      position: absolute;
+      top: 115px;
+      left: 10%;
+      width: 325px;
+      height: 325px;
+      color: #162e0d;
+      font-family: sans-serif;
+      text-align: center; }
+    body .create-info .fa-camera-retro {
+      color: #b4b4b4;
+      padding: 90px 50px;
+      display: inline-block;
+      border: solid thin #b4b4b4;
+      background-color: #f5e4e8;
+      cursor: pointer; }
+    body .create-info .create-location {
+      position: absolute;
+      top: 340px;
+      left: 10%;
+      width: 325px;
       height: 20px;
-      border: solid 2px #dbdbdb; }
-  body .create-description {
-    width: 370px;
-    background-color: white;
-    padding: 5px 0;
-    border: solid 2px #dbdbdb;
-    color: #162e0d;
-    font-family: sans-serif; }
-  body .created-post-title {
-    margin-top: 5%;
-    font-size: 2em;
-    text-align: center; }
-  body .created-post-description {
-    color: #162e0d;
-    font-family: sans-serif;
-    display: block;
-    width: 95%;
-    margin: 5% 0 5% 2.5%; }
-  body .created-post-images {
-    display: block; }
-    body .created-post-images .created-post-map {
-      border: 1px solid;
-      display: inline-block;
-      width: 10em;
-      height: 10em;
-      margin: 5% 5% 0 5%; }
-    body .created-post-images .created-post-photo {
-      border: 1px solid;
-      display: inline-block;
-      width: 10em;
-      height: 10em;
-      margin: 5% 5% 0 1.5%; }
-  body .created-post-location {
-    margin: 0 0 10px 4%; }
-    body .created-post-location .created-post-address {
-      display: inline-block;
-      width: 10em;
-      margin: 15px 5% 15px 1.5%; }
-    body .created-post-location .created-post-directions-btn {
-      display: inline-block;
-      background-color: #0c8183;
-      color: white;
-      padding: 8px 0;
-      text-align: center;
-      width: 10em;
-      margin: 15px 3% 0 1.75%; }
-  body .created-post-calendar {
-    margin: 4%;
-    width: 355px; }
-    body .created-post-calendar .created-post-time {
-      display: inline-block; }
-      body .created-post-calendar .created-post-time .created-post-start {
-        padding: 5px 0 0 0;
-        width: 180px;
-        margin: 0 0 3px 4%; }
-      body .created-post-calendar .created-post-time .created-post-end {
-        padding: 5px 0 0 0;
-        width: 180px;
-        margin: 0 0 3px 4%; }
-    body .created-post-calendar .created-post-calendar-btns {
-      vertical-align: top;
-      display: inline-block;
-      margin: 0 0 0 4%; }
-      body .created-post-calendar .created-post-calendar-btns .google-cal {
-        border: 1px solid;
+      background-color: white;
+      padding: 5px 0;
+      border: solid 2px #dbdbdb;
+      color: #162e0d;
+      font-family: sans-serif; }
+    body .create-info .create-time {
+      position: absolute;
+      left: 10%; }
+      body .create-info .create-time .create-start {
+        position: absolute;
         display: inline-block;
-        width: 4em;
-        height: 4em;
-        margin-right: 1em; }
-      body .created-post-calendar .created-post-calendar-btns .ical {
-        border: 1px solid;
+        top: 385px;
+        width: 125px;
+        height: 20px;
+        color: white;
+        color: #162e0d;
+        font-family: sans-serif;
+        border: solid 2px #dbdbdb;
+        vertical-align: top; }
+        body .create-info .create-time .create-start input {
+          width: 75px;
+          height: 20px; }
+      body .create-info .create-time .create-end {
+        position: absolute;
         display: inline-block;
-        width: 4em;
-        height: 4em; }
+        top: 385px;
+        left: 198px;
+        width: 125px;
+        height: 20px;
+        color: white;
+        color: #162e0d;
+        font-family: sans-serif;
+        border: solid 2px #dbdbdb;
+        vertical-align: top; }
+        body .create-info .create-time .create-end input {
+          width: 75px;
+          height: 20px; }
+    body .create-info .create-description {
+      position: absolute;
+      top: 425px;
+      left: 10%;
+      height: 85px;
+      width: 325px;
+      background-color: white;
+      padding: 5px 0;
+      border: solid 2px #dbdbdb;
+      color: #162e0d;
+      font-family: sans-serif; }
+  body .create-post {
+    background-color: #8bc34a;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200; }
+    body .create-post:hover {
+      background-color: #7eb73d; }
+  body .created-info {
+    position: relative; }
+    body .created-info .created-post-title {
+      position: absolute;
+      top: 20px;
+      left: 35px;
+      width: 325px;
+      height: 20px;
+      font-size: 2em;
+      text-align: center; }
+    body .created-info .created-post-description {
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      width: 325px;
+      color: #162e0d;
+      font-family: sans-serif; }
+    body .created-info .created-post-images {
+      display: block;
+      position: absolute; }
+      body .created-info .created-post-images .created-post-map {
+        display: inline-block;
+        position: absolute;
+        top: 190px;
+        left: 20px;
+        width: 160px;
+        height: 160px; }
+      body .created-info .created-post-images .created-post-photo {
+        display: inline-block;
+        position: absolute;
+        top: 190px;
+        left: 220px;
+        width: 160px;
+        height: 160px; }
+    body .created-info .created-post-location {
+      position: absolute;
+      display: block; }
+      body .created-info .created-post-location .created-post-address {
+        display: inline-block;
+        position: absolute;
+        top: 365px;
+        left: 20px;
+        width: 160px;
+        height: 20px;
+        margin: 15px 5% 15px 1.5%; }
+      body .created-info .created-post-location .created-post-directions-btn {
+        display: inline-block;
+        background-color: #0c8183;
+        border-radius: 5px;
+        color: white;
+        padding: 8px 0;
+        position: absolute;
+        text-align: center;
+        top: 365px;
+        left: 220px;
+        width: 160px;
+        height: 20px; }
+    body .created-info .created-post-calendar {
+      position: absolute; }
+      body .created-info .created-post-calendar .created-post-time {
+        position: absolute;
+        display: inline-block; }
+        body .created-info .created-post-calendar .created-post-time .created-post-start {
+          padding: 5px 0 0 0;
+          position: absolute;
+          top: 425px;
+          left: 20px;
+          width: 160px;
+          height: 20px; }
+        body .created-info .created-post-calendar .created-post-time .created-post-end {
+          padding: 5px 0 0 0;
+          position: absolute;
+          top: 450px;
+          left: 20px;
+          width: 160px;
+          height: 20px; }
+      body .created-info .created-post-calendar .created-post-calendar-btns {
+        position: absolute;
+        vertical-align: top;
+        display: inline-block; }
+        body .created-info .created-post-calendar .created-post-calendar-btns .google-cal {
+          position: absolute;
+          display: inline-block;
+          top: 420px;
+          left: 230px;
+          width: 80px;
+          height: 20px; }
+        body .created-info .created-post-calendar .created-post-calendar-btns .ical {
+          position: absolute;
+          display: inline-block;
+          top: 420px;
+          left: 305px;
+          width: 80px;
+          height: 20px; }
   body .created-post-footer-home {
     background-color: #8bc34a;
     position: fixed;
@@ -595,5 +715,74 @@ body {
     position: fixed;
     margin: 0 0 0 50%;
     bottom: 0; }
+  body .claimed-title {
+    font-size: 2em;
+    margin: 5% 0 0 5%;
+    display: inline-block;
+    padding: 5px 0; }
+  body .claimed-chat {
+    display: inline;
+    margin: 5% 0 0 5%;
+    margin-left: 20%;
+    font-size: 2em;
+    background-color: #8bc34a;
+    color: white;
+    padding: 5px; }
+  body .claimed-supplier-name {
+    margin: 5% 0 0 5%; }
+  body .claimed-image {
+    margin: 5%; }
+  body .claimed-details {
+    margin: 5% 5% 0 5%; }
+  body .claimed-location {
+    margin: 5% 0 0 5%; }
+  body .claimed-location-image {
+    display: inline-block;
+    margin: 5% 0 0 5%; }
+  body .claimed-time-calendar-wrap {
+    border: solid 1px red;
+    display: inline-block;
+    margin-left: 10%; }
+    body .claimed-time-calendar-wrap .claimed-time-wrap {
+      display: inline;
+      margin: 10px 0; }
+      body .claimed-time-calendar-wrap .claimed-time-wrap .claimed-start {
+        display: inline;
+        padding: 5px; }
+      body .claimed-time-calendar-wrap .claimed-time-wrap .claimed-end {
+        display: inline;
+        padding: 5px; }
+    body .claimed-time-calendar-wrap .claimed-calendar-wrap {
+      border: solid 1px red;
+      display: block; }
+      body .claimed-time-calendar-wrap .claimed-calendar-wrap .claimed-iCal {
+        display: block;
+        margin-top: 10px; }
+      body .claimed-time-calendar-wrap .claimed-calendar-wrap .claimed-googleCal {
+        display: block;
+        margin-top: 10px; }
+  body .claimed-details-title {
+    margin: 5%; }
+  body .claimed-bottom-button {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    background-color: #0c8183; }
+  body .claimed-remove-button {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    margin-left: 50%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    background-color: #8bc34a; }
 
 /*# sourceMappingURL=styles.css.map */
