@@ -1,5 +1,9 @@
 var foodStream = angular.module("foodStream", ['ngRoute']);
 
+foodStream.controller('appController', ['$http', '$scope', function($http, $scope){
+  console.log("app ctrlr is workinggg");
+}])
+
 foodStream.config(function($routeProvider){
   $routeProvider
     .when('/landing', {
