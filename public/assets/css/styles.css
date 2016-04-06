@@ -310,7 +310,8 @@ body {
     width: 60%;
     color: white;
     padding: 30px 0;
-    text-align: center; }
+    text-align: center;
+    text-decoration: none; }
   body .login-login {
     margin: 50px 0 5% 20%;
     background-color: #12c6c9;
