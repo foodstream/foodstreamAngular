@@ -1,8 +1,16 @@
 var foodStream = angular.module("foodStream", ['ngRoute']);
 
 foodStream.controller('appController', ['$http', '$scope', function($http, $scope){
-  console.log("app ctrlr is workinggg");
-}])
+  // console.log("app ctrlr is workinggg");
+}]);
+
+foodStream.factory('getPostDetail', function() {
+  var details = {};
+  details.posts = function(postId){
+    console.log(postId);
+  }
+  return details;
+ });
 
 foodStream.config(function($routeProvider){
   $routeProvider
