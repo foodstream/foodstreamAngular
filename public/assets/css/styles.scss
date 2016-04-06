@@ -11,9 +11,12 @@ $aubergine: #4a1d3b;
 $cardHeight: 20vh;
 
 body{
-  background-color: $bodybg;
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
+  text-decoration: none;
+  &:visited{
+    text-decoration: none;
+  }
   .app-header{
     font-weight: 700;
     height: 40%;
@@ -167,7 +170,24 @@ body{
   }
 
 //------ Home Page/Dashboard ------ //
-
+  .home-subheader{
+    background-color:lighten($subheaderbg, 25%);
+    width: 100%;
+    height: 20%;
+    color: darken($headerbg, 5%);
+    .home-search{
+      margin: 2% 0 0 2%;
+      width: 80%;
+    }
+    .home-subheader-text{
+      font-size: .75em;
+      margin: 2% 0 0 5%;
+      padding: 0 0 2% 0;
+      .home-distance-search{
+        width: 10%;
+      }
+    }
+  }
   .home-card {
     display: block;
     height: $cardHeight;
@@ -192,6 +212,17 @@ body{
       width: 19%;
       height: $cardHeight * 0.75;
       position: absolute;
+      text-align: center;
+      .fa-comment{
+        margin: 20% 0 0 0;
+        color: white;
+        font-size: 3em;
+        display: block;
+        .home-chat-text{
+          font-size: .5em;
+          font-family: 'overpass', sans-serif;
+        }
+      }
     }
     .home-details {
       display: inline-block;
@@ -200,6 +231,17 @@ body{
       height: $cardHeight * 0.75;
       position: absolute;
       margin-left: 19%;
+      text-align: center;
+      .fa-info-circle{
+        margin: 20% 0 0 0;
+        color: white;
+        font-size: 3em;
+        display: block;
+        .home-details-text{
+          font-size: .5em;
+          font-family: 'overpass', sans-serif;
+        }
+      }
     }
   }
 
@@ -209,6 +251,9 @@ body{
     bottom: 0;
     width: 100%;
     text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
   }
 
 // ---------- Post Detail from Search ---------
@@ -254,7 +299,13 @@ body{
   .post-detail-claim-button {
     background-color: $buttonbg;
     color: white;
-    width: 25%;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
   }
 
   .post-detail-bottom-button {
@@ -265,7 +316,7 @@ body{
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 50%;
   }
 
 
@@ -307,10 +358,20 @@ body{
       height: $cardHeight * 0.75;
       // border: solid thin black;
       margin: 0 0 0 25%;
+      .results-supplier-name-text{
+        line-height: 1.2em;
+        font-weight: 500;
+      }
+      .results-transaction-location{
+        line-height: 1.2em;
+        font-weight: 500;
+      }
+
     }
+
     .results-add-picture{
       position: absolute;
-      margin: -32% 0 0 0;
+      margin: 2% 0 0 0;
       display: inline;
       // height: 20%;
       width: 20%;
@@ -335,10 +396,10 @@ body{
     .results-details {
       display: inline-block;
       background-color: lighten($aubergine, 50%);
-      width: 23%;
+      width: 23.8%;
       height: $cardHeight * 0.82;
       position: absolute;
-      margin: -33.25% 0 0 72%;
+      // margin: -33.25% 0 0 72%;
       text-align: center;
       color: white;
       .fa-info-circle{
@@ -377,6 +438,7 @@ body{
 	color: white;
 	padding: 30px 0;
 	text-align: center;
+  text-decoration: none;
   }
 
   .login-login {
@@ -593,6 +655,7 @@ body{
       color: black;
     }
   }
+
   .create-post {
     background-color: $buttonaccent2;
     position: fixed;
@@ -803,4 +866,182 @@ ul#tab {
 	}
 }
 
+//----------chat page styling----------//
+  .chat-subheader{
+    background-color: lighten($subheaderbg, 25%);
+    font-size: 1.5em;
+    line-height: 1.5em;
+    .chat-other-user-text{
+      font-weight: 700;
+    }
+  }
+  .chat-other-user-response{
+    width: 65%;
+    display: block;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    background-color: white;
+    border-radius: 0 .3em .3em .3em;
+    margin: 2%;
+    padding: 2% 1%;
+  }
+  .chat-current-user-response{
+    float: right;
+    width: 65%;
+    display: block;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    background-color: white;
+    margin: 2%;
+    padding: 2% 1%;
+    border-radius: .3em .3em 0 .3em;
+  }
+  .chat-input-block{
+    margin: 1% 0 1% 2%;
+    position: absolute;
+    bottom: 7%;
+    width: 100%;
+    border-top: darken($border, 30%);
+    .chat-input{
+      width: 85%;
+      font-size: 1.3em;
+      line-height: 1.2em;
+      // margin: 0 0 2% 0;
+      }
+      .fa-paper-plane-o{
+        display: inline-block;
+        font-size: 2em;
+        margin: 0 0 0 -1%;
+        padding: 0 1%;
+        color: lighten($aubergine, 20%);
+        // background-color: $itembg;
+    }
+  }
+
+  .chat-home-btn{
+    display:inline-block;
+    background-color: $buttonaccent2;
+    font-size: 2em;
+    line-height: 1.3em;
+    text-align: center;
+    color: white;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+  }
+  .chat-back-to-post-btn{
+    display:inline-block;
+    background-color: $buttonbg;
+    font-size: 2em;
+    line-height: 1.3em;
+    text-align: center;
+    color: white;
+    width:50%;
+    position: fixed;
+    margin: 0 0 0 50%;
+    bottom: 0;
+  }
+
+// ------------ Your Claimed Posts --------- //
+
+.claimed-title {
+  font-size: 2em;
+  margin: 5% 0 0 5%;
+  display: inline-block;
+  padding: 5px 0;
 }
+
+.claimed-chat {
+  display: inline;
+  margin: 5% 0 0 5%;
+  margin-left: 20%;
+  font-size: 2em;
+  background-color: $buttonaccent2;
+  color: white;
+  padding: 5px;
+}
+
+.claimed-supplier-name {
+  margin: 5% 0 0 5%;
+}
+
+.claimed-image {
+  margin: 5%;
+}
+
+.claimed-details {
+  margin: 5% 5% 0 5%;
+}
+
+.claimed-location {
+  margin: 5% 0 0 5%;
+}
+
+.claimed-location-image {
+  display: inline-block;
+  margin: 5% 0 0 5%;
+}
+
+.claimed-time-calendar-wrap {
+  border: solid 1px red;
+  display: inline-block;
+  margin-left: 10%;
+  .claimed-time-wrap {
+    display: inline;
+    margin: 10px 0;
+    .claimed-start {
+      display: inline;
+      padding: 5px;
+    }
+    .claimed-end {
+      display: inline;
+      padding: 5px;
+    }
+  }
+  .claimed-calendar-wrap {
+    border: solid 1px red;
+    display: block;
+    .claimed-iCal {
+      // border: solid thin black;
+      display: block;
+      margin-top: 10px;
+    }
+    .claimed-googleCal {
+      // border: solid thin black;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+}
+
+.claimed-details-title {
+  margin: 5%;
+}
+
+.claimed-bottom-button {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  color: white;
+  cursor: pointer;
+  background-color: $buttonbg;
+}
+
+.claimed-remove-button {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  margin-left: 50%;
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  color: white;
+  cursor: pointer;
+  background-color: $buttonaccent2;
+}
+
+}
+//close body

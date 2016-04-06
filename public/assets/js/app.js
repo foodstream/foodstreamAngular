@@ -1,5 +1,9 @@
 var foodStream = angular.module("foodStream", ['ngRoute']);
 
+foodStream.controller('appController', ['$http', '$scope', function($http, $scope){
+  console.log("app ctrlr is workinggg");
+}])
+
 foodStream.config(function($routeProvider){
   $routeProvider
     .when('/landing', {
@@ -40,6 +44,21 @@ foodStream.config(function($routeProvider){
     .when('/results', {
       templateUrl : '/views/searchresults.html',
       controller : 'resultsController'
+    })
+
+    .when('/claimed', {
+      templateUrl : '/views/claimed.html',
+      controller : 'claimedController'
+    })
+
+    .when('/profile', {
+      templateUrl : '/views/profile.html',
+      controller : 'profileController'
+    })
+
+    .when('/chat', {
+      templateUrl : '/views/chat.html',
+      controller: 'chatController'
     })
 
     .when('/profilePublic', {
