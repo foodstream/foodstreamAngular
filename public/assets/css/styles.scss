@@ -11,7 +11,6 @@ $aubergine: #4a1d3b;
 $cardHeight: 20vh;
 
 body{
-  background-color: $bodybg;
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
   .app-header{
@@ -296,7 +295,13 @@ body{
   .post-detail-claim-button {
     background-color: $buttonbg;
     color: white;
-    width: 25%;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
   }
 
   .post-detail-bottom-button {
@@ -307,7 +312,7 @@ body{
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 50%;
   }
 
 
@@ -461,223 +466,342 @@ body{
    	text-align: center;
   }
 
+    //--------- Profile [public] View-------------//
+      .profile-public-info {
+        position: relative;
+        .profile-pub-picture {
+          position: absolute;
+          top: 20px;
+          left: 75px;
+          display: block;
+        }
+        .profile-pub-name {
+          position: absolute;
+          .profile-pub-firstname {
+            position: absolute;
+            top: 300px;
+            width: 125px;
+            left: 75px;
+            height: 20px;
+            text-align: center;
+            display: inline-block;
+          }
+          .profile-pub-lastname {
+            position: absolute;
+            top: 300px;
+            width: 125px;
+            left: 200px;
+            height: 20px;
+            text-align: center;
+            display: inline-block;
+          }
+        }
+        .profile-pub-data {
+          position: absolute;
+          .profile-pub-org {
+            position: absolute;
+            top: 335px;
+            width: 125px;
+            left: 135px;
+            height: 20px;
+            text-align: center;
+          }
+          .profile-pub-location {
+            position: absolute;
+            position: absolute;
+            top: 360px;
+            width: 125px;
+            left: 135px;
+            height: 20px;
+            text-align: center;
+          }
+          .profile-pub-rating {
+            position: absolute;
+            position: absolute;
+            top: 390px;
+            width: 125px;
+            left: 135px;
+            height: 20px;
+            text-align: center;
+          }
+        }
+        .profile-pub-about {
+          position: absolute;
+          top: 435px;
+          width: 385px;
+          left: 15px;
+          height: 20px;
+        }
+      }
+    .profile-pub-footer {
+      .profile-pub-home {
+        display: inline-block;
+        width: 50%;
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        font-size: 2.5em;
+        line-height: 1.3em;
+        color: white;
+        background-color: $buttonaccent2;
+        cursor: pointer;
+        font-weight: 200;
+      }
+      .profile-pub-back {
+        display: inline-block;
+        margin-left: 50%;
+        width: 50%;
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        font-size: 2.5em;
+        line-height: 1.3em;
+        color: white;
+        background-color: $aubergine;
+        cursor: pointer;
+        font-weight: 200;
+      }
+    }
 
   //--------- Create View -------------//
 
-  .create-labels {
-    margin-top: 50px;
-  }
-  .create-title {
-    width:370px;
-    background-color: white;
-    padding: 5px 0;
-    border: solid 2px darken($border, 10%);
-    color: darken($headerbg, 15%);
-    font-family: sans-serif;
-  }
-  .create-picture {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 30px;
-    width:225px;
-    background-color: white;
-    padding: 5px 0 5px 0;
-    border: solid 2px darken($border, 10%);
-    color: darken($headerbg, 15%);
-    font-family: sans-serif;
-    text-align: center;
-  }
-  .fa-camera-retro{
-    color:darken($border, 25%);
-    font-size: 1em;
-    padding: 15vw ;
-    display: inline-block;
-    border: solid thin darken($border, 25%);
-    background-color: darken($bodybg, 5%);
-    cursor: pointer;
-  }
-  .create-location {
-    width:370px;
-    background-color: white;
-    padding: 5px 0;
-    border: solid 2px darken($border, 10%);
-    color: darken($headerbg, 15%);
-    font-family: sans-serif;
-  }
-  .create-start {
-    width: 75px;
-    display: inline-block;
-    margin: 30px 30px 0 80px;
-    color: white;
-    color: darken($headerbg, 15%);
-    font-family: sans-serif;
-      input {
-        width: 75px;
-        height:20px;
-        border: solid 2px darken($border, 10%);
-      }
-  }
-  .create-end {
-    width: 75px;
-    display: inline-block;
-    color: white;
-    color: darken($headerbg, 15%);
-    font-family: sans-serif;
-      input {
-        width: 75px;
-        height:20px;
-        border: solid 2px darken($border, 10%);
-      }
-  }
-  .create-description {
-    width:370px;
-    background-color: white;
-    padding: 5px 0;
-    border: solid 2px darken($border, 10%);
-    color: darken($headerbg, 15%);
-    font-family: sans-serif;
-  }
-
-    //--------- Create View -------------//
-
-
-  	.create-location {
-  	  //   margin-left: 11%;
-  		width:370px;
-  		background-color: white;
-  		padding: 5px 0;
-  		border: solid 2px darken($border, 10%);
-  		color: darken($headerbg, 15%);
-  		font-family: sans-serif;
-  	}
-  	.create-start {
-  	  //   margin-left: 11%;
-  		width: 75px;
-  		display: inline-block;
-  		margin: 30px 30px 0 80px;
-  		color: white;
-  		// padding: 5px 10px;
-  		color: darken($headerbg, 15%);
-  		font-family: sans-serif;
-  		input {
-  			width: 75px;
-  			height:20px;
-  			border: solid 2px darken($border, 10%);
-  		}
-  	}
-  	.create-end {
-  		width: 75px;
-  		display: inline-block;
-  	  //   margin-top: 50px;
-  	  //   margin-right: 25%;
-  		color: white;
-  		// padding: 5px 50px 0 0;
-  		color: darken($headerbg, 15%);
-  		font-family: sans-serif;
-  		input {
-  			width: 75px;
-  			height:20px;
-  			border: solid 2px darken($border, 10%);
-  		}
-  	}
-  	.create-description {
-  	  //   margin-left: 11%;
-  		width:370px;
-  		background-color: white;
-  		padding: 5px 0;
-  		border: solid 2px darken($border, 10%);
-  		color: darken($headerbg, 15%);
-  		font-family: sans-serif;
-  	}
-
-
-
-  .created-post-title {
-    margin-top: 5%;
-    font-size: 2em;
-    text-align: center;
-  }
-  .created-post-description {
-    color: darken($headerbg, 15%);
-    font-family: sans-serif;
-    display: block;
-    width: 95%;
-    margin: 5% 0 5% 2.5%;
-  }
-  .created-post-images {
-    display: block;
-      .created-post-map {
-        border: 1px solid;
+  .create-info {
+    position: relative;
+    .create-subheader {
+      position: absolute;
+      top: 20px;
+      left: 10%;
+      width: 325px;
+      height: 20px;
+      font-size: 2em;
+      text-align: center;
+    }
+    .create-title {
+      position: absolute;
+      top: 60px;
+      left: 10%;
+      width: 325px;
+      height: 20px;
+      background-color: white;
+      padding: 5px 0;
+      border: solid 2px darken($border, 10%);
+      color: darken($headerbg, 15%);
+      font-family: sans-serif;
+    }
+    .create-picture {
+      position: absolute;
+      top: 115px;
+      left: 10%;
+      width: 325px;
+      height: 325px;
+      color: darken($headerbg, 15%);
+      font-family: sans-serif;
+      text-align: center;
+    }
+    .fa-camera-retro{
+      color:darken($border, 25%);
+      padding: 90px 50px;
+      display: inline-block;
+      border: solid thin darken($border, 25%);
+      background-color: darken($bodybg, 5%);
+      cursor: pointer;
+    }
+    .create-location {
+      position: absolute;
+      top: 340px;
+      left: 10%;
+      width: 325px;
+      height: 20px;
+      background-color: white;
+      padding: 5px 0;
+      border: solid 2px darken($border, 10%);
+      color: darken($headerbg, 15%);
+      font-family: sans-serif;
+    }
+    .create-time {
+      position: absolute;
+      left: 10%;
+      .create-start {
+        position: absolute;
         display: inline-block;
-        width: 10em;
-        height: 10em;
-        margin: 5% 5% 0 5%;
-      }
-      .created-post-photo {
-        border: 1px solid;
-        display: inline-block;
-        width: 10em;
-        height: 10em;
-        margin: 5% 5% 0 1.5%;
-      }
-  }
-  .created-post-location {
-    margin: 0 0 10px 4%;
-      .created-post-address {
-        display: inline-block;
-        width: 10em;
-        margin: 15px 5% 15px 1.5%;
-      }
-      .created-post-directions-btn {
-        display: inline-block;
-        background-color: $buttonbg;
+        top: 385px;
+        width: 125px;
+        height: 20px;
         color: white;
-        padding: 8px 0;
+        color: darken($headerbg, 15%);
+        font-family: sans-serif;
+        border: solid 2px darken($border, 10%);
+        vertical-align: top;
+        input {
+          width: 75px;
+          height:20px;
+        }
+      }
+      .create-end {
+        position: absolute;
+        display: inline-block;
+        top: 385px;
+        left: 198px;
+        width: 125px;
+        height: 20px;
+        color: white;
+        color: darken($headerbg, 15%);
+        font-family: sans-serif;
+        border: solid 2px darken($border, 10%);
+        vertical-align: top;
+        input {
+          width: 75px;
+          height:20px;
+        }
+      }
+    }
+    .create-description {
+      position: absolute;
+      top: 425px;
+      left: 10%;
+      height: 85px;
+      width:325px;
+      background-color: white;
+      padding: 5px 0;
+      border: solid 2px darken($border, 10%);
+      color: darken($headerbg, 15%);
+      font-family: sans-serif;
+    }
+  }
+
+  .create-post {
+    background-color: $buttonaccent2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+
+    &:hover{
+     background-color: darken($buttonaccent2, 5%);
+    }
+  }
+
+//-------- Created View --------------//
+
+    .created-info {
+      position: relative;
+      .created-post-title {
+        position: absolute;
+        top: 20px;
+        left: 35px;
+        width: 325px;
+        height: 20px;
+        font-size: 2em;
         text-align: center;
-        width: 10em;
-        margin: 15px 3% 0 1.75%;
       }
-  }
-  .created-post-calendar {
-    margin: 4%;
-    width: 355px;
-    // border: 1px solid;
-    .created-post-time {
-    //   border: 1px solid;
-      display: inline-block;
-      .created-post-start {
-        padding: 5px 0 0 0;
-        width: 180px;
-        margin: 0 0 3px 4%;
-        //   border: 1px solid;
+      .created-post-description {
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        width: 325px;
+        color: darken($headerbg, 15%);
+        font-family: sans-serif;
       }
-      .created-post-end {
-        padding: 5px 0 0 0;
-        width: 180px;
-        margin: 0 0 3px 4%;
+      .created-post-images {
+        display: block;
+        position: absolute;
+          .created-post-map {
+            display: inline-block;
+            position: absolute;
+            top: 190px;
+            left: 20px;
+            width: 160px;
+            height: 160px;
+          }
+          .created-post-photo {
+            display: inline-block;
+            position: absolute;
+            top: 190px;
+            left: 220px;
+            width: 160px;
+            height: 160px;
+          }
+      }
+      .created-post-location {
+        position: absolute;
+        display: block;
+          .created-post-address {
+            display: inline-block;
+            position: absolute;
+            top: 365px;
+            left: 20px;
+            width: 160px;
+            height: 20px;
+            margin: 15px 5% 15px 1.5%;
+          }
+          .created-post-directions-btn {
+            display: inline-block;
+            background-color: $buttonbg;
+            border-radius: 5px;
+            color: white;
+            padding: 8px 0;
+            position: absolute;
+            text-align: center;
+            top: 365px;
+            left: 220px;
+            width: 160px;
+            height: 20px;
+          }
+      }
+      .created-post-calendar {
+        position: absolute;
+        // border: 1px solid;
+        .created-post-time {
+            position: absolute;
         //   border: 1px solid;
+          display: inline-block;
+          .created-post-start {
+            padding: 5px 0 0 0;
+            position: absolute;
+            top: 425px;
+            left: 20px;
+            width: 160px;
+            height: 20px;
+            //   border: 1px solid;
+          }
+          .created-post-end {
+            padding: 5px 0 0 0;
+            position: absolute;
+            top: 450px;
+            left: 20px;
+            width: 160px;
+            height: 20px;
+            //   border: 1px solid;
+          }
+        }
+        .created-post-calendar-btns {
+          position: absolute;
+          vertical-align: top;
+          display: inline-block;
+          .google-cal {
+            position: absolute;
+            display: inline-block;
+            top: 420px;
+            left: 230px;
+            width: 80px;
+            height: 20px;
+          }
+          .ical {
+            position: absolute;
+            display: inline-block;
+            top: 420px;
+            left: 305px;
+            width: 80px;
+            height: 20px;
+          }
+        }
       }
     }
-    .created-post-calendar-btns {
-    //   border: 1px solid;
-      vertical-align: top;
-      display: inline-block;
-      margin: 0 0 0 4%;
-      .google-cal {
-        border: 1px solid;
-        display: inline-block;
-        width: 4em;
-        height: 4em;
-        margin-right: 1em;
-      }
-      .ical {
-        border: 1px solid;
-        display: inline-block;
-        width: 4em;
-        height: 4em;
-      }
-    }
-  }
   .created-post-footer-home {
     background-color: $buttonaccent2;
     position: fixed;
@@ -716,6 +840,7 @@ body{
     cursor: pointer;
     font-weight: 200;
   }
+
 
 //----------chat page styling----------//
   .chat-subheader{
@@ -793,4 +918,106 @@ body{
     bottom: 0;
   }
 
+// ------------ Your Claimed Posts --------- //
+
+.claimed-title {
+  font-size: 2em;
+  margin: 5% 0 0 5%;
+  display: inline-block;
+  padding: 5px 0;
 }
+
+.claimed-chat {
+  display: inline;
+  margin: 5% 0 0 5%;
+  margin-left: 20%;
+  font-size: 2em;
+  background-color: $buttonaccent2;
+  color: white;
+  padding: 5px;
+}
+
+.claimed-supplier-name {
+  margin: 5% 0 0 5%;
+}
+
+.claimed-image {
+  margin: 5%;
+}
+
+.claimed-details {
+  margin: 5% 5% 0 5%;
+}
+
+.claimed-location {
+  margin: 5% 0 0 5%;
+}
+
+.claimed-location-image {
+  display: inline-block;
+  margin: 5% 0 0 5%;
+}
+
+.claimed-time-calendar-wrap {
+  border: solid 1px red;
+  display: inline-block;
+  margin-left: 10%;
+  .claimed-time-wrap {
+    display: inline;
+    margin: 10px 0;
+    .claimed-start {
+      display: inline;
+      padding: 5px;
+    }
+    .claimed-end {
+      display: inline;
+      padding: 5px;
+    }
+  }
+  .claimed-calendar-wrap {
+    border: solid 1px red;
+    display: block;
+    .claimed-iCal {
+      // border: solid thin black;
+      display: block;
+      margin-top: 10px;
+    }
+    .claimed-googleCal {
+      // border: solid thin black;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+}
+
+.claimed-details-title {
+  margin: 5%;
+}
+
+.claimed-bottom-button {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  color: white;
+  cursor: pointer;
+  background-color: $buttonbg;
+}
+
+.claimed-remove-button {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  margin-left: 50%;
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  color: white;
+  cursor: pointer;
+  background-color: $buttonaccent2;
+}
+
+}
+//close body
