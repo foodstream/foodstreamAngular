@@ -43,7 +43,6 @@ foodStream.config(function($routeProvider){
     })
 
     .when('/claimed', {
-
       templateUrl : '/views/claimed.html',
       controller : 'claimedController'
     })
@@ -56,6 +55,11 @@ foodStream.config(function($routeProvider){
     .when('/chat', {
       templateUrl : '/views/chat.html',
       controller: 'chatController'
+    })
+
+    .when('/profilePublic', {
+      templateUrl : '/views/publicprofile.html',
+      controller : 'publicProfileController'
     })
 
     .otherwise({
