@@ -24,6 +24,8 @@ foodStream.controller('editProfileController', ['$http', '$scope', function($htt
         }, function error(response){
           console.log("edit profile failed");
           console.log(response);
+          alert('edit failed');
+          $location.path('/home');
       });
 
 
