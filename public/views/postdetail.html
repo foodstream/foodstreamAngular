@@ -1,8 +1,8 @@
-<div class = "post-detail-title">Post Title</div>
+<div class = "post-detail-title">{{post.title}}</div>
 
-{{detailed}}
 
-<div class = "post-detail-supplier-name">Supplier Name <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+
+<div class = "post-detail-supplier-name">{{post.supplier_id}} <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
 </div>
 
 <div class = "post-detail-image">
@@ -10,18 +10,18 @@
 </div>
 
 <div class = "post-detail-details">
-  Art of cool durham city of medicine edgemont bay 7, carolina theatre wunc chapel hill street fifty-five the pickle dino trail durham bulls, the kress book exchange.
+  {{post.details}}
 </div>
 
-<div class = "post-detail-location">Location</div>
+<div class = "post-detail-location">{{post.location.address_1}}<br>{{post.location.city}} {{post.location.state}} {{post.location.zip_code}}</div>
 <div class = "post-detail-location-image">
   <img src = "assets/images/map-thumbnail.png" width = "100px">
 </div>
 
-<div class = "post-detail-start">Start Time</div>
-<div class = "post-detail-end">End Time</div>
+<div class = "post-detail-start">{{post.start_at}}</div>
+<div class = "post-detail-end">{{post.end_at}}</div>
 
 
 
-<div class = "post-detail-bottom-button">Back</div>
-<div class = "post-detail-claim-button">Claim Post</div>
+<div class = "post-detail-bottom-button" ng-click='goHome()'>Back</div>
+<div class = "post-detail-claim-button" >Claim Post</div>
