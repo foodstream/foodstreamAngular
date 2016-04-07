@@ -133,6 +133,8 @@ body {
     color: white;
     padding: 2% 35%;
     font-size: 1.3em; }
+    body .sign-up-submit-btn:hover {
+      background-color: #7eb73d; }
   body .sign-up-back-btn {
     position: absolute;
     bottom: 0;
@@ -142,6 +144,8 @@ body {
     color: white;
     background-color: #0c8183;
     text-align: center; }
+    body .sign-up-back-btn:hover {
+      background-color: #0a6a6c; }
   body .home-subheader {
     background-color: #fbfbc4;
     width: 100%;

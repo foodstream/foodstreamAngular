@@ -1,10 +1,10 @@
 foodStream.controller('detailController', ['$http', '$scope', 'getPostDetail', '$location', function($http, $scope, getPostDetail, $location) {
    console.log("detail ctrllr up");
   //  console.log(getPostDetail.clickedPost);
-  var postId = localStorage.getItem('postId');
+  var postId = localStorage.getItem('resultsPostId');
   var token = localStorage.getItem('token');
   console.log(postId);
-  localStorage.removeItem('postId');
+  localStorage.removeItem('resultsPostId');
 
   $http({
     method: 'GET',
@@ -17,6 +17,6 @@ foodStream.controller('detailController', ['$http', '$scope', 'getPostDetail', '
 });
 
    $scope.goHome = function(){
-     $location.path('/home');
+     $location.path('/results');
    }
 }]);

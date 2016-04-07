@@ -178,6 +178,9 @@ body{
     color: white;
     padding: 2% 35%;
     font-size: 1.3em;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
 
   .sign-up-back-btn{
@@ -189,6 +192,9 @@ body{
     color: white;
     background-color: $buttonbg;
     text-align: center;
+    &:hover{
+      background-color: darken($buttonbg, 5%);
+    }
   }
 
 //------ Home Page/Dashboard ------ //
@@ -244,6 +250,9 @@ body{
           font-size: .5em;
           font-family: 'overpass', sans-serif;
         }
+      }
+      &:hover{
+        
       }
     }
     .home-details {
