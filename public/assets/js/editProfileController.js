@@ -15,9 +15,9 @@ foodStream.controller('editProfileController', ['$http', '$scope', function($htt
     $scope.userDescription;
 
     console.log($scope.first, $scope.last);
-    var param = JSON.stringify({first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, location_id:1});
+    var param = {first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, location_id:1};
 
-    $http.put( 'https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+  $scope.userToken, param)
+    $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+  $scope.userToken, param)
       .then(function success(response){
           console.log("edited successfully");
           $location.path('/home');
@@ -25,7 +25,6 @@ foodStream.controller('editProfileController', ['$http', '$scope', function($htt
           console.log("edit profile failed");
           console.log(response);
       });
-
 
   }
 
