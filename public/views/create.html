@@ -2,8 +2,8 @@
 	<div class = "create-subheader">
 		Create Post
 	</div>
-
-	<input class = "create-title" placeholder="Title"></input>
+<form ng-submit = 'submit()'>
+	<input class = "create-title" placeholder="Title" ng-model='title'></input>
 
 	<div class='create-picture'>
 		<i class="fa fa-camera-retro pic-box">
@@ -11,17 +11,20 @@
 		</i>
 	</div>
 
-	<input class="create-location" placeholder="Location"></input>
+	<input class="create-location" placeholder="Location" ng-model='location'></input>
 
 	<div class="create-time">
-		<input class="create-start" placeholder="Start:"></input>
+		<input class="create-start" placeholder="Start:" ng-model='startTime'></input>
 
-		<input class="create-end" placeholder="End:"></input>
+		<input class="create-end" placeholder="End:" ng-model='endTime'></input>
    </div>
 
-	<textarea class = "create-description" placeholder="Description"></textarea>
+	<textarea class = "create-description" placeholder="Description" ng-model='description'></textarea>
 </div>
 
+
+<!-- <input type = 'submit' value='Create Post'/> -->
 <div class = "create-post">
 	Create Post
 </div>
+</form>
