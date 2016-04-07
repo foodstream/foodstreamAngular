@@ -1,7 +1,7 @@
 foodStream.controller('loginController', ['$http', '$scope', '$location', function($http, $scope, $location){
   console.log('login whydonchya');
 
-  $scope.submit = function(){
+  $scope.submitLogin = function(){
     console.log('click');
     console.log($scope.username);
     console.log($scope.password);
@@ -16,8 +16,13 @@ foodStream.controller('loginController', ['$http', '$scope', '$location', functi
       $location.path('/home');
     }, function errorCallback(response){
       console.log('not post?')
+      alert('that is not a valid username/password')
     });
+  }//end of submit login
 
+  $scope.submitSignup = function(){
+    console.log('click!!');
+    $location.path('/signUp')
   }
 
 }]);
