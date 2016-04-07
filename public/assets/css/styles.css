@@ -208,11 +208,11 @@ body {
     margin: 5%; }
   body .post-detail-start {
     margin: 5%;
-    display: inline;
+    display: block;
     border: solid thin black; }
   body .post-detail-end {
     margin: 5%;
-    display: inline;
+    display: block;
     border: solid thin black; }
   body .post-detail-claim-button {
     background-color: #0c8183;
