@@ -7,10 +7,10 @@
 
 </div>
 
-
+<div ng-repeat = 'post in posts' ng-controller='resultsController'>
 <div class = "results-card">
-  <div class = "results-header">Transaction name
-    <span>Pick-up time</span>
+  <div class = "results-header">{{post.title}}
+    <span>{{post.end_at}}</span>
   </div>
 
   <div class = "results-pic">
@@ -19,21 +19,21 @@
   </div>
 
   <div class = "results-transaction-details">
-    <div class='results-supplier-name-text'>Supplier Name</div>
-    <div class='results-transaction-location'>Transaction Location</div>
-    <div class='results-transaction-details-text'>DEETS deets deets deets deets deets deets deets deets deets deets deets deets deets deets deets deets deets deets deets deets deets deets</div>
+    <div class='results-supplier-name-text'>{{post.supplier_id}}</div>
+    <div class='results-transaction-location'>{{post.location.address_1}}<br>{{post.location.city}} {{post.location.state}} {{post.location.zip_code}}</div>
+    <div class='results-transaction-details-text'>{{post.details}}</div>
   </div>
 
 
 
-  <div class = "results-details">
+  <div class = "results-details" ng-click='getDetails(post.id)'>
     <i class="fa fa-info-circle">
       <span class='search-details-text'>details</span>
     </i>
   </div>
 
 </div>
-
-<div class='results-footer'>
+</div>
+<div class='results-footer' ng-click='goHome()'>
   Home
 </div>
