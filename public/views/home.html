@@ -15,9 +15,8 @@
     </div>
 
     <div class = "home-transaction-details">
-      <div>{{post.location_id}}</div>
-      <div>{{post.supplier_id}}</div>
-      <div>Claimant Name</div>
+      <div>{{post.location.address_1}}<br>{{post.location.city}} {{post.location.state}} {{post.location.zip_code}}</div>
+      <div>{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}</div>
     </div>
 
     <div class = "home-chat">

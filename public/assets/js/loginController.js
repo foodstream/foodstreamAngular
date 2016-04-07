@@ -9,10 +9,12 @@ foodStream.controller('loginController', ['$http', '$scope', '$location', functi
       method: 'POST',
       url: 'https://sheltered-wildwood-38449.herokuapp.com/sessions/login?email='+$scope.username+'&password='+$scope.password
     }).then(function successCallback(response){
-      console.log('post?')
-      console.log(response.data.token)
+      console.log('post?');
+      console.log(response.data.token);
+      console.log(response.data.id);
 
       localStorage.setItem('token',response.data.token);
+      localStorage.setItem('userId', response.data.id);
       $location.path('/home');
     }, function errorCallback(response){
       console.log('not post?')

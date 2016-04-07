@@ -1,12 +1,11 @@
-//grab signup info
-//POST the new account info to our API
+
 
 foodStream.controller('signUpController', ['$http', '$scope', '$location', function($http, $scope, $location) {
-    // console.log("signup ctrllr up")
+    console.log("signup ctrllr up")
 
     $scope.submit = function() {
-      console.log('clicked!')
-    // $scope.newUser =
+      console.log('submit clicked!')
+
     $scope.email;
     $scope.password;
     $scope.organization;
@@ -17,19 +16,21 @@ foodStream.controller('signUpController', ['$http', '$scope', '$location', funct
 
     $http({
       method: 'POST',
-      url: "https://sheltered-wildwood-38449.herokuapp.com/users/create?email=" + $scope.email + "&password=" + $scope.password + "&company=" + $scope.organization
+      url: "https://sheltered-wildwood-38449.herokuapp.com/users?user[email]=" + $scope.email + "&user[password]=" + $scope.password + "&user[organization]=" + $scope.organization
     }).then(function successCallback(response) {
-        console.log('post?')
-        $location.path('/editProfile')
+          console.log(response.data.token)
+          console.log(response.data.id)
+          localStorage.setItem('token', response.data.token);
+          localStorage.setItem('userId', response.data.id);
+          console.log('new user posted');
+          $location.path('/editProfile');
       }, function errorCallback(response) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
-        alert(response)
-        console.log('no post?')
+          console.log(response);
+          console.log('user not posted');
       });
 
-    }
-
+    }//close submit function
+//already have an account? click here so you aren't trapped in signup if you are an existing user
     $scope.backToLogin = function(){
       $location.path('/landing');
     }
