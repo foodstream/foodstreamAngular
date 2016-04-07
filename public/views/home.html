@@ -27,7 +27,7 @@
     </div>
     <div class = "home-details" ng-click='detailsId(post.id)'>
       <i class="fa fa-info-circle">
-        <span class='home-details-text'>Details</span>
+        <span class='home-details-text' ng-click='createPost()'>Details</span>
       </i>
     </div>
 
@@ -36,4 +36,4 @@
 
 
 
-<div class = "home-post">Create Post</div>
+<div class = "home-post" ng-click='createPost()'>Create Post</div>

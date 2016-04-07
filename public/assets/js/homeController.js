@@ -8,7 +8,8 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'getPos
   }).then(function successCallback(response){
     console.log(response.data);
     $scope.posts = response.data;
-  }, function errorCallback(response){console.log('hate')
+  }, function errorCallback(response){
+    console.log(response)
 });
 
 $scope.detailsId = function(postId){
@@ -16,7 +17,7 @@ $scope.detailsId = function(postId){
   console.log(postId);
   localStorage.setItem('postId', postId)
   // getPostDetail.add(postId)
-  $location.path('/details');
+  $location.path('/claimed');
 }
 
 $scope.createPost = function(){

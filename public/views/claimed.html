@@ -1,19 +1,19 @@
-<div class = "claimed-title">Post Title</div>
+<div class = "claimed-title">{{post.title}}</div>
 
 <div class = "claimed-chat"><i class="fa fa-comment"></i> Chat</div>
 
-<div class = "claimed-supplier-name">Supplier Name <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+<div class = "claimed-supplier-name">{{post.supplier_id}} <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
 </div>
 
-<div class = "claimed-location">Location</div>
+<div class = "claimed-location">{{post.location.address_1}}<br>{{post.location.city}} {{post.location.state}} {{post.location.zip_code}}</div>
 <div class = "claimed-location-image">
   <img src = "assets/images/map-thumbnail.png" width = "100px">
 </div>
 
 <div class = "claimed-time-calendar-wrap">
   <div class = "claimed-time-wrap">
-    <div class = "claimed-start">Start Time</div>
-    <div class = "claimed-end">End Time</div>
+    <div class = "claimed-start">{{post.start_at}}</div>
+    <div class = "claimed-end">{{post.end_at}}</div>
   </div>
 
   <div class = "claimed-calendar-wrap">
@@ -29,8 +29,8 @@
 </div>
 
 <div class = "claimed-details">
-  This post has been claimed by you. This is your post. No one else can take this post away from you. Because there's no admin view, no there isn't. Only you have that power.
+  {{post.details}}
 </div>
 
-<div class = "claimed-bottom-button">Back</div>
+<div class = "claimed-bottom-button" ng-click='goHome()'>Back</div>
 <div class = "claimed-remove-button">Remove</div>
