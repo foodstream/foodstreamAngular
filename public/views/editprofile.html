@@ -9,13 +9,16 @@
 
 </div>
 
-<input class='edit-profile-first-name' type=text placeholder='First Name'>
-<input class='edit-profile-last-name' type=text placeholder='Last Name'>
-<input class='edit-profile-email' type=text placeholder='email'>
-<input class='edit-profile-organization' type=text placeholder='Organization'>
-<input class='edit-profile-location' type=text placeholder='Location (City, St.)'>
-<textarea class='edit-profile-description' type=text placeholder='Describe Yourself'></textarea>
+<form ng-submit = "submitEdit()">
+  <input class='edit-profile-first-name' type=text placeholder='First Name' ng-model = "first">
+  <input class='edit-profile-last-name' type=text placeholder='Last Name' ng-model = "last">
+  <input class='edit-profile-email' type=text placeholder='email' ng-model = "email">
+  <input class='edit-profile-organization' type=text placeholder='Organization' ng-model = "org">
+  <input class='edit-profile-location' type=text placeholder='Location (City, St.)' ng-model = "location">
+  <textarea class='edit-profile-description' type=text placeholder='Describe Yourself' ng-model = "description"></textarea>
 
-<div class='edit-profile-footer'>
-  Submit Profile
-</div>
+  <input type = "submit" value = "Submit" class='edit-profile-submit-btn'/>
+  <!-- <div class='edit-profile-footer'>
+    Submit Profile
+  </div> -->
+</form>
