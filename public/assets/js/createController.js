@@ -13,7 +13,7 @@ $('.create-post').on('click', function(){
   endTime = $('.create-end').val();
   description = $('.create-description').val();
   console.log(title, location, startTime, endTime, description)
-  var param = JSON.stringify({title:title, details:description, start_at:startTime, end_at:endTime,location_id:4, location:{address_1:location},  })
+  var param = JSON.stringify({title:title, details:description, start_at:startTime, end_at:endTime,location_id:5, location:{address_1:location},  })
   console.log(param);
   $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token, param
   ).then(function successCallback(response){

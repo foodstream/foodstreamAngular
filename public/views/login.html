@@ -7,37 +7,34 @@
 	<ul id="tab">
 	    <li class="active"> -->
 		<div class= "tab-container">
-		<div class="cb" ng-click="showDetails = ! showDetails">Log In</div>
-        <div class="cb" ng-click="showDetails = ! showDetails">Sign Up</div>
-        <div ng-hide="showDetails">
-            <p>
-				<form ng-submit = 'submit()' class= "form-container">
-				<input type='text' ng-model='username' placeholder="EMAIL">
-				<input type='text' ng-model='password' placeholder="PASSWORD">
+			<div class="cb" ng-click="showDetails = ! showDetails">Log In</div>
+      <div class="cb" ng-click="submitSignup()">Sign Up</div>
 
-				<input type = 'submit' value='Submit'/>
-
-				</form>
-            </p>
-        </div>
-        <div ng-show="showDetails">
-			<p>
-				<form ng-submit = 'submit()' class= "form-container">
-				<input type='text' ng-model='username' placeholder="EMAIL  GOES HERE">
-				<input type='text' ng-model='password' placeholder="CHOOSE PASSWORD">
-
-				<input type = 'submit' value='Submit'/>
-
-				</form>
-            </p>
-        </div>
-	    </div>
+			<div ng-hide="showDetails">
+        <p>
+					<form ng-submit = 'submitLogin()' class= "form-container">
+						<input type='text' ng-model='username' placeholder="login email" class='landing-login-email-input'>
+						<input type='password' ng-model='password' placeholder="password" class='landing-login-password-input'>
+						<input type = 'submit' value='Submit' class='landing-login-submit'/>
+					</form>
+        </p>
+      </div>
+      <div ng-show="showDetails">
+				<p>
+					<form ng-submit = 'submitSignup()' class= "form-container">
+						<input type='text' ng-model='username' placeholder="EMAIL  GOES HERE" >
+						<input type='text' ng-model='password' placeholder="CHOOSE PASSWORD" >
+						<input type = 'submit' value='Submit'/>
+					</form>
+        </p>
+      </div>
+	</div>
 		<!-- </li>
 		<li>
 			<h2>Please enter your email address and choose a password</h2>
 		</li>
 	</ul> -->
 
-	<div class="login-about">Lorem ipsum dolor sit amet, aenean purus. Tortor suscipit ullamcorper orci wisi neque curabitur. Consequat lorem mauris eros cursus odio, pellentesque mollis semper elit nam in. Porttitor amet pulvinar amet pharetra, suscipit massa pretium, interdum tincidunt nunc, justo et taciti et faucibus diam, urna libero ligula elementum cras ac eget.</div>
+	<div class="login-about">If one examines postsemiotic textual theory, one is faced with a choice: either reject the deconstructivist paradigm of reality or conclude that the significance of the artist is deconstruction, but only if sexuality is equal to consciousness; otherwise, we can assume that truth has intrinsic meaning. The example of nationalism prevalent in Stone’s Heaven and Earth emerges again in Platoon. It could be said that the subject is contextualised into a cultural capitalism that includes consciousness as a totality.</div>
 
 	<div class = "login-legal">Legal stuff</div>
