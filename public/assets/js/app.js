@@ -5,11 +5,26 @@ foodStream.controller('appController', ['$http', '$scope', function($http, $scop
 }]);
 
 foodStream.factory('getPostDetail', function() {
-  var details = {};
-  details.posts = function(postId){
-    console.log(postId);
-  }
-  return details;
+var clickedPost = {};
+// // var theId;
+// clickedPost.number = []
+//
+// clickedPost.add = function(postId){
+//   clickedPost.number.push({id: postId});
+//     console.log(clickedPost.number);
+// };
+//
+// // function(postId){
+// //     console.log(postId);
+// //     // console.log(details);
+// //     theId = postId;
+// //     // var clickedPost =  postId;
+// //
+// //   }
+//   console.log(clickedPost);
+  return clickedPost;
+
+
  });
 
 foodStream.config(function($routeProvider){

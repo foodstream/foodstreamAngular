@@ -11,10 +11,16 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'getPos
   }, function errorCallback(response){console.log('hate')
 });
 
-$scope.details = function(postId){
+$scope.detailsId = function(postId){
   console.log('clicked');
   console.log(postId);
-  getPostDetail.posts(postId)
+  localStorage.setItem('postId', postId)
+  // getPostDetail.add(postId)
+  $location.path('/details');
+}
+
+$scope.createPost = function(){
+  $location.path('/create');
 }
 
 }])
