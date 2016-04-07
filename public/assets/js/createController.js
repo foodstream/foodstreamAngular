@@ -19,7 +19,7 @@ $('.create-post').on('click', function(){
   ).then(function successCallback(response){
     console.log('post?')
     console.log(response)
-
+    $location.path('/home')
   }, function errorCallback(response){
     console.log('not post?')
   });

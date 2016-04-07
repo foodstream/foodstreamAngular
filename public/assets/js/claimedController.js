@@ -34,6 +34,7 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
      if(supplierId  == userId){
        $http.delete('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
          console.log('post deleted')
+         $location.path('/home')
        }, function errorCallback(response){
          console.log('not deleted')
        })
@@ -43,6 +44,7 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
          var param = JSON.stringify({claimed:'false', claimant_id: 'null'})
          $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, param).then(function successCallback(response){
            console.log('UNCLAIMED');
+           $location.path('/home')
          }, function errorCallback(response){
            console.log('not unclaimed');
          });
