@@ -1,8 +1,31 @@
 var foodStream = angular.module("foodStream", ['ngRoute']);
 
 foodStream.controller('appController', ['$http', '$scope', function($http, $scope){
-  console.log("app ctrlr is workinggg");
-}])
+  // console.log("app ctrlr is workinggg");
+}]);
+
+foodStream.factory('getPostDetail', function() {
+var clickedPost = {};
+// // var theId;
+// clickedPost.number = []
+//
+// clickedPost.add = function(postId){
+//   clickedPost.number.push({id: postId});
+//     console.log(clickedPost.number);
+// };
+//
+// // function(postId){
+// //     console.log(postId);
+// //     // console.log(details);
+// //     theId = postId;
+// //     // var clickedPost =  postId;
+// //
+// //   }
+//   console.log(clickedPost);
+  return clickedPost;
+
+
+ });
 
 foodStream.config(function($routeProvider){
   $routeProvider
