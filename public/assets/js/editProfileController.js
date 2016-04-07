@@ -1,4 +1,4 @@
-foodStream.controller('editProfileController', ['$http', '$scope', function($http, $scope){
+foodStream.controller('editProfileController', ['$http', '$scope', '$location', function($http, $scope, $location){
   console.log('edit ctrlr here');
   $scope.userToken = localStorage.getItem('token');
   userId = localStorage.getItem('userId');
