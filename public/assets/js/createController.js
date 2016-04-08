@@ -29,4 +29,18 @@ $('.create-post').on('click', function(){
     console.log($scope.title);
     console.log('clicked!')
   };
+
+// PICKADATE
+
+$(".create-start-na").pickadate({
+format: 'mm/dd/yyyy'});
+$(".create-start-time-na").pickatime({
+format: 'HH:i'});
+
+
+$(".create-end-na").pickadate({
+format: 'mm/dd/yyyy'});
+$(".create-end-time-na").pickatime({
+format: 'HH:i'});
+
 }]);
