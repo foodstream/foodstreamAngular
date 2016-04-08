@@ -1,13 +1,30 @@
-foodStream.controller('homeController', ['$http', '$scope', '$location', 'getPostDetail', function($http, $scope, $location, getPostDetail){
+foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLocationService', function($http, $scope, $location, geolocation){
   var token = localStorage.getItem('token')
   // console.log(token);
+
+  $scope.position = null;
+  $scope.message = "Determining gelocation...";
+
+  geolocation().then(function (position) {
+    $scope.position = position;
+    console.log($scope.position.coords.latitude)
+    console.log($scope.position.coords.longitude)
+  }, function (reason) {
+    $scope.message = "Could not be determined."
+  });
+
+
   $scope.search = function(){
+
     $location.path('/results');
   }
 
 
 
+
+
   $scope.posts;
+
   $http({
     method: 'GET',
     url:' https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token
@@ -16,7 +33,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'getPos
     $scope.posts = response.data;
   }, function errorCallback(response){
     console.log(response)
-});
+  });
 
 $scope.detailsId = function(postId){
   console.log('clicked');
