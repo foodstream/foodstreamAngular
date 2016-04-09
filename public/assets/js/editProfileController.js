@@ -74,4 +74,6 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
   }
 
+
+
 }]);
