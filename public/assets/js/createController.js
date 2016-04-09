@@ -43,14 +43,14 @@ $('.create-post').on('click', function(){
   console.log(param);
 
   //send post values to rails to create a post!
-  // $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token, param
-  // ).then(function successCallback(response){
-  //   console.log('post?')
-  //   console.log(response)
-  //   $location.path('/home')
-  // }, function errorCallback(response){
-  //   console.log('not post?')
-  // });
+  $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token, param
+  ).then(function successCallback(response){
+    console.log('post?')
+    console.log(response)
+    $location.path('/home')
+  }, function errorCallback(response){
+    console.log('not post?')
+  });
 });
 
 
