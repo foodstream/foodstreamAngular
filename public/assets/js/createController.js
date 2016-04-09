@@ -19,52 +19,57 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
 
   //use google places autocomplete to input location addy & lat/long
   var autocompleteFrom = new google.maps.places.Autocomplete(inputFrom);
-      google.maps.event.addListener(autocompleteFrom, 'place_changed', function() {
-          var place = autocompleteFrom.getPlace();
+    google.maps.event.addListener(autocompleteFrom, 'place_changed', function() {
+        var place = autocompleteFrom.getPlace();
 
-          lat = place.geometry.location.lat();
-          lng = place.geometry.location.lng();
-          address = place.formatted_address;
-            console.log(lat, lng, address)
-      });
+        lat = place.geometry.location.lat();
+        lng = place.geometry.location.lng();
+        address = place.formatted_address;
+          console.log(lat, lng, address)
+    });
 
+  //use pickadate to get standardized date-times
+  // starting time
+  $(".create-start-na").pickadate({
+  format: 'yyyy/mm/dd'});
+  $(".create-start-time-na").pickatime({
+  format: 'h:iA'});
 
+  //ending time
+  $(".create-end-na").pickadate({
+  format: 'yyyy/mm/dd'});
+  $(".create-end-time-na").pickatime({
+  format: 'h:iA'});
 
-//use jquery to grab text (ng-form didnt like it, sue me)
-$('.create-post').on('click', function(){
-  title = $('.create-title').val();
-  // location = $('.create-location').val();
-  startTime = $('.create-start').val();
-  endTime = $('.create-end').val();
-  description = $('.create-description').val();
-  console.log(title, startTime, endTime, description, lat, lng, address)
-  //put values into json to send to rails
-  var param = JSON.stringify({title:title, details:description, start_at:startTime, end_at:endTime,location_id:5, location:{address_string:address, latitude:lat, longitude:lng}, })
-  console.log(param);
+  //use jquery to grab text (ng-form didnt like it, sue me)
+  $('.create-post').on('click', function(){
+    title = $('.create-title').val();
 
-  //send post values to rails to create a post!
-  $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token, param
-  ).then(function successCallback(response){
-    console.log('post?')
-    console.log(response)
-    $location.path('/home')
-  }, function errorCallback(response){
-    console.log('not post?')
+    startDate = $('.create-start-na').val()
+    startTime = $('.create-start-time-na').val();
+    //create strating date for rails
+    startString = startDate.concat(' ' + startTime);
+    endDate = $('.create-end-na').val();
+    endTime = $(".create-end-time-na").val();
+    //create ending date for rails
+    endString = endDate.concat(' ' + endTime);
+
+    description = $('.create-description').val();
+
+    console.log(title, startString, endString, description, lat, lng, address)
+    //put values into json to send to rails
+    var param = JSON.stringify({title:title, details:description, start_at:startString, end_at:endString,location_id:null, location:{address_string:address, lat:lat, long:lng}, })
+    console.log(param);
+
+    //send post values to rails to create a post!
+    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts?token='+token, param
+    ).then(function successCallback(response){
+      console.log('post?')
+      console.log(response)
+      $location.path('/home')
+    }, function errorCallback(response){
+      console.log('not post?')
+    });
   });
-});
-
-
-// PICKADATE
-
-$(".create-start-na").pickadate({
-format: 'mm/dd/yyyy'});
-$(".create-start-time-na").pickatime({
-format: 'HH:i'});
-
-
-$(".create-end-na").pickadate({
-format: 'mm/dd/yyyy'});
-$(".create-end-time-na").pickatime({
-format: 'HH:i'});
 
 }]);

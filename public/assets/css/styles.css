@@ -15,6 +15,9 @@ body {
     display: inline-block;
     padding: 2% 2%;
     font-size: 1.5em; }
+    body .app-header .app-header-login-icon {
+      float: right;
+      margin: 0 5% 0 0; }
   body .edit-profile-subheader {
     background-color: #fbfbc4;
     width: 100%;
@@ -526,8 +529,7 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
-
-    body .create-info .create-start-na {
+    body .create-info .create-start {
       position: absolute;
       display: inline-block;
       top: 362px;
@@ -538,35 +540,10 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
-
-    body .create-info .create-end-na {
+    body .create-info .create-end {
       position: absolute;
       display: inline-block;
       top: 362px;
-      left: 57%;
-      height: 20px;
-      background-color: white;
-      width: 40%;
-      border: solid 2px #F4F4F4;
-      font-size: 1em;
-      margin-top: 2%;
-      color: black; }
-
-    body .create-info .create-start-time-na {
-      position: absolute;
-      display: inline-block;
-      top: 392px;
-      height: 20px;
-      background-color: white;
-      width: 40%;
-      border: solid 2px #F4F4F4;
-      font-size: 1em;
-      margin-top: 2%;
-      color: black; }
-    body .create-info .create-end-time-na {
-      position: absolute;
-      display: inline-block;
-      top: 392px;
       left: 57%;
       height: 20px;
       background-color: white;
@@ -577,7 +554,7 @@ body {
       color: black; }
     body .create-info .create-description {
       position: absolute;
-      top: 430px;
+      top: 400px;
       height: 85px;
       background-color: white;
       width: 95%;

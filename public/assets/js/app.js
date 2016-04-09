@@ -1,8 +1,39 @@
 var foodStream = angular.module("foodStream", ['ngRoute']);
 
-foodStream.controller('appController', ['$http', '$scope', function($http, $scope){
-  // console.log("app ctrlr is workinggg");
+foodStream.controller('appController', ['$http', '$scope', '$location', function($http, $scope, $location){
+
+  //create a variable that changes when user is logged in for ng-show
+  $scope.logged=false;
+  //get login token out of localstorage
+  $scope.userToken = localStorage.getItem('token');
+  //get userId out of localstorage
+  userId = localStorage.getItem('userId');
+  $scope.first;
+  //check and see if user is logged in...if they are, show a user icon in the header that is a link to the edit-profile page
+  $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+$scope.userToken).then(function success(response){
+        console.log(response);
+        $scope.first = response.data.first_name;
+        $scope.last = response.data.last_name;
+        $scope.email = response.data.email;
+        $scope.org = response.data.organization;
+    }, function error(response){
+      console.log('GET failed');
+  });
+
+  //if a token exists, log the user in
+  if($scope.userToken != null){
+    $scope.logged = true;
+    console.log('logged', $scope.logged)
+    $scope.apply;
+  }
+
+  //when you click on the user icon, you go to the edit profile page...
+  $scope.goToProfile = function(){
+    $location.path('/editProfile')
+  }
 }]);
+
+
 
 foodStream.factory('getPostDetail', function() {
 var clickedPost = {};
