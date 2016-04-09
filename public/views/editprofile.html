@@ -5,9 +5,18 @@
   </span>
 </div>
 
-<div class='edit-profile-add-picture'><i class="fa fa-camera-retro pic-box"><span class='edit-profile-add-picture-txt'>add a picture</span></i>
+<!-- <div class='edit-profile-add-picture'><i class="fa fa-camera-retro pic-box"><span class='edit-profile-add-picture-txt'>add a picture</span></i>
 
-</div>
+</div> -->
+
+<form role="form" name="resourceForm" ng-submit="save()">
+    
+    <!--some other fields here -->
+    <div class="form-group">
+      <label>Attachment</label>
+      <input type="file" ngf-select ng-model="myResource.file_attachment" />
+    </div>
+  </form>
 
 <form ng-submit = "submitEdit()">
   <input class='edit-profile-first-name' type=text placeholder='First Name' ng-model = "first">
