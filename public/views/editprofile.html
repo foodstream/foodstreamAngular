@@ -1,0 +1,24 @@
+<div class="edit-profile-subheader">
+  <span class='edit-profile-subheader-txt'>Your Profile</span>
+  <span class='edit-profile-subheader-change-pass'>
+    Change Your <br> Password
+  </span>
+</div>
+
+<div class='edit-profile-add-picture'><i class="fa fa-camera-retro pic-box"><span class='edit-profile-add-picture-txt'>add a picture</span></i>
+
+</div>
+
+<form ng-submit = "submitEdit()">
+  <input class='edit-profile-first-name' type=text placeholder='First Name' ng-model = "first">
+  <input class='edit-profile-last-name' type=text placeholder='Last Name' ng-model = "last">
+  <input class='edit-profile-email' type=text placeholder='email' ng-model = "email">
+  <input class='edit-profile-organization' type=text placeholder='Organization' ng-model = "org">
+  <input class='edit-profile-location' type=text placeholder='Location (City, St.)' ng-model = "userLocation">
+  <textarea class='edit-profile-description' type=text placeholder='Describe Yourself' ng-model = "userDescription"></textarea>
+
+  <input type = "submit" value = "Submit" class='edit-profile-submit-btn'/>
+  <!-- <div class='edit-profile-footer'>
+    Submit Profile
+  </div> -->
+</form>

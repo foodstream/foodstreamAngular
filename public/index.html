@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>foodstream</title>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://overpass-30e2.kxcdn.com/overpass.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+    <link href="assets/js/pickadate/lib/themes/default.css" rel="stylesheet" type='text/css'>
+    <link href="assets/js/pickadate/lib/themes/default.date.css" rel="stylesheet" type='text/css'>
+    <link href="assets/js/pickadate/lib/themes/default.time.css" rel="stylesheet" type='text/css'>
+
+  </head>
+
+  <body ng-app="foodStream" ng-controller = "appController">
+
+    <div class="app-header">foodstream</div>
+
+    <div>
+      <ng-view></ng-view>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.js"></script>
+    <script src = "assets/js/app.js"></script>
+    <script src='assets/js/loginController.js'></script>
+    <script src = "assets/js/signUpController.js"></script>
+    <script src='assets/js/editProfileController.js'></script>
+    <script src='assets/js/homeController.js'></script>
+    <script src='assets/js/detailController.js'></script>
+    <script src='assets/js/createController.js'></script>
+    <script src='/assets/js/claimedController.js'></script>
+
+    <script src='/assets/js/publicProfileController.js'></script>
+
+    <script src='/assets/js/resultsController.js'></script>
+
+    <script src="assets/js/pickadate/lib/picker.js"></script>
+     <script src="assets/js/pickadate/lib/picker.date.js"></script>
+     <script src="assets/js/pickadate/lib/picker.time.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,39 @@
+<div class='results-subheader'>
+  <input class='results-search' placeholder='Search for Food'></input>
+  <i class="fa fa-search"></i>
+
+  <div class='results-subheader-text'>Search for food within <input class = "results-distance-search"></input> miles of my location
+  </div>
+
+</div>
+
+<div ng-repeat = 'post in posts' ng-controller='resultsController'>
+<div class = "results-card">
+  <div class = "results-header">{{post.title}}
+    <span>{{post.end_at}}</span>
+  </div>
+
+  <div class = "results-pic">
+    <div class='results-add-picture'><i class="fa fa-camera-retro pic-box"><span class='results-add-picture-txt'>add a picture</span></i>
+    </div>
+  </div>
+
+  <div class = "results-transaction-details">
+    <div class='results-supplier-name-text'>{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}</div>
+    <div class='results-transaction-location'>{{post.location.address_1}}<br>{{post.location.city}} {{post.location.state}} {{post.location.zip_code}}</div>
+    <div class='results-transaction-details-text'>{{post.details}}</div>
+  </div>
+
+
+
+  <div class = "results-details" ng-click='getDetails(post.id)'>
+    <i class="fa fa-info-circle">
+      <span class='search-details-text'>details</span>
+    </i>
+  </div>
+
+</div>
+</div>
+<div class='results-footer' ng-click='goHome()'>
+  Home
+</div>

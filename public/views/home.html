@@ -1,0 +1,38 @@
+
+<div class='home-subheader'>
+
+  <input class = "home-search" placeholder="Search for food"></input>
+  <i class="fa fa-search" ng-click='search()'></i>
+
+  <div class='home-subheader-text'>Search for food within <input class = "home-distance-search"></input> miles of my location
+  </div>
+</div>
+
+<div ng-repeat = "post in posts" ng-controller = "homeController">
+  <div class = "home-card">
+    <div class = "home-header">{{post.title}}
+      <span>{{post.end_at}}</span>
+    </div>
+
+    <div class = "home-transaction-details">
+      <div>{{post.location.address_1}}<br>{{post.location.city}} {{post.location.state}} {{post.location.zip_code}}</div>
+      <div>{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}</div>
+    </div>
+
+    <div class = "home-chat">
+      <i class="fa fa-comment">
+        <span class='home-chat-text'>Chat</span>
+      </i>
+    </div>
+    <div class = "home-details" ng-click='detailsId(post.id)'>
+      <i class="fa fa-info-circle">
+        <span class='home-details-text' ng-click='createPost()'>Details</span>
+      </i>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class = "home-post" ng-click='createPost()'>Create Post</div>
