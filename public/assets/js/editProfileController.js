@@ -1,5 +1,6 @@
 foodStream.controller('editProfileController', ['$http', '$scope', '$location', function($http, $scope, $location){
   console.log('edit ctrlr here');
+<<<<<<< HEAD
   //get login token out of localstorage
   $scope.userToken = localStorage.getItem('token');
   //get userId out of localstorage
@@ -49,6 +50,24 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     // console.log($scope.first, $scope.last);
     var param = JSON.stringify({first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, email:$scope.email, orgainization:$scope.org, address_string:$scope.userLocation, latitude:lat, longitude:lng, location_id:null});
     console.log(param)
+=======
+  $scope.userToken = localStorage.getItem('token');
+  userId = localStorage.getItem('userId');
+  console.log($scope.userToken)
+
+  $scope.submitEdit = function(){
+    console.log("submit edit button clicked");
+
+    $scope.first;
+    $scope.last;
+    $scope.email;
+    $scope.org;
+    $scope.userLocation;
+    $scope.userDescription;
+
+    console.log($scope.first, $scope.last);
+    var param = JSON.stringify({first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, location_id:1});
+>>>>>>> 0b8006e1ee36f322b4439023ef202716f5ea39e0
 
     $http.put( 'https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+  $scope.userToken, param)
       .then(function success(response){

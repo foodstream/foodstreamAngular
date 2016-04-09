@@ -526,7 +526,11 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
+<<<<<<< HEAD
     body .create-info .create-start {
+=======
+    body .create-info .create-start-na {
+>>>>>>> 0b8006e1ee36f322b4439023ef202716f5ea39e0
       position: absolute;
       display: inline-block;
       top: 362px;
@@ -537,7 +541,11 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
+<<<<<<< HEAD
     body .create-info .create-end {
+=======
+    body .create-info .create-end-na {
+>>>>>>> 0b8006e1ee36f322b4439023ef202716f5ea39e0
       position: absolute;
       display: inline-block;
       top: 362px;
@@ -549,9 +557,38 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
+<<<<<<< HEAD
     body .create-info .create-description {
       position: absolute;
       top: 400px;
+=======
+    body .create-info .create-start-time-na {
+      position: absolute;
+      display: inline-block;
+      top: 392px;
+      height: 20px;
+      background-color: white;
+      width: 40%;
+      border: solid 2px #F4F4F4;
+      font-size: 1em;
+      margin-top: 2%;
+      color: black; }
+    body .create-info .create-end-time-na {
+      position: absolute;
+      display: inline-block;
+      top: 392px;
+      left: 57%;
+      height: 20px;
+      background-color: white;
+      width: 40%;
+      border: solid 2px #F4F4F4;
+      font-size: 1em;
+      margin-top: 2%;
+      color: black; }
+    body .create-info .create-description {
+      position: absolute;
+      top: 430px;
+>>>>>>> 0b8006e1ee36f322b4439023ef202716f5ea39e0
       height: 85px;
       background-color: white;
       width: 95%;

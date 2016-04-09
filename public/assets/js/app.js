@@ -26,6 +26,7 @@ var clickedPost = {};
 
 
  });
+<<<<<<< HEAD
 //from http://www.proccli.com/2013/10/angularjs-geolocation-service/
 foodStream.factory("geoLocationService", ['$q', '$window', '$rootScope', function ($q, $window, $rootScope) {
     return function () {
@@ -51,6 +52,8 @@ foodStream.factory("geoLocationService", ['$q', '$window', '$rootScope', functio
     }
 }]);
 
+=======
+>>>>>>> 0b8006e1ee36f322b4439023ef202716f5ea39e0
 
 foodStream.config(function($routeProvider){
   $routeProvider
