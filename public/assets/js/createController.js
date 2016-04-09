@@ -15,7 +15,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
   //point google places autocomplete to proper field
   var inputFrom = document.getElementById('create-post-location');
 
-
+  //use google places autocomplete to input location addy & lat/long
   var autocompleteFrom = new google.maps.places.Autocomplete(inputFrom);
       google.maps.event.addListener(autocompleteFrom, 'place_changed', function() {
           var place = autocompleteFrom.getPlace();
