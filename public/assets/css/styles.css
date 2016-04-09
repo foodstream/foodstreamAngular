@@ -16,10 +16,12 @@ body {
     padding: 2% 2%;
     font-size: 1.5em; }
     body .app-header .app-header-txt {
-      display: inline-block; }
+      display: inline-block;
+      cursor: pointer; }
     body .app-header .app-header-login-icon {
       float: right;
-      margin: 0 5% 0 0; }
+      margin: 0 5% 0 0;
+      cursor: pointer; }
   body .edit-profile-subheader {
     background-color: #fbfbc4;
     width: 100%;
@@ -131,13 +133,17 @@ body {
     font-size: 1.5em;
     text-align: center;
     padding: 10px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    cursor: pointer; }
+    body .sign-up-button:hover {
+      background-color: #7eb73d; }
   body .sign-up-submit-btn {
     margin: 2% 0 2% 8%;
     background-color: #8bc34a;
     color: white;
     padding: 2% 35%;
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    cursor: pointer; }
     body .sign-up-submit-btn:hover {
       background-color: #7eb73d; }
   body .sign-up-back-btn {
@@ -148,7 +154,8 @@ body {
     line-height: 1.3em;
     color: white;
     background-color: #0c8183;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
     body .sign-up-back-btn:hover {
       background-color: #0a6a6c; }
   body .home-subheader {
@@ -185,7 +192,8 @@ body {
       width: 19%;
       height: 15vh;
       position: absolute;
-      text-align: center; }
+      text-align: center;
+      cursor: pointer; }
       body .home-card .home-chat .fa-comment {
         margin: 20% 0 0 0;
         color: white;
@@ -194,6 +202,8 @@ body {
         body .home-card .home-chat .fa-comment .home-chat-text {
           font-size: .5em;
           font-family: 'overpass', sans-serif; }
+      body .home-card .home-chat:hover {
+        background-color: #0a6a6c; }
     body .home-card .home-details {
       display: inline-block;
       background-color: #ffc08a;
@@ -218,7 +228,10 @@ body {
     text-align: center;
     font-size: 2.5em;
     line-height: 1.3em;
-    color: white; }
+    color: white;
+    cursor: pointer; }
+    body .home-post:hover {
+      background-color: #7eb73d; }
   body .post-detail-title {
     font-size: 2em;
     margin: 5%; }
@@ -250,7 +263,10 @@ body {
     position: fixed;
     bottom: 0;
     left: 50%;
-    width: 50%; }
+    width: 50%;
+    cursor: pointer; }
+    body .post-detail-claim-button:hover {
+      background-color: #0a6a6c; }
   body .post-detail-bottom-button {
     background-color: #8bc34a;
     color: white;
@@ -259,7 +275,10 @@ body {
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 50%; }
+    width: 50%;
+    cursor: pointer; }
+    body .post-detail-bottom-button:hover {
+      background-color: #7eb73d; }
   body .results-subheader {
     background-color: #fbfbc4; }
     body .results-subheader .results-search {
@@ -346,14 +365,20 @@ body {
     color: white;
     padding: 30px 0;
     text-align: center;
-    text-decoration: none; }
+    text-decoration: none;
+    cursor: pointer; }
+    body .login-signup:hover {
+      background-color: #7eb73d; }
   body .login-login {
     margin: 50px 0 5% 20%;
     background-color: #12c6c9;
     width: 60%;
     color: white;
     padding: 30px 0;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
+    body .login-login:hover {
+      background-color: #10afb2; }
   body .landing-login-email-input {
     width: 99%;
     border-style: solid thin #dbdbdb;
@@ -369,7 +394,10 @@ body {
     background-color: #8bc34a;
     color: white;
     padding: 2% 30%;
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    cursor: pointer; }
+    body .landing-login-submit:hover {
+      background-color: #7eb73d; }
   body .login-about {
     margin: 50px 2.5%;
     background-color: white;
@@ -474,6 +502,8 @@ body {
     background-color: #8bc34a;
     cursor: pointer;
     font-weight: 200; }
+    body .profile-pub-footer .profile-pub-home:hover {
+      background-color: #7eb73d; }
   body .profile-pub-footer .profile-pub-back {
     display: inline-block;
     margin-left: 50%;
@@ -487,6 +517,8 @@ body {
     background-color: #4a1d3b;
     cursor: pointer;
     font-weight: 200; }
+    body .profile-pub-footer .profile-pub-back:hover {
+      background-color: #38162c; }
   body .create-info {
     padding: 2% 2%;
     position: relative; }
@@ -655,7 +687,10 @@ body {
         top: 365px;
         left: 220px;
         width: 160px;
-        height: 20px; }
+        height: 20px;
+        cursor: pointer; }
+        body .created-info .created-post-location .created-post-directions-btn:hover {
+          background-color: #0a6a6c; }
     body .created-info .created-post-calendar {
       position: absolute; }
       body .created-info .created-post-calendar .created-post-time {
@@ -704,6 +739,8 @@ body {
     color: white;
     cursor: pointer;
     font-weight: 200; }
+    body .created-post-footer-home:hover {
+      background-color: #7eb73d; }
   body .created-post-footer-edit {
     background-color: #f06e00;
     position: fixed;
@@ -716,6 +753,8 @@ body {
     color: white;
     cursor: pointer;
     font-weight: 200; }
+    body .created-post-footer-edit:hover {
+      background-color: #d76200; }
   body .created-post-footer-delete {
     background-color: #4a1d3b;
     position: fixed;
@@ -728,6 +767,8 @@ body {
     color: white;
     cursor: pointer;
     font-weight: 200; }
+    body .created-post-footer-delete:hover {
+      background-color: #38162c; }
   body .chat-subheader {
     background-color: #fbfbc4;
     font-size: 1.5em;
@@ -769,6 +810,8 @@ body {
       margin: 0 0 0 -1%;
       padding: 0 1%;
       color: #933a75; }
+      body .chat-input-block .fa-paper-plane-o:hover {
+        color: #813367; }
   body .chat-home-btn {
     display: inline-block;
     background-color: #8bc34a;
@@ -778,7 +821,10 @@ body {
     color: white;
     width: 50%;
     position: fixed;
-    bottom: 0; }
+    bottom: 0;
+    cursor: pointer; }
+    body .chat-home-btn:hover {
+      background-color: #7eb73d; }
   body .chat-back-to-post-btn {
     display: inline-block;
     background-color: #0c8183;
@@ -789,7 +835,10 @@ body {
     width: 50%;
     position: fixed;
     margin: 0 0 0 50%;
-    bottom: 0; }
+    bottom: 0;
+    cursor: pointer; }
+    body .chat-back-to-post-btn:hover {
+      background-color: #0a6a6c; }
   body .claimed-title {
     font-size: 2em;
     margin: 5% 0 0 5%;
@@ -803,7 +852,10 @@ body {
     background-color: #8bc34a;
     color: white;
     padding: 5px;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
+    body .claimed-chat:hover {
+      background-color: #7eb73d; }
   body .claimed-supplier-name {
     margin: 5% 0 0 5%; }
   body .claimed-image {
@@ -816,7 +868,6 @@ body {
     display: inline-block;
     margin: 5% 0 0 5%; }
   body .claimed-time-calendar-wrap {
-    border: solid 1px red;
     display: inline-block;
     margin-left: 10%; }
     body .claimed-time-calendar-wrap .claimed-time-wrap {
@@ -829,7 +880,6 @@ body {
         display: inline;
         padding: 5px; }
     body .claimed-time-calendar-wrap .claimed-calendar-wrap {
-      border: solid 1px red;
       display: block; }
       body .claimed-time-calendar-wrap .claimed-calendar-wrap .claimed-iCal {
         display: block;
@@ -848,7 +898,10 @@ body {
     line-height: 1.3em;
     color: white;
     cursor: pointer;
-    background-color: #0c8183; }
+    background-color: #0c8183;
+    cursor: pointer; }
+    body .claimed-bottom-button:hover {
+      background-color: #0a6a6c; }
   body .claimed-remove-button {
     position: fixed;
     bottom: 0;
@@ -859,6 +912,9 @@ body {
     line-height: 1.3em;
     color: white;
     cursor: pointer;
-    background-color: #8bc34a; }
+    background-color: #8bc34a;
+    cursor: pointer; }
+    body .claimed-remove-button:hover {
+      background-color: #7eb73d; }
 
 /*# sourceMappingURL=styles.css.map */

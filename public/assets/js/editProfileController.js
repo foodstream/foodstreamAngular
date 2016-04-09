@@ -10,7 +10,7 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   //declare input value variables
   $scope.first;
   $scope.last;
-  $scope.email;
+  $scope.email; 
   $scope.org;
   $scope.userLocation;
   $scope.userDescription;

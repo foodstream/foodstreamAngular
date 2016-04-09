@@ -29,10 +29,12 @@ body{
     font-size: 1.5em;
     .app-header-txt{
       display: inline-block;
+      cursor: pointer;
     }
     .app-header-login-icon{
       float: right;
       margin: 0 5% 0 0;
+      cursor: pointer;
     }
   }
 
@@ -177,6 +179,10 @@ body{
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
 
   .sign-up-submit-btn{
@@ -185,6 +191,7 @@ body{
     color: white;
     padding: 2% 35%;
     font-size: 1.3em;
+    cursor: pointer;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -199,6 +206,7 @@ body{
     color: white;
     background-color: $buttonbg;
     text-align: center;
+    cursor: pointer;
     &:hover{
       background-color: darken($buttonbg, 5%);
     }
@@ -248,6 +256,7 @@ body{
       height: $cardHeight * 0.75;
       position: absolute;
       text-align: center;
+      cursor: pointer;
       .fa-comment{
         margin: 20% 0 0 0;
         color: white;
@@ -259,7 +268,7 @@ body{
         }
       }
       &:hover{
-
+        background-color: darken($buttonbg, 5%);
       }
     }
     .home-details {
@@ -292,6 +301,10 @@ body{
     font-size: 2.5em;
     line-height: 1.3em;
     color: white;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
 
 // ---------- Post Detail from Search ---------
@@ -344,6 +357,10 @@ body{
     bottom: 0;
     left: 50%;
     width: 50%;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonbg, 5%);
+    }
   }
 
   .post-detail-bottom-button {
@@ -355,6 +372,10 @@ body{
     position: fixed;
     bottom: 0;
     width: 50%;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
 
 
@@ -476,6 +497,10 @@ body{
 	padding: 30px 0;
 	text-align: center;
   text-decoration: none;
+  cursor: pointer;
+  &:hover{
+    background-color: darken($buttonaccent2, 5%);
+  }
   }
 
   .login-login {
@@ -485,6 +510,10 @@ body{
 	color: white;
 	padding: 30px 0;
 	text-align: center;
+  cursor: pointer;
+  &:hover{
+    background-color: lighten($buttonbg, 10%);
+  }
   }
 
   .landing-login-email-input{
@@ -507,6 +536,10 @@ body{
     color: white;
     padding: 2% 30%;
     font-size: 1.3em;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
 
   .login-about {
@@ -637,6 +670,9 @@ body{
         background-color: $buttonaccent2;
         cursor: pointer;
         font-weight: 200;
+        &:hover{
+          background-color: darken($buttonaccent2, 5%);
+        }
       }
       .profile-pub-back {
         display: inline-block;
@@ -651,6 +687,9 @@ body{
         background-color: $aubergine;
         cursor: pointer;
         font-weight: 200;
+        &:hover{
+          background-color: darken($aubergine, 5%);
+        }
       }
     }
 
@@ -852,6 +891,10 @@ body{
           left: 220px;
           width: 160px;
           height: 20px;
+          cursor: pointer;
+          &:hover{
+            background-color: darken($buttonbg, 5%);
+          }
         }
       }
       .created-post-calendar {
@@ -914,6 +957,9 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
   .created-post-footer-edit {
     background-color: $buttonaccent;
@@ -927,6 +973,9 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+    &:hover{
+      background-color: darken($buttonaccent, 5%);
+    }
   }
   .created-post-footer-delete {
     background-color: $aubergine;
@@ -940,6 +989,9 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+    &:hover{
+      background-color: darken($aubergine, 5%);
+    }
   }
 
 //----------chat page styling----------//
@@ -991,6 +1043,9 @@ body{
         padding: 0 1%;
         color: lighten($aubergine, 20%);
         // background-color: $itembg;
+        &:hover{
+          color: lighten($aubergine, 15%);
+        }
     }
   }
 
@@ -1004,6 +1059,10 @@ body{
     width: 50%;
     position: fixed;
     bottom: 0;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
   .chat-back-to-post-btn{
     display:inline-block;
@@ -1016,6 +1075,10 @@ body{
     position: fixed;
     margin: 0 0 0 50%;
     bottom: 0;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonbg, 5%);
+    }
   }
 
 // ------------ Your Claimed Posts --------- //
@@ -1036,6 +1099,10 @@ body{
   color: white;
   padding: 5px;
   text-align: center;
+  cursor: pointer;
+  &:hover{
+    background-color: darken($buttonaccent2, 5%);
+  }
 }
 
 .claimed-supplier-name {
@@ -1060,7 +1127,7 @@ body{
 }
 
 .claimed-time-calendar-wrap {
-  border: solid 1px red;
+  // border: solid 1px red;
   display: inline-block;
   margin-left: 10%;
   .claimed-time-wrap {
@@ -1076,7 +1143,7 @@ body{
     }
   }
   .claimed-calendar-wrap {
-    border: solid 1px red;
+    // border: solid 1px red;
     display: block;
     .claimed-iCal {
       // border: solid thin black;
@@ -1105,6 +1172,10 @@ body{
   color: white;
   cursor: pointer;
   background-color: $buttonbg;
+  cursor: pointer;
+  &:hover{
+    background-color: darken($buttonbg, 5%);
+  }
 }
 
 .claimed-remove-button {
@@ -1118,6 +1189,10 @@ body{
   color: white;
   cursor: pointer;
   background-color: $buttonaccent2;
+  cursor: pointer;
+  &:hover{
+    background-color: darken($buttonaccent2, 5%);
+  }
 }
 
 }

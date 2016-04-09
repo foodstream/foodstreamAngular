@@ -3,6 +3,8 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
 
   //grab login token from localstorage
   var token = localStorage.getItem('token');
+  var userId = localStorage.getItem('userId')
+  console.log(userId);
 
   //declare text field variables
 
@@ -31,13 +33,13 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
   //use pickadate to get standardized date-times
   // starting time
   $(".create-start-na").pickadate({
-  format: 'yyyy/mm/dd'});
+  format: 'mm/dd/yyyy'});
   $(".create-start-time-na").pickatime({
   format: 'h:iA'});
 
   //ending time
   $(".create-end-na").pickadate({
-  format: 'yyyy/mm/dd'});
+  format: 'mm/dd/yyyy'});
   $(".create-end-time-na").pickatime({
   format: 'h:iA'});
 
@@ -58,17 +60,19 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
 
     console.log(title, startString, endString, description, lat, lng, address)
     //put values into json to send to rails
-    var param = JSON.stringify({title:title, details:description, start_at:startString, end_at:endString,location_id:null, location:{address_string:address, lat:lat, lng:lng}, })
+    var param = JSON.stringify({title:title, details:description, start_at:startString, end_at:endString, supplier:{id:userId}, location:{address_string:address, lat:lat, lng:lng}, })
     console.log(param);
 
     //send post values to rails to create a post!
-    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts?token='+token, param
+    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token, param
     ).then(function successCallback(response){
-      console.log('post?')
-      console.log(response)
-      $location.path('/home')
+      console.log('post?');
+      console.log(response, response.data.id);
+      localStorage.setItem('createdPostId', response.data.id)
+
+      $location.path('/created')
     }, function errorCallback(response){
-      console.log('not post?')
+      console.log('not post?', response)
     });
   });
 
