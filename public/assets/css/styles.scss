@@ -252,7 +252,7 @@ body{
         }
       }
       &:hover{
-        
+
       }
     }
     .home-details {
@@ -995,13 +995,14 @@ body{
 }
 
 .claimed-chat {
-  display: inline;
+  display: block;
   margin: 5% 0 0 5%;
-  margin-left: 20%;
+  margin: 0 20%;
   font-size: 2em;
   background-color: $buttonaccent2;
   color: white;
   padding: 5px;
+  text-align: center;
 }
 
 .claimed-supplier-name {

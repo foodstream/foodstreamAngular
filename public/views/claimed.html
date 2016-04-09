@@ -2,7 +2,7 @@
 
 <div class = "claimed-chat"><i class="fa fa-comment"></i> Chat</div>
 
-<div class = "claimed-supplier-name">{{post.supplier_id}} <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+<div class = "claimed-supplier-name">{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}} <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
 </div>
 
 <div class = "claimed-location">{{post.location.address_1}}<br>{{post.location.city}} {{post.location.state}} {{post.location.zip_code}}</div>
@@ -33,4 +33,4 @@
 </div>
 
 <div class = "claimed-bottom-button" ng-click='goHome()'>Back</div>
-<div class = "claimed-remove-button">Remove</div>
+<div class = "claimed-remove-button" ng-click='removePost(post.claimant.id, post.supplier.id)'>Remove</div>

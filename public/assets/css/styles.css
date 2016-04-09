@@ -526,7 +526,8 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
-    body .create-info .create-start {
+
+    body .create-info .create-start-na {
       position: absolute;
       display: inline-block;
       top: 362px;
@@ -537,7 +538,8 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
-    body .create-info .create-end {
+
+    body .create-info .create-end-na {
       position: absolute;
       display: inline-block;
       top: 362px;
@@ -549,9 +551,33 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
+
+    body .create-info .create-start-time-na {
+      position: absolute;
+      display: inline-block;
+      top: 392px;
+      height: 20px;
+      background-color: white;
+      width: 40%;
+      border: solid 2px #F4F4F4;
+      font-size: 1em;
+      margin-top: 2%;
+      color: black; }
+    body .create-info .create-end-time-na {
+      position: absolute;
+      display: inline-block;
+      top: 392px;
+      left: 57%;
+      height: 20px;
+      background-color: white;
+      width: 40%;
+      border: solid 2px #F4F4F4;
+      font-size: 1em;
+      margin-top: 2%;
+      color: black; }
     body .create-info .create-description {
       position: absolute;
-      top: 400px;
+      top: 430px;
       height: 85px;
       background-color: white;
       width: 95%;
@@ -768,13 +794,14 @@ body {
     display: inline-block;
     padding: 5px 0; }
   body .claimed-chat {
-    display: inline;
+    display: block;
     margin: 5% 0 0 5%;
-    margin-left: 20%;
+    margin: 0 20%;
     font-size: 2em;
     background-color: #8bc34a;
     color: white;
-    padding: 5px; }
+    padding: 5px;
+    text-align: center; }
   body .claimed-supplier-name {
     margin: 5% 0 0 5%; }
   body .claimed-image {
