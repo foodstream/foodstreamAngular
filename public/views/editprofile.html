@@ -10,14 +10,15 @@
 </div> -->
 
 <!-- this form sourced from http://aws.amazon.com/articles/1434/ -->
-<form action="https://s3-bucket.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+<form action="https://foodstream.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
   <input type="hidden" name="key" value="uploads/${filename}">
-  <input type="hidden" name="AWSAccessKeyId" value="YOUR_AWS_ACCESS_KEY">
+
+  <input type="hidden" name="AWSAccessKeyId" value="AKIAJRMM6LYUN6O6HYTA">
   <input type="hidden" name="acl" value="private">
-  <input type="hidden" name="success_action_redirect" value="http://localhost/">
-  <input type="hidden" name="policy" value="YOUR_POLICY_DOCUMENT_BASE64_ENCODED">
-  <input type="hidden" name="signature" value="YOUR_CALCULATED_SIGNATURE">
-  <input type="hidden" name="Content-Type" value="image/jpeg">
+  <input type="hidden" name="success_action_redirect" value="https://torrid-torch-8806.firebaseapp.com">
+  <input type="hidden" name="policy" value="eyJleHBpcmF0aW9uIjogIjIwMTctMDEtMDFUMDA6MDA6MDBaIiwKICAiY29uZGl0aW9ucyI6IFsKICAgIHsiYnVja2V0IjogImZvb2RzdHJlYW0ifSwKICAgIFsic3RhcnRzLXdpdGgiLAogICAgICAiJGtleSIsCiAgICAgICJ1cGxvYWRzLyJdLAogICAgeyJhY2wiOiAicHJpdmF0ZSJ9LAogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwczovL3RvcnJpZC10b3JjaC04ODA2LmZpcmViYXNlYXBwLmNvbSJ9LAogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgIiJdCiAgXQp9">
+  <input type="hidden" name="signature" value="nNQswr7rUld/AKE3PYdpUuzkdW4=">
+  <input type="hidden" name="Content-Type" value="">
    <!-- Include any additional input fields here -->
 
   File to upload to S3:
