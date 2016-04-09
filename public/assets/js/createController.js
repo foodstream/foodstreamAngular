@@ -58,7 +58,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
 
     console.log(title, startString, endString, description, lat, lng, address)
     //put values into json to send to rails
-    var param = JSON.stringify({title:title, details:description, start_at:startString, end_at:endString,location_id:null, location:{address_string:address, lat:lat, long:lng}, })
+    var param = JSON.stringify({title:title, details:description, start_at:startString, end_at:endString,location_id:null, location:{address_string:address, lat:lat, lng:lng}, })
     console.log(param);
 
     //send post values to rails to create a post!

@@ -15,6 +15,8 @@ body {
     display: inline-block;
     padding: 2% 2%;
     font-size: 1.5em; }
+    body .app-header .app-header-txt {
+      display: inline-block; }
     body .app-header .app-header-login-icon {
       float: right;
       margin: 0 5% 0 0; }
@@ -529,7 +531,7 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
-    body .create-info .create-start {
+    body .create-info .create-start-na {
       position: absolute;
       display: inline-block;
       top: 362px;
@@ -540,7 +542,18 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
-    body .create-info .create-end {
+    body .create-info .create-start-time-na {
+      position: absolute;
+      display: inline-block;
+      top: 392px;
+      height: 20px;
+      background-color: white;
+      width: 40%;
+      border: solid 2px #F4F4F4;
+      font-size: 1em;
+      margin-top: 2%;
+      color: black; }
+    body .create-info .create-end-na {
       position: absolute;
       display: inline-block;
       top: 362px;
@@ -552,9 +565,21 @@ body {
       font-size: 1em;
       margin-top: 2%;
       color: black; }
+    body .create-info .create-end-time-na {
+      position: absolute;
+      display: inline-block;
+      left: 57%;
+      top: 392px;
+      height: 20px;
+      background-color: white;
+      width: 40%;
+      border: solid 2px #F4F4F4;
+      font-size: 1em;
+      margin-top: 2%;
+      color: black; }
     body .create-info .create-description {
       position: absolute;
-      top: 400px;
+      top: 430px;
       height: 85px;
       background-color: white;
       width: 95%;

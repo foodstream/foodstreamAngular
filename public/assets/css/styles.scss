@@ -27,6 +27,9 @@ body{
     display: inline-block;
     padding: 2% 2%;
     font-size: 1.5em;
+    .app-header-txt{
+      display: inline-block;
+    }
     .app-header-login-icon{
       float: right;
       margin: 0 5% 0 0;
@@ -702,7 +705,7 @@ body{
       margin-top: 2%;
       color: black;
     }
-    .create-start {
+    .create-start-na {
       position: absolute;
       display: inline-block;
       top: 362px;
@@ -714,7 +717,19 @@ body{
       margin-top: 2%;
       color: black;
     }
-    .create-end {
+    .create-start-time-na{
+      position: absolute;
+      display: inline-block;
+      top: 392px;
+      height: 20px;
+      background-color: white;
+      width: 40%;
+      border: solid 2px $border;
+      font-size: 1em;
+      margin-top: 2%;
+      color: black;
+    }
+    .create-end-na {
       position: absolute;
       display: inline-block;
       top: 362px;
@@ -727,9 +742,23 @@ body{
       margin-top: 2%;
       color: black;
     }
+    .create-end-time-na{
+      position: absolute;
+      display: inline-block;
+      left: 57%;
+      top: 392px;
+      height: 20px;
+      background-color: white;
+      width: 40%;
+      border: solid 2px $border;
+      font-size: 1em;
+      margin-top: 2%;
+      color: black
+    }
+
     .create-description {
       position: absolute;
-      top: 400px;
+      top: 430px;
       height: 85px;
       background-color: white;
       width: 95%;
