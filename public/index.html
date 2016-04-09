@@ -15,9 +15,9 @@
 
   <body ng-app="foodStream" ng-controller = "appController">
 
-    <div class="app-header">
+    <div class="app-header" ng-click='goHome()'>
       foodstream
-      <span class='app-header-login-icon' ng-if='logged'  ng-click='goToProfile()'><i class="fa fa-user"></i>{{$scope.first}}</span>
+      <span class='app-header-login-icon' ng-if='logged'  ng-click='goToProfile()'><i class="fa fa-user"></i></span>
     </div>
 
     <div>

@@ -25,12 +25,17 @@ foodStream.controller('appController', ['$http', '$scope', '$location', function
     $scope.logged = true;
     console.log('logged', $scope.logged)
     $scope.apply;
-  }
+  };
 
   //when you click on the user icon, you go to the edit profile page...
   $scope.goToProfile = function(){
-    $location.path('/editProfile')
-  }
+    $location.path('/editProfile');
+  };
+
+  $scope.goHome = function(){
+    $location.path('/home');
+  };
+
 }]);
 
 
