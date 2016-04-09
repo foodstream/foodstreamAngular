@@ -24,8 +24,10 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     $scope.last = response.data.last_name;
     $scope.email = response.data.email;
     $scope.org = response.data.organization;
+    $scope.userLocation = response.data.address_string;
+    $scope.userDescription = response.data.description;
   }, function error(response){
-    console.log('GET failed');
+    console.log('GET failed', response);
   });
 
   //point google places autocomplete to the proper field
@@ -53,7 +55,7 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
     $http.put( 'https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+  $scope.userToken, param)
       .then(function success(response){
-          console.log("edited successfully");
+          console.log("edited successfully", response);
           $location.path('/home');
         }, function error(response){
           console.log("edit profile failed");
