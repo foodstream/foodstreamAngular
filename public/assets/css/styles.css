@@ -163,15 +163,32 @@ body {
     width: 100%;
     height: 20%;
     color: #295518; }
-    body .home-subheader .home-search {
-      margin: 2% 0 0 2%;
-      width: 80%; }
-    body .home-subheader .home-subheader-text {
-      font-size: .75em;
-      margin: 2% 0 0 5%;
-      padding: 0 0 2% 0; }
-      body .home-subheader .home-subheader-text .home-distance-search {
-        width: 10%; }
+    body .home-subheader .home-subheader-see-all {
+      line-height: 2em;
+      text-align: center;
+      display: inline-block;
+      width: 32.5%;
+      cursor: pointer; }
+      body .home-subheader .home-subheader-see-all:hover {
+        background-color: #f9f9ac; }
+    body .home-subheader .home-subheader-see-claimed {
+      line-height: 2em;
+      text-align: center;
+      display: inline-block;
+      margin: 0 0 0 0;
+      width: 32.5%;
+      margin: 0 0 0 -1%;
+      cursor: pointer; }
+      body .home-subheader .home-subheader-see-claimed:hover {
+        background-color: #f9f9ac; }
+    body .home-subheader .home-subheader-see-provided {
+      line-height: 2em;
+      text-align: center;
+      display: inline-block;
+      width: 32.5%;
+      cursor: pointer; }
+      body .home-subheader .home-subheader-see-provided:hover {
+        background-color: #f9f9ac; }
   body .home-card {
     display: block;
     height: 20vh;
@@ -220,18 +237,28 @@ body {
         body .home-card .home-details .fa-info-circle .home-details-text {
           font-size: .5em;
           font-family: 'overpass', sans-serif; }
-  body .home-post {
-    background-color: #8bc34a;
+  body .home-search {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    right: 50%;
+    display: inline-block;
+    width: 50%;
+    background-color: #8bc34a;
     text-align: center;
-    font-size: 2.5em;
-    line-height: 1.3em;
-    color: white;
-    cursor: pointer; }
-    body .home-post:hover {
-      background-color: #7eb73d; }
+    font-size: 1.5em;
+    line-height: 2em;
+    color: white; }
+  body .home-post {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    display: inline-block;
+    width: 50%;
+    background-color: #0c8183;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 2em;
+    color: white; }
   body .post-detail-title {
     font-size: 2em;
     margin: 5%; }
