@@ -225,7 +225,7 @@ body{
       width: 32.5%;
       cursor: pointer;
       &:hover{
-        background-color: lighten($subheaderbg, 20%);
+        background-color: lighten($subheaderbg, 15%);
       }
     }
     .home-subheader-see-claimed{
@@ -238,7 +238,7 @@ body{
       cursor: pointer;
         // background-color: lighten($subheaderbg, 20%);
       &:hover{
-        background-color: lighten($subheaderbg, 20%);
+        background-color: lighten($subheaderbg, 15%);
       }
     }
     .home-subheader-see-provided{
@@ -248,7 +248,7 @@ body{
       width: 32.5%;
       cursor: pointer;
       &:hover{
-        background-color: lighten($subheaderbg, 20%);
+        background-color: lighten($subheaderbg, 15%);
       }
     }
   }
@@ -300,6 +300,10 @@ body{
       position: absolute;
       margin-left: 19%;
       text-align: center;
+      cursor: pointer;
+      &:hover{
+        background-color: lighten($buttonaccent, 25%);
+      }
       .fa-info-circle{
         margin: 20% 0 0 0;
         color: white;
@@ -324,6 +328,10 @@ body{
       font-size: 1.5em;
       line-height: 2em;
       color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: darken($buttonaccent2, 5%);
+      }
     }
     .home-post{
       position: fixed;
@@ -336,6 +344,10 @@ body{
       font-size: 1.5em;
       line-height: 2em;
       color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: darken($buttonbg, 5%);
+      }
     }
 
 
@@ -492,6 +504,10 @@ body{
       // margin: -33.25% 0 0 72%;
       text-align: center;
       color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: lighten($aubergine, 45%);
+      }
       .fa-info-circle{
         font-size: 3em;
         margin: 20% 0 0 0;
