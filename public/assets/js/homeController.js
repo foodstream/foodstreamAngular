@@ -7,23 +7,23 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
   // console.log(userId)
   // console.log(token);
 
-  //define geolocation variables
-  $scope.position = null;
-  $scope.message = "Determining gelocation...";
 
-  //get user geolocation
-  geolocation().then(function (position) {
-    $scope.position = position;
-    // console.log($scope.position.coords.latitude)
-    // console.log($scope.position.coords.longitude)
-  }, function (reason) {
-    $scope.message = "Could not be determined."
+  //define post variables
+  $scope.posts;
+
+  //get user's posts.
+  $http({
+    method: 'GET',
+    url:' https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token
+  }).then(function successCallback(response){
+    // console.log(response.data);
+    $scope.posts = response.data;
+  }, function errorCallback(response){
+    // console.log(response)
   });
 
   //declare filter variable for post filters
   $scope.filters = {};
-
-
 
   //see all posts where user is claimant
   $scope.seeClaimed = function(){
@@ -39,26 +39,6 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
   }
 
 
-
-  //migrate user to search page
-  $scope.search = function(){
-    $location.path('/results');
-  }
-
-  //define post variables
-  $scope.posts;
-
-  //get user's posts.
-  $http({
-    method: 'GET',
-    url:' https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token
-  }).then(function successCallback(response){
-    console.log(response.data);
-    $scope.posts = response.data;
-  }, function errorCallback(response){
-    // console.log(response)
-  });
-
   //get the ID of the post a user wants more details on, and take them to that page
   $scope.detailsId = function(postId){
     // console.log('clicked');
@@ -67,8 +47,29 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
     $location.path('/claimed');
   };
 
-$scope.createPost = function(){
-  $location.path('/create');
-};
+  //migrate user to search page
+  $scope.search = function(){
+    $location.path('/results');
+  }
 
-}])
+  //migrate user to create post page
+  $scope.createPost = function(){
+    $location.path('/create');
+  };
+
+}]);
+
+
+
+// //define geolocation variables
+// $scope.position = null;
+// $scope.message = "Determining gelocation...";
+//
+// //get user geolocation
+// geolocation().then(function (position) {
+//   $scope.position = position;
+//   // console.log($scope.position.coords.latitude)
+//   // console.log($scope.position.coords.longitude)
+// }, function (reason) {
+//   $scope.message = "Could not be determined."
+// });
