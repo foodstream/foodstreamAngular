@@ -49,11 +49,21 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   $scope.submitEdit = function(){
     console.log("submit edit button clicked");
 
+
+    $scope.first;
+    $scope.last;
+    $scope.email;
+    $scope.org;
+    $scope.userLocation;
+    $scope.userDescription;
+
+
     // console.log($scope.first, $scope.last);
     var param = JSON.stringify({first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, email:$scope.email, orgainization:$scope.org, address_string:$scope.userLocation, latitude:lat, longitude:lng, location_id:null});
     console.log(param)
 
-    $http.put( 'https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+  $scope.userToken, param)
+
+    $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+  $scope.userToken, param)
       .then(function success(response){
           console.log("edited successfully", response);
           $location.path('/home');
@@ -64,7 +74,8 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
           $location.path('/home');
       });
 
-
   }
+
+
 
 }]);
