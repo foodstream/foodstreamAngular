@@ -7,7 +7,7 @@
 
 </div>
 
-<div ng-repeat = 'post in posts' ng-controller='resultsController'>
+<div ng-repeat = 'post in posts | orderBy : -end_at' >
 <div class = "results-card">
   <div class = "results-header">{{post.title}}
     <span>{{post.end_at}}</span>
