@@ -1,13 +1,21 @@
 <div class='results-subheader'>
-  <input class='results-search' placeholder='Search for Food'></input>
-  <i class="fa fa-search"></i>
+  <input class='results-search' placeholder='Search Available Posts' ng-model='type'></input>
 
-  <div class='results-subheader-text'>Search for food within <input class = "results-distance-search"></input> miles of my location
+
+  <div class='results-subheader-text'>
+    Search for available food within
+    <input class = "results-distance-input" ng-model='distanceInput'></input>
+    miles of my location
+    <div class='results-subheader-search-button'>
+      Search
+      <i class="fa fa-search"></i>
+    </div>
   </div>
+
 
 </div>
 
-<div ng-repeat = 'post in posts | orderBy : -end_at' >
+<div ng-repeat = 'post in posts | orderBy : "end_at" | filter:type' >
 <div class = "results-card">
   <div class = "results-header">{{post.title}}
     <span>{{post.end_at}}</span>

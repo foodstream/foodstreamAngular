@@ -7,7 +7,7 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
   var token = localStorage.getItem('token');
   //get the user ID
   var userId  = localStorage.getItem('userId');
-  console.log(postId);
+  // console.log(postId);
 
   //remove the post ID b/c it's a one-time need
   localStorage.removeItem('postId');
@@ -17,9 +17,8 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
     method: 'GET',
     url:' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token
   }).then(function successCallback(response){
-    console.log(response.data);
+    // console.log(response.data);
     $scope.post = response.data;
-    console.log($scope.post.location);
   }, function errorCallback(response){console.log('hate')
   });
 
@@ -29,11 +28,11 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
    }
 
    $scope.removePost = function(claimantId, supplierId){
-     console.log(claimantId, supplierId)
+    //  console.log(claimantId, supplierId)
      //if the user is the supplier, delete the post
      if(supplierId  == userId){
        $http.delete('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
-         console.log('post deleted')
+        //  console.log('post deleted')
          $location.path('/home')
        }, function errorCallback(response){
          console.log('not deleted')
@@ -43,7 +42,7 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
       else if(claimantId == userId){
          var param = JSON.stringify({claimed:'false', claimant_id: 'null'})
          $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, param).then(function successCallback(response){
-           console.log('UNCLAIMED');
+          //  console.log('UNCLAIMED');
            $location.path('/home')
          }, function errorCallback(response){
            console.log('not unclaimed');

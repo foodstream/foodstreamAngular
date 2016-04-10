@@ -164,7 +164,7 @@ body {
     height: 20%;
     color: #295518; }
     body .home-subheader .home-subheader-see-all {
-      line-height: 2em;
+      line-height: 1.2em;
       text-align: center;
       display: inline-block;
       width: 32.5%;
@@ -172,7 +172,7 @@ body {
       body .home-subheader .home-subheader-see-all:hover {
         background-color: #f7f794; }
     body .home-subheader .home-subheader-see-claimed {
-      line-height: 2em;
+      line-height: 1.2em;
       text-align: center;
       display: inline-block;
       margin: 0 0 0 0;
@@ -182,7 +182,7 @@ body {
       body .home-subheader .home-subheader-see-claimed:hover {
         background-color: #f7f794; }
     body .home-subheader .home-subheader-see-provided {
-      line-height: 2em;
+      line-height: 1.2em;
       text-align: center;
       display: inline-block;
       width: 32.5%;
@@ -319,13 +319,23 @@ body {
     background-color: #fbfbc4; }
     body .results-subheader .results-search {
       margin: 2% 0 0 2%;
-      width: 80%; }
+      width: 95%; }
     body .results-subheader .results-subheader-text {
       font-size: .75em;
-      margin: 2% 0 0 5%;
+      margin: 2% 0 0 2%;
       padding: 0 0 2% 0; }
-      body .results-subheader .results-subheader-text .results-distance-search {
+      body .results-subheader .results-subheader-text .results-distance-input {
         width: 10%; }
+      body .results-subheader .results-subheader-text .results-subheader-search-button {
+        display: inline-block;
+        float: right;
+        margin: 0 2% 2% 0;
+        background-color: #5ab835;
+        padding: 1.5%;
+        color: white;
+        cursor: pointer; }
+        body .results-subheader .results-subheader-text .results-subheader-search-button:hover {
+          background-color: #50a52f; }
   body .results-card {
     display: block;
     height: 20vh;
