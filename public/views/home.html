@@ -1,7 +1,7 @@
 
 <div class='home-subheader'>
   <div class='home-subheader-see-all' ng-click='filters= ""'>
-     all my posts
+     all my active posts
   </div>
   <div class='home-subheader-see-claimed' ng-click='seeClaimed()'>
     my claimed posts
@@ -20,8 +20,9 @@
     </div>
 
     <div class = "home-transaction-details">
-      <div>{{post.address_string}}</div>
+
       <div>{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}</div>
+      <div>{{post.address_string}}</div>
     </div>
 
     <div class = "home-chat">

@@ -3,7 +3,7 @@
 
 
   <div class='results-subheader-text'>
-    Search for available food within
+    Search for food within
     <input class = "results-distance-input" ng-model='distanceInput'></input>
     miles of my location
     <div class='results-subheader-search-button'>
@@ -28,7 +28,7 @@
 
   <div class = "results-transaction-details">
     <div class='results-supplier-name-text'>{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}</div>
-    <div class='results-transaction-location'>{{post.location.address_1}}<br>{{post.location.city}} {{post.location.state}} {{post.location.zip_code}}</div>
+    <div class='results-transaction-location'>{{post.address_string}}</div>
     <div class='results-transaction-details-text'>{{post.details}}</div>
   </div>
 
