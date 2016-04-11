@@ -1,8 +1,28 @@
+//add fastclick.js for more responsive mobile touch
 $(function() {
     FastClick.attach(document.body);
 });
 
 var foodStream = angular.module("foodStream", ['ngRoute']);
+
+//add file directive for amazon s3 uploads
+foodStream.directive('file', function() {
+  return {
+    restrict: 'AE',
+    scope: {
+      file: '@'
+    },
+    link: function(scope, el, attrs){
+      el.bind('change', function(event){
+        var files = event.target.files;
+        var file = files[0];
+        scope.file = file;
+        scope.$parent.file = file;
+        scope.$apply();
+      });
+    }
+  };
+});
 
 foodStream.controller('appController', ['$http', '$scope', '$location', function($http, $scope, $location){
 
