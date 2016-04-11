@@ -1,3 +1,7 @@
+$(function() {
+    FastClick.attach(document.body);
+});
+
 var foodStream = angular.module("foodStream", ['ngRoute']);
 
 foodStream.controller('appController', ['$http', '$scope', '$location', function($http, $scope, $location){
