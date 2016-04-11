@@ -11,9 +11,6 @@
 
 </div> -->
 
-<input type="file" accept="image/*" capture="camera">
-
-
 <!-- this form sourced from http://aws.amazon.com/articles/1434/ -->
 <form action="https://foodstream.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
   <input id = "randomFile" type="hidden" name="key" value="uploads/{{nonce}}${filename}">
@@ -27,9 +24,9 @@
    <!-- Include any additional input fields here -->
 
   File to upload to S3:
-  <input id = "fileName" name="file" type="file">
+  <input id = "fileName" name="file" type="file" class='edit-profile-image-input'>
   <br>
-  <input type="submit" value="Upload File to S3" ng-click = "logFile()">
+  <input type="submit" value="Upload File to S3" ng-click = "logFile()" class='edit-profile-image-upload'>
 </form>
 
 <form ng-submit = "submitEdit()">
@@ -48,4 +45,4 @@
   </div> -->
 </form>
 
-<input type="file" accept="image/*" capture="camera">
+<div class='edit-profile-footer'>Home</div>

@@ -32,18 +32,26 @@ body {
     display: block;
     color: #295518; }
     body .edit-profile-subheader .edit-profile-subheader-txt {
-      font-size: 2em;
-      line-height: 1.3em;
+      font-size: 3.5em;
       padding: 2% 0 2% 4%;
       display: inline-block; }
+    body .edit-profile-subheader .edit-profile-logout {
+      margin: 0 0 0 30%;
+      font-size: 2em;
+      background-color: #ffcda4;
+      padding: 2% 1.8%;
+      cursor: pointer; }
+      body .edit-profile-subheader .edit-profile-logout:hover {
+        background-color: #ffc08a; }
     body .edit-profile-subheader .edit-profile-subheader-change-pass {
       float: right;
       text-align: center;
       background-color: #ffcda4;
-      padding: 2.5% 2%;
+      padding: 1.6% 2%;
       display: inline-block;
       color: white;
-      cursor: pointer; }
+      cursor: pointer;
+      font-size: 2em; }
       body .edit-profile-subheader .edit-profile-subheader-change-pass:hover {
         background-color: #ffc08a; }
   body .edit-profile-add-picture {
@@ -97,8 +105,8 @@ body {
     background-color: #8bc34a;
     position: fixed;
     text-align: center;
-    font-size: 2.5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 2em;
     color: white;
     cursor: pointer;
     font-weight: 200; }
