@@ -1116,7 +1116,7 @@ body{
 .claimed-chat {
   display: block;
   margin: 5% 0 0 5%;
-  margin: 0 20%;
+  width: 90%;
   font-size: 4em;
   background-color: $buttonaccent2;
   color: white;
@@ -1197,6 +1197,17 @@ body{
 .claimed-details-title {
   margin: 5%;
   font-size: 3em;
+}
+
+.claimed-mark-as-complete{
+  display: block;
+  width: 90%;
+  text-align: center;
+  margin: 1% 0 1% 5%;
+  background-color: $buttonaccent;
+  color: white;
+  font-size: 3em;
+  line-height: 1.5em;
 }
 
 

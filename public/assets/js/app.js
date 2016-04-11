@@ -1,29 +1,12 @@
-//add fastclick.js for more responsive mobile touch
+//add fastclick.js to make site more mobile-friendly
 $(function() {
     FastClick.attach(document.body);
 });
 
+//initiate angular app
 var foodStream = angular.module("foodStream", ['ngRoute']);
 
-//add file directive for amazon s3 uploads
-foodStream.directive('file', function() {
-  return {
-    restrict: 'AE',
-    scope: {
-      file: '@'
-    },
-    link: function(scope, el, attrs){
-      el.bind('change', function(event){
-        var files = event.target.files;
-        var file = files[0];
-        scope.file = file;
-        scope.$parent.file = file;
-        scope.$apply();
-      });
-    }
-  };
-});
-
+//this controller shows an icon in the header upon user login
 foodStream.controller('appController', ['$http', '$scope', '$location', function($http, $scope, $location){
 
   //create a variable that changes when user is logged in for ng-show
@@ -113,7 +96,7 @@ foodStream.factory("geoLocationService", ['$q', '$window', '$rootScope', functio
 }]);
 
 
-
+//routing
 foodStream.config(function($routeProvider){
   $routeProvider
     .when('/landing', {

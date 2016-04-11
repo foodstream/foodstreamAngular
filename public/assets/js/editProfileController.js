@@ -18,8 +18,17 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   var lng;
 
   $scope.logout = function(){
-    localStorage.removeItem('token');
-    $location.path('/landing');
+
+    $http.get('https://sheltered-wildwood-38449.herokuapp.com/sessions/logout?token='+$scope.userToken).then(function successCallback(){
+      console.log('logged out');
+      localStorage.removeItem('token');
+      $location.path('/landing');
+    }, function errorCallback(){
+      console.log('not logged out');
+      localStorage.removeItem('token');
+      $location.path('/landing');
+    })
+
   }
 
   //get user info to migrate onto page
@@ -48,44 +57,6 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
           $scope.userLocation = place.formatted_address;
             console.log(lat, lng, $scope.userLocation)
       });
-
-  //enable upload to amazon s3 temp bucket
-  $scope.creds = {
-  bucket: 'elasticbeanstalk-us-west-2-052502637371',
-  access_key: 'AKIAJFAX6BLGJFLZIZAA',
-  secret_key: '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'
-}
-
-$scope.upload = function() {
-  // Configure The S3 Object
-  AWS.config.update({ accessKeyId: $scope.creds.access_key, secretAccessKey: $scope.creds.secret_key });
-  AWS.config.region = 'us-east-1';
-  var bucket = new AWS.S3({ params: { Bucket: $scope.creds.bucket } });
-
-  if($scope.file) {
-    var params = { Key: $scope.file.name, ContentType: $scope.file.type, Body: $scope.file, ServerSideEncryption: 'AES256' };
-
-    bucket.putObject(params, function(err, data) {
-      if(err) {
-        // There Was An Error With Your S3 Config
-        alert(err.message);
-        return false;
-      }
-      else {
-        // Success!
-        alert('Upload Done');
-      }
-    })
-    .on('httpUploadProgress',function(progress) {
-          // Log Progress Information
-          console.log(Math.round(progress.loaded / progress.total * 100) + '% done');
-        });
-  }
-  else {
-    // No File Selected
-    alert('No File Selected');
-  }
-}
 
 
   //grab the profile info field info and send it

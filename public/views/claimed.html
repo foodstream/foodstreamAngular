@@ -37,5 +37,9 @@
   {{post.details}}
 </div>
 
+<div class='claimed-mark-as-complete' ng-click='markComplete(post.supplier.id)'>
+  This transaction has been completed
+</div>
+
 <div class = "claimed-bottom-button" ng-click='goHome()'>Back</div>
 <div class = "claimed-remove-button" ng-click='removePost(post.claimant.id, post.supplier.id)'>Remove</div>
