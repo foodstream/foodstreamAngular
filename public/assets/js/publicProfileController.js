@@ -15,11 +15,11 @@
   // })
 // }]);
 foodStream.controller('publicProfileController', ['$http', '$scope', 'getPostDetail', '$location', function($http, $scope, getPostDetail, $location) {
-   console.log("claimed ctrllr up");
+  //  console.log("claimed ctrllr up");
   //  console.log(getPostDetail.clickedPost);
   var postId = localStorage.getItem('userId');
   var token = localStorage.getItem('token');
-  console.log(postId);
+  // console.log(postId);
   localStorage.removeItem('userId');
 
   $http({

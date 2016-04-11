@@ -2,7 +2,12 @@
 
 
 
-<div class = "post-detail-supplier-name">{{post.supplier_id}} <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+<div class = "post-detail-supplier-name">
+  {{post.supplier.first_name}} {{post.supplier.last_name}}
+  <br>{{post.supplier.organization}}
+  <span class='post-detail-rating'>
+    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+  </span>
 </div>
 
 <div class = "post-detail-image">
@@ -13,13 +18,13 @@
   {{post.details}}
 </div>
 
-<div class = "post-detail-location">{{post.location.address_1}}<br>{{post.location.city}} {{post.location.state}} {{post.location.zip_code}}</div>
+<div class = "post-detail-location">{{post.address_string}}</div>
 <div class = "post-detail-location-image">
   <img src = "assets/images/map-thumbnail.png" width = "100px">
 </div>
 
-<div class = "post-detail-start">{{post.start_at}}</div>
-<div class = "post-detail-end">{{post.end_at}}</div>
+<div class = "post-detail-start"><span>Available at: </span>{{post.start_at}}</div>
+<div class = "post-detail-end"><span> Pick Up by: </span>{{post.end_at}}</div>
 
 
 

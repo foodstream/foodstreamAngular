@@ -1,20 +1,45 @@
 <div class="edit-profile-subheader">
   <span class='edit-profile-subheader-txt'>Your Profile</span>
+  <span class='edit-profile-logout' ng-click='logout()'>logout</span>
+
   <span class='edit-profile-subheader-change-pass'>
     Change Your <br> Password
   </span>
 </div>
 
-<div class='edit-profile-add-picture'><i class="fa fa-camera-retro pic-box"><span class='edit-profile-add-picture-txt'>add a picture</span></i>
+<!-- <div class='edit-profile-add-picture'><i class="fa fa-camera-retro pic-box"><span class='edit-profile-add-picture-txt'>add a picture</span></i>
 
-</div>
+</div> -->
+
+<input type="file" accept="image/*" capture="camera">
+
+
+<!-- this form sourced from http://aws.amazon.com/articles/1434/ -->
+<form action="https://foodstream.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="key" value="uploads/${filename}">
+
+  <input type="hidden" name="AWSAccessKeyId" value="AKIAJRMM6LYUN6O6HYTA">
+  <input type="hidden" name="acl" value="public-read">
+  <input type="hidden" name="success_action_redirect" value="https://torrid-torch-8806.firebaseapp.com">
+  <input type="hidden" name="policy" value="eyJleHBpcmF0aW9uIjogIjIwMTctMDEtMDFUMDA6MDA6MDBaIiwKICAiY29uZGl0aW9ucyI6IFsKICAgIHsiYnVja2V0IjogImZvb2RzdHJlYW0ifSwKICAgIFsic3RhcnRzLXdpdGgiLAogICAgICAiJGtleSIsCiAgICAgICJ1cGxvYWRzLyJdLAogICAgeyJhY2wiOiAicHVibGljLXJlYWQifSwKICAgIHsic3VjY2Vzc19hY3Rpb25fcmVkaXJlY3QiOiAiaHR0cHM6Ly90b3JyaWQtdG9yY2gtODgwNi5maXJlYmFzZWFwcC5jb20ifSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICIiXQogIF0KfQ==">
+  <input type="hidden" name="signature" value="ZWmx9gDNMHMIga1T+qoMOwjnbCo=">
+  <input type="hidden" name="Content-Type" value="">
+   <!-- Include any additional input fields here -->
+
+  File to upload to S3:
+  <input name="file" type="file">
+  <br>
+  <input type="submit" value="Upload File to S3">
+</form>
 
 <form ng-submit = "submitEdit()">
   <input class='edit-profile-first-name' type=text placeholder='First Name' ng-model = "first">
   <input class='edit-profile-last-name' type=text placeholder='Last Name' ng-model = "last">
   <input class='edit-profile-email' type=text placeholder='email' ng-model = "email">
   <input class='edit-profile-organization' type=text placeholder='Organization' ng-model = "org">
-  <input class='edit-profile-location' type=text placeholder='Location (City, St.)' ng-model = "userLocation">
+
+  <input class='edit-profile-location' id='edit-profile-location-input' type=text placeholder='Location (City, St.)' ng-model = "userLocation">
+
   <textarea class='edit-profile-description' type=text placeholder='Describe Yourself' ng-model = "userDescription"></textarea>
 
   <input type = "submit" value = "Submit" class='edit-profile-submit-btn'/>
@@ -22,3 +47,5 @@
     Submit Profile
   </div> -->
 </form>
+
+<input type="file" accept="image/*" capture="camera">

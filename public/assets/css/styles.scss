@@ -16,25 +16,39 @@ body{
   text-decoration: none;
   background-color: $bodybg;
   margin-bottom: 100px;
+  .ng-view{
+    width: 100%;
+  }
   &:visited{
     text-decoration: none;
   }
   .app-header{
     font-weight: 700;
     height: 40%;
-    width: 100%;
+    width: 100vw;
     background-color: lighten($headerbg, 3%);
     color: white;
-    display: inline-block;
-    padding: 2% 2%;
-    font-size: 1.5em;
+    display: block;
+    padding: 2% 0;
+    font-size: 4em;
+    .app-header-txt{
+      display: inline-block;
+      cursor: pointer;
+      margin: 0 0 0 2%;
+    }
+    .app-header-login-icon{
+      float: right;
+      margin: 0 2% 0 0;
+      cursor: pointer;
+    }
   }
 
 //--------------edit profile page styling---------//
   .edit-profile-subheader{
     background-color:lighten($subheaderbg, 25%);
-    width: 100%;
+    width: 100vw;
     height: 20%;
+    display: block;
     color: darken($headerbg, 5%);
     .edit-profile-subheader-txt{
       font-size: 2em;
@@ -46,7 +60,7 @@ body{
       float: right;
       text-align: center;
       background-color: lighten($buttonaccent, 35%);
-      padding: 3.2% 2%;
+      padding: 2.5% 2%;
       display: inline-block;
       color: white;
       cursor: pointer;
@@ -134,26 +148,28 @@ body{
   .sign-up-title{
     // margin-top: 5%;
     padding: 2% 0;
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
     background-color: lighten($subheaderbg, 25%)
   }
   .sign-up-form {
     width: 80%;
     margin: 10% 10% 5% 10%;
-    text-align: center;
   }
+
   .sign-up-label {
     display: block;
     margin-top: 5%;
     text-align: left;
+    font-size: 2em;
+    margin: 5% 0 0 10%;
   }
   .sign-up-input {
-    width: 100%;
-    border: solid 2px $border;
-    font-size: 1em;
-    line-height: 2;
-    padding: 5px;
+    width: 80%;
+    border: none;
+    font-size: 2em;
+    line-height: 1.8em;
+    margin: 1% 0 5% 10%;
     margin-top: 2%;
     color: black;
   }
@@ -174,11 +190,15 @@ body{
   }
 
   .sign-up-submit-btn{
-    margin: 2% 0 2% 8%;
+    margin: 2% 0 2% 10%;
     background-color: $buttonaccent2;
     color: white;
-    padding: 2% 35%;
-    font-size: 1.3em;
+    font-size: 2em;
+    cursor: pointer;
+    width: 80%;
+    text-align: center;
+    font-size: 3em;
+    line-height: 2em;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -189,10 +209,11 @@ body{
     bottom: 0;
     width: 100%;
     font-size: 2.5em;
-    line-height: 1.3em;
+    line-height: 2em;
     color: white;
     background-color: $buttonbg;
     text-align: center;
+    cursor: pointer;
     &:hover{
       background-color: darken($buttonbg, 5%);
     }
@@ -204,16 +225,38 @@ body{
     width: 100%;
     height: 20%;
     color: darken($headerbg, 5%);
-    .home-search{
-      margin: 2% 0 0 2%;
-      width: 80%;
+    font-size: 3em;
+    .home-subheader-see-all{
+      line-height: 1.2em;
+      text-align: center;
+      display: inline-block;
+      width: 32.5%;
+      cursor: pointer;
+      &:hover{
+        background-color: lighten($subheaderbg, 15%);
+      }
     }
-    .home-subheader-text{
-      font-size: .75em;
-      margin: 2% 0 0 5%;
-      padding: 0 0 2% 0;
-      .home-distance-search{
-        width: 10%;
+    .home-subheader-see-claimed{
+      line-height: 1.2em;
+      text-align: center;
+      display: inline-block;
+      margin: 0 0 0 0;
+      width: 32.5%;
+      margin: 0 0 0 -1%;
+      cursor: pointer;
+        // background-color: lighten($subheaderbg, 20%);
+      &:hover{
+        background-color: lighten($subheaderbg, 15%);
+      }
+    }
+    .home-subheader-see-provided{
+      line-height: 1.2em;
+      text-align: center;
+      display: inline-block;
+      width: 32.5%;
+      cursor: pointer;
+      &:hover{
+        background-color: lighten($subheaderbg, 15%);
       }
     }
   }
@@ -225,27 +268,32 @@ body{
     width:95%;
     margin: 5% 0 5% 2.5%;
     .home-header {
-      height: $cardHeight / 4;
+      height: $cardHeight / 5;
       background-color: lightgray;
+      font-size: 3em;
+      font-weight: 700;
       span {
+        font-size: .75em;
         float: right;
       }
     }
     .home-transaction-details {
       display: inline-block;
       width: 60%;
+      font-size: 2.5em;
     }
     .home-chat {
       display: inline-block;
       background-color: $buttonbg;
       width: 19%;
-      height: $cardHeight * 0.75;
+      height: $cardHeight * 0.8;
       position: absolute;
       text-align: center;
+      cursor: pointer;
       .fa-comment{
         margin: 20% 0 0 0;
         color: white;
-        font-size: 3em;
+        font-size: 6em;
         display: block;
         .home-chat-text{
           font-size: .5em;
@@ -253,21 +301,25 @@ body{
         }
       }
       &:hover{
-
+        background-color: darken($buttonbg, 5%);
       }
     }
     .home-details {
       display: inline-block;
       background-color: lighten($buttonaccent, 30%);
       width: 19%;
-      height: $cardHeight * 0.75;
+      height: $cardHeight * 0.8;
       position: absolute;
       margin-left: 19%;
       text-align: center;
+      cursor: pointer;
+      &:hover{
+        background-color: lighten($buttonaccent, 25%);
+      }
       .fa-info-circle{
         margin: 20% 0 0 0;
         color: white;
-        font-size: 3em;
+        font-size: 6em;
         display: block;
         .home-details-text{
           font-size: .5em;
@@ -277,26 +329,57 @@ body{
     }
   }
 
-  .home-post {
-    background-color: $buttonaccent2;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 2.5em;
-    line-height: 1.3em;
-    color: white;
-  }
+    .home-search{
+      position: fixed;
+      bottom: 0;
+      right: 50%;
+      display: inline-block;
+      width: 50%;
+      background-color: $buttonaccent2;
+      text-align: center;
+      font-size: 4em;
+      line-height: 2em;
+      color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: darken($buttonaccent2, 5%);
+      }
+    }
+    .home-post{
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      display: inline-block;
+      width: 50%;
+      background-color: $buttonbg;
+      text-align: center;
+      font-size: 4em;
+      line-height: 2em;
+      color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: darken($buttonbg, 5%);
+      }
+    }
+
 
 // ---------- Post Detail from Search ---------
 
   .post-detail-title {
-    font-size: 2em;
-    margin: 5%;
+    font-size: 4em;
+    font-weight: 700;
+    margin: 5% 0;
+    width: 100%;
+    text-align: center;
+
   }
 
   .post-detail-supplier-name {
     margin: 5%;
+    font-size: 3em;
+    .post-detail-rating{
+      display: block;
+    }
   }
 
   .post-detail-image {
@@ -319,36 +402,53 @@ body{
   .post-detail-start {
     margin: 5%;
     display: block;
-    border: solid thin black;
+    // border: solid thin black;
+    span{
+      font-size: 2em;
+      display: block;
+    }
+
   }
 
   .post-detail-end {
     margin: 5%;
     display: block;
-    border: solid thin black;
+    // border: solid thin black;
+    span{
+      font-size: 2em;
+      display: block;
+    }
   }
 
   .post-detail-claim-button {
     background-color: $buttonbg;
     color: white;
-    font-size: 2.5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     text-align: center;
     position: fixed;
     bottom: 0;
     left: 50%;
     width: 50%;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonbg, 5%);
+    }
   }
 
   .post-detail-bottom-button {
     background-color: $buttonaccent2;
     color: white;
-    font-size: 2.5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 50%;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
 
 
@@ -357,14 +457,31 @@ body{
     background-color: lighten($subheaderbg, 25%);
     .results-search{
       margin: 2% 0 0 2%;
-      width: 80%;
+      width: 95%;
+      font-size: 2em;
     }
     .results-subheader-text{
-      font-size: .75em;
-      margin: 2% 0 0 5%;
+      font-size: 2em;
+      margin: 2% 0 0 2%;
       padding: 0 0 2% 0;
-      .results-distance-search{
+      line-height: 2em;
+      .results-distance-input{
         width: 10%;
+        font-size: 1em;
+        border: none;
+      }
+      .results-subheader-search-button{
+        display: inline-block;
+        float: right;
+        line-height: 1em;
+        margin: 0 2% 2% 0;
+        background-color: lighten($headerbg, 20%);
+        padding: 1.5%;
+        color: white;
+        cursor: pointer;
+        &:hover{
+          background-color: lighten($headerbg, 15%);
+        }
       }
     }
   }
@@ -379,7 +496,10 @@ body{
       // height: $cardHeight / 4;
       background-color: lightgray;
       padding: 2%;
+      font-size: 3em;
+      font-weight: 700;
       span {
+        font-size: .5em;
         float: right;
       }
     }
@@ -389,6 +509,7 @@ body{
       height: $cardHeight * 0.75;
       // border: solid thin black;
       margin: 0 0 0 25%;
+      font-size: 2em;
       .results-supplier-name-text{
         line-height: 1.2em;
         font-weight: 500;
@@ -403,8 +524,8 @@ body{
     .results-add-picture{
       position: absolute;
       margin: 2% 0 0 0;
-      display: inline;
-      // height: 20%;
+      display: inline-block;
+      height: $cardHeight * 0.75;
       width: 20%;
       text-align: center;
       // margin: 2%;
@@ -428,13 +549,17 @@ body{
       display: inline-block;
       background-color: lighten($aubergine, 50%);
       width: 23.8%;
-      height: $cardHeight * 0.82;
+      height: $cardHeight * 0.75;
       position: absolute;
       // margin: -33.25% 0 0 72%;
       text-align: center;
       color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: lighten($aubergine, 45%);
+      }
       .fa-info-circle{
-        font-size: 3em;
+        font-size: 6em;
         margin: 20% 0 0 0;
         .search-details-text{
           display: block;
@@ -450,7 +575,7 @@ body{
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 4.5em;
     line-height: 1.3em;
     color: white;
     cursor: pointer;
@@ -482,25 +607,46 @@ body{
   }
 
   .landing-login-email-input{
-    width: 99%;
+    width: 80%;
     border-style: solid thin darken($border, 10%);
-    font-size: 1.5em;
-    line-height: 1.2em;
-    margin: 5% 0;
+    font-size: 2em;
+    line-height: 1.8em;
+    margin: 15% 0 0 10%;
   }
 
   .landing-login-password-input{
-    width: 99%;
-    font-size: 1.5em;
-    margin: 5% 0;
+    width: 80%;
+    font-size: 2em;
+    line-height: 1.8em;
+    margin: 5% 0 5% 10%;
   }
 
-  .landing-login-submit{
-    margin: 2% 0 2% 10%;
+  .landing-login-btn{
+    width: 80%;
+    font-size: 2.5em;
+    line-height: 1.8em;
+    text-align: center;
+    margin: 2% 0 5% 10%;
     background-color: $buttonaccent2;
     color: white;
-    padding: 2% 30%;
-    font-size: 1.3em;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
+  }
+
+  .landing-signup-btn{
+    width: 80%;
+    font-size: 2.5em;
+    line-height: 1.8em;
+    text-align: center;
+    margin: 10% 0 5% 10%;
+    background-color: $buttonbg;
+    color: white;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonbg, 5%);
+    }
   }
 
   .login-about {
@@ -631,6 +777,9 @@ body{
         background-color: $buttonaccent2;
         cursor: pointer;
         font-weight: 200;
+        &:hover{
+          background-color: darken($buttonaccent2, 5%);
+        }
       }
       .profile-pub-back {
         display: inline-block;
@@ -645,6 +794,9 @@ body{
         background-color: $aubergine;
         cursor: pointer;
         font-weight: 200;
+        &:hover{
+          background-color: darken($aubergine, 5%);
+        }
       }
     }
 
@@ -652,14 +804,16 @@ body{
 
   .create-info {
     padding: 2% 2%;
-    position: relative;
+
     .create-subheader {
       position: absolute;
       top: 20px;
-      width: 95%;
+      width: 100%;
       height: 20px;
-      font-size: 2em;
+      font-size: 4em;
       text-align: center;
+      background-color: lighten($subheaderbg, 25%);
+      line-height: 1.5em;
     }
     .create-title {
       position: absolute;
@@ -668,12 +822,12 @@ body{
       background-color: white;
       width: 95%;
       border: solid 2px $border;
-      font-size: 1em;
-      margin-top: 2%;
+      font-size: 3em;
+      margin: 2% 0 0 2.5%;
       color: black;
     }
     .create-picture {
-      position: absolute;
+      margin: 2% 0;
       top: 115px;
       width: 95%;
       height: 325px;
@@ -696,8 +850,9 @@ body{
       width: 95%;
       border: solid 2px $border;
       font-size: 1em;
-      margin-top: 2%;
+      margin: 2% 0 2% 2.5%;
       color: black;
+      font-size: 3em;
     }
     .create-start-na {
       position: absolute;
@@ -707,11 +862,11 @@ body{
       background-color: white;
       width: 40%;
       border: solid 2px $border;
-      font-size: 1em;
-      margin-top: 2%;
+      font-size: 3em;
+      margin: 2% 5%;
       color: black;
     }
-    .create-end-na {
+    .create-start-time-na{
       position: absolute;
       display: inline-block;
       top: 362px;
@@ -720,23 +875,23 @@ body{
       background-color: white;
       width: 40%;
       border: solid 2px $border;
-      font-size: 1em;
+      font-size: 3em;
       margin-top: 2%;
       color: black;
     }
-    .create-start-time-na {
+    .create-end-na {
       position: absolute;
       display: inline-block;
-      top: 392px;
+      margin: 2% 5%;
       height: 20px;
       background-color: white;
       width: 40%;
       border: solid 2px $border;
-      font-size: 1em;
+      font-size: 3em;
       margin-top: 2%;
       color: black;
     }
-    .create-end-time-na {
+    .create-end-time-na{
       position: absolute;
       display: inline-block;
       top: 392px;
@@ -745,23 +900,24 @@ body{
       background-color: white;
       width: 40%;
       border: solid 2px $border;
-      font-size: 1em;
+      font-size: 3em;
       margin-top: 2%;
-      color: black;
+      color: black
     }
 
     .create-description {
-      position: absolute;
+      display: block;
       top: 430px;
-      height: 85px;
+      height: 25vh;
       background-color: white;
       width: 95%;
       border: solid 2px $border;
       font-size: 1em;
-      margin-top: 2%;
+      margin: 2% 0 0 2.5%;
       color: black;
+      font-size: 3em;
     }
-  }
+
 
   .create-post {
     background-color: $buttonaccent2;
@@ -769,7 +925,7 @@ body{
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 5em;
     line-height: 1.3em;
     color: white;
     cursor: pointer;
@@ -781,6 +937,25 @@ body{
   }
 
 //-------- Created View --------------//
+      .created-post-title {
+        width: 100%;
+        font-size: 5em;
+        line-height: 1.5em;
+        color: black;
+        text-align: center;
+        background-color: lighten($subheaderbg, 25%);
+      }
+      .created-post-description {
+        width: 95%;
+        font-size: 3em;
+        margin-top: 2%;
+        color: black;
+      }
+      .created-post-images {
+        // display: block;
+        position: relative;
+        .created-post-photo {
+          display: inline-block;
 
 .created-info {
     position: relative;
@@ -789,6 +964,7 @@ body{
     -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
                   box-sizing: border-box;
+            height: 400px;
 }
   .created-post-title {
     margin: 1em auto 1em;
@@ -831,6 +1007,7 @@ body{
         border-radius: 5px;
         color: white;
         padding: 8px 0;
+          text-align: center;
         float: right;
         width: 40%;
         min-width: 10%;
@@ -846,17 +1023,22 @@ body{
       width: 45%;
       float: left;
       margin-top: 1em;
+
       .created-post-start {
         clear: left;
         float: left;
         width: 40%;
+          font-size: .75em;
         padding: 10px 0;
+        }
       }
       .created-post-end {
         clear: left;
         float: left;
         width: 40%;
+          font-size: .75em;
         padding: 10px 0;
+        }
       }
     }
     .created-post-calendar-btns {
@@ -864,10 +1046,15 @@ body{
         width: 40%;
         float: right;
       .google-cal {
+
           display: inline-block;
+
+        width: 80px;
+        height: 20px;
       }
       .ical {
           display: inline-block;
+        width: 80px;
           float: right;
       }
     }
@@ -885,6 +1072,9 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
   .created-post-footer-edit {
     background-color: $buttonaccent;
@@ -899,6 +1089,9 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+    &:hover{
+      background-color: darken($buttonaccent, 5%);
+    }
   }
   .created-post-footer-delete {
     background-color: $aubergine;
@@ -913,6 +1106,9 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+    &:hover{
+      background-color: darken($aubergine, 5%);
+    }
   }
 
 
@@ -965,6 +1161,9 @@ body{
         padding: 0 1%;
         color: lighten($aubergine, 20%);
         // background-color: $itembg;
+        &:hover{
+          color: lighten($aubergine, 15%);
+        }
     }
   }
 
@@ -978,6 +1177,10 @@ body{
     width: 50%;
     position: fixed;
     bottom: 0;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
   .chat-back-to-post-btn{
     display:inline-block;
@@ -990,30 +1193,43 @@ body{
     position: fixed;
     margin: 0 0 0 50%;
     bottom: 0;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonbg, 5%);
+    }
   }
 
 // ------------ Your Claimed Posts --------- //
 
 .claimed-title {
-  font-size: 2em;
-  margin: 5% 0 0 5%;
+  font-size: 6em;
+  margin: 5% 0 2% 0;
   display: inline-block;
-  padding: 5px 0;
+  width: 100%;
+  text-align: center;
 }
 
 .claimed-chat {
   display: block;
   margin: 5% 0 0 5%;
   margin: 0 20%;
-  font-size: 2em;
+  font-size: 4em;
   background-color: $buttonaccent2;
   color: white;
   padding: 5px;
   text-align: center;
+  cursor: pointer;
+  &:hover{
+    background-color: darken($buttonaccent2, 5%);
+  }
 }
 
 .claimed-supplier-name {
   margin: 5% 0 0 5%;
+  font-size: 3em;
+  span{
+    display: block;
+  }
 }
 
 .claimed-image {
@@ -1022,10 +1238,12 @@ body{
 
 .claimed-details {
   margin: 5% 5% 0 5%;
+  font-size: 3em;
 }
 
 .claimed-location {
   margin: 5% 0 0 5%;
+  font-size: 3em;
 }
 
 .claimed-location-image {
@@ -1034,23 +1252,30 @@ body{
 }
 
 .claimed-time-calendar-wrap {
-  border: solid 1px red;
+  // border: solid 1px red;
   display: inline-block;
   margin-left: 10%;
+  font-size: 3em;
   .claimed-time-wrap {
     display: inline;
     margin: 10px 0;
     .claimed-start {
       display: inline;
       padding: 5px;
+      span{
+        display: block;
+      }
     }
     .claimed-end {
       display: inline;
       padding: 5px;
+      span{
+        display: block;
+      }
     }
   }
   .claimed-calendar-wrap {
-    border: solid 1px red;
+    // border: solid 1px red;
     display: block;
     .claimed-iCal {
       // border: solid thin black;
@@ -1067,18 +1292,24 @@ body{
 
 .claimed-details-title {
   margin: 5%;
+  font-size: 3em;
 }
+
 
 .claimed-bottom-button {
   position: fixed;
   bottom: 0;
   width: 50%;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 5em;
   line-height: 1.3em;
   color: white;
   cursor: pointer;
   background-color: $buttonbg;
+  cursor: pointer;
+  &:hover{
+    background-color: darken($buttonbg, 5%);
+  }
 }
 
 .claimed-remove-button {
@@ -1087,11 +1318,15 @@ body{
   width: 50%;
   margin-left: 50%;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 5em;
   line-height: 1.3em;
   color: white;
   cursor: pointer;
   background-color: $buttonaccent2;
+  cursor: pointer;
+  &:hover{
+    background-color: darken($buttonaccent2, 5%);
+  }
 }
 
 }

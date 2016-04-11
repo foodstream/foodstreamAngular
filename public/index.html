@@ -10,10 +10,15 @@
     <link href="assets/js/pickadate/lib/themes/default.css" rel="stylesheet" type='text/css'>
     <link href="assets/js/pickadate/lib/themes/default.date.css" rel="stylesheet" type='text/css'>
     <link href="assets/js/pickadate/lib/themes/default.time.css" rel="stylesheet" type='text/css'>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
 
   <body ng-app="foodStream" ng-controller = "appController">
+
+    <div class="app-header">
+      <div  class='app-header-txt' ng-click='goHome()'>foodstream</div>
+      <span class='app-header-login-icon' ng-if='logged'  ng-click='goToProfile()'><i class="fa fa-user"></i></span>
+    </div>
 
     <div class="app-header">foodstream</div>
 
@@ -21,9 +26,12 @@
       <ng-view></ng-view>
     </div>
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js'></script>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBCD73KiXP6Ng9QyW9dv4gB1STBMFw2og&libraries=places"></script>
+    <script src='./bower_components/aws-sdk/dist/aws-sdk.js'></script>
     <script src = "assets/js/app.js"></script>
     <script src='assets/js/loginController.js'></script>
     <script src = "assets/js/signUpController.js"></script>
@@ -32,15 +40,15 @@
     <script src='assets/js/detailController.js'></script>
     <script src='assets/js/createController.js'></script>
     <script src='/assets/js/claimedController.js'></script>
-
+    <script src='/assets/js/resultsController.js'></script>
     <script src='/assets/js/publicProfileController.js'></script>
 
     <script src='/assets/js/resultsController.js'></script>
 
     <script src="assets/js/pickadate/lib/picker.js"></script>
-     <script src="assets/js/pickadate/lib/picker.date.js"></script>
-     <script src="assets/js/pickadate/lib/picker.time.js"></script>
-
+    <script src="assets/js/pickadate/lib/picker.date.js"></script>
+    <script src="assets/js/pickadate/lib/picker.time.js"></script>
+    <script src='assets/js/createdController.js'></script>
   </body>
 
 </html>
