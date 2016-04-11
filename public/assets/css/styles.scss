@@ -90,7 +90,13 @@ body{
   .edit-profile-image-input{
     font-size: 2em;
     color: white;
-    
+
+  }
+  .edit-profile-image-upload{
+    background-color: $buttonaccent2;
+    font-size: 3em;
+    color: white;
+    margin: 0 2% 0 0;
   }
   .edit-profile-add-picture{
     display: block;
@@ -117,34 +123,40 @@ body{
   .edit-profile-first-name{
     margin: 2% 0 2% 2%;
     width: 45vw;
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .edit-profile-last-name{
     margin: 2% 0 0 2%;
     width: 47vw;
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .edit-profile-email{
     margin: 2%;
     width: 96vw;
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .edit-profile-organization{
     margin: 2%;
     width: 96vw;
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .edit-profile-location{
     margin: 2%;
     width: 96vw;
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .edit-profile-description{
     display: block;
     margin: 2%;
     width: 96vw;
     height: 18vh;
-    font-size: 1.3em;
+    font-size: 3em;
+  }
+  .edit-profile-submit-btn{
+    background-color: $buttonbg;
+    color: white;
+    font-size: 4em;
+    padding: 1% 30%;
   }
   .edit-profile-footer{
     display: block;

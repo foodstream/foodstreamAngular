@@ -61,6 +61,11 @@ body {
   body .edit-profile-image-input {
     font-size: 2em;
     color: white; }
+  body .edit-profile-image-upload {
+    background-color: #8bc34a;
+    font-size: 3em;
+    color: white;
+    margin: 0 2% 0 0; }
   body .edit-profile-add-picture {
     display: block;
     width: 100%;
@@ -81,29 +86,34 @@ body {
   body .edit-profile-first-name {
     margin: 2% 0 2% 2%;
     width: 45vw;
-    font-size: 1.5em; }
+    font-size: 3em; }
   body .edit-profile-last-name {
     margin: 2% 0 0 2%;
     width: 47vw;
-    font-size: 1.5em; }
+    font-size: 3em; }
   body .edit-profile-email {
     margin: 2%;
     width: 96vw;
-    font-size: 1.5em; }
+    font-size: 3em; }
   body .edit-profile-organization {
     margin: 2%;
     width: 96vw;
-    font-size: 1.5em; }
+    font-size: 3em; }
   body .edit-profile-location {
     margin: 2%;
     width: 96vw;
-    font-size: 1.5em; }
+    font-size: 3em; }
   body .edit-profile-description {
     display: block;
     margin: 2%;
     width: 96vw;
     height: 18vh;
-    font-size: 1.3em; }
+    font-size: 3em; }
+  body .edit-profile-submit-btn {
+    background-color: #0c8183;
+    color: white;
+    font-size: 4em;
+    padding: 1% 30%; }
   body .edit-profile-footer {
     display: block;
     width: 100%;
