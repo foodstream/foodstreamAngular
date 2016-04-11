@@ -54,6 +54,13 @@ body {
       font-size: 2em; }
       body .edit-profile-subheader .edit-profile-subheader-change-pass:hover {
         background-color: #ffc08a; }
+  body .edit-profile-image {
+    margin: 2% 0 2% 25%; }
+  body .edit-profile-choose-file {
+    font-size: 2em; }
+  body .edit-profile-image-input {
+    font-size: 2em;
+    color: white; }
   body .edit-profile-add-picture {
     display: block;
     width: 100%;
