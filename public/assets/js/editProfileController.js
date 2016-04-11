@@ -10,7 +10,7 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   //declare input value variables
   $scope.first;
   $scope.last;
-  $scope.email; 
+  $scope.email;
   $scope.org;
   $scope.userLocation;
   $scope.userDescription;
@@ -76,6 +76,16 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
   }
 
+  $scope.nonce = Math.floor(Math.random()*99999);
 
+  $scope.logFile = function(){
+    console.log($("#randomFile").val());
+    console.log($("#fileName").val());
+
+    $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+  $scope.userToken+'user[image_link]='+ $scope.WHATEVERTHEFILENAMEISWHYCANTIJUSTHAVEIT)
+      .then(function success(){
+        console.log("sent file name to database")''
+      });
+  }
 
 }]);
