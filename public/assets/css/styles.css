@@ -113,7 +113,8 @@ body {
     background-color: #0c8183;
     color: white;
     font-size: 4em;
-    padding: 1% 30%; }
+    padding: 1% 30%;
+    margin: 0 0 10% 0; }
   body .edit-profile-footer {
     display: block;
     width: 100%;
