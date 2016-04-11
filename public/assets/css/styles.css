@@ -704,30 +704,36 @@ body {
       color: white;
       padding: 8px 0;
       text-align: center;
-      cursor: pointer; }
+      width: 90%;
+      text-align: center;
+      cursor: pointer;
+      font-size: 3em;
+      line-height: 1.5em;
+      margin: 0 0 0 5%; }
       body .created-post-location .created-post-directions-btn:hover {
         background-color: #0a6a6c; }
-  body .created-post-calendar {
-    position: absolute; }
-    body .created-post-calendar .created-post-time {
-      position: absolute;
-      display: inline-block; }
-      body .created-post-calendar .created-post-time .created-post-start {
-        padding: 5px 0 0 0;
-        height: 20px; }
-      body .created-post-calendar .created-post-time .created-post-end {
-        padding: 5px 0 0 0;
-        height: 20px; }
-    body .created-post-calendar .created-post-calendar-btns {
-      display: inline-block; }
-      body .created-post-calendar .created-post-calendar-btns .google-cal {
-        display: inline-block;
-        width: 80px;
-        height: 20px; }
-      body .created-post-calendar .created-post-calendar-btns .ical {
-        display: inline-block;
-        width: 80px;
-        height: 20px; }
+  body .created-post-start {
+    margin: 2% 2.5%;
+    font-size: 3em; }
+    body .created-post-start span {
+      font-size: .75em;
+      display: block; }
+  body .created-post-end {
+    margin: 2% 2.5%;
+    font-size: 3em; }
+    body .created-post-end span {
+      font-size: .75em;
+      display: block; }
+  body .created-post-calendar-btns {
+    display: inline-block; }
+    body .created-post-calendar-btns .google-cal {
+      display: inline-block;
+      width: 80px;
+      height: 20px; }
+    body .created-post-calendar-btns .ical {
+      display: inline-block;
+      width: 80px;
+      height: 20px; }
   body .created-post-footer-home {
     background-color: #8bc34a;
     position: fixed;

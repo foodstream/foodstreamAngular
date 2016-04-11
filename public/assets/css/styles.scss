@@ -922,49 +922,51 @@ body{
           color: white;
           padding: 8px 0;
           text-align: center;
-
+          width: 90%;
+          text-align: center;
           cursor: pointer;
+          font-size: 3em;
+          line-height: 1.5em;
+          margin: 0 0 0 5%;
           &:hover{
             background-color: darken($buttonbg, 5%);
           }
         }
       }
-      .created-post-calendar {
-        position: absolute;
-        // border: 1px solid;
-        .created-post-time {
-          position: absolute;
-        //   border: 1px solid;
-          display: inline-block;
-          .created-post-start {
-            padding: 5px 0 0 0;
 
-            height: 20px;
-            //   border: 1px solid;
-          }
-          .created-post-end {
-            padding: 5px 0 0 0;
-
-            height: 20px;
-            //   border: 1px solid;
-          }
-        }
-        .created-post-calendar-btns {
-          display: inline-block;
-          .google-cal {
-
-            display: inline-block;
-
-            width: 80px;
-            height: 20px;
-          }
-          .ical {
-            display: inline-block;
-            width: 80px;
-            height: 20px;
-          }
+      .created-post-start {
+        margin: 2% 2.5%;
+        font-size: 3em;
+        span{
+          font-size: .75em;
+          display: block;
         }
       }
+      .created-post-end {
+        margin: 2% 2.5%;
+        font-size: 3em;
+        span{
+          font-size: .75em;
+          display: block;
+        }
+      }
+
+    .created-post-calendar-btns {
+      display: inline-block;
+      .google-cal {
+
+        display: inline-block;
+
+        width: 80px;
+        height: 20px;
+      }
+      .ical {
+        display: inline-block;
+        width: 80px;
+        height: 20px;
+      }
+    }
+
 
   .created-post-footer-home {
     background-color: $buttonaccent2;
