@@ -7,12 +7,15 @@
   </span>
 </div>
 
+
+
 <!-- <div class='edit-profile-add-picture'><i class="fa fa-camera-retro pic-box"><span class='edit-profile-add-picture-txt'>add a picture</span></i>
 
 </div> -->
+<!--
+<input type="file" accept="image/*" capture="camera"> -->
 
-<input type="file" accept="image/*" capture="camera">
-
+<img ng-src = "{{profilePic}}" width = "100px"></img>
 
 <!-- this form sourced from http://aws.amazon.com/articles/1434/ -->
 <form action="https://foodstream.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
