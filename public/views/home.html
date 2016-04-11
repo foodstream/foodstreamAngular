@@ -1,15 +1,18 @@
 
 <div class='home-subheader'>
-
-  <input class = "home-search" placeholder="Search for food"></input>
-  <i class="fa fa-search" ng-click='search()'></i>
-
-  <div class='home-subheader-text'>Search for food within <input class = "home-distance-search"></input> miles of my location
+  <div class='home-subheader-see-all' ng-click='filters= ""'>
+     all my active posts
+  </div>
+  <div class='home-subheader-see-claimed' ng-click='seeClaimed()'>
+    my claimed posts
+  </div>
+  <div class='home-subheader-see-provided' ng-click='seeProvided()'>
+    my provided posts
   </div>
 </div>
 
 
-<div ng-repeat = "post in posts" >
+<div ng-repeat = "post in posts | filter:filters | orderBy:'end_at'" >
 
   <div class = "home-card">
     <div class = "home-header">{{post.title}}
@@ -17,8 +20,9 @@
     </div>
 
     <div class = "home-transaction-details">
-      <div>{{post.address_string}}</div>
+
       <div>{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}</div>
+      <div>{{post.address_string}}</div>
     </div>
 
     <div class = "home-chat">
@@ -36,5 +40,5 @@
 </div>
 
 
-
-<div class = "home-post" ng-click='createPost()'>Create Post</div>
+  <div class='home-search' ng-click='search()'>Search for Food</div>
+  <div class = "home-post" ng-click='createPost()'>Create Post</div>
