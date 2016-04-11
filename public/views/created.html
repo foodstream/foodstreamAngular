@@ -18,29 +18,31 @@
 		<div class="created-post-address">
 			<span>Address:</span>{{post.address_string}}
 		</div>
-		<a href="#"><div class="created-post-directions-btn">
-			Get Directions
-		</div></a>
+		<div class="created-post-directions-btn">
+			Get Directions w/Google
+		</div>
 	</div>
 
-	<div class="created-post-calendar">
-		<div class="created-post-time">
+
+
 			<div class="created-post-start">
-				Start:{{post.start_at}}
+				<span>Starts at:</span>{{post.start_at}}
 			</div>
 			<div class="created-post-end">
-				End:{{post.end_at}}
+				<span>Pick up by:</span>{{post.end_at}}
 			</div>
-		</div>
-		<div class="created-post-calendar-btns">
+
+
 			<div class="google-cal">
 				<a href="#"><i class="fa fa-calendar-plus-o fa-4x"></i></a>
+				add to google calendar
 			</div>
 			<div class="ical">
 				<a href="#"><i class="fa fa-calendar-plus-o fa-4x"></i></a>
+				add to ical
 			</div>
-		</div>
-	</div>
+
+
 
 	<div class="created-post-footer-home" ng-click='goHome()'>
 		Home
