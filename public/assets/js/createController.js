@@ -4,7 +4,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
   //grab login token from localstorage
   var token = localStorage.getItem('token');
   var userId = localStorage.getItem('userId')
-  console.log(userId);
+  // console.log(userId);
 
   //declare text field variables
 
@@ -27,7 +27,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
         lat = place.geometry.location.lat();
         lng = place.geometry.location.lng();
         address = place.formatted_address;
-          console.log(lat, lng, address)
+          // console.log(lat, lng, address)
     });
 
   //use pickadate to get standardized date-times
@@ -58,7 +58,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
 
     description = $('.create-description').val();
 
-    console.log(title, startString, endString, description, lat, lng, address)
+    // console.log(title, startString, endString, description, lat, lng, address)
     //put values into json to send to rails
     var param = JSON.stringify({title:title, details:description, start_at:startString, end_at:endString, supplier:{id:userId}, address_string:address, latitude:lat, longitude:lng })
     console.log(param);
@@ -66,8 +66,8 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
     //send post values to rails to create a post!
     $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token, param
     ).then(function successCallback(response){
-      console.log('post?');
-      console.log(response, response.data.id);
+      // console.log('post?');
+      // console.log(response, response.data.id);
       localStorage.setItem('createdPostId', response.data.id)
 
       $location.path('/created')

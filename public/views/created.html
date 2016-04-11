@@ -7,17 +7,19 @@
 
 	<div class="created-post-images">
 		<div class="created-post-photo">
-			<img src = "/assets/images/map.png" width = "150px"></div>
+			<img class='created-post-photo-img' src="/assets/images/map.png">
+		</div>
 		<div class="created-post-map">
-			<img src = "/assets/images/produce.png" width = "150px"></div>
+			<img class='created-post-map-img' src="/assets/images/produce.png">
+		</div>
 	</div>
 
 	<div class="created-post-location">
 		<div class="created-post-address">
-			Address:
+			<span>Address:</span>{{post.address_string}}
 		</div>
 		<a href="#"><div class="created-post-directions-btn">
-			Get Directions{{post.address_string}}
+			Get Directions
 		</div></a>
 	</div>
 

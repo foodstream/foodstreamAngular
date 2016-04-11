@@ -1,5 +1,5 @@
 foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', '$location', function($http, $scope, getPostDetail, $location) {
-   console.log("claimed ctrllr up");
+  //  console.log("claimed ctrllr up");
   //  console.log(getPostDetail.clickedPost);
   //get the ID of the post you just clicked
   var postId = localStorage.getItem('postId');
