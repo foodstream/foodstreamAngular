@@ -50,23 +50,53 @@ body{
     display: block;
     color: darken($headerbg, 5%);
     .edit-profile-subheader-txt{
-      font-size: 2em;
-      line-height: 1.3em;
+      font-size: 3.5em;
       padding: 2% 0 2% 4%;
       display: inline-block;
     }
-    .edit-profile-subheader-change-pass{
-      float: right;
-      text-align: center;
+    .edit-profile-logout{
+      margin: 0 0 0 30%;
+      font-size: 2em;
       background-color: lighten($buttonaccent, 35%);
-      padding: 2.5% 2%;
-      display: inline-block;
-      color: white;
+      padding: 2% 1.8%;
       cursor: pointer;
       &:hover{
         background-color: lighten($buttonaccent, 30%);
       }
     }
+    .edit-profile-subheader-change-pass{
+      float: right;
+      text-align: center;
+      background-color: lighten($buttonaccent, 35%);
+      padding: 1.6% 2%;
+      display: inline-block;
+      color: white;
+      cursor: pointer;
+      font-size: 2em;
+      &:hover{
+        background-color: lighten($buttonaccent, 30%);
+      }
+    }
+  }
+
+  .edit-profile-image{
+    margin: 2% 0 2% 25%;
+
+  }
+  .edit-profile-choose-file{
+    font-size: 2em;
+
+  }
+  .edit-profile-image-input{
+    font-size: 2em;
+    color: white;
+
+  }
+  .edit-profile-image-upload{
+    background-color: $buttonaccent2;
+    font-size: 3em;
+    color: white;
+    margin: 0 2% 0 0;
   }
   .edit-profile-add-picture{
     display: block;
@@ -93,34 +123,41 @@ body{
   .edit-profile-first-name{
     margin: 2% 0 2% 2%;
     width: 45vw;
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .edit-profile-last-name{
     margin: 2% 0 0 2%;
     width: 47vw;
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .edit-profile-email{
     margin: 2%;
     width: 96vw;
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .edit-profile-organization{
     margin: 2%;
     width: 96vw;
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .edit-profile-location{
     margin: 2%;
     width: 96vw;
-    font-size: 1.5em;
+    font-size: 3em;
   }
   .edit-profile-description{
     display: block;
     margin: 2%;
     width: 96vw;
     height: 18vh;
-    font-size: 1.3em;
+    font-size: 3em;
+  }
+  .edit-profile-submit-btn{
+    background-color: $buttonbg;
+    color: white;
+    font-size: 4em;
+    padding: 1% 30%;
+    margin: 0 0 10% 0;
   }
   .edit-profile-footer{
     display: block;
@@ -131,8 +168,8 @@ body{
 
     position: fixed;
     text-align: center;
-    font-size: 2.5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 2em;
     color: white;
     cursor: pointer;
     font-weight: 200;
