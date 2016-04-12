@@ -1,6 +1,8 @@
 <div class = "post-detail-title">{{post.title}}</div>
 
-<img src ="{{post.image_link}}"></img>
+<div class = "post-detail-image">
+  <img src ="{{post.image_link}}"></img>
+</div>
 
 <div class = "post-detail-supplier-name">
   {{post.supplier.first_name}} {{post.supplier.last_name}}
@@ -10,9 +12,7 @@
   </span>
 </div>
 
-<div class = "post-detail-image">
-  <img src = "/assets/images/food-thumbnail.jpg" width = "100px">
-</div>
+
 
 <div class = "post-detail-details">
   {{post.details}}
