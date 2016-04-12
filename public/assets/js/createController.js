@@ -31,13 +31,13 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
   //use pickadate to get standardized date-times
   // starting time
   $(".create-start-na").pickadate({
-  format: 'mm/dd/yyyy'});
+  format: 'yyyy/mm/dd'});
   $(".create-start-time-na").pickatime({
   format: 'h:iA'});
 
   //ending time
   $(".create-end-na").pickadate({
-  format: 'mm/dd/yyyy'});
+  format: 'yyyy/mm/dd'});
   $(".create-end-time-na").pickatime({
   format: 'h:iA'});
 
@@ -76,7 +76,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
     // console.log(param);
 
     //send post values to rails to create a post!
-    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts?token=' + token + "&post[title]=" + title + "&post[details]=" + description + "&post[start_at]=" + startString + "&post[end_at]=" + endString + "&post[supplier_id]=" + userId + "&post[address_string]=" + address + "&post[latitude]=" + lat + "&post[longitude]=" + lng + "&post[image_link]=" + $scope.nonce + $scope.fileFix
+    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token=' + token + "&post[title]=" + title + "&post[details]=" + description + "&post[start_at]=" + startString + "&post[end_at]=" + endString + "&post[supplier_id]=" + userId + "&post[address_string]=" + address + "&post[latitude]=" + lat + "&post[longitude]=" + lng + "&post[image_link]=" + $scope.nonce + $scope.fileFix
     ).then(function successCallback(response){
       console.log('new post was created');
       // console.log(response, response.data.id);
