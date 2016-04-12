@@ -417,6 +417,11 @@ body{
     margin: 5%;
   }
 
+  #post-detail-map{
+    height: 500px;
+    width: 500px;
+  }
+
   .post-detail-start {
     margin: 5%;
     display: block;
@@ -928,9 +933,10 @@ body{
 
           margin-top: 2%;
           border: solid thin black;
-          .created-post-photo-img{
+          #created-post-gmap{
             width: 400px;
             height: 400px;
+          }
           }
         }
         .created-post-map {
@@ -941,7 +947,7 @@ body{
             height: 400px;
           }
         }
-      }
+      
       .created-post-location {
         display: block;
         .created-post-address {

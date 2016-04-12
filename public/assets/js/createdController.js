@@ -10,6 +10,32 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
   //get post information
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
     $scope.post = response.data;
+
+    //use callback lat/long to display google map of post location
+    var marker;
+    var myLatLng;
+    //set map latLng w/callback info
+    myLatlng = new google.maps.LatLng($scope.post.latitude, $scope.post.longitude);
+    var mapOptions = {
+      zoom: 16,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    //render map
+    var map = new google.maps.Map(document.getElementById("created-post-gmap"),
+      mapOptions);
+    //set marker
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      title:"Food Is here"
+    });
+    //render marker
+    marker.setMap(map);
+
+    //set directions link
+    $scope.directionsLink = 'https://maps.google.com?saddr=Current+Location&daddr='+$scope.post.latitude+','+$scope.post.longitude;
+    console.log($scope.directionsLink);
+
   }, function errorCallback(response){
     console.log('not get?', response);
   });

@@ -20,7 +20,10 @@
 
 <div class = "post-detail-location">{{post.address_string}}</div>
 <div class = "post-detail-location-image">
-  <img src = "assets/images/map-thumbnail.png" width = "100px">
+  <div id='post-detail-map'></div>
+  <a href={{directionsLink}} class='post-detail-directions-link' >
+    get directions with google
+  </a>
 </div>
 
 <div class = "post-detail-start"><span>Available at: </span>{{post.start_at}}</div>
