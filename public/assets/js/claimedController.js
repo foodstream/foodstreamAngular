@@ -12,15 +12,46 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
   //remove the post ID b/c it's a one-time need
   localStorage.removeItem('postId');
 
+  $scope.directionsLink;
   //get the post info
   $http({
     method: 'GET',
     url:' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token
   }).then(function successCallback(response){
-    console.log(response.data);
+    // console.log(response.data);
+    //post info = callback response
     $scope.post = response.data;
-  }, function errorCallback(response){console.log('hate')
+    // console.log($scope.post.latitude, $scope.post.longitude)
+    //use callback lat/long to display google map of post location
+    var marker;
+    var myLatLng;
+    //set map latLng w/callback info
+    myLatlng = new google.maps.LatLng($scope.post.latitude, $scope.post.longitude);
+    var mapOptions = {
+      zoom: 16,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    //render map
+    var map = new google.maps.Map(document.getElementById("claimed-map"),
+      mapOptions);
+    //set marker
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      title:"Food Is here"
+    });
+    //render marker
+    marker.setMap(map);
+
+    //set directions link
+    $scope.directionsLink = 'https://maps.google.com?saddr=Current+Location&daddr='+$scope.post.latitude+','+$scope.post.longitude;
+    console.log($scope.directionsLink);
+
+  }, function errorCallback(response){
+    console.log('hate');
   });
+
+
 
 
   //allow supplier to mark the post as completed

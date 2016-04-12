@@ -899,6 +899,9 @@ body {
   body .claimed-details {
     margin: 5% 5% 0 5%;
     font-size: 3em; }
+  body #claimed-map {
+    width: 600px;
+    height: 600px; }
   body .claimed-location {
     margin: 5% 0 0 5%;
     font-size: 3em; }
@@ -945,6 +948,7 @@ body {
   body .claimed-bottom-button {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 50%;
     text-align: center;
     font-size: 5em;
@@ -959,7 +963,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 50%;
-    margin-left: 50%;
+    left: 50%;
     text-align: center;
     font-size: 5em;
     line-height: 1.3em;
