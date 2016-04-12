@@ -3,7 +3,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
 
   //grab login token from localstorage
   var token = localStorage.getItem('token');
-  var userId = localStorage.getItem('userId')
+  var userId = localStorage.getItem('userId');
   // console.log(userId);
 
   //declare text field variables
@@ -64,16 +64,31 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
     console.log(param);
 
     //send post values to rails to create a post!
-    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token, param
+    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token=' + token, param
     ).then(function successCallback(response){
-      // console.log('post?');
+      console.log('new post was created');
       // console.log(response, response.data.id);
       localStorage.setItem('createdPostId', response.data.id)
 
       $location.path('/created')
     }, function errorCallback(response){
-      console.log('not post?', response)
+      console.log('post not created', response)
     });
   });
+
+  $scope.nonce = Math.floor(Math.random()*99999);
+
+  $scope.submitNewPost = function(){
+    console.log($("#randomFile").val());
+    console.log($("#fileName").val());
+    console.log($scope.nonce);
+
+    $scope.fileFix = ($("#fileName").val()).slice(12);
+
+    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts?token=' + token + '&post[image_link]='+ $scope.nonce + $scope.fileFix)
+      .then(function success(){
+        console.log("sent file name to database");
+      });
+  }
 
 }]);
