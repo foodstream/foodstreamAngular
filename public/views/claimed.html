@@ -12,7 +12,10 @@
 
 <div class = "claimed-location">{{post.address_string}}</div>
 <div class = "claimed-location-image">
-  <img src = "assets/images/map-thumbnail.png" width = "100px">
+  <div id='claimed-map'></div>
+  <a href={{directionsLink}} class='claimed-directions-link' >
+    get directions with google
+  </a>
 </div>
 
 <div class = "claimed-time-calendar-wrap">
@@ -38,7 +41,7 @@
 </div>
 
 <div class='claimed-mark-as-complete' ng-click='markComplete(post.supplier.id)'>
-  This transaction has been completed
+
 </div>
 
 <div class = "claimed-bottom-button" ng-click='goHome()'>Back</div>
