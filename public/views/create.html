@@ -2,8 +2,6 @@
 	<div class = "create-subheader">
 		Create Post
 	</div>
-<form ng-submit = 'submit()'>
-	<input class = "create-title" placeholder="Title" ng-model='title'></input>
 
 
 <!-- this form sourced from http://aws.amazon.com/articles/1434/ -->
@@ -20,9 +18,9 @@
 
   Choose an image for your food post:
   <input id = "fileName" name="file" type="file">
-  <br>
-  <input type="submit" value="Upload image" ng-click = "submitNewPost()">
-</form>
+
+
+	<input class = "create-title" placeholder="Title" ng-model='title'></input>
 
 	<input id="create-post-location" class="create-location" placeholder="Location" ng-model='location' ></input>
 
@@ -36,10 +34,13 @@
 
 	<textarea class = "create-description" placeholder="Description" ng-model='description'></textarea>
 
+<input type="submit" value="Submit post" id = "newPostSubmitButton" ng-click = "submitNewPost()">
 
+
+<!--  -->
 
 <!-- <input type = 'submit' value='Create Post'/> -->
-<div class = "create-post" ng-click = "">
+<!-- <div class = "create-post" ng-click = "">
 	Create Post
-</div>
+</div> -->
 </form>
