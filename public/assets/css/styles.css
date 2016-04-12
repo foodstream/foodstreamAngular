@@ -10,13 +10,16 @@ body {
     text-decoration: none; }
   body .app-header {
     font-weight: 700;
-    height: 40%;
+    height: 5%;
     width: 100vw;
     background-color: #397521;
     color: white;
     display: block;
     padding: 2% 0;
-    font-size: 4em; }
+    font-size: 4em;
+    position: fixed;
+    top: 0;
+    z-index: 999; }
     body .app-header .app-header-txt {
       display: inline-block;
       cursor: pointer;
@@ -28,9 +31,11 @@ body {
   body .edit-profile-subheader {
     background-color: #fbfbc4;
     width: 100vw;
-    height: 20%;
+    height: 10%;
     display: block;
-    color: #295518; }
+    color: #295518;
+    position: fixed;
+    margin-top: 12%; }
     body .edit-profile-subheader .edit-profile-subheader-txt {
       font-size: 3.5em;
       padding: 2% 0 2% 4%;
@@ -172,12 +177,17 @@ body {
     cursor: pointer; }
     body .sign-up-back-btn:hover {
       background-color: #0a6a6c; }
+  body .home-content-wrapper {
+    margin: 30% 0 20% 0; }
   body .home-subheader {
     background-color: #fbfbc4;
     width: 100%;
-    height: 20%;
+    height: 7%;
     color: #295518;
-    font-size: 3em; }
+    font-size: 3em;
+    position: fixed;
+    top: 7%;
+    z-index: 999; }
     body .home-subheader .home-subheader-see-all {
       line-height: 1.2em;
       text-align: center;
@@ -345,6 +355,9 @@ body {
     body .post-detail-bottom-button:hover {
       background-color: #7eb73d; }
   body .results-subheader {
+    position: fixed;
+    margin: -20% 0 0 0;
+    z-index: 999;
     background-color: #fbfbc4; }
     body .results-subheader .results-search {
       margin: 2% 0 0 2%;
@@ -370,6 +383,8 @@ body {
         cursor: pointer; }
         body .results-subheader .results-subheader-text .results-subheader-search-button:hover {
           background-color: #50a52f; }
+  body .results-butt-content-wrapper {
+    margin: 33% 0 10% 0; }
   body .results-card {
     display: block;
     height: 20vh;
@@ -600,12 +615,15 @@ body {
     font-weight: 200; }
     body .profile-pub-footer .profile-pub-back:hover {
       background-color: #38162c; }
+  body .create-content-wrapper {
+    margin-top: 12%; }
   body .create-subheader {
     width: 100%;
     font-size: 4em;
     text-align: center;
     background-color: #fbfbc4;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    margin-top: 15%; }
   body .create-title {
     background-color: white;
     width: 95%;
@@ -688,6 +706,8 @@ body {
     font-weight: 200; }
     body .create-post:hover {
       background-color: #7eb73d; }
+  body .created-content-wrapper {
+    margin-top: 12%; }
   body .created-post-title {
     width: 100%;
     font-size: 5em;
@@ -871,6 +891,8 @@ body {
     cursor: pointer; }
     body .chat-back-to-post-btn:hover {
       background-color: #0a6a6c; }
+  body .claimed-content-wrapper {
+    margin-top: 10%; }
   body .claimed-title {
     font-size: 6em;
     margin: 5% 0 2% 0;

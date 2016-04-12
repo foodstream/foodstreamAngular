@@ -11,31 +11,32 @@
   </div>
 </div>
 
+<div class = "home-content-wrapper">
+  <div ng-repeat = "post in posts | filter:filters | orderBy:'end_at'" >
 
-<div ng-repeat = "post in posts | filter:filters | orderBy:'end_at'" >
+    <div class = "home-card">
+      <div class = "home-header">{{post.title}}
+        <span>{{post.end_at}}</span>
+      </div>
 
-  <div class = "home-card">
-    <div class = "home-header">{{post.title}}
-      <span>{{post.end_at}}</span>
+      <div class = "home-transaction-details">
+
+        <div>{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}</div>
+        <div>{{post.address_string}}</div>
+      </div>
+
+      <div class = "home-chat">
+        <i class="fa fa-comment">
+          <span class='home-chat-text'>Chat</span>
+        </i>
+      </div>
+      <div class = "home-details" ng-click='detailsId(post.id)'>
+        <i class="fa fa-info-circle">
+          <span class='home-details-text'>Details</span>
+        </i>
+      </div>
+
     </div>
-
-    <div class = "home-transaction-details">
-
-      <div>{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}</div>
-      <div>{{post.address_string}}</div>
-    </div>
-
-    <div class = "home-chat">
-      <i class="fa fa-comment">
-        <span class='home-chat-text'>Chat</span>
-      </i>
-    </div>
-    <div class = "home-details" ng-click='detailsId(post.id)'>
-      <i class="fa fa-info-circle">
-        <span class='home-details-text'>Details</span>
-      </i>
-    </div>
-
   </div>
 </div>
 

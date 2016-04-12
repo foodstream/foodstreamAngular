@@ -1,48 +1,50 @@
-<div class = "claimed-title">{{post.title}}</div>
+<div class = "claimed-content-wrapper">
+  <div class = "claimed-title">{{post.title}}</div>
 
-<div class = "claimed-chat"><i class="fa fa-comment"></i> Chat</div>
+  <div class = "claimed-chat"><i class="fa fa-comment"></i> Chat</div>
 
-<div class = "claimed-supplier-name">
-  {{post.supplier.first_name}} {{post.supplier.last_name}}
-  <br>{{post.supplier.organization}}
-  <span class='claimed-review'>
-    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
-  </span>
-</div>
-
-<div class = "claimed-location">{{post.address_string}}</div>
-<div class = "claimed-location-image">
-  <div id='claimed-map'></div>
-  <a href={{directionsLink}} class='claimed-directions-link' >
-    get directions with google
-  </a>
-</div>
-
-<div class = "claimed-time-calendar-wrap">
-  <div class = "claimed-time-wrap">
-    <div class = "claimed-start"><span>Starts At: </span>{{post.start_at}}</div>
-    <div class = "claimed-end"><span>Pick Up by:</span>{{post.end_at}}</div>
+  <div class = "claimed-supplier-name">
+    {{post.supplier.first_name}} {{post.supplier.last_name}}
+    <br>{{post.supplier.organization}}
+    <span class='claimed-review'>
+      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
+    </span>
   </div>
 
-  <div class = "claimed-calendar-wrap">
-    <div class = "claimed-iCal">+ iCal</div>
-    <div class = "claimed-googleCal">+ Google Calendar</div>
+  <div class = "claimed-location">{{post.address_string}}</div>
+  <div class = "claimed-location-image">
+    <div id='claimed-map'></div>
+    <a href={{directionsLink}} class='claimed-directions-link' >
+      get directions with google
+    </a>
+  </div>
+
+  <div class = "claimed-time-calendar-wrap">
+    <div class = "claimed-time-wrap">
+      <div class = "claimed-start"><span>Starts At: </span>{{post.start_at}}</div>
+      <div class = "claimed-end"><span>Pick Up by:</span>{{post.end_at}}</div>
+    </div>
+
+    <div class = "claimed-calendar-wrap">
+      <div class = "claimed-iCal">+ iCal</div>
+      <div class = "claimed-googleCal">+ Google Calendar</div>
+    </div>
+  </div>
+
+  <div class = "claimed-details-title">Details</div>
+
+  <div class = "claimed-image">
+    <img src = "{{post.image_link}}" width = "300px">
+  </div>
+
+  <div class = "claimed-details">
+    {{post.details}}
+  </div>
+
+  <div class='claimed-mark-as-complete' ng-click='markComplete(post.supplier.id)'>
+
   </div>
 </div>
 
-<div class = "claimed-details-title">Details</div>
-
-<div class = "claimed-image">
-  <img src = "{{post.image_link}}" width = "300px">
-</div>
-
-<div class = "claimed-details">
-  {{post.details}}
-</div>
-
-<div class='claimed-mark-as-complete' ng-click='markComplete(post.supplier.id)'>
-
-</div>
-
-<div class = "claimed-bottom-button" ng-click='goHome()'>Back</div>
-<div class = "claimed-remove-button" ng-click='removePost(post.claimant.id, post.supplier.id)'>Remove</div>
+  <div class = "claimed-bottom-button" ng-click='goHome()'>Back</div>
+  <div class = "claimed-remove-button" ng-click='removePost(post.claimant.id, post.supplier.id)'>Remove</div>
