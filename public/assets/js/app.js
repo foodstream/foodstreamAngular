@@ -6,6 +6,7 @@ $(function() {
 //initiate angular app
 var foodStream = angular.module("foodStream", ['ngRoute']);
 
+
 //this controller shows an icon in the header upon user login
 foodStream.controller('appController', ['$http', '$scope', '$location', function($http, $scope, $location){
 
@@ -31,14 +32,13 @@ foodStream.controller('appController', ['$http', '$scope', '$location', function
   if($scope.userToken != null){
     $scope.logged = true;
     // console.log('logged', $scope.logged)
-    $scope.apply;
   };
 
   //when you click on the user icon, you go to the edit profile page...
   $scope.goToProfile = function(){
     $location.path('/editProfile');
   };
-
+  //when you click on the foodstram logo, you go home
   $scope.goHome = function(){
     $location.path('/home');
   };
@@ -48,25 +48,19 @@ foodStream.controller('appController', ['$http', '$scope', '$location', function
 
 
 foodStream.factory('getPostDetail', function() {
-var clickedPost = {};
-// // var theId;
-// clickedPost.number = []
-//
-// clickedPost.add = function(postId){
-//   clickedPost.number.push({id: postId});
-//     console.log(clickedPost.number);
-// };
-//
-// // function(postId){
-// //     console.log(postId);
-// //     // console.log(details);
-// //     theId = postId;
-// //     // var clickedPost =  postId;
-// //
-// //   }
-//   console.log(clickedPost);
+  var clickedPost = {};
   return clickedPost;
+ });
 
+ foodStream.factory('logged', function(){
+   var logged = {}
+     var userToken = localStorage.getItem('token');
+     if(userToken != null){
+       logged.token = userToken;
+     }
+
+
+   return logged;
 
  });
 
@@ -95,18 +89,37 @@ foodStream.factory("geoLocationService", ['$q', '$window', '$rootScope', functio
     }
 }]);
 
+angular.module('foodStream').run(function($rootScope, $location, $route, logged) {
+  console.log(logged.token);
+  //get login token out of localstorage
+  // var userToken = localStorage.getItem('token');
+    var routesOpenToPublic = [];
+    angular.forEach($route.routes, function(route, path) {
+        // push route onto routesOpenToPublic if it has a truthy publicAccess value
+        route.publicAccess && (routesOpenToPublic.push(path));
+    });
+
+    $rootScope.$on('$routeChangeStart', function(event, nextLoc, currentLoc) {
+        var closedToPublic = (-1 === routesOpenToPublic.indexOf($location.path()));
+        if(closedToPublic && logged.token == undefined) {
+            $location.path('/login');
+        }
+    });
+})
 
 //routing
 foodStream.config(function($routeProvider){
   $routeProvider
     .when('/landing', {
       templateUrl : '/views/login.html',
-      controller : 'loginController'
+      controller : 'loginController',
+      publicAccess : true
     })
 
     .when('/signUp', {
       templateUrl : '/views/signup.html',
-      controller : 'signUpController'
+      controller : 'signUpController',
+      publicAccess : true
     })
 
     .when('/editProfile', {

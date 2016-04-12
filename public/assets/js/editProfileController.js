@@ -1,4 +1,4 @@
-foodStream.controller('editProfileController', ['$http', '$scope', '$location', function($http, $scope, $location){
+foodStream.controller('editProfileController', ['$http', '$scope', '$location', 'logged', function($http, $scope, $location, logged){
   console.log('edit ctrlr here');
 
   //get login token out of localstorage
@@ -22,10 +22,12 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/sessions/logout?token='+$scope.userToken).then(function successCallback(){
       console.log('logged out');
       localStorage.removeItem('token');
+      logged.token = undefined;
       $location.path('/landing');
     }, function errorCallback(){
       console.log('not logged out');
       localStorage.removeItem('token');
+      logged.token = undefined;
       $location.path('/landing');
     })
 
