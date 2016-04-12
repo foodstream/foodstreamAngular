@@ -9,8 +9,8 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
   var userId  = localStorage.getItem('userId');
   // console.log(postId);
 
-  //remove the post ID b/c it's a one-time need
-  localStorage.removeItem('postId');
+  //remove the post ID b/c it's a one-time need..or not, because people will go back after getting directions
+  // localStorage.removeItem('postId');
 
   $scope.directionsLink;
   //get the post info

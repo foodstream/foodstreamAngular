@@ -317,6 +317,9 @@ body {
     font-weight: bold; }
   body .post-detail-location-image {
     margin: 5%; }
+  body #post-detail-map {
+    height: 500px;
+    width: 500px; }
   body .post-detail-start {
     margin: 5%;
     display: block; }
@@ -726,15 +729,15 @@ body {
       display: inline-block;
       margin-top: 2%;
       border: solid thin black; }
-      body .created-post-images .created-post-photo .created-post-photo-img {
+      body .created-post-images .created-post-photo #created-post-gmap {
         width: 400px;
         height: 400px; }
-    body .created-post-images .created-post-map {
-      display: inline-block;
-      margin: 2% 5%; }
-      body .created-post-images .created-post-map .created-post-map-img {
-        width: 400px;
-        height: 400px; }
+  body .created-post-map {
+    display: inline-block;
+    margin: 2% 5%; }
+    body .created-post-map .created-post-map-img {
+      width: 400px;
+      height: 400px; }
   body .created-post-location {
     display: block; }
     body .created-post-location .created-post-address {

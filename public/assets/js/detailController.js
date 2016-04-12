@@ -8,10 +8,10 @@ foodStream.controller('detailController', ['$http', '$scope', 'getPostDetail', '
   //get user ID to enable a claim
   var userId = localStorage.getItem('userId');
 
-  //remove ID of clicked post b/c we dont need it no more
-  localStorage.removeItem('resultsPostId');
+  //remove ID of clicked post b/c we dont need it no more..or not b/c directions
+  // localStorage.removeItem('resultsPostId');
 
-  //call the API for post info
+  //call the API for post info and set google map on callback response
   $http({
     method: 'GET',
     url:' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token
@@ -19,8 +19,34 @@ foodStream.controller('detailController', ['$http', '$scope', 'getPostDetail', '
     console.log(response.data);
     $scope.post = response.data;
     console.log($scope.post.location);
-  }, function errorCallback(response){console.log('hate')
+    //google map
+    var marker;
+    var myLatLng;
+    //set map latLng w/callback info
+    myLatlng = new google.maps.LatLng($scope.post.latitude, $scope.post.longitude);
+    var mapOptions = {
+      zoom: 16,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    //render map
+    var map = new google.maps.Map(document.getElementById("post-detail-map"),
+      mapOptions);
+    //set marker
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      title:"Food Is here"
+    });
+    //render marker
+    marker.setMap(map);
+    //set the directions link
+    $scope.directionsLink = 'https://maps.google.com?saddr=Current+Location&daddr='+$scope.post.latitude+','+$scope.post.longitude;
+    console.log($scope.directionsLink);
+    
+  }, function errorCallback(response){
+    console.log('hate')
   });
+
 
   //go back to the search results page
    $scope.goHome = function(){

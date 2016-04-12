@@ -58,18 +58,3 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
   };
 
 }]);
-
-
-
-// //define geolocation variables
-// $scope.position = null;
-// $scope.message = "Determining gelocation...";
-//
-// //get user geolocation
-// geolocation().then(function (position) {
-//   $scope.position = position;
-//   // console.log($scope.position.coords.latitude)
-//   // console.log($scope.position.coords.longitude)
-// }, function (reason) {
-//   $scope.message = "Could not be determined."
-// });
