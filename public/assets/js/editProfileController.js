@@ -18,8 +18,17 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   var lng;
 
   $scope.logout = function(){
-    localStorage.removeItem('token');
-    $location.path('/landing');
+
+    $http.get('https://sheltered-wildwood-38449.herokuapp.com/sessions/logout?token='+$scope.userToken).then(function successCallback(){
+      console.log('logged out');
+      localStorage.removeItem('token');
+      $location.path('/landing');
+    }, function errorCallback(){
+      console.log('not logged out');
+      localStorage.removeItem('token');
+      $location.path('/landing');
+    })
+
   }
 
   //get user info to migrate onto page
