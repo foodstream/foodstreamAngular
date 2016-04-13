@@ -408,9 +408,16 @@ body {
       padding: 2%;
       font-size: 3em;
       font-weight: 700; }
-      body .results-card .results-header span {
+      body .results-card .results-header .results-card-title {
+        width: 60%;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      body .results-card .results-header .results-card-end {
         font-size: .5em;
-        float: right; }
+        float: right;
+        display: inline; }
     body .results-card .results-transaction-details {
       display: inline-block;
       width: 50%;

@@ -17,8 +17,9 @@
 
   <div ng-repeat = 'post in posts | orderBy : "end_at" | filter:type' >
   <div class = "results-card">
-    <div class = "results-header">{{post.title}}
-      <span>{{post.end_at}}</span>
+    <div class = "results-header">
+      <div class = "results-card-title">{{post.title}}</div>
+      <div class = "results-card-end">{{post.end_at}}</div>
     </div>
 
     <div class = "results-pic">
