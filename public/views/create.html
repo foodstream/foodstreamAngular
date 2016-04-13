@@ -17,8 +17,8 @@
   <input type="hidden" name="Content-Type" value="">
    <!-- Include any additional input fields here -->
 
-  Choose an image for your food post:
-  <input id = "fileName" name="file" type="file">
+  <div class = "create-choose-file">Choose an image for your post</div>
+  <input id = "create-fileName" name="file" type="file">
 
 
 	<input class = "create-title" placeholder="Title" ng-model='title'></input>
@@ -35,7 +35,7 @@
 
 	<textarea class = "create-description" placeholder="Description" ng-model='description'></textarea>
 
-<input type="submit" value="Submit post" id = "newPostSubmitButton" ng-click = "submitNewPost()">
+<input class = "create-submit-button" type="submit" value="Submit post" id = "newPostSubmitButton" ng-click = "submitNewPost()">
 
 
 <!--  -->

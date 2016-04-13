@@ -636,6 +636,26 @@ body {
       background-color: #38162c; }
   body .create-content-wrapper {
     margin-top: 12%; }
+  body #create-fileName {
+    margin-left: 2%;
+    background-color: transparent;
+    color: transparent; }
+  body #create-fileName::-webkit-file-upload-button {
+    visibility: hidden; }
+  body #create-fileName::before {
+    content: 'Choose image';
+    font-family: sans-serif;
+    color: white;
+    display: inline-block;
+    background-color: #0c8183;
+    padding: 10px;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 3em; }
+  body .create-choose-file {
+    margin-left: 2%;
+    font-size: 3em; }
   body .create-subheader {
     width: 100%;
     font-size: 4em;
@@ -712,7 +732,7 @@ body {
     margin: 2% 0 0 2.5%;
     color: black;
     font-size: 3em; }
-  body .create-post {
+  body .create-submit-button {
     background-color: #8bc34a;
     position: fixed;
     bottom: 0;
@@ -723,7 +743,7 @@ body {
     color: white;
     cursor: pointer;
     font-weight: 200; }
-    body .create-post:hover {
+    body .create-submit-button:hover {
       background-color: #7eb73d; }
   body .edit-post-content-wrapper {
     margin-top: 12%; }
