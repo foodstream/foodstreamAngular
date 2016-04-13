@@ -38,6 +38,10 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
     $scope.filters.supplier_id = userId;
   }
 
+  $scope.goToChat = function(chatId){
+    localStorage.setItem('chatId', chatId);
+    $location.path('/chat');
+  }
 
   //get the ID of the post a user wants more details on, and take them to that page
   $scope.detailsId = function(postId){

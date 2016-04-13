@@ -39,6 +39,14 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
   }, function errorCallback(response){
     console.log('not get?', response);
   });
+  //send ical to user
+  $scope.addToCalendar = function(){
+    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'/send_ical?token='+token).then(function successCallback(response){
+      alert('event sent to email');
+    }, function errorCallback(response){
+      console.log('event not sent', response);
+    })
+  }
 
   //go home
   $scope.goHome = function(){
