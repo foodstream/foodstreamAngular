@@ -235,6 +235,7 @@ body {
         text-overflow: ellipsis; }
       body .home-card .home-header .home-post-end {
         font-size: .75em;
+        float: right;
         display: inline; }
     body .home-card .home-transaction-details {
       display: inline-block;
