@@ -932,6 +932,118 @@ body{
     }
   }
 
+//----------edit post view----------//
+
+.edit-post-content-wrapper{
+  margin-top: 12%;
+}
+
+.edit-post-subheader {
+  width: 100%;
+  font-size: 4em;
+  text-align: center;
+  background-color: lighten($subheaderbg, 25%);
+  line-height: 1.5em;
+  margin-top: 15%;
+}
+.edit-post-title {
+  background-color: white;
+  width: 95%;
+  border: solid 2px $border;
+  font-size: 3em;
+  margin: 2% 0 0 2.5%;
+  color: black;
+}
+.edit-post-picture {
+  margin: 2% 0;
+  color: black;
+  text-align: center;
+}
+.fa-camera-retro{
+  color:darken($border, 25%);
+  padding: 90px 50px;
+  display: inline-block;
+  border: solid thin darken($border, 25%);
+  background-color: darken($bodybg, 5%);
+  cursor: pointer;
+}
+.edit-post-location {
+  background-color: white;
+  width: 95%;
+  border: solid 2px $border;
+  font-size: 1em;
+  margin: 2% 0 2% 2.5%;
+  color: black;
+  font-size: 3em;
+}
+.edit-post-start-na {
+  display: inline-block;
+  background-color: white;
+  width: 40%;
+  border: solid 2px $border;
+  font-size: 3em;
+  margin: 2% 5%;
+  color: black;
+}
+.edit-post-start-time-na{
+  display: inline-block;
+  background-color: white;
+  width: 40%;
+  border: solid 2px $border;
+  font-size: 3em;
+  margin-top: 2%;
+  color: black;
+}
+.edit-post-end-na {
+  display: inline-block;
+  margin: 2% 5%;
+  background-color: white;
+  width: 40%;
+  border: solid 2px $border;
+  font-size: 3em;
+  margin-top: 2%;
+  color: black;
+}
+.edit-post-end-time-na{
+  display: inline-block;
+  background-color: white;
+  width: 40%;
+  border: solid 2px $border;
+  font-size: 3em;
+  margin-top: 2%;
+  color: black
+}
+
+.edit-post-description {
+  display: block;
+  height: 25vh;
+  background-color: white;
+  width: 95%;
+  border: solid 2px $border;
+  font-size: 1em;
+  margin: 2% 0 0 2.5%;
+  color: black;
+  font-size: 3em;
+}
+
+
+.edit-post-btn {
+background-color: $buttonaccent2;
+position: fixed;
+bottom: 0;
+width: 100%;
+text-align: center;
+font-size: 5em;
+line-height: 1.3em;
+color: white;
+cursor: pointer;
+font-weight: 200;
+
+&:hover{
+ background-color: darken($buttonaccent2, 5%);
+}
+}
+
 //-------- Created View --------------//
 
       .created-content-wrapper{
@@ -974,7 +1086,7 @@ body{
             height: 400px;
           }
         }
-      
+
       .created-post-location {
         display: block;
         .created-post-address {

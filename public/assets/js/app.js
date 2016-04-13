@@ -1,7 +1,9 @@
 //add fastclick.js to make site more mobile-friendly
-$(function() {
-    FastClick.attach(document.body);
-});
+
+
+$('input, select, textarea').on('focus blur', function(event) {
+    $('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1,maximum-scale=' + (event.type == 'blur' ? 10 : 1));
+  });
 
 //initiate angular app
 var foodStream = angular.module("foodStream", ['ngRoute']);
@@ -46,24 +48,24 @@ foodStream.controller('appController', ['$http', '$scope', '$location', function
 }]);
 
 
-
+//this factory does nothing, but it's a dependency of some controller and the site breaks if it isnt here...we should fix that
 foodStream.factory('getPostDetail', function() {
   var clickedPost = {};
   return clickedPost;
  });
 
- foodStream.factory('logged', function(){
-   var logged = {}
-     var userToken = localStorage.getItem('token');
-     if(userToken != null){
-       logged.token = userToken;
-     }
+//this factory checks for a token, and if there is one tells the routing to let the user see more than just login/landing
+foodStream.factory('logged', function(){
+ var logged = {}
+   var userToken = localStorage.getItem('token');
+   if(userToken != null){
+     logged.token = userToken;
+   }
 
+ return logged;
+});
 
-   return logged;
-
- });
-
+//this factory is used to find the user's geolocation in lat/long when needed
 //from http://www.proccli.com/2013/10/angularjs-geolocation-service/
 foodStream.factory("geoLocationService", ['$q', '$window', '$rootScope', function ($q, $window, $rootScope) {
     return function () {
@@ -84,21 +86,20 @@ foodStream.factory("geoLocationService", ['$q', '$window', '$rootScope', functio
                 });
             });
         }
-
         return deferred.promise;
     }
 }]);
 
+//this module locks down any routes not marked as public access unless there is a token present in the logged factory.
 angular.module('foodStream').run(function($rootScope, $location, $route, logged) {
-  console.log(logged.token);
-  //get login token out of localstorage
-  // var userToken = localStorage.getItem('token');
+    //tell route provider which routes are public
     var routesOpenToPublic = [];
     angular.forEach($route.routes, function(route, path) {
         // push route onto routesOpenToPublic if it has a truthy publicAccess value
         route.publicAccess && (routesOpenToPublic.push(path));
     });
 
+    //allow user to use non-public routes only if token present
     $rootScope.$on('$routeChangeStart', function(event, nextLoc, currentLoc) {
         var closedToPublic = (-1 === routesOpenToPublic.indexOf($location.path()));
         if(closedToPublic && logged.token == undefined) {
@@ -170,6 +171,11 @@ foodStream.config(function($routeProvider){
     .when('/profilePublic', {
       templateUrl : '/views/publicprofile.html',
       controller : 'publicProfileController'
+    })
+
+    .when('/editPost', {
+      templateUrl : '/views/editpost.html',
+      controller : 'editPostController'
     })
 
     .otherwise({
