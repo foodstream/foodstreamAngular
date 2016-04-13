@@ -10,11 +10,17 @@ $aubergine: #4a1d3b;
 
 $cardHeight: 20vh;
 
+$break-large: 1200px;
+$break-small: 320px;
+
 body{
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
   background-color: $bodybg;
+  @media screen and (min-width: $break-large) {
+      margin-bottom: 200px;
+  }
   .ng-view{
     width: 100%;
   }
@@ -33,6 +39,10 @@ body{
     position: fixed;
     top: 0;
     z-index:999;
+    @media screen and (min-width: $break-large) {
+        font-size: 3em;
+        border-bottom: 3px solid darken($headerbg, 5%);
+    }
     .app-header-txt{
       display: inline-block;
       cursor: pointer;
@@ -187,20 +197,37 @@ body{
 //---------sign up page styling------------//
 
   .sign-up-title{
-    // margin-top: 5%;
-    padding: 2% 0;
+    padding: 4% 0 1% 0;
     font-size: 3em;
+    color: black;
     text-align: center;
-    background-color: lighten($subheaderbg, 25%)
+    background-color: lighten($subheaderbg, 25%);
+    @media screen and (min-width: $break-large) {
+        margin-top: 1em;
+        padding: 5% 0 1% 12%;
+        margin-bottom: 1.5em;
+        font-size: 2em;
+        font-weight: 600;
+        text-align: left;
+        border-bottom: 3px solid darken($headerbg, 5%);
+        color: darken($headerbg, 5%);
+    }
   }
 
 
   .sign-up-label {
     display: block;
-    margin-top: 5%;
+    // margin-top: 5%;
     text-align: left;
     font-size: 2em;
     margin: 5% 0 0 10%;
+    @media screen and (min-width: $break-large) {
+        display: block;
+        margin: 1.5% 0 0 13%;
+        font-size: 1.2em;
+        width: 40%;
+        text-align: left;
+    }
   }
   .sign-up-input {
     width: 80%;
@@ -209,6 +236,16 @@ body{
     line-height: 1.8em;
     margin: 1% 0 5% 10%;
     color: black;
+    @media screen and (min-width: $break-large) {
+        display: block;
+        line-height: 1.5em;
+        font-size: 1.2em;
+        width: 35%;
+        margin: 0 0 0 13%;
+        text-align: left;
+        border: 1px solid darken($border, 10%);
+        border-radius: 3px;
+    }
   }
 
 
@@ -216,19 +253,28 @@ body{
     margin: 2% 0 2% 10%;
     background-color: $buttonaccent2;
     color: white;
-    font-size: 2em;
     cursor: pointer;
     width: 80%;
     text-align: center;
     font-size: 3em;
     line-height: 2em;
+    @media screen and (min-width: $break-large) {
+        display: block;
+        margin: 3% 0 0 13%;
+        width: 12%;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 2em;
+        line-height: 1.5em;
+        border: 3px solid darken($buttonaccent2, 5%);
+    }
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
   }
 
   .sign-up-back-btn{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     font-size: 2.5em;
@@ -237,6 +283,11 @@ body{
     background-color: $buttonbg;
     text-align: center;
     cursor: pointer;
+    @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonbg, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
     &:hover{
       background-color: darken($buttonbg, 5%);
     }
@@ -256,6 +307,10 @@ body{
     position: fixed;
     top: 7%;
     z-index: 999;
+    @media screen and (min-width: $break-large) {
+        top: 11.5%;
+        height: 6%;
+    }
     .home-subheader-see-all{
       line-height: 1.2em;
       text-align: center;
@@ -629,18 +684,44 @@ body{
 
   .landing-login-email-input{
     width: 80%;
-    border-style: solid thin darken($border, 10%);
+    border: solid thin darken($border, 25%);
     font-size: 2em;
     line-height: 1.8em;
     margin: 15% 0 0 10%;
+    @media screen and (min-width: $break-large) {
+        width: 40%;
+        // display: block;
+        margin: 5% 0 0 25%;
+        text-align: left;
+        font-size: 1.5em;
+    }
   }
 
   .landing-login-password-input{
     width: 80%;
+    border: solid thin darken($border, 25%);
     font-size: 2em;
     line-height: 1.8em;
     margin: 5% 0 5% 10%;
+    @media screen and (min-width: $break-large) {
+        width: 40%;
+        margin: 5% 0 0 25%;
+        text-align: left;
+        font-size: 1.5em;
+    }
   }
+
+  // .landing-desktop-labels {
+  //     visibility: hidden;
+  //   //   width: 35%;
+  //     display: block;
+  //     margin: 5% 0 5% 25%;
+  //     @media screen and (min-width: $break-large) {
+  //         font-size: 3.5em;
+  //         visibility: visible;
+  //         text-align: left;
+  //     }
+  // }
 
   .landing-login-btn{
     width: 80%;
@@ -651,6 +732,15 @@ body{
     background-color: $buttonaccent2;
     color: white;
     cursor: pointer;
+    @media screen and (min-width: $break-large) {
+        // width: 40%;
+        // margin-left: 25%;
+        border-radius: 10px;
+        display: block;
+        margin: 5% 0 0 36%;
+        width: 20%;
+        text-align: center;
+    }
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -665,6 +755,16 @@ body{
     background-color: $buttonbg;
     color: white;
     cursor: pointer;
+    @media screen and (min-width: $break-large) {
+        // width: 40%;
+        // margin-left: 25%;
+        border-radius: 10px;
+        font-size: 1.25em;
+        display: block;
+        margin: 5% 0 0 36%;
+        width: 20%;
+        text-align: center;
+    }
     &:hover{
       background-color: darken($buttonbg, 5%);
     }
@@ -679,6 +779,12 @@ body{
 	color: darken($headerbg, 15%);
 	font-family: sans-serif;
 	text-align: center;
+    @media screen and (min-width: $break-large) {
+        font-size: 1.75em;
+        width: 55%;
+        margin: 5% 0 0 20%;
+        text-align: left;
+    }
   }
 
   .login-legal {
@@ -974,7 +1080,7 @@ body{
             height: 400px;
           }
         }
-      
+
       .created-post-location {
         display: block;
         .created-post-address {

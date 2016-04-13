@@ -4,6 +4,9 @@ body {
   text-decoration: none;
   background-color: #FCF7F8;
   /*------------------- LANDING PAGE TAB STYLING ---------------------- */ }
+  @media screen and (min-width: 1200px) {
+    body {
+      margin-bottom: 200px; } }
   body .ng-view {
     width: 100%; }
   body:visited {
@@ -20,6 +23,10 @@ body {
     position: fixed;
     top: 0;
     z-index: 999; }
+    @media screen and (min-width: 1200px) {
+      body .app-header {
+        font-size: 3em;
+        border-bottom: 3px solid #295518; } }
     body .app-header .app-header-txt {
       display: inline-block;
       cursor: pointer;
@@ -136,16 +143,33 @@ body {
     body .edit-profile-footer:hover {
       background-color: #7eb73d; }
   body .sign-up-title {
-    padding: 2% 0;
+    padding: 4% 0 1% 0;
     font-size: 3em;
+    color: black;
     text-align: center;
     background-color: #fbfbc4; }
+    @media screen and (min-width: 1200px) {
+      body .sign-up-title {
+        margin-top: 1em;
+        padding: 5% 0 1% 12%;
+        margin-bottom: 1.5em;
+        font-size: 2em;
+        font-weight: 600;
+        text-align: left;
+        border-bottom: 3px solid #295518;
+        color: #295518; } }
   body .sign-up-label {
     display: block;
-    margin-top: 5%;
     text-align: left;
     font-size: 2em;
     margin: 5% 0 0 10%; }
+    @media screen and (min-width: 1200px) {
+      body .sign-up-label {
+        display: block;
+        margin: 1.5% 0 0 13%;
+        font-size: 1.2em;
+        width: 40%;
+        text-align: left; } }
   body .sign-up-input {
     width: 80%;
     border: none;
@@ -153,20 +177,39 @@ body {
     line-height: 1.8em;
     margin: 1% 0 5% 10%;
     color: black; }
+    @media screen and (min-width: 1200px) {
+      body .sign-up-input {
+        display: block;
+        line-height: 1.5em;
+        font-size: 1.2em;
+        width: 35%;
+        margin: 0 0 0 13%;
+        text-align: left;
+        border: 1px solid #dbdbdb;
+        border-radius: 3px; } }
   body .sign-up-submit-btn {
     margin: 2% 0 2% 10%;
     background-color: #8bc34a;
     color: white;
-    font-size: 2em;
     cursor: pointer;
     width: 80%;
     text-align: center;
     font-size: 3em;
     line-height: 2em; }
+    @media screen and (min-width: 1200px) {
+      body .sign-up-submit-btn {
+        display: block;
+        margin: 3% 0 0 13%;
+        width: 12%;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 2em;
+        line-height: 1.5em;
+        border: 3px solid #7eb73d; } }
     body .sign-up-submit-btn:hover {
       background-color: #7eb73d; }
   body .sign-up-back-btn {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     font-size: 2.5em;
@@ -175,6 +218,11 @@ body {
     background-color: #0c8183;
     text-align: center;
     cursor: pointer; }
+    @media screen and (min-width: 1200px) {
+      body .sign-up-back-btn {
+        border-top: 4px solid #0a6a6c;
+        font-size: 2em;
+        line-height: 2em; } }
     body .sign-up-back-btn:hover {
       background-color: #0a6a6c; }
   body .home-content-wrapper {
@@ -188,6 +236,10 @@ body {
     position: fixed;
     top: 7%;
     z-index: 999; }
+    @media screen and (min-width: 1200px) {
+      body .home-subheader {
+        top: 11.5%;
+        height: 6%; } }
     body .home-subheader .home-subheader-see-all {
       line-height: 1.2em;
       text-align: center;
@@ -466,15 +518,28 @@ body {
       background-color: #7eb73d; }
   body .landing-login-email-input {
     width: 80%;
-    border-style: solid thin #dbdbdb;
+    border: solid thin #b4b4b4;
     font-size: 2em;
     line-height: 1.8em;
     margin: 15% 0 0 10%; }
+    @media screen and (min-width: 1200px) {
+      body .landing-login-email-input {
+        width: 40%;
+        margin: 5% 0 0 25%;
+        text-align: left;
+        font-size: 1.5em; } }
   body .landing-login-password-input {
     width: 80%;
+    border: solid thin #b4b4b4;
     font-size: 2em;
     line-height: 1.8em;
     margin: 5% 0 5% 10%; }
+    @media screen and (min-width: 1200px) {
+      body .landing-login-password-input {
+        width: 40%;
+        margin: 5% 0 0 25%;
+        text-align: left;
+        font-size: 1.5em; } }
   body .landing-login-btn {
     width: 80%;
     font-size: 2.5em;
@@ -484,6 +549,13 @@ body {
     background-color: #8bc34a;
     color: white;
     cursor: pointer; }
+    @media screen and (min-width: 1200px) {
+      body .landing-login-btn {
+        border-radius: 10px;
+        display: block;
+        margin: 5% 0 0 36%;
+        width: 20%;
+        text-align: center; } }
     body .landing-login-btn:hover {
       background-color: #7eb73d; }
   body .landing-signup-btn {
@@ -495,6 +567,14 @@ body {
     background-color: #0c8183;
     color: white;
     cursor: pointer; }
+    @media screen and (min-width: 1200px) {
+      body .landing-signup-btn {
+        border-radius: 10px;
+        font-size: 1.25em;
+        display: block;
+        margin: 5% 0 0 36%;
+        width: 20%;
+        text-align: center; } }
     body .landing-signup-btn:hover {
       background-color: #0a6a6c; }
   body .login-about {
@@ -506,6 +586,12 @@ body {
     color: #162e0d;
     font-family: sans-serif;
     text-align: center; }
+    @media screen and (min-width: 1200px) {
+      body .login-about {
+        font-size: 1.75em;
+        width: 55%;
+        margin: 5% 0 0 20%;
+        text-align: left; } }
   body .login-legal {
     margin: 50px 2.5%;
     width: 90%;
