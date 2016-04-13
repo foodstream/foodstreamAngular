@@ -47,7 +47,7 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
 
   //edit post (goes home currently, CHANGE THIS WHEN WE HAVE AN EDIT POST VIEW)
   $scope.goEdit = function(){
-    $location.path('/home');
+    $location.path('/editPost');
   };
 
   //delete post
