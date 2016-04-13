@@ -5,7 +5,7 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
   var token = localStorage.getItem('token');
 
 
-         var inputFrom = document.getElementById('pac-edit-post');
+         var inputFrom = document.getElementById('edit-post-location-ga');
 
   //use google places autocomplete to input location addy & lat/long
   var autocompleteFrom = new google.maps.places.Autocomplete(inputFrom);

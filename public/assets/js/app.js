@@ -1,7 +1,5 @@
 //add fastclick.js to make site more mobile-friendly
 
-
-
 //initiate angular app
 var foodStream = angular.module("foodStream", ['ngRoute']);
 
