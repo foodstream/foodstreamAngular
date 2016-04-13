@@ -46,14 +46,19 @@ body{
   }
 
 //--------------edit profile page styling---------//
+  .edit-profile-content-wrapper {
+    margin-top: 30%;
+  }
+
   .edit-profile-subheader{
     background-color:lighten($subheaderbg, 25%);
     width: 100vw;
-    height: 10%;
+    height: 5%;
     display: block;
     color: darken($headerbg, 5%);
     position: fixed;
-    margin-top: 12%;
+    top: 0;
+    // margin-top: 12%;
     .edit-profile-subheader-txt{
       font-size: 3.5em;
       padding: 2% 0 2% 4%;
@@ -974,7 +979,7 @@ body{
             height: 400px;
           }
         }
-      
+
       .created-post-location {
         display: block;
         .created-post-address {
