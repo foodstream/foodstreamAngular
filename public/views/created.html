@@ -3,9 +3,6 @@
 		<div class="created-post-title">{{post.title}}</div>
 
 
-		<div class="created-post-description">
-		{{post.details}}
-
 	<div class="created-post-description">
 	{{post.details}}
 	</div>
@@ -13,32 +10,19 @@
 	<div class="created-post-images">
 		<div class="created-post-photo">
 			  <div id='created-post-gmap'></div>
-			  <a href={{directionsLink}} class='post-detail-directions-link' >
-			    get directions with google
-			  </a>
 		</div>
-		</div>
+
 		<div class="created-post-map">
 			<img class='created-post-map-img' src="/assets/images/produce.png">
-
 		</div>
-
-		<div class="created-post-images">
-			<div class="created-post-photo">
-				<img class='created-post-photo-img' src="/assets/images/map.png">
-			</div>
-			<div class="created-post-map">
-				<img class='created-post-map-img' src="/assets/images/produce.png">
-			</div>
-		</div>
-
+	</div>
 		<div class="created-post-location">
 			<div class="created-post-address">
 				<span>Address:</span>{{post.address_string}}
 			</div>
-			<div class="created-post-directions-btn">
+			<a href={{directionsLink}} class="created-post-directions-btn">
 				Get Directions w/Google
-			</div>
+			</a>
 		</div>
 
 
@@ -52,12 +36,9 @@
 
 
 				<div class="google-cal">
-					<a href="#"><i class="fa fa-calendar-plus-o fa-4x"></i></a>
-					add to google calendar
-				</div>
 				<div class="ical">
 					<a href="#"><i class="fa fa-calendar-plus-o fa-4x"></i></a>
-					add to ical
+					add to calendar
 				</div>
 
 	</div>
@@ -66,7 +47,7 @@
 	<div class="created-post-footer-home" ng-click='goHome()'>
 		Home
 	</div>
-	<div class="created-post-footer-edit" ng-click='goEdit(post.id)'>
+	<div class="created-post-footer-edit" ng-click='goEdit()'>
 		Edit
 	</div>
 	<div class="created-post-footer-delete" ng-click='deletePost()'>

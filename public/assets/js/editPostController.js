@@ -28,7 +28,8 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
 
   //point google places autocomplete to correct field
   var inputFrom = document.getElementById('edit-post-location-ga');
-
+  var lat;
+  var lng;
   //use google places autocomplete to input location addy & lat/long
   var autocompleteFrom = new google.maps.places.Autocomplete(inputFrom);
     google.maps.event.addListener(autocompleteFrom, 'place_changed', function() {
@@ -67,8 +68,8 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
     endTime = $('.edit-post-end-time-na').val();
     var endString = endDate.concat(' ' + endTime);
 
-    console.log($scope.title, location, startString, endString, $scope.description);
-      $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token=' + token + "&post[title]=" + $scope.title + "&post[details]=" + $scope.description + "&post[start_at]=" + startString + "&post[end_at]=" + endString + "&post[address_string]=" + location + "&post[image_link]=" + $scope.nonce + $scope.fileFix
+    console.log($scope.title, location, startString, endString, $scope.description, lat, lng);
+      $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token=' + token + "&post[title]=" + $scope.title + "&post[details]=" + $scope.description + "&post[start_at]=" + startString + "&post[end_at]=" + endString + "&post[address_string]=" + location + "&post[latitude]=" + lat + "&post[longitude]=" + lng + "&post[image_link]=" + $scope.nonce + $scope.fileFix
       ).then(function successCallback(response){
         console.log('post was edited');
         // console.log(response, response.data.id);

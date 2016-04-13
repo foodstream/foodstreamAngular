@@ -816,15 +816,12 @@ body {
     font-size: 3em;
     margin-top: 2%;
     color: black; }
-  body .created-post-images {
-    position: relative; }
-    body .created-post-images .created-post-photo {
-      display: inline-block;
-      margin-top: 2%;
-      border: solid thin black; }
-      body .created-post-images .created-post-photo #created-post-gmap {
-        width: 400px;
-        height: 400px; }
+  body .created-post-images .created-post-photo {
+    display: inline-block;
+    margin: 2% 0 0 5%; }
+    body .created-post-images .created-post-photo #created-post-gmap {
+      width: 400px;
+      height: 400px; }
   body .created-post-map {
     display: inline-block;
     margin: 2% 5%; }

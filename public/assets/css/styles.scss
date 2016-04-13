@@ -1071,12 +1071,12 @@ font-weight: 200;
       }
       .created-post-images {
         // display: block;
-        position: relative;
+        // border: solid thin black;
         .created-post-photo {
           display: inline-block;
 
-          margin-top: 2%;
-          border: solid thin black;
+          margin: 2% 0 0 5%;
+          // border: solid thin black;
           #created-post-gmap{
             width: 400px;
             height: 400px;
