@@ -307,9 +307,17 @@ body{
       background-color: lightgray;
       font-size: 3em;
       font-weight: 700;
-      span {
+      .home-post-title {
+        width: 50%;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .home-post-end {
         font-size: .75em;
         float: right;
+        display: inline;
       }
     }
     .home-transaction-details {
@@ -545,9 +553,17 @@ body{
       padding: 2%;
       font-size: 3em;
       font-weight: 700;
-      span {
+      .results-card-title {
+        width: 60%;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .results-card-end {
         font-size: .5em;
         float: right;
+        display: inline;
       }
     }
     .results-transaction-details {

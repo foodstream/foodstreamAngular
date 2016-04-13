@@ -227,9 +227,16 @@ body {
       background-color: lightgray;
       font-size: 3em;
       font-weight: 700; }
-      body .home-card .home-header span {
+      body .home-card .home-header .home-post-title {
+        width: 50%;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      body .home-card .home-header .home-post-end {
         font-size: .75em;
-        float: right; }
+        float: right;
+        display: inline; }
     body .home-card .home-transaction-details {
       display: inline-block;
       width: 60%;
@@ -401,9 +408,16 @@ body {
       padding: 2%;
       font-size: 3em;
       font-weight: 700; }
-      body .results-card .results-header span {
+      body .results-card .results-header .results-card-title {
+        width: 60%;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      body .results-card .results-header .results-card-end {
         font-size: .5em;
-        float: right; }
+        float: right;
+        display: inline; }
     body .results-card .results-transaction-details {
       display: inline-block;
       width: 50%;
