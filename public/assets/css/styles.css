@@ -28,14 +28,16 @@ body {
       float: right;
       margin: 0 2% 0 0;
       cursor: pointer; }
+  body .edit-profile-content-wrapper {
+    margin-top: 30%; }
   body .edit-profile-subheader {
     background-color: #fbfbc4;
     width: 100vw;
-    height: 10%;
+    height: 5%;
     display: block;
     color: #295518;
     position: fixed;
-    margin-top: 12%; }
+    top: 0; }
     body .edit-profile-subheader .edit-profile-subheader-txt {
       font-size: 3.5em;
       padding: 2% 0 2% 4%;

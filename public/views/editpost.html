@@ -1,0 +1,50 @@
+<div class = "edit-post-subheader">
+  Edit Your Post
+</div>
+
+<div class = "edit-post-content-wrapper">
+
+<!-- this form sourced from http://aws.amazon.com/articles/1434/ -->
+<form action="https://foodstream.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+<input id = "randomFile" type="hidden" name="key" value="uploads/{{nonce}}${filename}">
+
+<input type="hidden" name="AWSAccessKeyId" value="AKIAJRMM6LYUN6O6HYTA">
+<input type="hidden" name="acl" value="public-read">
+<input type="hidden" name="success_action_redirect" value="">
+<input type="hidden" name="policy" value="eyJleHBpcmF0aW9uIjogIjIwMTctMDEtMDFUMDA6MDA6MDBaIiwKICAiY29uZGl0aW9ucyI6IFsKICAgIHsiYnVja2V0IjogImZvb2RzdHJlYW0ifSwKICAgIFsic3RhcnRzLXdpdGgiLAogICAgICAiJGtleSIsCiAgICAgICJ1cGxvYWRzLyJdLAogICAgeyJhY2wiOiAicHVibGljLXJlYWQifSwKICAgIHsic3VjY2Vzc19hY3Rpb25fcmVkaXJlY3QiOiAiIn0sCiAgICBbInN0YXJ0cy13aXRoIiwgIiRDb250ZW50LVR5cGUiLCAiIl0KICBdCn0=">
+<input type="hidden" name="signature" value="Tp8vvWr6z3he+ZFWTiWDbpnWdXA=">
+<input type="hidden" name="Content-Type" value="">
+ <!-- Include any additional input fields here -->
+
+Choose an image for your food post:
+<input id = "fileName" name="file" type="file">
+
+
+<input class = "edit-post-title" placeholder="Title" ng-model='title'></input>
+
+<input id="pac-edit-post" class="edit-post-location" placeholder="Location" ng-model='location' ></input>
+
+<div class="edit-post-time">
+      <input class="edit-post-start-na" type="text"  placeholder="Starting Date" ng-model='startDate'></input>
+      <input class="edit-post-start-time-na" type="text"  placeholder="Starting Time" ng-model='startTime'></input>
+
+      <input class="edit-post-end-na" type="text" placeholder="Ending Date" ng-model='endDate'></input>
+      <input class="edit-post-end-time-na" type="text"  placeholder="Ending Time" ng-model='endTime'></input>
+  </div>
+
+<textarea class = "edit-post-description" placeholder="Description" ng-model='description'></textarea>
+
+<input type="submit" value="Submit post" id = "newPostSubmitButton" ng-click = "editPost()">
+
+
+<!--  -->
+
+<!-- <input type = 'submit' value='Create Post'/> -->
+<!-- <div class = "create-post" ng-click = "">
+Create Post
+</div> -->
+</form>
+
+</div>
+
+<div class='edit-post-btn'>Edit Post</div>
