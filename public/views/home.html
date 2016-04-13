@@ -15,8 +15,9 @@
   <div ng-repeat = "post in posts | filter:filters | orderBy:'end_at'" >
 
     <div class = "home-card">
-      <div class = "home-header">{{post.title}}
-        <span>{{post.end_at}}</span>
+      <div class = "home-header">
+        <div class = "home-post-title">{{post.title}}</div>
+        <div class = "home-post-end">{{post.end_at}}</div>
       </div>
 
       <div class = "home-transaction-details">
