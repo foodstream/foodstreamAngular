@@ -1140,6 +1140,11 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+    @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonaccent2, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
 
     &:hover{
      background-color: darken($buttonaccent2, 5%);
@@ -1253,7 +1258,11 @@ line-height: 1.3em;
 color: white;
 cursor: pointer;
 font-weight: 200;
-
+@media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonaccent2, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
 &:hover{
  background-color: darken($buttonaccent2, 5%);
 }
@@ -1261,17 +1270,27 @@ font-weight: 200;
 
 //-------- Created View --------------//
 
-      .created-content-wrapper{
-        margin-top: 12%;
-      }
+    //   .created-content-wrapper{
+    //     margin-top: 12%;
+    //   }
 
       .created-post-title {
-        width: 100%;
-        font-size: 5em;
-        line-height: 1.5em;
-        color: black;
-        text-align: center;
-        background-color: lighten($subheaderbg, 25%);
+          padding: 4% 0 1% 0;
+          font-size: 3em;
+          text-align: center;
+          background-color: lighten($subheaderbg, 25%);
+          line-height: 1.5em;
+          margin-top: 15%;
+          @media screen and (min-width: $break-large) {
+              margin-top: 1em;
+              padding: 5% 0 0 12%;
+              margin-bottom: 2.5em;
+              font-size: 2em;
+              font-weight: 600;
+              text-align: left;
+              border-bottom: 3px solid darken($headerbg, 5%);
+              color: darken($headerbg, 5%);
+          }
       }
       .created-post-description {
         width: 95%;
@@ -1430,14 +1449,21 @@ font-weight: 200;
 
 //----------chat page styling----------//
   .chat-subheader{
-    background-color: lighten($subheaderbg, 25%);
-    font-size: 4em;
-    line-height: 1.5em;
-    position: fixed;
-    top: 7%;
-    width: 100%;
-    display: block;
-    text-align: center;
+      padding: 4% 0 1% 0;
+      font-size: 3em;
+      color: black;
+      text-align: center;
+      background-color: lighten($subheaderbg, 25%);
+      @media screen and (min-width: $break-large) {
+          margin-top: 1em;
+          padding: 5% 0 0 12%;
+          margin-bottom: 2.5em;
+          font-size: 2em;
+          font-weight: 600;
+          text-align: left;
+          border-bottom: 3px solid darken($headerbg, 5%);
+          color: darken($headerbg, 5%);
+      }
     .chat-other-user-text{
       font-weight: 700;
     }
