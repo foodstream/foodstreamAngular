@@ -168,30 +168,41 @@ body{
     font-size: 3em;
   }
   .edit-profile-submit-btn{
-    background-color: $buttonbg;
-    color: white;
-    font-size: 4em;
-    padding: 1% 30%;
-    margin: 0 0 10% 0;
-  }
-  .edit-profile-footer{
-    display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background-color: $buttonaccent2;
-
-    position: fixed;
-    text-align: center;
-    font-size: 4em;
-    line-height: 2em;
-    color: white;
-    cursor: pointer;
-    font-weight: 200;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 4em;
+      line-height: 2em;
+      color: white;
+      background-color: $buttonbg;
+      text-align: center;
+      cursor: pointer;
+    @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonbg, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
     &:hover{
-      background-color: darken($buttonaccent2, 5%);
+      background-color: darken($buttonbg, 5%);
     }
   }
+  // .edit-profile-footer{
+  //   display: block;
+  //   width: 100%;
+  //   position: absolute;
+  //   bottom: 0;
+  //   background-color: $buttonaccent2;
+  //   position: fixed;
+  //   text-align: center;
+  //   font-size: 4em;
+  //   line-height: 2em;
+  //   color: white;
+  //   cursor: pointer;
+  //   font-weight: 200;
+  //   &:hover{
+  //     background-color: darken($buttonaccent2, 5%);
+  //   }
+  // }
 
 
 //---------sign up page styling------------//
@@ -536,6 +547,11 @@ body{
     left: 50%;
     width: 50%;
     cursor: pointer;
+    @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonbg, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
     &:hover{
       background-color: darken($buttonbg, 5%);
     }
@@ -551,6 +567,11 @@ body{
     bottom: 0;
     width: 50%;
     cursor: pointer;
+    @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonaccent2, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -690,7 +711,11 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
-
+    @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonaccent2, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -915,6 +940,11 @@ body{
         background-color: $buttonaccent2;
         cursor: pointer;
         font-weight: 200;
+        @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonaccent2, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
         &:hover{
           background-color: darken($buttonaccent2, 5%);
         }
@@ -932,6 +962,11 @@ body{
         background-color: $aubergine;
         cursor: pointer;
         font-weight: 200;
+        @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($aubergine, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
         &:hover{
           background-color: darken($aubergine, 5%);
         }
@@ -1177,6 +1212,11 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+    @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonaccent2, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -1193,6 +1233,11 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+    @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonaccent, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
     &:hover{
       background-color: darken($buttonaccent, 5%);
     }
@@ -1209,6 +1254,11 @@ body{
     color: white;
     cursor: pointer;
     font-weight: 200;
+    @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($aubergine, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
     &:hover{
       background-color: darken($aubergine, 5%);
     }
@@ -1280,6 +1330,11 @@ body{
     position: fixed;
     bottom: 0;
     cursor: pointer;
+    @media screen and (min-width: $break-large) {
+    border-top: 4px solid darken($buttonaccent2, 5%);
+    font-size: 2em;
+    line-height: 2em;
+}
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -1287,8 +1342,8 @@ body{
   .chat-back-to-post-btn{
     display:inline-block;
     background-color: $buttonbg;
-    font-size: 2em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 2em;
     text-align: center;
     color: white;
     width:50%;
@@ -1296,6 +1351,11 @@ body{
     margin: 0 0 0 50%;
     bottom: 0;
     cursor: pointer;
+    @media screen and (min-width: $break-large) {
+    border-top: 4px solid darken($buttonbg, 5%);
+    font-size: 2em;
+    line-height: 2em;
+}
     &:hover{
       background-color: darken($buttonbg, 5%);
     }
@@ -1429,6 +1489,11 @@ body{
   cursor: pointer;
   background-color: $buttonbg;
   cursor: pointer;
+  @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonbg, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
   &:hover{
     background-color: darken($buttonbg, 5%);
   }
@@ -1446,6 +1511,11 @@ body{
   cursor: pointer;
   background-color: $buttonaccent2;
   cursor: pointer;
+  @media screen and (min-width: $break-large) {
+        border-top: 4px solid darken($buttonaccent2, 5%);
+        font-size: 2em;
+        line-height: 2em;
+    }
   &:hover{
     background-color: darken($buttonaccent2, 5%);
   }
