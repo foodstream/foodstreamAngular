@@ -847,6 +847,36 @@ body{
       margin-top: 12%;
     }
 
+    #create-fileName {
+      margin-left: 2%;
+      background-color: transparent;
+      color: transparent;
+    }
+
+    #create-fileName::-webkit-file-upload-button{
+      visibility: hidden;
+    }
+
+    #create-fileName::before {
+      content: 'Choose image';
+      font-family: sans-serif;
+      color: white;
+      display: inline-block;
+      // border: 1px solid $border;
+      background-color: $buttonbg;
+      padding: 10px;
+      // outline: none;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      cursor: pointer;
+      font-size: 3em;
+    }
+
+    .create-choose-file{
+      margin-left: 2%;
+      font-size: 3em;
+    }
+
     .create-subheader {
       width: 100%;
       font-size: 4em;
@@ -936,7 +966,7 @@ body{
     }
 
 
-  .create-post {
+  .create-submit-button {
     background-color: $buttonaccent2;
     position: fixed;
     bottom: 0;
@@ -952,6 +982,7 @@ body{
      background-color: darken($buttonaccent2, 5%);
     }
   }
+
 
 //----------edit post view----------//
 
