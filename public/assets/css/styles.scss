@@ -1115,6 +1115,7 @@ font-weight: 200;
         font-size: 3em;
         margin-top: 2%;
         color: black;
+        display: inline;
       }
       .created-post-images {
         // display: block;
@@ -1131,7 +1132,7 @@ font-weight: 200;
           }
         }
         .created-post-map {
-          display: inline-block;
+          display: inline;
           margin: 2% 5%;
           .created-post-map-img{
             width: 400px;
@@ -1139,8 +1140,6 @@ font-weight: 200;
           }
         }
 
-      .created-post-location {
-        display: block;
         .created-post-address {
           display: inline-block;
           margin: 15px 5% 15px 1.5%;
@@ -1149,6 +1148,9 @@ font-weight: 200;
             display: block;
           }
         }
+      .created-post-location {
+        display: block;
+
         .created-post-directions-btn {
           display: inline-block;
           background-color: $buttonbg;
@@ -1156,7 +1158,8 @@ font-weight: 200;
           color: white;
           padding: 8px 0;
           text-align: center;
-          width: 90%;
+          width: 40%;
+          text-decoration: none;
           text-align: center;
           cursor: pointer;
           font-size: 3em;
@@ -1174,6 +1177,7 @@ font-weight: 200;
         span{
           font-size: .75em;
           display: block;
+          font-weight: bold;
         }
       }
       .created-post-end {
@@ -1182,6 +1186,7 @@ font-weight: 200;
         span{
           font-size: .75em;
           display: block;
+          font-weight: bold;
         }
       }
 
@@ -1230,7 +1235,7 @@ font-weight: 200;
     cursor: pointer;
     font-weight: 200;
     &:hover{
-      background-color: darken($buttonaccent, 5%);
+      background-color: darken($buttonbg, 5%);
     }
   }
   .created-post-footer-delete {
