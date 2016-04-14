@@ -2,6 +2,8 @@
 	<div class = "created-info">
 		<div class="created-post-title">{{post.title}}</div>
 
+		<div class="created-post-images">
+
 
 	<div class="created-post-description">
 	{{post.details}}
@@ -14,18 +16,19 @@
 			  <div id='created-post-gmap'></div>
 		</div>
 
-		<div class="created-post-map">
-			<img class='created-post-map-img' src="{{post.image_link}}">
+
 		</div>
-	</div>
+
 		<div class="created-post-location">
-			<div class="created-post-address">
-				<span>Address:</span>{{post.address_string}}
-			</div>
+
 			<a href={{directionsLink}} class="created-post-directions-btn">
 				Get Directions
 			</a>
 
+		</div>
+
+		<div class="created-post-address">
+			<span>Address:</span>{{post.address_string}}
 		</div>
 
 
@@ -40,10 +43,9 @@
 				<div class="ical" ng-click='addToCalendar()'>
 					<i class="fa fa-calendar-plus-o fa-4x"></i> add to calendar
 				</div>
-
+		</div>
 	</div>
-</div>
-
+<!-- Below is footer -->
 	<div class="created-post-footer-home" ng-click='goHome()'>
 		Home
 	</div>
