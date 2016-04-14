@@ -1117,6 +1117,23 @@ font-weight: 200;
         color: black;
         display: inline;
       }
+      .created-post-chat{
+        display: inline-block;
+        background-color: $buttonaccent2;
+        border-radius: 5px;
+        color: white;
+        padding: 8px 0;
+        text-align: center;
+        width: 90%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 3em;
+        line-height: 1.5em;
+        margin: 2% 0 0 5%;
+        &:hover{
+          background-color: darken($buttonaccent2, 5%);
+        }
+      }
       .created-post-images {
         // display: block;
         // border: solid thin black;
@@ -1190,21 +1207,29 @@ font-weight: 200;
         }
       }
 
-    .created-post-calendar-btns {
-      display: inline-block;
-      .google-cal {
 
-        display: inline-block;
-
-        width: 80px;
-        height: 20px;
-      }
       .ical {
         display: inline-block;
-        width: 80px;
-        height: 20px;
+        background-color: $aubergine;
+        border-radius: 5px;
+        color: white;
+        padding: 8px 0;
+        text-align: center;
+        width: 90%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 3em;
+        line-height: 1.5em;
+        margin: 2% 0 0 5%;
+        &:hover{
+          background-color: darken($aubergine, 5%);
+        }
+        i{
+          font-size:1em;
+        }
       }
-    }
+
+
 
 
   .created-post-footer-home {
@@ -1362,6 +1387,8 @@ font-weight: 200;
 
 .claimed-content-wrapper{
   margin-top: 10%;
+  height: 88vh;
+  overflow: scroll;
 }
 
 .claimed-title {
@@ -1406,6 +1433,7 @@ font-weight: 200;
 #claimed-map{
   width: 600px;
   height: 600px;
+  margin: 2% 0 2% 20%;
 }
 
 .claimed-location {
@@ -1413,16 +1441,33 @@ font-weight: 200;
   font-size: 3em;
 }
 
-.claimed-location-image {
-  display: inline-block;
-  margin: 5% 0 0 5%;
-}
+
+  .claimed-directions-link{
+    display: inline-block;
+    background-color: $buttonbg;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 0;
+    text-align: center;
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 3em;
+    line-height: 1.5em;
+    margin: 0 0 0 5%;
+    &:hover{
+      background-color: darken($buttonbg, 5%);
+    }
+  }
+
+
 
 .claimed-time-calendar-wrap {
   // border: solid 1px red;
-  display: inline-block;
-  margin-left: 10%;
+  display: block;
+
   font-size: 3em;
+
   .claimed-time-wrap {
     display: inline;
     margin: 10px 0;
@@ -1441,21 +1486,21 @@ font-weight: 200;
       }
     }
   }
-  .claimed-calendar-wrap {
-    // border: solid 1px red;
-    display: block;
+
     .claimed-iCal {
       // border: solid thin black;
       display: block;
-      margin-top: 10px;
+      margin: 5% 0 2% 5%;
+      background-color: $aubergine;
+      width: 90%;
+      text-align: center;
+      color: white;
+      padding: 2% 0;
+
     }
-    .claimed-googleCal {
-      // border: solid thin black;
-      display: block;
-      margin-top: 10px;
-    }
+
   }
-}
+
 
 .claimed-details-title {
   margin: 5%;
