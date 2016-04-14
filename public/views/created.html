@@ -6,7 +6,9 @@
 	<div class="created-post-description">
 	{{post.details}}
 	</div>
-
+	<div class='created-post-chat' ng-click='goToChat(post.id, post.supplier.id, post.claimant_id)'>
+		Go To Chat <i class="fa fa-comment" aria-hidden="true"></i>
+	</div>
 	<div class="created-post-images">
 		<div class="created-post-photo">
 			  <div id='created-post-gmap'></div>
@@ -23,6 +25,7 @@
 			<a href={{directionsLink}} class="created-post-directions-btn">
 				Get Directions w/Google
 			</a>
+
 		</div>
 
 
@@ -34,11 +37,8 @@
 					<span>Pick up by:</span>{{post.end_at}}
 				</div>
 
-
-				<div class="google-cal">
-				<div class="ical">
-					<i class="fa fa-calendar-plus-o fa-4x" ng-click='addToCalendar()'></i>
-					add to calendar
+				<div class="ical" ng-click='addToCalendar()'>
+					<i class="fa fa-calendar-plus-o fa-4x"></i> add to calendar
 				</div>
 
 	</div>

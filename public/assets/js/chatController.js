@@ -105,6 +105,10 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
 
   //go to claimed on click of go to post (add logic to send user to created if supplier soon)
   $scope.backToPost = function(){
+    console.log(supplierId, claimantId, userId);
+    if(userId == supplierId){
+      $location.path('/created');
+    }else if(userId == claimantId)
     $location.path('/claimed')
   }
 
