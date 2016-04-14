@@ -17,9 +17,12 @@
   <input type="hidden" name="Content-Type" value="">
    <!-- Include any additional input fields here -->
 
-  <div class = "create-choose-file">Choose an image for your post</div>
-  <input id = "create-fileName" name="file" type="file">
+  <div class = "create-choose-file">Choose an image for your post.</div>
+	<div class = "create-submit-wrap">
+		<input id = "create-fileName" name="file" type="file">
+	</div>
 
+	<div class = "create-file-status"></div>
 
 	<input class = "create-title" placeholder="Title" ng-model='title'></input>
 

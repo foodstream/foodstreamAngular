@@ -92,6 +92,8 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
     //   .then(function success(){
     //     console.log("sent file name to database");
     //   });
+
+    
   }
 
 }]);
