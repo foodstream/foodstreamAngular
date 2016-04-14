@@ -35,14 +35,16 @@ body {
       float: right;
       margin: 0 2% 0 0;
       cursor: pointer; }
+  body .edit-profile-content-wrapper {
+    margin-top: 30%; }
   body .edit-profile-subheader {
     background-color: #fbfbc4;
     width: 100vw;
-    height: 10%;
+    height: 5%;
     display: block;
     color: #295518;
     position: fixed;
-    margin-top: 12%; }
+    top: 0; }
     body .edit-profile-subheader .edit-profile-subheader-txt {
       font-size: 3.5em;
       padding: 2% 0 2% 4%;
@@ -278,9 +280,16 @@ body {
       background-color: lightgray;
       font-size: 3em;
       font-weight: 700; }
-      body .home-card .home-header span {
+      body .home-card .home-header .home-post-title {
+        width: 50%;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      body .home-card .home-header .home-post-end {
         font-size: .75em;
-        float: right; }
+        float: right;
+        display: inline; }
     body .home-card .home-transaction-details {
       display: inline-block;
       width: 60%;
@@ -472,9 +481,16 @@ body {
       padding: 2%;
       font-size: 3em;
       font-weight: 700; }
-      body .results-card .results-header span {
+      body .results-card .results-header .results-card-title {
+        width: 60%;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      body .results-card .results-header .results-card-end {
         font-size: .5em;
-        float: right; }
+        float: right;
+        display: inline; }
     body .results-card .results-transaction-details {
       display: inline-block;
       width: 50%;
@@ -752,6 +768,26 @@ body {
         line-height: 2em; } }
     body .profile-pub-footer .profile-pub-back:hover {
       background-color: #38162c; }
+  body #create-fileName {
+    margin-left: 2%;
+    background-color: transparent;
+    color: transparent; }
+  body #create-fileName::-webkit-file-upload-button {
+    visibility: hidden; }
+  body #create-fileName::before {
+    content: 'Choose image';
+    font-family: sans-serif;
+    color: white;
+    display: inline-block;
+    background-color: #0c8183;
+    padding: 10px;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 3em; }
+  body .create-choose-file {
+    margin-left: 2%;
+    font-size: 3em; }
   body .create-subheader {
     padding: 4% 0 1% 0;
     font-size: 3em;
@@ -838,7 +874,7 @@ body {
     margin: 2% 0 0 2.5%;
     color: black;
     font-size: 3em; }
-  body .create-post {
+  body .create-submit-button {
     background-color: #8bc34a;
     position: fixed;
     bottom: 0;
@@ -849,7 +885,98 @@ body {
     color: white;
     cursor: pointer;
     font-weight: 200; }
-    body .create-post:hover {
+    body .create-submit-button:hover {
+      background-color: #7eb73d; }
+  body .edit-post-content-wrapper {
+    margin-top: 12%; }
+  body .edit-post-subheader {
+    width: 100%;
+    font-size: 4em;
+    text-align: center;
+    background-color: #fbfbc4;
+    line-height: 1.5em;
+    margin-top: 15%; }
+  body .edit-post-title {
+    background-color: white;
+    width: 95%;
+    border: solid 2px #F4F4F4;
+    font-size: 3em;
+    margin: 2% 0 0 2.5%;
+    color: black; }
+  body .edit-post-picture {
+    margin: 2% 0;
+    color: black;
+    text-align: center; }
+  body .fa-camera-retro {
+    color: #b4b4b4;
+    padding: 90px 50px;
+    display: inline-block;
+    border: solid thin #b4b4b4;
+    background-color: #f5e4e8;
+    cursor: pointer; }
+  body .edit-post-location {
+    background-color: white;
+    width: 95%;
+    border: solid 2px #F4F4F4;
+    font-size: 1em;
+    margin: 2% 0 2% 2.5%;
+    color: black;
+    font-size: 3em; }
+  body .edit-post-start-na {
+    display: inline-block;
+    background-color: white;
+    width: 40%;
+    border: solid 2px #F4F4F4;
+    font-size: 3em;
+    margin: 2% 5%;
+    color: black; }
+  body .edit-post-start-time-na {
+    display: inline-block;
+    background-color: white;
+    width: 40%;
+    border: solid 2px #F4F4F4;
+    font-size: 3em;
+    margin-top: 2%;
+    color: black; }
+  body .edit-post-end-na {
+    display: inline-block;
+    margin: 2% 5%;
+    background-color: white;
+    width: 40%;
+    border: solid 2px #F4F4F4;
+    font-size: 3em;
+    margin-top: 2%;
+    color: black; }
+  body .edit-post-end-time-na {
+    display: inline-block;
+    background-color: white;
+    width: 40%;
+    border: solid 2px #F4F4F4;
+    font-size: 3em;
+    margin-top: 2%;
+    color: black; }
+  body .edit-post-description {
+    display: block;
+    height: 25vh;
+    background-color: white;
+    width: 95%;
+    border: solid 2px #F4F4F4;
+    font-size: 1em;
+    margin: 2% 0 0 2.5%;
+    color: black;
+    font-size: 3em; }
+  body .edit-post-btn {
+    background-color: #8bc34a;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200; }
+    body .edit-post-btn:hover {
       background-color: #7eb73d; }
   body .created-content-wrapper {
     margin-top: 12%; }
@@ -865,15 +992,12 @@ body {
     font-size: 3em;
     margin-top: 2%;
     color: black; }
-  body .created-post-images {
-    position: relative; }
-    body .created-post-images .created-post-photo {
-      display: inline-block;
-      margin-top: 2%;
-      border: solid thin black; }
-      body .created-post-images .created-post-photo #created-post-gmap {
-        width: 400px;
-        height: 400px; }
+  body .created-post-images .created-post-photo {
+    display: inline-block;
+    margin: 2% 0 0 5%; }
+    body .created-post-images .created-post-photo #created-post-gmap {
+      width: 400px;
+      height: 400px; }
   body .created-post-map {
     display: inline-block;
     margin: 2% 5%; }
@@ -983,57 +1107,68 @@ body {
       background-color: #38162c; }
   body .chat-subheader {
     background-color: #fbfbc4;
-    font-size: 1.5em;
-    line-height: 1.5em; }
+    font-size: 4em;
+    line-height: 1.5em;
+    position: fixed;
+    top: 7%;
+    width: 100%;
+    display: block;
+    text-align: center; }
     body .chat-subheader .chat-other-user-text {
       font-weight: 700; }
-  body .chat-other-user-response {
-    width: 65%;
-    display: block;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    background-color: white;
-    border-radius: 0 .3em .3em .3em;
-    margin: 2%;
-    padding: 2% 1%; }
-  body .chat-current-user-response {
-    float: right;
-    width: 65%;
-    display: block;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    background-color: white;
-    margin: 2%;
-    padding: 2% 1%;
-    border-radius: .3em .3em 0 .3em; }
+  body .chat-content-wrapper {
+    margin: 25% 0 0 0;
+    height: 73vh;
+    overflow: scroll; }
+    body .chat-content-wrapper .chat-other-user-response {
+      width: 65%;
+      display: block;
+      font-size: 3em;
+      line-height: 1.2em;
+      background-color: white;
+      border-radius: 0 .3em .3em .3em;
+      margin: 2%;
+      padding: 2% 1%;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); }
+    body .chat-content-wrapper .chat-current-user-response {
+      margin: 2% 0 2% 30%;
+      width: 65%;
+      display: block;
+      font-size: 3em;
+      line-height: 1.2em;
+      background-color: white;
+      padding: 2% 1%;
+      border-radius: .3em .3em 0 .3em;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); }
   body .chat-input-block {
-    margin: 1% 0 1% 2%;
+    margin: 1% 0 1% 0;
     position: absolute;
     bottom: 7%;
     width: 100%;
-    border-top: #a8a8a8; }
+    border-top: #a8a8a8;
+    display: block; }
     body .chat-input-block .chat-input {
-      width: 85%;
-      font-size: 1.3em;
-      line-height: 1.2em; }
+      width: 80%;
+      font-size: 3em;
+      line-height: 1.2em;
+      margin: 0 0 0 5%; }
     body .chat-input-block .fa-paper-plane-o {
       display: inline-block;
-      font-size: 2em;
-      margin: 0 0 0 -1%;
-      padding: 0 1%;
+      font-size: 3.5em;
       color: #933a75; }
       body .chat-input-block .fa-paper-plane-o:hover {
         color: #813367; }
   body .chat-home-btn {
-    display: inline-block;
+    display: block;
     background-color: #8bc34a;
-    font-size: 2em;
+    font-size: 5em;
     line-height: 1.3em;
     text-align: center;
     color: white;
     width: 50%;
     position: fixed;
     bottom: 0;
+    left: 0;
     cursor: pointer; }
     @media screen and (min-width: 1200px) {
       body .chat-home-btn {
@@ -1051,8 +1186,8 @@ body {
     color: white;
     width: 50%;
     position: fixed;
-    margin: 0 0 0 50%;
     bottom: 0;
+    left: 50%;
     cursor: pointer; }
     @media screen and (min-width: 1200px) {
       body .chat-back-to-post-btn {
