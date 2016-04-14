@@ -971,17 +971,18 @@ body {
       background-color: white;
       border-radius: 0 .3em .3em .3em;
       margin: 2%;
-      padding: 2% 1%; }
+      padding: 2% 1%;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); }
     body .chat-content-wrapper .chat-current-user-response {
-      float: right;
+      margin: 2% 0 2% 30%;
       width: 65%;
       display: block;
       font-size: 3em;
       line-height: 1.2em;
       background-color: white;
-      margin: 2%;
       padding: 2% 1%;
-      border-radius: .3em .3em 0 .3em; }
+      border-radius: .3em .3em 0 .3em;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); }
   body .chat-input-block {
     margin: 1% 0 1% 0;
     position: absolute;

@@ -9,10 +9,13 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   var supplierId = localStorage.getItem('chatSupplierId');
   var postTitle = localStorage.getItem('chatPostTitle');
 
+  $scope.userId = userId;
+  console.log($scope.userId);
   //push the scroll
   $(document).ready(function(){
   $('.chat-content-wrapper').animate({
-  scrollTop: $('.chat-content-wrapper').get(0).scrollHeight}, 100);
+  scrollTop: $('.chat-content-wrapper').get(0).scrollHeight}, 500);
+  $scope.apply;
   });
 
   //get other user's email address
@@ -35,13 +38,19 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     });
   }
 
+
+
+
   //get messages
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
     console.log('get messages worked', response)
     $scope.messages = response.data;
+
   }, function errorCallback(response){
     console.log('didnt get messages');
   });
+
+
 
   //declare the variables for filling the subject line
   $scope.userFirstName;
@@ -58,7 +67,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   //send a message
   $scope.sendMessage = function(){
     //create the json to send the message
-    var param = {"post_id":postId,"body":$('.chat-input').val(),"subject":"Foodstream app message from "+$scope.userFirstName+" "+$scope.userLastName+" regarding "+postTitle,"recipient":"nicoleacadavillo@gmail.com"}
+    var param = {"post_id":postId,"body":$('.chat-input').val(),"subject":"Foodstream app message from "+$scope.userFirstName+" "+$scope.userLastName+" regarding "+postTitle,"recipient":"byronssupersweetdevacct@gmail.com"}
     console.log(param);
     //make the call
     $http.post('https://sheltered-wildwood-38449.herokuapp.com/messages/send_email?token='+token, param).then(function successCallback(response){
@@ -78,6 +87,11 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
       $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
         console.log('get messages worked', response)
         $scope.messages = response.data;
+        $(document).ready(function(){
+        $('.chat-content-wrapper').animate({
+        scrollTop: $('.chat-content-wrapper').get(0).scrollHeight}, 300);
+        $scope.apply;
+        });
       }, function errorCallback(response){
         console.log('didnt get messages');
       });

@@ -3,9 +3,10 @@
 </div>
 
 <div class = "chat-content-wrapper">
-  <div ng-repeat='message in messages | orderBy: "updated_at"'>
-    <div class='chat-other-user-response'>{{message.body}}</div>
-    <!-- <div class='chat-current-user-response'>also hey hi other text</div> -->
+  <div ng-repeat='message in messages' >
+    <div ng-if='message.sender_id == userId' class='chat-current-user-response'>{{message.body}}</div>
+    <div ng-if='message.sender_id !=userId' class='chat-other-user-response'>{{message.body}}</div>
+
   </div>
 
 </div>
