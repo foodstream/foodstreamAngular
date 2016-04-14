@@ -943,7 +943,7 @@ body {
     body .created-post-footer-home:hover {
       background-color: #7eb73d; }
   body .created-post-footer-edit {
-    background-color: #f06e00;
+    background-color: #0c8183;
     position: fixed;
     bottom: 0;
     width: 33.33%;
