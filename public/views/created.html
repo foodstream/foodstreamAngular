@@ -1,5 +1,7 @@
-<div class = "created-info">
-	<div class="created-post-title">{{post.title}}</div>
+<div class = "created-content-wrapper">
+	<div class = "created-info">
+		<div class="created-post-title">{{post.title}}</div>
+
 
 	<div class="created-post-description">
 	{{post.details}}
@@ -8,45 +10,39 @@
 	<div class="created-post-images">
 		<div class="created-post-photo">
 			  <div id='created-post-gmap'></div>
-			  <a href={{directionsLink}} class='post-detail-directions-link' >
-			    get directions with google
-			  </a>
 		</div>
-		</div>
+
 		<div class="created-post-map">
 			<img class='created-post-map-img' src="/assets/images/produce.png">
 		</div>
 	</div>
+		<div class="created-post-location">
+			<div class="created-post-address">
+				<span>Address:</span>{{post.address_string}}
+			</div>
+			<a href={{directionsLink}} class="created-post-directions-btn">
+				Get Directions w/Google
+			</a>
+		</div>
 
-	<div class="created-post-location">
-		<div class="created-post-address">
-			<span>Address:</span>{{post.address_string}}
-		</div>
-		<div class="created-post-directions-btn">
-			Get Directions w/Google
-		</div>
+
+
+				<div class="created-post-start">
+					<span>Starts at:</span>{{post.start_at}}
+				</div>
+				<div class="created-post-end">
+					<span>Pick up by:</span>{{post.end_at}}
+				</div>
+
+
+				<div class="google-cal">
+				<div class="ical">
+					<i class="fa fa-calendar-plus-o fa-4x" ng-click='addToCalendar()'></i>
+					add to calendar
+				</div>
+
 	</div>
-
-
-
-			<div class="created-post-start">
-				<span>Starts at:</span>{{post.start_at}}
-			</div>
-			<div class="created-post-end">
-				<span>Pick up by:</span>{{post.end_at}}
-			</div>
-
-
-			<div class="google-cal">
-				<a href="#"><i class="fa fa-calendar-plus-o fa-4x"></i></a>
-				add to google calendar
-			</div>
-			<div class="ical">
-				<a href="#"><i class="fa fa-calendar-plus-o fa-4x"></i></a>
-				add to ical
-			</div>
-
-
+</div>
 
 	<div class="created-post-footer-home" ng-click='goHome()'>
 		Home

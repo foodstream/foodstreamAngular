@@ -1,4 +1,4 @@
-foodStream.controller('detailController', ['$http', '$scope', 'getPostDetail', '$location', function($http, $scope, getPostDetail, $location) {
+foodStream.controller('detailController', ['$http', '$scope', '$location', function($http, $scope, $location) {
    console.log("detail ctrllr up");
 
   //get ID of post clicked in search results
@@ -42,7 +42,7 @@ foodStream.controller('detailController', ['$http', '$scope', 'getPostDetail', '
     //set the directions link
     $scope.directionsLink = 'https://maps.google.com?saddr=Current+Location&daddr='+$scope.post.latitude+','+$scope.post.longitude;
     console.log($scope.directionsLink);
-    
+
   }, function errorCallback(response){
     console.log('hate')
   });

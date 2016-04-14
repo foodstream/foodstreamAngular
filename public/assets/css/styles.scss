@@ -23,13 +23,16 @@ body{
   }
   .app-header{
     font-weight: 700;
-    height: 40%;
+    height: 5%;
     width: 100vw;
     background-color: lighten($headerbg, 3%);
     color: white;
     display: block;
     padding: 2% 0;
     font-size: 4em;
+    position: fixed;
+    top: 0;
+    z-index:999;
     .app-header-txt{
       display: inline-block;
       cursor: pointer;
@@ -43,12 +46,19 @@ body{
   }
 
 //--------------edit profile page styling---------//
+  .edit-profile-content-wrapper {
+    margin-top: 30%;
+  }
+
   .edit-profile-subheader{
     background-color:lighten($subheaderbg, 25%);
     width: 100vw;
-    height: 20%;
+    height: 5%;
     display: block;
     color: darken($headerbg, 5%);
+    position: fixed;
+    top: 0;
+    // margin-top: 12%;
     .edit-profile-subheader-txt{
       font-size: 3.5em;
       padding: 2% 0 2% 4%;
@@ -238,12 +248,19 @@ body{
   }
 
 //------ Home Page/Dashboard ------ //
+  .home-content-wrapper {
+    margin: 30% 0 20% 0;
+  }
+
   .home-subheader{
     background-color:lighten($subheaderbg, 25%);
     width: 100%;
-    height: 20%;
+    height: 7%;
     color: darken($headerbg, 5%);
     font-size: 3em;
+    position: fixed;
+    top: 7%;
+    z-index: 999;
     .home-subheader-see-all{
       line-height: 1.2em;
       text-align: center;
@@ -290,9 +307,17 @@ body{
       background-color: lightgray;
       font-size: 3em;
       font-weight: 700;
-      span {
+      .home-post-title {
+        width: 50%;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .home-post-end {
         font-size: .75em;
         float: right;
+        display: inline;
       }
     }
     .home-transaction-details {
@@ -476,7 +501,11 @@ body{
 
 
   //-------------search results page styling--------------//
+
   .results-subheader{
+    position: fixed;
+    margin: -20% 0 0 0;
+    z-index: 999;
     background-color: lighten($subheaderbg, 25%);
     .results-search{
       margin: 2% 0 0 2%;
@@ -508,6 +537,9 @@ body{
       }
     }
   }
+  .results-butt-content-wrapper{
+  margin: 33% 0 10% 0;
+  }
   .results-card {
     display: block;
     height: $cardHeight;
@@ -521,9 +553,17 @@ body{
       padding: 2%;
       font-size: 3em;
       font-weight: 700;
-      span {
+      .results-card-title {
+        width: 60%;
+        white-space: nowrap;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .results-card-end {
         font-size: .5em;
         float: right;
+        display: inline;
       }
     }
     .results-transaction-details {
@@ -803,7 +843,39 @@ body{
     }
 
   //--------- Create View -------------//
+    .create-content-wrapper{
+      margin-top: 12%;
+    }
 
+    #create-fileName {
+      margin-left: 2%;
+      background-color: transparent;
+      color: transparent;
+    }
+
+    #create-fileName::-webkit-file-upload-button{
+      visibility: hidden;
+    }
+
+    #create-fileName::before {
+      content: 'Choose image';
+      font-family: sans-serif;
+      color: white;
+      display: inline-block;
+      // border: 1px solid $border;
+      background-color: $buttonbg;
+      padding: 10px;
+      // outline: none;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      cursor: pointer;
+      font-size: 3em;
+    }
+
+    .create-choose-file{
+      margin-left: 2%;
+      font-size: 3em;
+    }
 
     .create-subheader {
       width: 100%;
@@ -811,6 +883,7 @@ body{
       text-align: center;
       background-color: lighten($subheaderbg, 25%);
       line-height: 1.5em;
+      margin-top: 15%;
     }
     .create-title {
       background-color: white;
@@ -893,7 +966,7 @@ body{
     }
 
 
-  .create-post {
+  .create-submit-button {
     background-color: $buttonaccent2;
     position: fixed;
     bottom: 0;
@@ -910,7 +983,125 @@ body{
     }
   }
 
+
+//----------edit post view----------//
+
+.edit-post-content-wrapper{
+  margin-top: 12%;
+}
+
+.edit-post-subheader {
+  width: 100%;
+  font-size: 4em;
+  text-align: center;
+  background-color: lighten($subheaderbg, 25%);
+  line-height: 1.5em;
+  margin-top: 15%;
+}
+.edit-post-title {
+  background-color: white;
+  width: 95%;
+  border: solid 2px $border;
+  font-size: 3em;
+  margin: 2% 0 0 2.5%;
+  color: black;
+}
+.edit-post-picture {
+  margin: 2% 0;
+  color: black;
+  text-align: center;
+}
+.fa-camera-retro{
+  color:darken($border, 25%);
+  padding: 90px 50px;
+  display: inline-block;
+  border: solid thin darken($border, 25%);
+  background-color: darken($bodybg, 5%);
+  cursor: pointer;
+}
+.edit-post-location {
+  background-color: white;
+  width: 95%;
+  border: solid 2px $border;
+  font-size: 1em;
+  margin: 2% 0 2% 2.5%;
+  color: black;
+  font-size: 3em;
+}
+.edit-post-start-na {
+  display: inline-block;
+  background-color: white;
+  width: 40%;
+  border: solid 2px $border;
+  font-size: 3em;
+  margin: 2% 5%;
+  color: black;
+}
+.edit-post-start-time-na{
+  display: inline-block;
+  background-color: white;
+  width: 40%;
+  border: solid 2px $border;
+  font-size: 3em;
+  margin-top: 2%;
+  color: black;
+}
+.edit-post-end-na {
+  display: inline-block;
+  margin: 2% 5%;
+  background-color: white;
+  width: 40%;
+  border: solid 2px $border;
+  font-size: 3em;
+  margin-top: 2%;
+  color: black;
+}
+.edit-post-end-time-na{
+  display: inline-block;
+  background-color: white;
+  width: 40%;
+  border: solid 2px $border;
+  font-size: 3em;
+  margin-top: 2%;
+  color: black
+}
+
+.edit-post-description {
+  display: block;
+  height: 25vh;
+  background-color: white;
+  width: 95%;
+  border: solid 2px $border;
+  font-size: 1em;
+  margin: 2% 0 0 2.5%;
+  color: black;
+  font-size: 3em;
+}
+
+
+.edit-post-btn {
+background-color: $buttonaccent2;
+position: fixed;
+bottom: 0;
+width: 100%;
+text-align: center;
+font-size: 5em;
+line-height: 1.3em;
+color: white;
+cursor: pointer;
+font-weight: 200;
+
+&:hover{
+ background-color: darken($buttonaccent2, 5%);
+}
+}
+
 //-------- Created View --------------//
+
+      .created-content-wrapper{
+        margin-top: 12%;
+      }
+
       .created-post-title {
         width: 100%;
         font-size: 5em;
@@ -927,12 +1118,12 @@ body{
       }
       .created-post-images {
         // display: block;
-        position: relative;
+        // border: solid thin black;
         .created-post-photo {
           display: inline-block;
 
-          margin-top: 2%;
-          border: solid thin black;
+          margin: 2% 0 0 5%;
+          // border: solid thin black;
           #created-post-gmap{
             width: 400px;
             height: 400px;
@@ -947,7 +1138,7 @@ body{
             height: 400px;
           }
         }
-      
+
       .created-post-location {
         display: block;
         .created-post-address {
@@ -1062,50 +1253,65 @@ body{
 //----------chat page styling----------//
   .chat-subheader{
     background-color: lighten($subheaderbg, 25%);
-    font-size: 1.5em;
+    font-size: 4em;
     line-height: 1.5em;
+    position: fixed;
+    top: 7%;
+    width: 100%;
+    display: block;
+    text-align: center;
     .chat-other-user-text{
       font-weight: 700;
     }
   }
-  .chat-other-user-response{
-    width: 65%;
-    display: block;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    background-color: white;
-    border-radius: 0 .3em .3em .3em;
-    margin: 2%;
-    padding: 2% 1%;
-  }
-  .chat-current-user-response{
-    float: right;
-    width: 65%;
-    display: block;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    background-color: white;
-    margin: 2%;
-    padding: 2% 1%;
-    border-radius: .3em .3em 0 .3em;
+  .chat-content-wrapper{
+    margin: 25% 0 0 0;
+    // width: 100%;
+    height: 73vh;
+    // border: solid thin black;
+    overflow: scroll;
+    .chat-other-user-response{
+      width: 65%;
+      display: block;
+      font-size: 3em;
+      line-height: 1.2em;
+      background-color: white;
+      border-radius: 0 .3em .3em .3em;
+      margin: 2%;
+      padding: 2% 1%;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    .chat-current-user-response{
+      // border: solid thin black;
+      margin: 2% 0 2% 30%;
+      width: 65%;
+      display: block;
+      font-size: 3em;
+      line-height: 1.2em;
+      background-color: white;
+      padding: 2% 1%;
+      border-radius: .3em .3em 0 .3em;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    }
   }
   .chat-input-block{
-    margin: 1% 0 1% 2%;
+    margin: 1% 0 1% 0;
     position: absolute;
     bottom: 7%;
     width: 100%;
     border-top: darken($border, 30%);
+    display: block;
     .chat-input{
-      width: 85%;
-      font-size: 1.3em;
+      width: 80%;
+      font-size: 3em;
       line-height: 1.2em;
-      // margin: 0 0 2% 0;
+      margin: 0 0 0 5%;
       }
       .fa-paper-plane-o{
         display: inline-block;
-        font-size: 2em;
-        margin: 0 0 0 -1%;
-        padding: 0 1%;
+        font-size: 3.5em;
+        // margin: 0 0 0 -1%;
+        // padding: 0 1%;
         color: lighten($aubergine, 20%);
         // background-color: $itembg;
         &:hover{
@@ -1115,15 +1321,16 @@ body{
   }
 
   .chat-home-btn{
-    display:inline-block;
+    display:block;
     background-color: $buttonaccent2;
-    font-size: 2em;
+    font-size: 5em;
     line-height: 1.3em;
     text-align: center;
     color: white;
     width: 50%;
     position: fixed;
     bottom: 0;
+    left: 0;
     cursor: pointer;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
@@ -1132,14 +1339,14 @@ body{
   .chat-back-to-post-btn{
     display:inline-block;
     background-color: $buttonbg;
-    font-size: 2em;
+    font-size: 5em;
     line-height: 1.3em;
     text-align: center;
     color: white;
     width:50%;
     position: fixed;
-    margin: 0 0 0 50%;
     bottom: 0;
+    left: 50%;
     cursor: pointer;
     &:hover{
       background-color: darken($buttonbg, 5%);
@@ -1147,6 +1354,10 @@ body{
   }
 
 // ------------ Your Claimed Posts --------- //
+
+.claimed-content-wrapper{
+  margin-top: 10%;
+}
 
 .claimed-title {
   font-size: 6em;

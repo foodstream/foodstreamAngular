@@ -5,16 +5,15 @@ foodStream.controller('loginController', ['$http', '$scope', '$location', 'logge
     console.log('click');
     // console.log($scope.username);
     // console.log($scope.password);
-    $http({
-      method: 'POST',
-      url: 'https://sheltered-wildwood-38449.herokuapp.com/sessions/login?email='+$scope.username+'&password='+$scope.password
-    }).then(function successCallback(response){
+    $http.post( 'https://sheltered-wildwood-38449.herokuapp.com/sessions/login?email='+$scope.username+'&password='+$scope.password
+    ).then(function successCallback(response){
       console.log('post?');
       // console.log(response.data.token);
       // console.log(response.data.id);
 
       localStorage.setItem('token',response.data.token);
       localStorage.setItem('userId', response.data.id);
+      localStorage.setItem('email', response.data.email);
       logged.token = response.data.token;
       $location.path('/home');
     }, function errorCallback(response){

@@ -7,10 +7,8 @@
   </span>
 </div>
 
+<div class = "edit-profile-content-wrapper">
 
-
-
-</div> -->
 <!--
 <input type="file" accept="image/*" capture="camera"> -->
   <img class='edit-profile-image' ng-src = "{{profilePic}}" width = "500px"></img>
@@ -33,10 +31,10 @@
   <input id = "fileName" name="file" type="file">
 
   <br>
-  <input type="submit" value="Upload File to S3" ng-click = "logFile()" class='edit-profile-image-upload'>
-</form>
+  <!-- <input type="submit" value="Upload File to S3" ng-click = "logFile()" class='edit-profile-image-upload'> -->
+<!-- </form> -->
 
-<form ng-submit = "submitEdit()">
+<!-- <form> -->
   <input class='edit-profile-first-name' type=text placeholder='First Name' ng-model = "first">
   <input class='edit-profile-last-name' type=text placeholder='Last Name' ng-model = "last">
   <input class='edit-profile-email' type=text placeholder='email' ng-model = "email">
@@ -46,8 +44,10 @@
 
   <textarea class='edit-profile-description' type=text placeholder='Describe Yourself' ng-model = "userDescription"></textarea>
 
-  <input type = "submit" value = "Submit Profile" class='edit-profile-submit-btn'/>
+  <input type = "submit" value = "Submit Profile" class='edit-profile-submit-btn' ng-click = "submitEdit()"/>
   <!-- <div class='edit-profile-footer'>
     Submit Profile
   </div> -->
 </form>
+
+</div>

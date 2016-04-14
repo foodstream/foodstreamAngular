@@ -3,6 +3,7 @@
 		Create Post
 	</div>
 
+<div class = "create-content-wrapper">
 
 <!-- this form sourced from http://aws.amazon.com/articles/1434/ -->
 <form action="https://foodstream.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
@@ -16,9 +17,12 @@
   <input type="hidden" name="Content-Type" value="">
    <!-- Include any additional input fields here -->
 
-  Choose an image for your food post:
-  <input id = "fileName" name="file" type="file">
+  <div class = "create-choose-file">Choose an image for your post.</div>
+	<div class = "create-submit-wrap">
+		<input id = "create-fileName" name="file" type="file">
+	</div>
 
+	<div class = "create-file-status"></div>
 
 	<input class = "create-title" placeholder="Title" ng-model='title'></input>
 
@@ -34,7 +38,7 @@
 
 	<textarea class = "create-description" placeholder="Description" ng-model='description'></textarea>
 
-<input type="submit" value="Submit post" id = "newPostSubmitButton" ng-click = "submitNewPost()">
+<input class = "create-submit-button" type="submit" value="Submit post" id = "newPostSubmitButton" ng-click = "submitNewPost()">
 
 
 <!--  -->
@@ -44,3 +48,5 @@
 	Create Post
 </div> -->
 </form>
+
+</div>

@@ -16,7 +16,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
     method: 'GET',
     url:' https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token
   }).then(function successCallback(response){
-    // console.log(response.data);
+    console.log(response.data);
     $scope.posts = response.data;
   }, function errorCallback(response){
     // console.log(response)
@@ -38,6 +38,14 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
     $scope.filters.supplier_id = userId;
   }
 
+  $scope.goToChat = function(chatId, claimantId, supplierId, postTitle){
+    console.log(chatId, claimantId, supplierId, postTitle)
+    localStorage.setItem('chatId', chatId);
+    localStorage.setItem('chatClaimantId', claimantId);
+    localStorage.setItem('chatSupplierId', supplierId);
+    localStorage.setItem('chatPostTitle', postTitle);
+    $location.path('/chat');
+  }
 
   //get the ID of the post a user wants more details on, and take them to that page
   $scope.detailsId = function(postId){
