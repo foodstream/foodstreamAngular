@@ -48,11 +48,13 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
   }
 
   //get the ID of the post a user wants more details on, and take them to that page
-  $scope.detailsId = function(postId){
-    // console.log('clicked');
-    // console.log(postId);
+  $scope.detailsId = function(postId, supplierId, claimantId){
     localStorage.setItem('postId', postId);
-    $location.path('/claimed');
+    if(supplierId == userId){
+      $location.path('/created');
+    }else if(claimantId == userId){
+      $location.path('/claimed');
+    }
   };
 
   //migrate user to search page

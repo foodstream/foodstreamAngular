@@ -1,7 +1,7 @@
 //add fastclick.js to make site more mobile-friendly
 
 //initiate angular app
-var foodStream = angular.module("foodStream", ['ngRoute']);
+var foodStream = angular.module("foodStream", ['ngRoute', 'ngFileUpload']);
 
 
 //this controller shows an icon in the header upon user login
