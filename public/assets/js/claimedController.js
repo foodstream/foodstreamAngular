@@ -12,12 +12,15 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
   //remove the post ID b/c it's a one-time need..or not, because people will go back after getting directions
   // localStorage.removeItem('postId');
 
+  $scope.goToChat = function(postId){
+    localStorage.setItem('chatId', postId);
+    $location.path('/chat');
+  }
+
   $scope.directionsLink;
   //get the post info
-  $http({
-    method: 'GET',
-    url:' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token
-  }).then(function successCallback(response){
+  $http.get(
+   'https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
     // console.log(response.data);
     //post info = callback response
     $scope.post = response.data;

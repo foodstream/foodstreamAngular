@@ -92,6 +92,7 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+  $scope.userToken, param)
       .then(function success(response){
           console.log("edited successfully", response);
+          localStorage.setItem('email', response.data.email);
           $location.path('/home');
         }, function error(response){
           console.log("edit profile failed");
@@ -115,6 +116,6 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     //   .then(function success(){
     //     console.log("sent file name to database");
     //   });
-  
+
 
 }]);

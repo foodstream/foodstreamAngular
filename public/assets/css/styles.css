@@ -941,7 +941,8 @@ body {
       font-weight: 700; }
   body .chat-content-wrapper {
     margin: 25% 0 0 0;
-    height: 73vh; }
+    height: 73vh;
+    overflow: scroll; }
     body .chat-content-wrapper .chat-other-user-response {
       width: 65%;
       display: block;
