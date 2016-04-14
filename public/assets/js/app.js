@@ -103,7 +103,10 @@ angular.module('foodStream').run(function($rootScope, $location, $route, logged)
             $location.path('/login');
         }
     });
-})
+});
+
+
+
 
 //routing
 foodStream.config(function($routeProvider){
