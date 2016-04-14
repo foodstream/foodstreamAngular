@@ -82,9 +82,10 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
     $scope.fileFix = ($("#fileName").val()).slice(12);
 
+    $scope.imgPre = "IMG";
 
     // console.log($scope.first, $scope.last);
-    var param = JSON.stringify({first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, email:$scope.email, orgainization:$scope.org, address_string:$scope.userLocation, latitude:lat, longitude:lng, location_id:null, image_link:$scope.nonce+$scope.fileFix});
+    var param = JSON.stringify({first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, email:$scope.email, orgainization:$scope.org, address_string:$scope.userLocation, latitude:lat, longitude:lng, location_id:null, image_link:+$scope.imgPre+$scope.nonce+$scope.fileFix});
 
     console.log(param)
 
