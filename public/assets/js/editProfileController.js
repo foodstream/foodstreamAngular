@@ -1,4 +1,4 @@
-foodStream.controller('editProfileController', ['$http', '$scope', '$location', 'logged', function($http, $scope, $location, logged){
+foodStream.controller('editProfileController', ['$http', '$scope', '$location', 'logged', 'Upload', function($http, $scope, $location, logged, Upload){
   console.log('edit ctrlr here');
 
   //get login token out of localstorage
