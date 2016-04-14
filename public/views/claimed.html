@@ -1,7 +1,7 @@
 <div class = "claimed-content-wrapper">
   <div class = "claimed-title">{{post.title}}</div>
 
-  <div class = "claimed-chat"><i class="fa fa-comment"></i> Chat</div>
+  <div class = "claimed-chat" ng-click='goToChat(post.id)'><i class="fa fa-comment"></i> Chat</div>
 
   <div class = "claimed-supplier-name">
     {{post.supplier.first_name}} {{post.supplier.last_name}}

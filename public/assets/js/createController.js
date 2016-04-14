@@ -1,5 +1,5 @@
 foodStream.controller('createController', ['$http', '$scope', '$location', function($http, $scope, $location){
-  console.log("create controller here!");
+  // console.log("create controller here!");
 
   //grab login token from localstorage
   var token = localStorage.getItem('token');

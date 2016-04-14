@@ -26,9 +26,9 @@
         <div>{{post.address_string}}</div>
       </div>
 
-      <div class = "home-chat">
+      <div class = "home-chat" ng-click='goToChat(post.id, post.claimant_id, post.supplier_id, post.title)'>
         <i class="fa fa-comment">
-          <span class='home-chat-text' ng-click='goToChat(post.id)'>Chat</span>
+          <span class='home-chat-text'>Chat</span>
         </i>
       </div>
       <div class = "home-details" ng-click='detailsId(post.id)'>
