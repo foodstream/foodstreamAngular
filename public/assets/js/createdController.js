@@ -7,9 +7,18 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
   //remove created post id from LS...actually, if we have an edit we keep this..idk?
   // localStorage.removeItem('createdPostId');
 
+  $scope.goToChat = function(postId, supplierId, claimantId){
+    console.log(postId, supplierId, claimantId)
+    localStorage.setItem('chatId', postId);
+    localStorage.setItem('chatSupplierId', supplierId);
+        localStorage.setItem('chatClaimantId', claimantId);
+    $location.path('/chat');
+  }
+
   //get post information
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
     $scope.post = response.data;
+    console.log($scope.post);
 
     //use callback lat/long to display google map of post location
     var marker;
