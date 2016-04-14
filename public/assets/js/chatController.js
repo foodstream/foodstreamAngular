@@ -4,6 +4,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   var token = localStorage.getItem('token');
   var userId = localStorage.getItem('userId');
   var postId = localStorage.getItem('chatId');
+  //grab supplierId, claimantId, and post title from the 'gotochat' click
   var claimantId = localStorage.getItem('chatClaimantId');
   var supplierId = localStorage.getItem('chatSupplierId');
   var postTitle = localStorage.getItem('chatPostTitle');
@@ -11,25 +12,29 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   //push the scroll
   $(document).ready(function(){
   $('.chat-content-wrapper').animate({
-  scrollTop: $('.chat-content-wrapper').get(0).scrollHeight}, 2000);
-});
+  scrollTop: $('.chat-content-wrapper').get(0).scrollHeight}, 100);
+  });
 
   //get other user's email address
+  //if the user is not the claimant, grab the claimants email to send the message
   if(claimantId === userId && claimantId != null){
-  $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+supplierId+'.json?token='+token).then( function successCallback(response){
-    console.log('other user got', response.data);
-    $scope.otherUserName = response.data.first_name+' '+response.data.last_name;
-  }, function errorCallback(response){
-    console.log('other user not got', response);
-  });
-} else if(supplierId === userId){
-  $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+claimantId+'.json?token='+token).then( function successCallback(response){
-    console.log('other user got', response.data);
+    $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+supplierId+'.json?token='+token).then( function successCallback(response){
+      console.log('other user got', response.data);
       $scope.otherUserName = response.data.first_name+' '+response.data.last_name;
-  }, function errorCallback(response){
+    }, function errorCallback(response){
+      console.log('other user not got', response);
+    });
+  }
+  //if the user is not the supplier, grab the suppliers email to send the message
+  else if(supplierId === userId){
+    $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+claimantId+'.json?token='+token).then( function successCallback(response){
+      console.log('other user got', response.data);
+        $scope.otherUserName = response.data.first_name+' '+response.data.last_name;
+      }, function errorCallback(response){
     console.log('other user not got', response);
-  });
-}
+    });
+  }
+
   //get messages
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
     console.log('get messages worked', response)
@@ -38,6 +43,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     console.log('didnt get messages');
   });
 
+  //declare the variables for filling the subject line
   $scope.userFirstName;
   $scope.userLastName;
   //get user information for to fill message email subject line
@@ -51,11 +57,14 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
 
   //send a message
   $scope.sendMessage = function(){
+    //create the json to send the message
     var param = {"post_id":postId,"body":$('.chat-input').val(),"subject":"Foodstream app message from "+$scope.userFirstName+" "+$scope.userLastName+" regarding "+postTitle,"recipient":"nicoleacadavillo@gmail.com"}
     console.log(param);
+    //make the call
     $http.post('https://sheltered-wildwood-38449.herokuapp.com/messages/send_email?token='+token, param).then(function successCallback(response){
       console.log('message sent');
       $('.chat-input').val('');
+      //once the message is sent, get the new list of messages to display
       $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
         console.log('get messages worked', response)
         $scope.messages = response.data;
@@ -65,6 +74,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     }, function errorCallback(response){
       console.log('message not sent', response);
       $('.chat-input').val('');
+      //once the message is sent, get the new list of messages to display (this is here b/c the server is issuing an error but still sending the message..change that once the issue is resolved)
       $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
         console.log('get messages worked', response)
         $scope.messages = response.data;
@@ -74,10 +84,12 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     });
   };
 
+  //go home on click of the home button
   $scope.goHome = function(){
     $location.path('/home');
   };
 
+  //go to claimed on click of go to post (add logic to send user to created if supplier soon)
   $scope.backToPost = function(){
     $location.path('/claimed')
   }
