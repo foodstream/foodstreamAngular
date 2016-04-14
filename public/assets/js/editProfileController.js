@@ -1,4 +1,4 @@
-foodStream.controller('editProfileController', ['$http', '$scope', '$location', 'logged', 'Upload', function($http, $scope, $location, logged, Upload){
+foodStream.controller('editProfileController', ['$http', '$scope', '$location', 'logged', function($http, $scope, $location, logged){
   console.log('edit ctrlr here');
 
   //get login token out of localstorage
@@ -33,27 +33,6 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
   };//close logout function
 
-  $scope.upload = function(file){
-    Upload.upload({
-      url: 'posts/' + post.id + '.json',
-      method: 'PUT',
-      headers: { 'Content-Type': false },
-      fields: {
-        'post[title]': post.title,
-        'post[body]': post.body,
-        'post[image]': file
-      },
-      file: file,
-      sendFieldsAs: 'json'
-    }).then(function (resp) {
-      console.log('Success ' + resp.config.file.name + 'uploaded. Response: ' + resp.data);
-    }, function (resp) {
-      console.log('Error status: ' + resp.status);
-    }, function (evt) {
-      var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-      console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
-    });
-  }
 
   //get user info to migrate onto page
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+$scope.userToken).then(function success(response){
