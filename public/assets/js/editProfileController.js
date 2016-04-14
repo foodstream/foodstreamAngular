@@ -21,17 +21,39 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/sessions/logout?token='+$scope.userToken).then(function successCallback(){
       console.log('logged out');
-      localStorage.removeItem('token');
+      localStorage.clear();
       logged.token = undefined;
       $location.path('/landing');
     }, function errorCallback(){
       console.log('not logged out');
-      localStorage.removeItem('token');
+      localStorage.clear();
       logged.token = undefined;
       $location.path('/landing');
-    })
+    });
 
-  }//close logout function
+  };//close logout function
+
+  $scope.upload = function(file){
+    Upload.upload({
+      url: 'posts/' + post.id + '.json',
+      method: 'PUT',
+      headers: { 'Content-Type': false },
+      fields: {
+        'post[title]': post.title,
+        'post[body]': post.body,
+        'post[image]': file
+      },
+      file: file,
+      sendFieldsAs: 'json'
+    }).then(function (resp) {
+      console.log('Success ' + resp.config.file.name + 'uploaded. Response: ' + resp.data);
+    }, function (resp) {
+      console.log('Error status: ' + resp.status);
+    }, function (evt) {
+      var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+      console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
+    });
+  }
 
   //get user info to migrate onto page
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+$scope.userToken).then(function success(response){
