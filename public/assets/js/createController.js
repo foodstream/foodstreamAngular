@@ -64,19 +64,21 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
     description = $('.create-description').val();
 
 
-    console.log($("#randomFile").val());
-    console.log($("#fileName").val());
-    console.log($scope.nonce);
-
-    $scope.fileFix = ($("#fileName").val()).slice(12);
+    // console.log($("#randomFile").val());
+    // console.log($("#fileName").val());
+    // console.log($scope.nonce);
+    //
+    // $scope.fileFix = ($("#fileName").val()).slice(12);
 
     // console.log(title, startString, endString, description, lat, lng, address)
     //put values into json to send to rails
     // var param = JSON.stringify({title:title, details:description, start_at:startString, end_at:endString, supplier:{id:userId}, address_string:address, latitude:lat, longitude:lng, image_link:$scope.nonce + $scope.fileFix})
     // console.log(param);
 
+    // "&post[image_link]=IMG" + $scope.nonce + $scope.fileFix
+
     //send post values to rails to create a post!
-    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token=' + token + "&post[title]=" + title + "&post[details]=" + description + "&post[start_at]=" + startString + "&post[end_at]=" + endString + "&post[supplier_id]=" + userId + "&post[address_string]=" + address + "&post[latitude]=" + lat + "&post[longitude]=" + lng + "&post[image_link]=IMG" + $scope.nonce + $scope.fileFix
+    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token=' + token + "&post[title]=" + title + "&post[details]=" + description + "&post[start_at]=" + startString + "&post[end_at]=" + endString + "&post[supplier_id]=" + userId + "&post[address_string]=" + address + "&post[latitude]=" + lat + "&post[longitude]=" + lng
     ).then(function successCallback(response){
       console.log('new post was created');
       // console.log(response, response.data.id);
