@@ -1494,10 +1494,28 @@ font-weight: 200;
         font-size: 3em;
         margin-top: 2%;
         color: black;
+        display: inline;
         @media screen and (min-width: $break-large) {
             margin: 2em auto 2em;
             margin-left: .5em;
             font-size: 1.5em;
+        }
+      }
+      .created-post-chat{
+        display: inline-block;
+        background-color: $buttonaccent2;
+        border-radius: 5px;
+        color: white;
+        padding: 8px 0;
+        text-align: center;
+        width: 90%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 3em;
+        line-height: 1.5em;
+        margin: 2% 0 0 5%;
+        &:hover{
+          background-color: darken($buttonaccent2, 5%);
         }
       }
       .created-post-images {
@@ -1518,7 +1536,7 @@ font-weight: 200;
           }
         }
         .created-post-map {
-          display: inline-block;
+          display: inline;
           margin: 2% 5%;
           .created-post-map-img{
             width: 400px;
@@ -1535,6 +1553,9 @@ font-weight: 200;
             display: block;
           }
         }
+      .created-post-location {
+        display: block;
+
         .created-post-directions-btn {
           display: inline-block;
           background-color: $buttonbg;
@@ -1542,7 +1563,8 @@ font-weight: 200;
           color: white;
           padding: 8px 0;
           text-align: center;
-          width: 90%;
+          width: 40%;
+          text-decoration: none;
           text-align: center;
           cursor: pointer;
           font-size: 3em;
@@ -1559,6 +1581,7 @@ font-weight: 200;
         span{
           font-size: .75em;
           display: block;
+          font-weight: bold;
         }
       }
       .created-post-end {
@@ -1567,8 +1590,10 @@ font-weight: 200;
         span{
           font-size: .75em;
           display: block;
+          font-weight: bold;
         }
       }
+
     .created-post-calendar-btns {
       display: inline-block;
       .google-cal {
@@ -1576,12 +1601,27 @@ font-weight: 200;
         width: 80px;
         height: 20px;
       }
+
       .ical {
         display: inline-block;
-        width: 80px;
-        height: 20px;
+        background-color: $aubergine;
+        border-radius: 5px;
+        color: white;
+        padding: 8px 0;
+        text-align: center;
+        width: 90%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 3em;
+        line-height: 1.5em;
+        margin: 2% 0 0 5%;
+        &:hover{
+          background-color: darken($aubergine, 5%);
+        }
+        i{
+          font-size:1em;
+        }
       }
-    }
 
   .created-post-footer-home {
     background-color: $buttonaccent2;
@@ -1713,15 +1753,25 @@ font-weight: 200;
     .chat-input{
       width: 80%;
       font-size: 3em;
-      line-height: 1.2em;
+      line-height: 1.7em;
       margin: 0 0 0 5%;
+      border: solid 2px $buttonbg;
+      border-right: solid 2px transparent;
+      border-radius: 5px;
       }
       .fa-paper-plane-o{
         display: inline-block;
         font-size: 3.5em;
         color: lighten($aubergine, 20%);
+        // margin: 0 0 0 -1%;
+        padding: 2%;
+        color: white;
+        background-color: $buttonbg;
+        border-radius: 5px;
         &:hover{
-          color: lighten($aubergine, 15%);
+          color: $buttonbg;
+          background-color: white;
+          border: solid 2px $buttonbg;
         }
     }
   }
@@ -1773,6 +1823,8 @@ font-weight: 200;
 
 .claimed-content-wrapper{
   margin-top: 10%;
+  height: 88vh;
+  overflow: scroll;
 }
 .claimed-title {
   font-size: 6em;
@@ -1812,11 +1864,13 @@ font-weight: 200;
 #claimed-map{
   width: 600px;
   height: 600px;
+  margin: 2% 0 2% 20%;
 }
 .claimed-location {
   margin: 5% 0 0 5%;
   font-size: 3em;
 }
+
 .claimed-location-image {
   display: inline-block;
   margin: 5% 0 0 5%;
@@ -1824,7 +1878,30 @@ font-weight: 200;
 .claimed-time-calendar-wrap {
   display: inline-block;
   margin-left: 10%;
+
+  .claimed-directions-link{
+    display: inline-block;
+    background-color: $buttonbg;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 0;
+    text-align: center;
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 3em;
+    line-height: 1.5em;
+    margin: 0 0 0 5%;
+    &:hover{
+      background-color: darken($buttonbg, 5%);
+    }
+  }
+
+.claimed-time-calendar-wrap {
+  // border: solid 1px red;
+  display: block;
   font-size: 3em;
+
   .claimed-time-wrap {
     display: inline;
     margin: 10px 0;
@@ -1833,6 +1910,7 @@ font-weight: 200;
       padding: 5px;
       span{
         display: block;
+        font-weight: bold;
       }
     }
     .claimed-end {
@@ -1840,9 +1918,11 @@ font-weight: 200;
       padding: 5px;
       span{
         display: block;
+        font-weight: bold;
       }
     }
   }
+
   .claimed-calendar-wrap {
     display: block;
     .claimed-iCal {
@@ -1852,9 +1932,16 @@ font-weight: 200;
     .claimed-googleCal {
       display: block;
       margin-top: 10px;
+      margin: 5% 0 2% 5%;
+      background-color: $aubergine;
+      width: 90%;
+      text-align: center;
+      color: white;
+      padding: 2% 0;
     }
   }
 }
+
 .claimed-details-title {
   margin: 5%;
   font-size: 3em;

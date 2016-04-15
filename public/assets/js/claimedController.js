@@ -12,8 +12,10 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
   //remove the post ID b/c it's a one-time need..or not, because people will go back after getting directions
   // localStorage.removeItem('postId');
 
-  $scope.goToChat = function(postId){
+  $scope.goToChat = function(postId, supplierId, claimantId){
     localStorage.setItem('chatId', postId);
+    localStorage.setItem('chatSupplierId', supplierId);
+    localStorage.setItem('chatClaimantId', claimantId);
     $location.path('/chat');
   }
 
@@ -58,17 +60,24 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
 
 
   //allow supplier to mark the post as completed
-  $scope.markComplete = function(supplierId){
-    if(supplierId == userId){
-      $http.put(' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
-        console.log('put successful', response);
-      }, function errorCallback(response){console.log('put hate')
-      });
-    } else{
-      alert('you must be the supplier of this food to mark the transaction complete')
-    }
-  }
+  // $scope.markComplete = function(supplierId){
+  //   if(supplierId == userId){
+  //     $http.put(' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
+  //       console.log('put successful', response);
+  //     }, function errorCallback(response){console.log('put hate')
+  //     });
+  //   } else{
+  //     alert('you must be the supplier of this food to mark the transaction complete')
+  //   }
+  // }
 
+  $scope.addToCalendar = function(){
+    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'/send_ical?token='+token).then(function successCallback(response){
+      alert('event sent to email');
+    }, function errorCallback(response){
+      console.log('event not sent', response);
+    })
+  }
 
   //go home
    $scope.goHome = function(){

@@ -17,6 +17,26 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   var lat;
   var lng;
 
+  $scope.upload = function (file) {
+  Upload.upload({
+    url: 'https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+  $scope.userToken,
+    method: 'PUT',
+    headers: { 'Content-Type': false },
+    fields: {
+      'user[profile_image]': file
+    },
+    file: file,
+    sendFieldsAs: 'json'
+  }).then(function (resp) {
+    console.log('Success ' + resp.config.file.name + 'uploaded. Response: ' + resp.data);
+  }, function (resp) {
+    console.log('Error status: ' + resp.status);
+  }, function (evt) {
+    var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+    console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
+  });
+};
+
   $scope.logout = function(){
 
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/sessions/logout?token='+$scope.userToken).then(function successCallback(){
@@ -33,27 +53,6 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
   };//close logout function
 
-  $scope.upload = function(file){
-    Upload.upload({
-      url: 'posts/' + post.id + '.json',
-      method: 'PUT',
-      headers: { 'Content-Type': false },
-      fields: {
-        'post[title]': post.title,
-        'post[body]': post.body,
-        'post[image]': file
-      },
-      file: file,
-      sendFieldsAs: 'json'
-    }).then(function (resp) {
-      console.log('Success ' + resp.config.file.name + 'uploaded. Response: ' + resp.data);
-    }, function (resp) {
-      console.log('Error status: ' + resp.status);
-    }, function (evt) {
-      var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-      console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
-    });
-  }
 
   //get user info to migrate onto page
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+$scope.userToken).then(function success(response){
@@ -96,15 +95,15 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     $scope.userLocation;
     $scope.userDescription;
 
-    $scope.nonce = Math.floor(Math.random()*99999);
-
-    console.log($("#randomFile").val());
-    console.log($("#fileName").val());
-    console.log($scope.nonce);
-
-    $scope.fileFix = ($("#fileName").val()).slice(12);
-
-    $scope.imgPre = "IMG";
+    // $scope.nonce = Math.floor(Math.random()*99999);
+    //
+    // console.log($("#randomFile").val());
+    // console.log($("#fileName").val());
+    // console.log($scope.nonce);
+    //
+    // $scope.fileFix = ($("#fileName").val()).slice(12);
+    //
+    // $scope.imgPre = "IMG";
 
     // console.log($scope.first, $scope.last);
     var param = JSON.stringify({first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, email:$scope.email, orgainization:$scope.org, address_string:$scope.userLocation, latitude:lat, longitude:lng, location_id:null, image_link:+$scope.imgPre+$scope.nonce+$scope.fileFix});
