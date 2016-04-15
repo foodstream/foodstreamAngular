@@ -1334,18 +1334,24 @@ font-weight: 200;
     .chat-input{
       width: 80%;
       font-size: 3em;
-      line-height: 1.2em;
+      line-height: 1.7em;
       margin: 0 0 0 5%;
+      border: solid 2px $buttonbg;
+      border-right: solid 2px transparent;
+      border-radius: 5px;
       }
       .fa-paper-plane-o{
         display: inline-block;
         font-size: 3.5em;
         // margin: 0 0 0 -1%;
-        // padding: 0 1%;
-        color: lighten($aubergine, 20%);
-        // background-color: $itembg;
+        padding: 2%;
+        color: white;
+        background-color: $buttonbg;
+        border-radius: 5px;
         &:hover{
-          color: lighten($aubergine, 15%);
+          color: $buttonbg;
+          background-color: white;
+          border: solid 2px $buttonbg;
         }
     }
   }
