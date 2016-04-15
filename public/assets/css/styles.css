@@ -22,7 +22,7 @@ body {
     font-size: 4em;
     position: fixed;
     top: 0;
-    z-index: 999; }
+    z-index: 998; }
     @media screen and (min-width: 1200px) {
       body .app-header {
         font-size: 3em;
@@ -260,6 +260,9 @@ body {
       background-color: #0a6a6c; }
   body .home-content-wrapper {
     margin: 30% 0 20% 0; }
+    @media screen and (min-width: 1200px) {
+      body .home-content-wrapper {
+        margin: 15% 0 15% 0; } }
   body .home-subheader {
     background-color: #fbfbc4;
     width: 100%;
@@ -273,11 +276,10 @@ body {
       body .home-subheader {
         position: fixed;
         font-size: 2em;
-        font-weight: 600;
+        font-weight: 700;
         top: 9%;
-        height: 5%;
+        height: 5.5%;
         border-bottom: 3px solid #295518;
-        border-top: 3px solid #295518;
         color: #295518; } }
     body .home-subheader .home-subheader-see-all {
       line-height: 1.2em;
@@ -292,7 +294,9 @@ body {
           background-color: #f7f794;
           border-bottom: 3px solid #295518;
           border-right: 3px solid #295518;
-          border-left: 3px solid #295518; } }
+          border-left: 3px solid #295518;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px; } }
     body .home-subheader .home-subheader-see-claimed {
       line-height: 1.2em;
       text-align: center;
@@ -308,7 +312,9 @@ body {
           background-color: #f7f794;
           border-bottom: 3px solid #295518;
           border-right: 3px solid #295518;
-          border-left: 3px solid #295518; } }
+          border-left: 3px solid #295518;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px; } }
     body .home-subheader .home-subheader-see-provided {
       line-height: 1.2em;
       text-align: center;
@@ -322,18 +328,29 @@ body {
           background-color: #f7f794;
           border-bottom: 3px solid #295518;
           border-right: 3px solid #295518;
-          border-left: 3px solid #295518; } }
+          border-left: 3px solid #295518;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px; } }
   body .home-card {
     display: block;
     height: 20vh;
     background-color: white;
     width: 95%;
     margin: 5% 0 5% 2.5%; }
+    @media screen and (min-width: 1200px) {
+      body .home-card {
+        height: 16vh;
+        border: 2px solid #e7e7e7;
+        margin: 3% 0 3% 2.5%; } }
     body .home-card .home-header {
       height: 4vh;
       background-color: lightgray;
       font-size: 3em;
       font-weight: 700; }
+      @media screen and (min-width: 1200px) {
+        body .home-card .home-header {
+          font-size: 1.75em;
+          border: 3px solid black; } }
       body .home-card .home-header .home-post-title {
         width: 50%;
         white-space: nowrap;
@@ -348,6 +365,11 @@ body {
       display: inline-block;
       width: 60%;
       font-size: 2.5em; }
+      body .home-card .home-transaction-details .ng-binding {
+        padding-left: .5em; }
+      @media screen and (min-width: 1200px) {
+        body .home-card .home-transaction-details {
+          font-size: 1.5em; } }
     body .home-card .home-chat {
       display: inline-block;
       background-color: #0c8183;
@@ -356,14 +378,25 @@ body {
       position: absolute;
       text-align: center;
       cursor: pointer; }
+      @media screen and (min-width: 1200px) {
+        body .home-card .home-chat {
+          height: 11.2vh;
+          font-size: .5em; } }
       body .home-card .home-chat .fa-comment {
         margin: 20% 0 0 0;
         color: white;
         font-size: 6em;
         display: block; }
+        @media screen and (min-width: 1200px) {
+          body .home-card .home-chat .fa-comment {
+            font-size: 6em;
+            margin: 6% 0; } }
         body .home-card .home-chat .fa-comment .home-chat-text {
           font-size: .5em;
           font-family: 'overpass', sans-serif; }
+          @media screen and (min-width: 1200px) {
+            body .home-card .home-chat .fa-comment .home-chat-text {
+              font-size: .7em; } }
       body .home-card .home-chat:hover {
         background-color: #0a6a6c; }
     body .home-card .home-details {
@@ -375,6 +408,10 @@ body {
       margin-left: 19%;
       text-align: center;
       cursor: pointer; }
+      @media screen and (min-width: 1200px) {
+        body .home-card .home-details {
+          height: 11.2vh;
+          font-size: .5em; } }
       body .home-card .home-details:hover {
         background-color: #ffb271; }
       body .home-card .home-details .fa-info-circle {
@@ -382,9 +419,16 @@ body {
         color: white;
         font-size: 6em;
         display: block; }
+        @media screen and (min-width: 1200px) {
+          body .home-card .home-details .fa-info-circle {
+            font-size: 6em;
+            margin: 6% 0; } }
         body .home-card .home-details .fa-info-circle .home-details-text {
           font-size: .5em;
           font-family: 'overpass', sans-serif; }
+          @media screen and (min-width: 1200px) {
+            body .home-card .home-details .fa-info-circle .home-details-text {
+              font-size: .7em; } }
   body .home-search {
     position: fixed;
     bottom: 0;
@@ -875,22 +919,33 @@ body {
     margin-left: 2%;
     background-color: transparent;
     color: transparent; }
+    @media screen and (min-width: 1200px) {
+      body #create-fileName {
+        margin: 2% 0 0 15%; } }
   body #create-fileName::-webkit-file-upload-button {
     visibility: hidden; }
   body #create-fileName::before {
-    content: 'Choose image';
+    content: 'BROWSE';
     font-family: sans-serif;
     color: white;
     display: inline-block;
     background-color: #0c8183;
+    border-radius: 5px;
     padding: 10px;
     white-space: nowrap;
     -webkit-user-select: none;
     cursor: pointer;
     font-size: 3em; }
+    @media screen and (min-width: 1200px) {
+      body #create-fileName::before {
+        font-size: 1.5em; } }
   body .create-choose-file {
     margin-left: 2%;
     font-size: 3em; }
+    @media screen and (min-width: 1200px) {
+      body .create-choose-file {
+        font-size: 1.5em;
+        margin: 2% 0 0 15%; } }
   body .create-subheader {
     padding: 4% 0 1% 0;
     font-size: 3em;
@@ -900,8 +955,9 @@ body {
     margin-top: 15%; }
     @media screen and (min-width: 1200px) {
       body .create-subheader {
-        margin-top: 1em;
-        padding: 5% 0 0 12%;
+        line-height: normal;
+        margin-top: .25em;
+        padding: 5% 0 0 14%;
         margin-bottom: 2.5em;
         font-size: 2em;
         font-weight: 600;
@@ -915,6 +971,11 @@ body {
     font-size: 3em;
     margin: 2% 0 0 2.5%;
     color: black; }
+    @media screen and (min-width: 1200px) {
+      body .create-title {
+        width: 35%;
+        font-size: 1em;
+        margin: 2% 0 0 15%; } }
   body .create-picture {
     margin: 2% 0;
     color: black;
@@ -934,6 +995,11 @@ body {
     margin: 2% 0 2% 2.5%;
     color: black;
     font-size: 3em; }
+    @media screen and (min-width: 1200px) {
+      body .create-location {
+        width: 35%;
+        font-size: 1em;
+        margin: 1% 0 0 15%; } }
   body .create-start-na {
     display: inline-block;
     background-color: white;
@@ -942,6 +1008,11 @@ body {
     font-size: 3em;
     margin: 2% 5%;
     color: black; }
+    @media screen and (min-width: 1200px) {
+      body .create-start-na {
+        width: 10%;
+        font-size: 1em;
+        margin: 1% 1% 0 18%; } }
   body .create-start-time-na {
     display: inline-block;
     background-color: white;
@@ -950,6 +1021,11 @@ body {
     font-size: 3em;
     margin-top: 2%;
     color: black; }
+    @media screen and (min-width: 1200px) {
+      body .create-start-time-na {
+        width: 10%;
+        font-size: 1em;
+        margin: 1% 45% 0 5%; } }
   body .create-end-na {
     display: inline-block;
     margin: 2% 5%;
@@ -959,6 +1035,11 @@ body {
     font-size: 3em;
     margin-top: 2%;
     color: black; }
+    @media screen and (min-width: 1200px) {
+      body .create-end-na {
+        width: 10%;
+        font-size: 1em;
+        margin: 1% 1% 0 18%; } }
   body .create-end-time-na {
     display: inline-block;
     background-color: white;
@@ -967,6 +1048,11 @@ body {
     font-size: 3em;
     margin-top: 2%;
     color: black; }
+    @media screen and (min-width: 1200px) {
+      body .create-end-time-na {
+        width: 10%;
+        font-size: 1em;
+        margin: 1% 45% 0 5%; } }
   body .create-description {
     display: block;
     height: 25vh;
@@ -977,6 +1063,12 @@ body {
     margin: 2% 0 0 2.5%;
     color: black;
     font-size: 3em; }
+    @media screen and (min-width: 1200px) {
+      body .create-description {
+        width: 35%;
+        font-size: 1em;
+        margin: 1% 0 0 15%;
+        height: 15vh; } }
   body .create-submit-button {
     background-color: #8bc34a;
     position: fixed;
@@ -1007,7 +1099,8 @@ body {
     @media screen and (min-width: 1200px) {
       body .edit-post-subheader {
         margin: 1em 0 0 0;
-        padding: 5% 0 0 7%;
+        line-height: .5em;
+        padding: 4% 0 .5% 7%;
         font-size: 2em;
         font-weight: 600;
         overflow: auto;
@@ -1110,9 +1203,8 @@ body {
     background-color: #fbfbc4; }
     @media screen and (min-width: 1200px) {
       body .created-post-title {
-        margin-top: 1em;
-        padding: 5% 0 0 12%;
-        margin-bottom: 2.5em;
+        margin: 1em auto 1em;
+        padding: 4% 0 0 12%;
         font-size: 2em;
         font-weight: 600;
         text-align: left;
@@ -1123,12 +1215,22 @@ body {
     font-size: 3em;
     margin-top: 2%;
     color: black; }
-  body .created-post-images .created-post-photo {
-    display: inline-block;
-    margin: 2% 0 0 5%; }
-    body .created-post-images .created-post-photo #created-post-gmap {
-      width: 400px;
-      height: 400px; }
+    @media screen and (min-width: 1200px) {
+      body .created-post-description {
+        margin: 2em auto 2em;
+        margin-left: .5em;
+        font-size: 1.5em; } }
+  body .created-post-images {
+    overflow: auto;
+    width: 100%;
+    margin: 1em auto 1em;
+    max-width: 650px; }
+    body .created-post-images .created-post-photo {
+      display: inline-block;
+      margin: 2% 0 0 5%; }
+      body .created-post-images .created-post-photo #created-post-gmap {
+        width: 400px;
+        height: 400px; }
   body .created-post-map {
     display: inline-block;
     margin: 2% 5%; }
@@ -1252,10 +1354,10 @@ body {
     @media screen and (min-width: 1200px) {
       body .chat-subheader {
         margin-top: 1em;
-        padding: 5% 0 0 12%;
+        padding: 4% 0 0 13%;
         margin-bottom: 2.5em;
         font-size: 2em;
-        font-weight: 600;
+        font-weight: 700;
         text-align: left;
         border-bottom: 3px solid #295518;
         color: #295518; } }
