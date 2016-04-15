@@ -6,11 +6,11 @@
   </div>
 
   <div class = "post-detail-supplier-name">
-    {{post.supplier.first_name}} {{post.supplier.last_name}}
+    <span>{{post.supplier.first_name}} {{post.supplier.last_name}}</span>
     <br>{{post.supplier.organization}}
-    <span class='post-detail-rating'>
+    <!-- <span class='post-detail-rating'>
       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
-    </span>
+    </span> -->
   </div>
 
 
@@ -20,19 +20,19 @@
     {{post.details}}
   </div>
 
-<div class = "post-detail-location">{{post.address_string}}</div>
+
 <div class = "post-detail-location-image">
   <div id='post-detail-map'></div>
   <a href={{directionsLink}} class='post-detail-directions-link' >
-    get directions with google
+    Get directions
   </a>
 </div>
 
 
   <div class = "post-detail-location">{{post.address_string}}</div>
-  <div class = "post-detail-location-image">
+  <!-- <div class = "post-detail-location-image">
     <img src = "assets/images/map-thumbnail.png" width = "100px">
-  </div>
+  </div> -->
 
   <div class = "post-detail-start"><span>Available at: </span>{{post.start_at}}</div>
   <div class = "post-detail-end"><span> Pick Up by: </span>{{post.end_at}}</div>

@@ -20,10 +20,12 @@ body {
     position: fixed;
     top: 0;
     z-index: 999; }
+    body .app-header img {
+      margin-left: 2%; }
     body .app-header .app-header-txt {
       display: inline-block;
       cursor: pointer;
-      margin: 0 0 0 2%; }
+      margin: 0 0 0 1%; }
     body .app-header .app-header-login-icon {
       float: right;
       margin: 0 2% 0 0;
@@ -317,6 +319,8 @@ body {
     font-size: 3em; }
     body .post-detail-supplier-name .post-detail-rating {
       display: block; }
+    body .post-detail-supplier-name span {
+      font-weight: bold; }
   body .post-detail-image {
     margin: 5%; }
   body .post-detail-details {
@@ -324,23 +328,32 @@ body {
   body .post-detail-location {
     margin: 5%;
     font-weight: bold; }
+  body .post-detail-directions-link {
+    color: white;
+    background-color: #0c8183;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 2em; }
   body .post-detail-location-image {
     margin: 5%; }
   body #post-detail-map {
     height: 500px;
-    width: 500px; }
+    width: 500px;
+    margin-bottom: 25px; }
   body .post-detail-start {
     margin: 5%;
     display: block; }
     body .post-detail-start span {
       font-size: 2em;
-      display: block; }
+      display: block;
+      font-weight: bold; }
   body .post-detail-end {
     margin: 5%;
     display: block; }
     body .post-detail-end span {
       font-size: 2em;
-      display: block; }
+      display: block;
+      font-weight: bold; }
   body .post-detail-claim-button {
     background-color: #0c8183;
     color: white;

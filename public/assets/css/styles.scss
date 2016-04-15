@@ -7,7 +7,7 @@ $buttonbg: #0c8183;
 $buttonaccent: #f06e00;
 $buttonaccent2: #8bc34a;
 $aubergine: #4a1d3b;
-
+// $bodybg: white;
 $cardHeight: 20vh;
 
 body{
@@ -33,10 +33,13 @@ body{
     position: fixed;
     top: 0;
     z-index:999;
+    img {
+      margin-left: 2%;
+    }
     .app-header-txt{
       display: inline-block;
       cursor: pointer;
-      margin: 0 0 0 2%;
+      margin: 0 0 0 1%;
     }
     .app-header-login-icon{
       float: right;
@@ -423,6 +426,9 @@ body{
     .post-detail-rating{
       display: block;
     }
+    span {
+      font-weight: bold;
+    }
   }
 
   .post-detail-image {
@@ -438,6 +444,14 @@ body{
     font-weight: bold;
   }
 
+  .post-detail-directions-link {
+    color: white;
+    background-color: $buttonbg;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 2em;
+  }
+
   .post-detail-location-image {
     margin: 5%;
   }
@@ -445,6 +459,7 @@ body{
   #post-detail-map{
     height: 500px;
     width: 500px;
+    margin-bottom: 25px;
   }
 
   .post-detail-start {
@@ -454,6 +469,7 @@ body{
     span{
       font-size: 2em;
       display: block;
+      font-weight: bold;
     }
 
   }
@@ -465,6 +481,7 @@ body{
     span{
       font-size: 2em;
       display: block;
+      font-weight: bold;
     }
   }
 

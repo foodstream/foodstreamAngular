@@ -1,14 +1,14 @@
 <div class = "claimed-content-wrapper">
   <div class = "claimed-title">{{post.title}}</div>
-
+  <div>post image here</div>
   <div class = "claimed-chat" ng-click='goToChat(post.id, post.supplier.id, post.claimant_id)'><i class="fa fa-comment"></i> Chat</div>
 
   <div class = "claimed-supplier-name">
     {{post.supplier.first_name}} {{post.supplier.last_name}}
     <br>{{post.supplier.organization}}
-    <span class='claimed-review'>
+    <!-- <span class='claimed-review'>
       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
-    </span>
+    </span> -->
   </div>
 
   <div class = "claimed-location">{{post.address_string}}</div>
@@ -16,7 +16,7 @@
     <div id='claimed-map'></div>
 
     <a href={{directionsLink}} class='claimed-directions-link' >
-      get directions with google
+      Get directions
     </a>
 
 
