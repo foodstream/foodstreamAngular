@@ -349,7 +349,7 @@ body{
     }
     .home-details {
       display: inline-block;
-      background-color: lighten($buttonaccent, 30%);
+      background-color: $buttonaccent2;
       width: 19%;
       height: $cardHeight * 0.8;
       position: absolute;
@@ -357,7 +357,7 @@ body{
       text-align: center;
       cursor: pointer;
       &:hover{
-        background-color: lighten($buttonaccent, 25%);
+        background-color: darken($buttonaccent2, 5%);
       }
       .fa-info-circle{
         margin: 20% 0 0 0;
@@ -608,7 +608,7 @@ body{
     }
     .results-details {
       display: inline-block;
-      background-color: lighten($aubergine, 50%);
+      background-color: $buttonbg;
       width: 23.8%;
       height: $cardHeight * 0.75;
       position: absolute;
@@ -617,7 +617,7 @@ body{
       color: white;
       cursor: pointer;
       &:hover{
-        background-color: lighten($aubergine, 45%);
+        background-color: $buttonbg;
       }
       .fa-info-circle{
         font-size: 6em;
