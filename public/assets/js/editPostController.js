@@ -8,6 +8,7 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
 
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
     console.log(response.data);
+    $scope.postPic = response.data.post_image;
     $scope.title = response.data.title;
     $scope.location = response.data.address_string;
     console.log(response.data.start_at, response.data.end_at);
@@ -59,7 +60,8 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
   var endDate;
   var endTime;
 
-  $scope.editPost = function(){
+  $scope.editPost = function(file){
+    title = $scope.title;
     location = $('#edit-post-location-ga').val();
     startDate = $('.edit-post-start-na').val();
     startTime = $('.edit-post-start-time-na').val();
@@ -67,18 +69,50 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
     endDate = $('.edit-post-end-na').val();
     endTime = $('.edit-post-end-time-na').val();
     var endString = endDate.concat(' ' + endTime);
+    description = $scope.description;
 
-    console.log($scope.title, location, startString, endString, $scope.description, lat, lng);
-      $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token=' + token + "&post[title]=" + $scope.title + "&post[details]=" + $scope.description + "&post[start_at]=" + startString + "&post[end_at]=" + endString + "&post[address_string]=" + location + "&post[latitude]=" + lat + "&post[longitude]=" + lng + "&post[image_link]=" + $scope.nonce + $scope.fileFix
-      ).then(function successCallback(response){
-        console.log('post was edited');
-        // console.log(response, response.data.id);
-        localStorage.setItem('createdPostId', response.data.id)
+    console.log($scope.title, location, startString, endString, $scope.description, lat, lng, file);
 
-        $location.path('/created')
-      }, function errorCallback(response){
-        console.log('post not created', response);
-        console.log(startString, endString);
-      });
+    var formData = new FormData();
+        formData.append('post[post_image]', file);
+        formData.append('post[title]', title);
+        formData.append('post[details]', description);
+        formData.append('post[start_at]', startString);
+        formData.append('post[end_at]', endString);
+        formData.append('post[supplier_id]', userId);
+        formData.append('post[address_string]', address);
+        formData.append('post[latitude]', lat);
+        formData.append('post[longitude]', lng);
+
+
+
+    //send post values to rails to create a post!
+    $http({
+      method: 'PUT',
+      url:'https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token=' + token,
+      data : formData,
+      headers : {'Content-Type': undefined}
+    }).then(function successCallback(response){
+      console.log('new post was created');
+      // console.log(response, response.data.id);
+      localStorage.setItem('createdPostId', response.data.id)
+
+
+      $location.path('/created')
+    }, function errorCallback(response){
+      console.log('post not created', response);
+      // console.log(startString, endString);
+    });
+      // $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token=' + token + "&post[title]=" + $scope.title + "&post[details]=" + $scope.description + "&post[start_at]=" + startString + "&post[end_at]=" + endString + "&post[address_string]=" + location + "&post[latitude]=" + lat + "&post[longitude]=" + lng + "&post[image_link]=" + $scope.nonce + $scope.fileFix
+      // ).then(function successCallback(response){
+      //   console.log('post was edited');
+      //   // console.log(response, response.data.id);
+      //   localStorage.setItem('createdPostId', response.data.id)
+      //
+      //   $location.path('/created')
+      // }, function errorCallback(response){
+      //   console.log('post not created', response);
+      //   console.log(startString, endString);
+      // });
   }
 }])

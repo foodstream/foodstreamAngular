@@ -17,25 +17,6 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   var lat;
   var lng;
 
-  $scope.upload = function (file) {
-  Upload.upload({
-    url: 'https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+  $scope.userToken,
-    method: 'PUT',
-    headers: { 'Content-Type': false },
-    fields: {
-      'user[profile_image]': file
-    },
-    file: file,
-    sendFieldsAs: 'json'
-  }).then(function (resp) {
-    console.log('Success ' + resp.config.file.name + 'uploaded. Response: ' + resp.data);
-  }, function (resp) {
-    console.log('Error status: ' + resp.status);
-  }, function (evt) {
-    var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-    console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
-  });
-};
 
   $scope.logout = function(){
 
@@ -63,7 +44,7 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     $scope.org = response.data.organization;
     $scope.userLocation = response.data.address_string;
     $scope.userDescription = response.data.description;
-    $scope.profilePic = response.data.image_link;
+    $scope.profilePic = response.data.profile_image;
     // console.log($scope.profilePic);
   }, function error(response){
     console.log('GET failed', response);
@@ -85,59 +66,44 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
 
   //grab the profile info field info and send it
-  $scope.submitEdit = function(){
+  $scope.submitEdit = function(file){
+
     console.log("submit edit button clicked");
+    console.log(file)
 
-    $scope.first;
-    $scope.last;
-    $scope.email;
-    $scope.org;
-    $scope.userLocation;
-    $scope.userDescription;
-
-    // $scope.nonce = Math.floor(Math.random()*99999);
-    //
-    // console.log($("#randomFile").val());
-    // console.log($("#fileName").val());
-    // console.log($scope.nonce);
-    //
-    // $scope.fileFix = ($("#fileName").val()).slice(12);
-    //
-    // $scope.imgPre = "IMG";
-
-    // console.log($scope.first, $scope.last);
-    var param = JSON.stringify({first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, email:$scope.email, orgainization:$scope.org, address_string:$scope.userLocation, latitude:lat, longitude:lng, location_id:null, image_link:+$scope.imgPre+$scope.nonce+$scope.fileFix});
-
-    console.log(param)
+    // var param = {first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, email:$scope.email, orgainization:$scope.org, address_string:$scope.userLocation, latitude:lat, longitude:lng, location_id:null, profile_image: file};
 
 
-    $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+  $scope.userToken, param)
-      .then(function success(response){
+    // console.log(param)
+    // $scope.base64file
+    var formData = new FormData();
+    formData.append('user[profile_image]', file);
+    formData.append('user[first_name]', $scope.first);
+    formData.append('user[last_name]', $scope.last);
+    formData.append('user[description]', $scope.userDescription);
+    formData.append('user[email]', $scope.email);
+    formData.append('user[orgainization]', $scope.org);
+    formData.append('user[address_string]', $scope.userLocation);
+    formData.append('user[latitude]', lat);
+    formData.append('user[longitude]', lng);
+    console.log(formData);
+
+      $http({
+        method: 'PUT',
+        url:'https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+$scope.userToken,
+        data: formData,
+        headers : {'Content-Type': undefined}
+      }).then(function success(response){
           console.log("edited successfully", response);
           localStorage.setItem('email', response.data.email);
           $location.path('/home');
         }, function error(response){
           console.log("edit profile failed");
           console.log(response);
-          alert('edit failed');
+          // alert('edit failed');
           $location.path('/home');
-      });
+        });
 
   };//close submitEdit function
-
-  // $scope.nonce = Math.floor(Math.random()*99999);
-  //
-  // $scope.logFile = function(){
-  //   console.log($("#randomFile").val());
-  //   console.log($("#fileName").val());
-  //   console.log($scope.nonce);
-  //
-  //   $scope.fileFix = ($("#fileName").val()).slice(12);
-
-    // $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+  $scope.userToken + '&user[image_link]='+ $scope.nonce + $scope.fileFix)
-    //   .then(function success(){
-    //     console.log("sent file name to database");
-    //   });
-
 
 }]);

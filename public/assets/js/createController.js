@@ -1,4 +1,4 @@
-foodStream.controller('createController', ['$http', '$scope', '$location', function($http, $scope, $location){
+foodStream.controller('createController', ['$http', '$scope', '$location', 'Upload', function($http, $scope, $location, Upload){
   // console.log("create controller here!");
 
   //grab login token from localstorage
@@ -14,6 +14,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
   var address;
   var lat;
   var lng;
+
   //point google places autocomplete to proper field
   var inputFrom = document.getElementById('create-post-location');
 
@@ -41,14 +42,12 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
   $(".create-end-time-na").pickatime({
   format: 'h:iA'});
 
-  //use jquery to grab text (ng-form didnt like it, sue me)
-  $('.create-post').on('click', function(){
 
-  });//close old close post function
 
   $scope.nonce = Math.floor(Math.random()*99999);
 
-  $scope.submitNewPost = function(){
+
+  $scope.submitNewPost = function(file){
 
     title = $('.create-title').val();
 
@@ -63,39 +62,39 @@ foodStream.controller('createController', ['$http', '$scope', '$location', funct
 
     description = $('.create-description').val();
 
+    var formData = new FormData();
+        formData.append('post[post_image]', file);
+        formData.append('post[title]', title);
+        formData.append('post[details]', description);
+        formData.append('post[start_at]', startString);
+        formData.append('post[end_at]', endString);
+        formData.append('post[supplier_id]', userId);
+        formData.append('post[address_string]', address);
+        formData.append('post[latitude]', lat);
+        formData.append('post[longitude]', lng);
 
-    // console.log($("#randomFile").val());
-    // console.log($("#fileName").val());
-    // console.log($scope.nonce);
-    //
-    // $scope.fileFix = ($("#fileName").val()).slice(12);
 
-    // console.log(title, startString, endString, description, lat, lng, address)
-    //put values into json to send to rails
-    // var param = JSON.stringify({title:title, details:description, start_at:startString, end_at:endString, supplier:{id:userId}, address_string:address, latitude:lat, longitude:lng, image_link:$scope.nonce + $scope.fileFix})
-    // console.log(param);
-
-    // "&post[image_link]=IMG" + $scope.nonce + $scope.fileFix
 
     //send post values to rails to create a post!
-    $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts.json?token=' + token + "&post[title]=" + title + "&post[details]=" + description + "&post[start_at]=" + startString + "&post[end_at]=" + endString + "&post[supplier_id]=" + userId + "&post[address_string]=" + address + "&post[latitude]=" + lat + "&post[longitude]=" + lng
-    ).then(function successCallback(response){
+    $http({
+      method: 'POST',
+      url:'https://sheltered-wildwood-38449.herokuapp.com/posts.json?token=' + token,
+      data : formData,
+      headers : {'Content-Type': undefined}
+    }).then(function successCallback(response){
       console.log('new post was created');
       // console.log(response, response.data.id);
       localStorage.setItem('createdPostId', response.data.id)
 
+
       $location.path('/created')
     }, function errorCallback(response){
       console.log('post not created', response);
-      console.log(startString, endString);
+      // console.log(startString, endString);
     });
-    //the old post that was just for the image. this has now been added to the other form
-    // $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts?token=' + token + '&post[image_link]='+ $scope.nonce + $scope.fileFix)
-    //   .then(function success(){
-    //     console.log("sent file name to database");
-    //   });
+
+  };//end of submit new post
 
 
-  }
 
 }]);
