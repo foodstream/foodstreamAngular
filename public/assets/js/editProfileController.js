@@ -49,6 +49,11 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     console.log('GET failed', response);
   });
 
+  //click on hidden image submit button to upload photo
+  $scope.addImage = function(){
+    $('#file-input-edit-profile').click();
+  }
+
   //point google places autocomplete to the proper field
   var inputFrom = document.getElementById('edit-profile-location-input');
 
@@ -63,6 +68,10 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
             console.log(lat, lng, $scope.userLocation)
       });
 
+  //click on the submit div to click hidden submit button
+  $scope.submitProfile = function(){
+    $('#edit-profile-submit-btn').click();
+  };
 
   //grab the profile info field info and send it
   $scope.submitEdit = function(file){

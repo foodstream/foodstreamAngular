@@ -82,7 +82,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
     }).then(function successCallback(response){
       console.log('new post was created');
       //set post id into LS so that we can migrate data to created view
-      localStorage.setItem('createdPostId', response.data.id)
+      localStorage.setItem('postId', response.data.id)
       $location.path('/created')
     }, function errorCallback(response){
       console.log('post not created', response);

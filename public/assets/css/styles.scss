@@ -50,7 +50,9 @@ body{
 
 //--------------edit profile page styling---------//
   .edit-profile-content-wrapper {
-    margin-top: 30%;
+    margin-top: 12%;
+    overflow: scroll;
+    // height: 85vh;
   }
 
   .edit-profile-subheader{
@@ -96,6 +98,18 @@ body{
     margin: 2% 0 2% 25%;
 
   }
+
+  .edit-profile-add-image{
+    background-color: $buttonbg;
+    color: white;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  #file-input-edit-profile{
+    display: none;
+  }
+
   .edit-profile-choose-file{
     font-size: 2em;
 
@@ -165,7 +179,8 @@ body{
     height: 18vh;
     font-size: 3em;
   }
-  .edit-profile-submit-btn{
+  #edit-profile-submit-btn{
+    // display: none;
     background-color: $buttonbg;
     color: white;
     font-size: 4em;

@@ -1,7 +1,7 @@
 foodStream.controller('createdController', ['$http', '$scope','$location', function($http, $scope, $location){
   console.log('你好！');
   //get the id of the created post out of LS
-  var postId = localStorage.getItem('createdPostId');
+  var postId = localStorage.getItem('postId');
   //get token out of LS
   var token = localStorage.getItem('token');
   //remove created post id from LS...actually, if we have an edit we keep this..idk?
@@ -73,9 +73,12 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
   $scope.deletePost = function(){
     $http.delete('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
       console.log('deleted', response);
+      localStorage.removeItem('createdPostId');
       $location.path('/home');
     }, function errorCallback(response){
       console.log('not delete?', response);
+      localStorage.removeItem('createdPostId');
+
       $location.path('/home');
     });
   };

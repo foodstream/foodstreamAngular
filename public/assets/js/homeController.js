@@ -50,6 +50,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
 
   //get the ID of the post a user wants more details on, and take them to claimed if they are the claimer and created if they are the supplier
   $scope.detailsId = function(postId, supplierId, claimantId){
+    console.log(postId, supplierId, claimantId)
     localStorage.setItem('postId', postId);
     if(supplierId == userId){
       $location.path('/created');

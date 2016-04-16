@@ -44,7 +44,7 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
   //get details of clicked post
   $scope.getDetails = function(postId){
     // console.log('clicked');
-    // console.log(postId);
+    console.log(postId);
     localStorage.setItem('resultsPostId', postId);
     $location.path('/details')
   }

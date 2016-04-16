@@ -4,7 +4,7 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
   //get user token for API auth
   var token = localStorage.getItem('token');
   //get the id of the post to edit out of LS
-  var postId = localStorage.getItem('createdPostId');
+  var postId = localStorage.getItem('postId');
 
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
     console.log(response.data);

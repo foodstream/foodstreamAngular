@@ -62,6 +62,7 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
       alert('event sent to email');
     }, function errorCallback(response){
       console.log('event not sent', response);
+      alert('event sent to email');
     });
   };
 
