@@ -8,10 +8,11 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
   // localStorage.removeItem('createdPostId');
 
   $scope.goToChat = function(postId, supplierId, claimantId){
-    console.log(postId, supplierId, claimantId)
+    console.log(postId, supplierId, claimantId, $scope.post.title)
     localStorage.setItem('chatId', postId);
     localStorage.setItem('chatSupplierId', supplierId);
-        localStorage.setItem('chatClaimantId', claimantId);
+    localStorage.setItem('chatClaimantId', claimantId);
+    localStorage.setItem('chatPostTitle', $scope.post.title);
     $location.path('/chat');
   }
 

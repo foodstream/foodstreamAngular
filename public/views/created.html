@@ -15,17 +15,16 @@
 		Go To Chat <i class="fa fa-comment" aria-hidden="true"></i>
 	</div>
 	<div class="created-post-images">
-		<div class="created-post-photo">
-			  <div id='created-post-gmap'></div>
-		</div>
 
+			  <div id='created-post-gmap'></div>
+				<img class='created-post-photo' ng-src = "{{post.post_image}}" width = "400px" height='400px'></img>
 
 		</div>
 
 		<div class="created-post-location">
 
 			<a href={{directionsLink}} class="created-post-directions-btn">
-				Get Directions
+				Get Directions w/Google Maps
 			</a>
 
 		</div>
