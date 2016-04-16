@@ -26,7 +26,7 @@
   <input type = "submit" value = "Submit Profile" id='edit-profile-submit-btn' ng-click = "submitEdit(file)"/>
 
 
-  <input id="file-input-edit-profile" name='file' type="file" ngf-select ng-model="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
+  <input id="file-input-edit-profile" name='file' type="file" ngf-select ng-model="file" ngf-pattern="'image/*'" ngf-capture='camera' accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
 
 </div>
 <!-- <div class='edit-profile-footer' ng-click='submitProfile()'>Submit Profile</div> -->

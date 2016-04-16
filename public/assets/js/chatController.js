@@ -3,13 +3,15 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   //grab login token and userId and postId from localstorage
   var token = localStorage.getItem('token');
   var userId = localStorage.getItem('userId');
-  var postId = localStorage.getItem('chatId');
+  var postId = localStorage.getItem('postId');
+  var userEmail = localStorage.getItem('email')
   //grab supplierId, claimantId, and post title from the 'gotochat' click
   var claimantId = localStorage.getItem('chatClaimantId');
   var supplierId = localStorage.getItem('chatSupplierId');
   var postTitle = localStorage.getItem('chatPostTitle');
 
   $scope.userId = userId;
+  console.log(claimantId)
 
   //push the scroll
   $(document).ready(function(){
@@ -20,7 +22,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
 
   //get other user's email address to send chat and name to display in the chat header
   //if the user is not the claimant, grab the claimants email to send the message
-  if(claimantId === userId && claimantId != null){
+  if(claimantId === userId && claimantId != null ){
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+supplierId+'.json?token='+token).then( function successCallback(response){
       console.log('other user got', response.data);
       $scope.otherUserName = response.data.first_name+' '+response.data.last_name;
@@ -29,7 +31,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     });
   }
   //if the user is not the supplier, grab the suppliers email to send the message
-  else if(supplierId === userId){
+  else if(supplierId === userId && claimantId != null){
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+claimantId+'.json?token='+token).then( function successCallback(response){
       console.log('other user got', response.data);
         $scope.otherUserName = response.data.first_name+' '+response.data.last_name;
@@ -67,7 +69,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   //send a message
   $scope.sendMessage = function(){
     //create the json to send the message
-    var param = {"post_id":postId,"body":$('.chat-input').val(),"subject":"Foodstream app message from "+$scope.userFirstName+" "+$scope.userLastName+" regarding "+postTitle,"recipient":"byronssupersweetdevacct@gmail.com"}
+    var param = {"post_id":postId,"body":$('.chat-input').val(),"subject":"Foodstream app message from "+$scope.userFirstName+" "+$scope.userLastName+" regarding "+postTitle,"recipient":userEmail}
     console.log(param);
     //make the call
     $http.post('https://sheltered-wildwood-38449.herokuapp.com/messages/send_email?token='+token, param).then(function successCallback(response){

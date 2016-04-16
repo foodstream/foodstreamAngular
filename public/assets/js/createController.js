@@ -76,7 +76,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
     //send post values to rails to create a post!
     $http({
       method: 'POST',
-      url:'https://sheltered-wildwood-38449.herokuapp.com/posts.json?token=' + token,
+      url:'https://sheltered-wildwood-38449.herokuapp.com/posts?token=' + token,
       data : formData,
       headers : {'Content-Type': undefined}
     }).then(function successCallback(response){

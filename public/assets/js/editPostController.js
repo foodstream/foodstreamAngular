@@ -6,13 +6,13 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
   //get the id of the post to edit out of LS
   var postId = localStorage.getItem('postId');
 
+
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
     console.log(response.data);
     //migrate data onto page
     $scope.postPic = response.data.post_image;
     $scope.title = response.data.title;
     $scope.location = response.data.address_string;
-    console.log(response.data.start_at, response.data.end_at);
     //chop up the start date string to place the date and time in separate fields
     var startArr = response.data.start_at.split(' ');
     $('.edit-post-start-na').val(startArr[0]) ;
@@ -26,6 +26,9 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
     console.log('not get?', response);
   });
 
+  $scope.addImage = function(){
+    $('#file-input-edit-post').click();
+  }
 
 
   //point google places autocomplete to correct field
@@ -76,7 +79,7 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
     description = $scope.description;
     address = $('#edit-post-location-ga').val();
 
-    // console.log($scope.title, location, startString, endString, $scope.description, lat, lng, file, address);
+    console.log($scope.title, location, startString, endString, $scope.description, lat, lng, file, address);
 
     //create new formdata to send to server
     var formData = new FormData();
@@ -88,7 +91,6 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
       formData.append('post[details]', description);
       formData.append('post[start_at]', startString);
       formData.append('post[end_at]', endString);
-      formData.append('post[supplier_id]', userId);
       formData.append('post[address_string]', address);
       //if there is no lat/lng, dont send anything to server
       if(lat != undefined){
@@ -101,7 +103,7 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
     //send post values to rails to create a post!
     $http({
       method: 'PUT',
-      url:'https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token=' + token,
+      url:'https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'?token=' + token,
       data : formData,
       headers : {'Content-Type': undefined}
     }).then(function successCallback(response){

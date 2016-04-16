@@ -766,17 +766,26 @@ body {
     font-weight: 200; }
     body .create-submit-button:hover {
       background-color: #7eb73d; }
-  body .edit-post-content-wrapper {
-    margin-top: 12%;
-    overflow: scroll;
-    height: 70vh; }
   body .edit-post-subheader {
     width: 100%;
     font-size: 4em;
     text-align: center;
     background-color: #fbfbc4;
     line-height: 1.5em;
-    margin-top: 15%; }
+    margin-top: -8%;
+    position: fixed; }
+  body .edit-post-content-wrapper {
+    margin-top: 20%;
+    overflow: scroll;
+    height: 90vh; }
+  body #file-input-edit-post {
+    display: none; }
+  body .edit-post-add-image {
+    background-color: #0c8183;
+    width: 90%;
+    color: white;
+    text-align: center;
+    font-size: 3em; }
   body .edit-post-title {
     background-color: white;
     width: 95%;

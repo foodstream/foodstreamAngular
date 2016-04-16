@@ -10,7 +10,7 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
   //go to chat and set variables needed by chat controller
   $scope.goToChat = function(postId, supplierId, claimantId){
     console.log(postId, supplierId, claimantId, $scope.post.title)
-    localStorage.setItem('chatId', postId);
+    localStorage.setItem('postId', postId);
     localStorage.setItem('chatSupplierId', supplierId);
     localStorage.setItem('chatClaimantId', claimantId);
     localStorage.setItem('chatPostTitle', $scope.post.title);

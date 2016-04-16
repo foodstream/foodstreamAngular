@@ -1018,11 +1018,7 @@ body{
 
 //----------edit post view----------//
 
-.edit-post-content-wrapper{
-  margin-top: 12%;
-  overflow: scroll;
-  height: 70vh;
-}
+
 
 .edit-post-subheader {
   width: 100%;
@@ -1030,7 +1026,23 @@ body{
   text-align: center;
   background-color: lighten($subheaderbg, 25%);
   line-height: 1.5em;
-  margin-top: 15%;
+  margin-top: -8%;
+  position: fixed;
+}
+.edit-post-content-wrapper{
+  margin-top: 20%;
+  overflow: scroll;
+  height: 90vh;
+}
+#file-input-edit-post{
+  display: none;
+}
+.edit-post-add-image{
+  background-color: $buttonbg;
+  width: 90%;
+  color: white;
+  text-align: center;
+  font-size: 3em;
 }
 .edit-post-title {
   background-color: white;
