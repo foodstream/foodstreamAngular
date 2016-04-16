@@ -7,7 +7,7 @@ $buttonbg: #0c8183;
 $buttonaccent: #f06e00;
 $buttonaccent2: #8bc34a;
 $aubergine: #4a1d3b;
-
+// $bodybg: white;
 $cardHeight: 20vh;
 
 body{
@@ -33,10 +33,13 @@ body{
     position: fixed;
     top: 0;
     z-index:999;
+    img {
+      margin-left: 2%;
+    }
     .app-header-txt{
       display: inline-block;
       cursor: pointer;
-      margin: 0 0 0 2%;
+      margin: 0 0 0 1%;
     }
     .app-header-login-icon{
       float: right;
@@ -349,7 +352,7 @@ body{
     }
     .home-details {
       display: inline-block;
-      background-color: lighten($buttonaccent, 30%);
+      background-color: $buttonaccent2;
       width: 19%;
       height: $cardHeight * 0.8;
       position: absolute;
@@ -357,7 +360,7 @@ body{
       text-align: center;
       cursor: pointer;
       &:hover{
-        background-color: lighten($buttonaccent, 25%);
+        background-color: darken($buttonaccent2, 5%);
       }
       .fa-info-circle{
         margin: 20% 0 0 0;
@@ -423,6 +426,9 @@ body{
     .post-detail-rating{
       display: block;
     }
+    span {
+      font-weight: bold;
+    }
   }
 
   .post-detail-image {
@@ -438,6 +444,14 @@ body{
     font-weight: bold;
   }
 
+  .post-detail-directions-link {
+    color: white;
+    background-color: $buttonbg;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 2em;
+  }
+
   .post-detail-location-image {
     margin: 5%;
   }
@@ -445,6 +459,7 @@ body{
   #post-detail-map{
     height: 500px;
     width: 500px;
+    margin-bottom: 25px;
   }
 
   .post-detail-start {
@@ -454,6 +469,7 @@ body{
     span{
       font-size: 2em;
       display: block;
+      font-weight: bold;
     }
 
   }
@@ -465,6 +481,7 @@ body{
     span{
       font-size: 2em;
       display: block;
+      font-weight: bold;
     }
   }
 
@@ -608,7 +625,7 @@ body{
     }
     .results-details {
       display: inline-block;
-      background-color: lighten($aubergine, 50%);
+      background-color: $buttonbg;
       width: 23.8%;
       height: $cardHeight * 0.75;
       position: absolute;
@@ -617,7 +634,7 @@ body{
       color: white;
       cursor: pointer;
       &:hover{
-        background-color: lighten($aubergine, 45%);
+        background-color: $buttonbg;
       }
       .fa-info-circle{
         font-size: 6em;
@@ -1334,18 +1351,24 @@ font-weight: 200;
     .chat-input{
       width: 80%;
       font-size: 3em;
-      line-height: 1.2em;
+      line-height: 1.7em;
       margin: 0 0 0 5%;
+      border: solid 2px $buttonbg;
+      border-right: solid 2px transparent;
+      border-radius: 5px;
       }
       .fa-paper-plane-o{
         display: inline-block;
         font-size: 3.5em;
         // margin: 0 0 0 -1%;
-        // padding: 0 1%;
-        color: lighten($aubergine, 20%);
-        // background-color: $itembg;
+        padding: 2%;
+        color: white;
+        background-color: $buttonbg;
+        border-radius: 5px;
         &:hover{
-          color: lighten($aubergine, 15%);
+          color: $buttonbg;
+          background-color: white;
+          border: solid 2px $buttonbg;
         }
     }
   }
@@ -1452,7 +1475,7 @@ font-weight: 200;
     width: 90%;
     text-align: center;
     cursor: pointer;
-    font-size: 3em;
+    font-size: 3.5em;
     line-height: 1.5em;
     margin: 0 0 0 5%;
     &:hover{
@@ -1476,6 +1499,7 @@ font-weight: 200;
       padding: 5px;
       span{
         display: block;
+        font-weight: bold;
       }
     }
     .claimed-end {
@@ -1483,6 +1507,7 @@ font-weight: 200;
       padding: 5px;
       span{
         display: block;
+        font-weight: bold;
       }
     }
   }

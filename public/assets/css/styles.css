@@ -20,10 +20,12 @@ body {
     position: fixed;
     top: 0;
     z-index: 999; }
+    body .app-header img {
+      margin-left: 2%; }
     body .app-header .app-header-txt {
       display: inline-block;
       cursor: pointer;
-      margin: 0 0 0 2%; }
+      margin: 0 0 0 1%; }
     body .app-header .app-header-login-icon {
       float: right;
       margin: 0 2% 0 0;
@@ -261,7 +263,7 @@ body {
         background-color: #0a6a6c; }
     body .home-card .home-details {
       display: inline-block;
-      background-color: #ffc08a;
+      background-color: #8bc34a;
       width: 19%;
       height: 16vh;
       position: absolute;
@@ -269,7 +271,7 @@ body {
       text-align: center;
       cursor: pointer; }
       body .home-card .home-details:hover {
-        background-color: #ffb271; }
+        background-color: #7eb73d; }
       body .home-card .home-details .fa-info-circle {
         margin: 20% 0 0 0;
         color: white;
@@ -317,6 +319,8 @@ body {
     font-size: 3em; }
     body .post-detail-supplier-name .post-detail-rating {
       display: block; }
+    body .post-detail-supplier-name span {
+      font-weight: bold; }
   body .post-detail-image {
     margin: 5%; }
   body .post-detail-details {
@@ -324,23 +328,32 @@ body {
   body .post-detail-location {
     margin: 5%;
     font-weight: bold; }
+  body .post-detail-directions-link {
+    color: white;
+    background-color: #0c8183;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 2em; }
   body .post-detail-location-image {
     margin: 5%; }
   body #post-detail-map {
     height: 500px;
-    width: 500px; }
+    width: 500px;
+    margin-bottom: 25px; }
   body .post-detail-start {
     margin: 5%;
     display: block; }
     body .post-detail-start span {
       font-size: 2em;
-      display: block; }
+      display: block;
+      font-weight: bold; }
   body .post-detail-end {
     margin: 5%;
     display: block; }
     body .post-detail-end span {
       font-size: 2em;
-      display: block; }
+      display: block;
+      font-weight: bold; }
   body .post-detail-claim-button {
     background-color: #0c8183;
     color: white;
@@ -451,7 +464,7 @@ body {
           font-weight: 200; }
     body .results-card .results-details {
       display: inline-block;
-      background-color: #d492be;
+      background-color: #0c8183;
       width: 23.8%;
       height: 15vh;
       position: absolute;
@@ -459,7 +472,7 @@ body {
       color: white;
       cursor: pointer; }
       body .results-card .results-details:hover {
-        background-color: #cd7fb3; }
+        background-color: #0c8183; }
       body .results-card .results-details .fa-info-circle {
         font-size: 6em;
         margin: 20% 0 0 0; }
@@ -1019,14 +1032,22 @@ body {
     body .chat-input-block .chat-input {
       width: 80%;
       font-size: 3em;
-      line-height: 1.2em;
-      margin: 0 0 0 5%; }
+      line-height: 1.7em;
+      margin: 0 0 0 5%;
+      border: solid 2px #0c8183;
+      border-right: solid 2px transparent;
+      border-radius: 5px; }
     body .chat-input-block .fa-paper-plane-o {
       display: inline-block;
       font-size: 3.5em;
-      color: #933a75; }
+      padding: 2%;
+      color: white;
+      background-color: #0c8183;
+      border-radius: 5px; }
       body .chat-input-block .fa-paper-plane-o:hover {
-        color: #813367; }
+        color: #0c8183;
+        background-color: white;
+        border: solid 2px #0c8183; }
   body .chat-home-btn {
     display: block;
     background-color: #8bc34a;
@@ -1104,7 +1125,7 @@ body {
     width: 90%;
     text-align: center;
     cursor: pointer;
-    font-size: 3em;
+    font-size: 3.5em;
     line-height: 1.5em;
     margin: 0 0 0 5%; }
     body .claimed-directions-link:hover {
@@ -1119,12 +1140,14 @@ body {
         display: inline;
         padding: 5px; }
         body .claimed-time-calendar-wrap .claimed-time-wrap .claimed-start span {
-          display: block; }
+          display: block;
+          font-weight: bold; }
       body .claimed-time-calendar-wrap .claimed-time-wrap .claimed-end {
         display: inline;
         padding: 5px; }
         body .claimed-time-calendar-wrap .claimed-time-wrap .claimed-end span {
-          display: block; }
+          display: block;
+          font-weight: bold; }
     body .claimed-time-calendar-wrap .claimed-iCal {
       display: block;
       margin: 5% 0 2% 5%;
