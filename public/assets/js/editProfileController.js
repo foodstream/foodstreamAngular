@@ -76,16 +76,23 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
     // console.log(param)
     // $scope.base64file
+    console.log($scope.org);
     var formData = new FormData();
-    formData.append('user[profile_image]', file);
+    if( file != undefined){
+      formData.append('user[profile_image]', file);
+    };
     formData.append('user[first_name]', $scope.first);
     formData.append('user[last_name]', $scope.last);
     formData.append('user[description]', $scope.userDescription);
     formData.append('user[email]', $scope.email);
-    formData.append('user[orgainization]', $scope.org);
+    formData.append('user[organization]', $scope.org);
     formData.append('user[address_string]', $scope.userLocation);
-    formData.append('user[latitude]', lat);
-    formData.append('user[longitude]', lng);
+    if(lat != undefined){
+      formData.append('user[latitude]', lat);
+    };
+    if(lng != undefined){
+      formData.append('user[longitude]', lng);
+    }
     console.log(formData);
 
       $http({

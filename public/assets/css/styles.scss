@@ -1005,6 +1005,8 @@ body{
 
 .edit-post-content-wrapper{
   margin-top: 12%;
+  overflow: scroll;
+  height: 70vh;
 }
 
 .edit-post-subheader {
@@ -1117,6 +1119,8 @@ font-weight: 200;
 
       .created-content-wrapper{
         margin-top: 12%;
+        overflow: scroll;
+
       }
 
       .created-post-title {
@@ -1152,25 +1156,23 @@ font-weight: 200;
         }
       }
       .created-post-images {
-        // display: block;
+        display: block;
         // border: solid thin black;
+        margin: 2% 0;
         .created-post-photo {
           display: inline-block;
-
-          margin: 2% 0 0 5%;
+          height: 450px;
+          width: 450px;
+          margin: 0 1%;
+          // margin: 2% 0 0 5%;
           // border: solid thin black;
+
+          }
           #created-post-gmap{
-            width: 400px;
-            height: 400px;
-          }
-          }
-        }
-        .created-post-map {
-          display: inline;
-          margin: 2% 5%;
-          .created-post-map-img{
-            width: 400px;
-            height: 400px;
+            width:450px;
+            height: 450px;
+            display: inline-block;
+            margin: 0 1% 0 2%;
           }
         }
 
@@ -1192,13 +1194,13 @@ font-weight: 200;
           color: white;
           padding: 8px 0;
           text-align: center;
-          width: 40%;
+          width: 80%;
           text-decoration: none;
           text-align: center;
           cursor: pointer;
           font-size: 3em;
           line-height: 1.5em;
-          margin: 0 0 0 5%;
+          margin: 0 0 0 7.5%;
           &:hover{
             background-color: darken($buttonbg, 5%);
           }

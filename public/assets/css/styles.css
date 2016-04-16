@@ -759,7 +759,9 @@ body {
     body .create-submit-button:hover {
       background-color: #7eb73d; }
   body .edit-post-content-wrapper {
-    margin-top: 12%; }
+    margin-top: 12%;
+    overflow: scroll;
+    height: 70vh; }
   body .edit-post-subheader {
     width: 100%;
     font-size: 4em;
@@ -850,7 +852,8 @@ body {
     body .edit-post-btn:hover {
       background-color: #7eb73d; }
   body .created-content-wrapper {
-    margin-top: 12%; }
+    margin-top: 12%;
+    overflow: scroll; }
   body .created-post-title {
     width: 100%;
     font-size: 5em;
@@ -879,18 +882,19 @@ body {
     margin: 2% 0 0 5%; }
     body .created-post-chat:hover {
       background-color: #7eb73d; }
-  body .created-post-images .created-post-photo {
-    display: inline-block;
-    margin: 2% 0 0 5%; }
-    body .created-post-images .created-post-photo #created-post-gmap {
-      width: 400px;
-      height: 400px; }
-  body .created-post-map {
-    display: inline;
-    margin: 2% 5%; }
-    body .created-post-map .created-post-map-img {
-      width: 400px;
-      height: 400px; }
+  body .created-post-images {
+    display: block;
+    margin: 2% 0; }
+    body .created-post-images .created-post-photo {
+      display: inline-block;
+      height: 450px;
+      width: 450px;
+      margin: 0 1%; }
+    body .created-post-images #created-post-gmap {
+      width: 450px;
+      height: 450px;
+      display: inline-block;
+      margin: 0 1% 0 2%; }
   body .created-post-address {
     display: inline-block;
     margin: 15px 5% 15px 1.5%;
@@ -906,13 +910,13 @@ body {
       color: white;
       padding: 8px 0;
       text-align: center;
-      width: 40%;
+      width: 80%;
       text-decoration: none;
       text-align: center;
       cursor: pointer;
       font-size: 3em;
       line-height: 1.5em;
-      margin: 0 0 0 5%; }
+      margin: 0 0 0 7.5%; }
       body .created-post-location .created-post-directions-btn:hover {
         background-color: #0a6a6c; }
   body .created-post-start {

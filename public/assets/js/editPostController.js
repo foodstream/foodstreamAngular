@@ -70,19 +70,26 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
     endTime = $('.edit-post-end-time-na').val();
     var endString = endDate.concat(' ' + endTime);
     description = $scope.description;
+    address = $('#edit-post-location-ga').val();
 
-    console.log($scope.title, location, startString, endString, $scope.description, lat, lng, file);
+    console.log($scope.title, location, startString, endString, $scope.description, lat, lng, file, address);
 
     var formData = new FormData();
-        formData.append('post[post_image]', file);
+        if(file != undefined){
+          formData.append('post[post_image]', file);
+        };
         formData.append('post[title]', title);
         formData.append('post[details]', description);
         formData.append('post[start_at]', startString);
         formData.append('post[end_at]', endString);
         formData.append('post[supplier_id]', userId);
         formData.append('post[address_string]', address);
-        formData.append('post[latitude]', lat);
-        formData.append('post[longitude]', lng);
+        if(lat != undefined){
+          formData.append('post[latitude]', lat);
+        };
+        if(lng != undefined){
+          formData.append('post[longitude]', lng);
+        };
 
 
 
