@@ -1,3 +1,4 @@
+//this controller shows the details view off the search results page
 foodStream.controller('detailController', ['$http', '$scope', '$location', function($http, $scope, $location) {
    console.log("detail ctrllr up");
 

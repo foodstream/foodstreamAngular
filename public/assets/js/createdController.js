@@ -7,6 +7,7 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
   //remove created post id from LS...actually, if we have an edit we keep this..idk?
   // localStorage.removeItem('createdPostId');
 
+  //go to chat and set variables needed by chat controller
   $scope.goToChat = function(postId, supplierId, claimantId){
     console.log(postId, supplierId, claimantId, $scope.post.title)
     localStorage.setItem('chatId', postId);
@@ -14,7 +15,7 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
     localStorage.setItem('chatClaimantId', claimantId);
     localStorage.setItem('chatPostTitle', $scope.post.title);
     $location.path('/chat');
-  }
+  };
 
   //get post information
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
@@ -44,7 +45,7 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
 
     //set directions link
     $scope.directionsLink = 'https://maps.google.com?saddr=Current+Location&daddr='+$scope.post.latitude+','+$scope.post.longitude;
-    console.log($scope.directionsLink);
+    // console.log($scope.directionsLink);
 
   }, function errorCallback(response){
     console.log('not get?', response);
@@ -63,7 +64,7 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
     $location.path('/home');
   };
 
-  //edit post (goes home currently, CHANGE THIS WHEN WE HAVE AN EDIT POST VIEW)
+  //go to edit post
   $scope.goEdit = function(){
     $location.path('/editPost');
   };
@@ -79,4 +80,16 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
     });
   };
 
-}])
+}]);
+
+//allow supplier to mark the post as completed
+// $scope.markComplete = function(supplierId){
+//   if(supplierId == userId){
+//     $http.put(' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
+//       console.log('put successful', response);
+//     }, function errorCallback(response){console.log('put hate')
+//     });
+//   } else{
+//     alert('you must be the supplier of this food to mark the transaction complete')
+//   }
+// }

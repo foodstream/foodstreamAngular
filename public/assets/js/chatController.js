@@ -10,7 +10,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   var postTitle = localStorage.getItem('chatPostTitle');
 
   $scope.userId = userId;
-  console.log($scope.userId);
+
   //push the scroll
   $(document).ready(function(){
   $('.chat-content-wrapper').animate({
@@ -18,7 +18,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   $scope.apply;
   });
 
-  //get other user's email address
+  //get other user's email address to send chat and name to display in the chat header
   //if the user is not the claimant, grab the claimants email to send the message
   if(claimantId === userId && claimantId != null){
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+supplierId+'.json?token='+token).then( function successCallback(response){
@@ -37,9 +37,10 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     console.log('other user not got', response);
     });
   }
-
-
-
+  //if there is not another user attached to the post, set the name to reflect that
+  else{
+    $scope.otherUserName = 'no one yet'
+  };
 
   //get messages
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
@@ -51,8 +52,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   });
 
 
-
-  //declare the variables for filling the subject line
+  //declare the variables for filling the subject line in the email that's sent along with the message
   $scope.userFirstName;
   $scope.userLastName;
   //get user information for to fill message email subject line
@@ -87,6 +87,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
       $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
         console.log('get messages worked', response)
         $scope.messages = response.data;
+        //re-push the scroll with new content
         $(document).ready(function(){
         $('.chat-content-wrapper').animate({
         scrollTop: $('.chat-content-wrapper').get(0).scrollHeight}, 300);
@@ -103,7 +104,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     $location.path('/home');
   };
 
-  //go to claimed on click of go to post (add logic to send user to created if supplier soon)
+  //go to claimed on click of go to post if claimant, go to created if supplier
   $scope.backToPost = function(){
     console.log(supplierId, claimantId, userId);
     if(userId == supplierId){
