@@ -15,7 +15,7 @@ foodStream.controller('detailController', ['$http', '$scope', '$location', funct
   //call the API for post info and set google map on callback response
   $http({
     method: 'GET',
-    url:' http://localhost:3010/posts/'+postId+'.json?token='+token
+    url:' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token
   }).then(function successCallback(response){
     console.log(response.data);
     $scope.post = response.data;
@@ -59,7 +59,7 @@ foodStream.controller('detailController', ['$http', '$scope', '$location', funct
     //create the put json which tells the server that its ben claimed and who claimed it
     var param = JSON.stringify({claimed:'true', claimant_id: userId })
     //make the call!
-    $http.put('http://localhost:3010/posts/'+postId+'.json?token='+token, param).then(function successCallback(response){
+    $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, param).then(function successCallback(response){
       console.log('CLAIMED');
       $location.path('/home')
     }, function errorCallback(response){
@@ -68,4 +68,4 @@ foodStream.controller('detailController', ['$http', '$scope', '$location', funct
   }
 
 }]);
-// http://localhost:3010
+// https://sheltered-wildwood-38449.herokuapp.com

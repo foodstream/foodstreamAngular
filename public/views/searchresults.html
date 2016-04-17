@@ -1,39 +1,49 @@
-<div class='results-subheader'>
-  <input class='results-search' placeholder='Search Available Posts' ng-model='type'></input>
+<div id='search-results-subheader'>
+  <input id='search-results-search' placeholder='Search Available Posts' ng-model='type'></input>
 
 
-  <div class='results-subheader-text'>
+  <div id='search-results-subheader-text'>
     Search for food within
-    <input class = "results-distance-input" ng-model='distanceInput'></input>
+    <input id= "search-results-distance-input" ng-model='distanceInput'></input>
     miles of my location
-    <div class='results-subheader-search-button' ng-click='search()'>
+    <div id='search-results-subheader-search-button' ng-click='search()'>
       Search
       <i class="fa fa-search"></i>
     </div>
   </div>
 </div>
 
-<div class = "results-butt-content-wrapper">
 
-  <div ng-repeat = 'post in posts | orderBy : "end_at" | filter:type' >
-  <div class = "results-card">
-    <div class = "results-header">
-      <div class = "results-card-title">{{post.title}}</div>
-      <div class = "results-card-end">{{post.end_at}}</div>
-    </div>
-
-    <div class = "results-pic">
-      <div class='results-add-picture'>
-        <img src = "{{post.image_link}}" width = "200px"></img>
-        <!-- <i class="fa fa-camera-retro pic-box"><span class='results-add-picture-txt'>add a picture</span></i> -->
+<div class='search-results-content-wrapper'>
+  <div  ng-repeat='post in posts | orderBy : "end_at" | filter:type' >
+    <div class = "results-card">
+      <div class = "results-header">
+        <div class = "results-card-title">
+          {{post.title}}
+        </div>
+        <div class = "results-card-end">
+          {{post.end_at}}
+        </div>
       </div>
-    </div>
 
-    <div class = "results-transaction-details">
-      <div class='results-supplier-name-text'>{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}</div>
-      <div class='results-transaction-location'>{{post.address_string}}</div>
-      <div class='results-transaction-details-text'>{{post.details}}</div>
-    </div>
+
+
+        <img class='results-add-picture' src = "{{post.post_image}}" width = "200px"></img>
+
+
+
+
+      <div class = "results-transaction-details">
+        <div class='results-supplier-name-text'>
+          {{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}
+        </div>
+        <div class='results-transaction-location'>
+          {{post.address_string}}
+        </div>
+        <div class='results-transaction-details-text'>
+          {{post.details}}
+        </div>
+      </div>
 
 
 
@@ -46,6 +56,7 @@
 
   </div>
 </div>
+
 
 <div class='results-footer' ng-click='goHome()'>
   Home

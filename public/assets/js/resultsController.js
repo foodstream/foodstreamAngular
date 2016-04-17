@@ -21,7 +21,7 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
 
     //send variables to rails for search by location diameter response
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/search.json?token='+token+'&latitude='+userLat+'&longitude='+userLng+'&radius='+$scope.distanceInput).then(function successCallback(response){
-      // console.log(response.data);
+      console.log(response.data);
       //set the data for showing the search results
       $scope.posts = response.data;
     }, function errorCallback(resonse){
