@@ -952,6 +952,13 @@ body {
       background-color: #38162c; }
     body .ical i {
       font-size: 1em; }
+  body .created-post-complete-button {
+    color: white;
+    background-color: #3DD6D0;
+    margin: 2% 10%;
+    padding: 2%;
+    font-size: 2em;
+    text-align: center; }
   body .created-post-footer-home {
     background-color: #71F79F;
     position: fixed;
