@@ -1,0 +1,113 @@
+.post-detail-title {
+  font-size: 4em;
+  font-weight: 700;
+  margin: 5% 0;
+  width: 100%;
+  text-align: center;
+
+}
+
+.post-detail-supplier-name {
+  margin: 5%;
+  font-size: 3em;
+  .post-detail-rating{
+	display: block;
+  }
+  span {
+	font-weight: bold;
+  }
+}
+
+.post-detail-image {
+  margin: 5%;
+}
+
+.post-detail-details {
+  margin: 5%;
+}
+
+.post-detail-location {
+  margin: 5%;
+  font-weight: bold;
+}
+
+.post-detail-directions-link {
+  color: white;
+  background-color: $buttonbg;
+  padding: 5px 15px;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.post-detail-location-image {
+  margin: 5%;
+}
+
+#post-detail-map{
+  height: 500px;
+  width: 500px;
+  margin-bottom: 25px;
+}
+
+.post-detail-start {
+  margin: 5%;
+  display: block;
+  span{
+	font-size: 2em;
+	display: block;
+	font-weight: bold;
+  }
+}
+.post-detail-end {
+  margin: 5%;
+  display: block;
+  span{
+	font-size: 2em;
+	display: block;
+	font-weight: bold;
+  }
+}
+.post-detail-claim-button {
+  background-color: $buttonaccent2;
+  color: white;
+  font-size: 4em;
+  line-height: 1.5em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 50.2%;
+  width: 49.8%;
+  cursor: pointer;
+  @media screen and (min-width: $break-large) {
+		border-top: 6px solid darken($buttonaccent2, 5%);
+		border-left: 6px solid darken($buttonaccent2, 5%);
+		font-size: 2em;
+		font-weight: 600;
+		line-height: 1.75em;
+	}
+  &:hover{
+	background-color: darken($buttonaccent2, 5%);
+  }
+}
+
+.post-detail-bottom-button {
+  background-color: $buttonbg;
+  color: white;
+  font-size: 4em;
+  line-height: 1.5em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 49.7%;
+  cursor: pointer;
+  @media screen and (min-width: $break-large) {
+		border-top: 6px solid darken($buttonbg, 5%);
+		border-right: 6px solid darken($buttonbg, 5%);
+		font-size: 2em;
+		font-weight: 600;
+		line-height: 1.75em;
+	}
+  &:hover{
+	background-color: darken($buttonbg, 5%);
+  }
+}

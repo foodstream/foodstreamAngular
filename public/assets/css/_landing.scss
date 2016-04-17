@@ -1,0 +1,103 @@
+.landing-login-email-input{
+  width: 80%;
+  border: solid thin darken($border, 25%);
+  font-size: 2em;
+  line-height: 1.8em;
+  margin: 15% 0 0 10%;
+  @media screen and (min-width: $break-large) {
+	  display: block;
+	  margin: .5% 0 0 13%;
+	  font-size: 1.2em;
+	  width: 30%;
+	  text-align: left;
+  }
+}
+.landing-login-password-input{
+  width: 80%;
+  border: solid thin darken($border, 25%);
+  font-size: 2em;
+  line-height: 1.8em;
+  margin: 5% 0 5% 10%;
+  @media screen and (min-width: $break-large) {
+	  display: block;
+	  margin: .5% 0 0 13%;
+	  font-size: 1.2em;
+	  width: 30%;
+	  text-align: left;
+  }
+}
+.landing-login-btn{
+  width: 80%;
+  font-size: 2.5em;
+  line-height: 1.8em;
+  text-align: center;
+  margin: 2% 0 5% 10%;
+  background-color: $buttonaccent2;
+  color: white;
+  cursor: pointer;
+  @media screen and (min-width: $break-large) {
+	  display: block;
+	  margin: 3% 0 0 13%;
+	  width: 12%;
+	  text-align: center;
+	  border-radius: 10px;
+	  font-size: 2em;
+	  line-height: 1.5em;
+	  border: 3px solid darken($buttonaccent2, 5%);
+  }
+  &:hover{
+	background-color: darken($buttonaccent2, 5%);
+  }
+}
+.landing-signup-btn{
+  width: 80%;
+  font-size: 2.5em;
+  line-height: 1.8em;
+  text-align: center;
+  margin: 10% 0 5% 10%;
+  background-color: $buttonbg;
+  color: white;
+  cursor: pointer;
+  @media screen and (min-width: $break-large) {
+	  font-size: 1.25em;
+	  display: block;
+	  width: 20%;
+	  margin: 5% 0 0 13%;
+	  text-align: center;
+	  border-radius: 10px;
+	  line-height: 1.5em;
+	  border: 4px solid darken($buttonbg, 5%);
+  }
+  &:hover{
+	background-color: darken($buttonbg, 5%);
+  }
+}
+.login-about {
+  margin: 50px 2.5%;
+  background-color: white;
+  width: 90%;
+  padding: 2% 2%;
+  border: solid 2px darken($border, 10%);
+  color: darken($headerbg, 15%);
+  font-family: sans-serif;
+  text-align: center;
+  @media screen and (min-width: $break-large) {
+	  font-size: 1.5em;
+	  font-weight: lighter;
+	  width: 40%;
+	  line-height: 1.5em;
+	  margin: -28% 0 10% 50%;
+	  text-align: left;
+	  background-color: $bodybg;
+	  border: none;
+  }
+}
+.login-legal {
+  position: fixed;
+  margin: 50px 2.5%;
+  width: 90%;
+  padding: 2% 2%;
+  color: darken($headerbg, 15%);
+  font-family: sans-serif;
+  text-align: center;
+}

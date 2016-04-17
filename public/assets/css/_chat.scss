@@ -1,0 +1,124 @@
+.chat-subheader{
+	padding: 4% 0 1% 0;
+	font-size: 3em;
+	color: black;
+	text-align: center;
+	background-color: lighten($subheaderbg, 25%);
+	@media screen and (min-width: $break-large) {
+		margin-top: 1em;
+		padding: 4% 0 0 13%;
+		margin-bottom: 2.5em;
+		font-size: 2em;
+		font-weight: 700;
+		text-align: left;
+		border-bottom: 3px solid darken($headerbg, 5%);
+		color: darken($headerbg, 5%);
+	}
+  .chat-other-user-text{
+	font-weight: 700;
+  }
+}
+.chat-content-wrapper{
+  margin: 25% 0 0 0;
+  // width: 100%;
+  height: 73vh;
+  // border: solid thin black;
+  overflow: scroll;
+  .chat-other-user-response{
+	width: 65%;
+	display: block;
+	font-size: 3em;
+	line-height: 1.2em;
+	background-color: white;
+	border-radius: 0 .3em .3em .3em;
+	margin: 2%;
+	padding: 2% 1%;
+	  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  .chat-current-user-response{
+	margin: 2% 0 2% 30%;
+	width: 65%;
+	display: block;
+	font-size: 3em;
+	line-height: 1.2em;
+	background-color: white;
+	padding: 2% 1%;
+	border-radius: .3em .3em 0 .3em;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+.chat-input-block{
+  margin: 1% 0 1% 0;
+  position: absolute;
+  bottom: 7%;
+  width: 100%;
+  border-top: darken($border, 30%);
+  display: block;
+  .chat-input{
+	width: 80%;
+	font-size: 3em;
+	line-height: 1.7em;
+	margin: 0 0 0 5%;
+	border: solid 2px $buttonbg;
+	border-right: solid 2px transparent;
+	border-radius: 5px;
+	}
+	.fa-paper-plane-o{
+	  display: inline-block;
+	  font-size: 3.5em;
+	  color: lighten($aubergine, 20%);
+	  // margin: 0 0 0 -1%;
+	  padding: 2%;
+	  color: white;
+	  background-color: $buttonbg;
+	  border-radius: 5px;
+	  &:hover{
+		color: $buttonbg;
+		background-color: white;
+		border: solid 2px $buttonbg;
+	  }
+  }
+}
+
+.chat-home-btn{
+  display:block;
+  background-color: $buttonaccent2;
+  font-size: 5em;
+  line-height: 1.3em;
+  text-align: center;
+  color: white;
+  width: 50%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  @media screen and (min-width: $break-large) {
+  border-top: 4px solid darken($buttonaccent2, 5%);
+  font-size: 2em;
+  line-height: 1.75em;
+}
+  &:hover{
+	background-color: darken($buttonaccent2, 5%);
+  }
+}
+.chat-back-to-post-btn{
+  display:inline-block;
+  background-color: $buttonbg;
+  font-size: 4em;
+  line-height: 2em;
+  text-align: center;
+  color: white;
+  width:50%;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  cursor: pointer;
+  @media screen and (min-width: $break-large) {
+  border-top: 4px solid darken($buttonbg, 5%);
+  font-size: 2em;
+  line-height: 1.75em;
+}
+  &:hover{
+	background-color: darken($buttonbg, 5%);
+  }
+}

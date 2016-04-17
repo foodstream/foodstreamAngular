@@ -1,0 +1,115 @@
+.profile-public-info {
+  position: relative;
+  .profile-pub-picture {
+	position: absolute;
+	top: 20px;
+	left: 75px;
+	display: block;
+  }
+  .profile-pub-name {
+	position: absolute;
+	.profile-pub-firstname {
+	  position: absolute;
+	  top: 300px;
+	  width: 125px;
+	  left: 75px;
+	  height: 20px;
+	  text-align: center;
+	  display: inline-block;
+	}
+	.profile-pub-lastname {
+	  position: absolute;
+	  top: 300px;
+	  width: 125px;
+	  left: 200px;
+	  height: 20px;
+	  text-align: center;
+	  display: inline-block;
+	}
+  }
+  .profile-pub-data {
+	position: absolute;
+	.profile-pub-org {
+	  position: absolute;
+	  top: 335px;
+	  width: 125px;
+	  left: 135px;
+	  height: 20px;
+	  text-align: center;
+	}
+	.profile-pub-location {
+	  position: absolute;
+	  position: absolute;
+	  top: 360px;
+	  width: 125px;
+	  left: 135px;
+	  height: 20px;
+	  text-align: center;
+	}
+	.profile-pub-rating {
+	  position: absolute;
+	  position: absolute;
+	  top: 390px;
+	  width: 125px;
+	  left: 135px;
+	  height: 20px;
+	  text-align: center;
+	}
+  }
+  .profile-pub-about {
+	position: absolute;
+	top: 435px;
+	width: 385px;
+	left: 15px;
+	height: 20px;
+  }
+}
+.profile-pub-footer {
+.profile-pub-home {
+  display: inline-block;
+  width: 49.7%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  color: white;
+  background-color: $buttonbg;
+  cursor: pointer;
+  font-weight: 200;
+  @media screen and (min-width: $break-large) {
+	border-top: 6px solid darken($buttonbg, 5%);
+	border-right: 6px solid darken($buttonbg, 5%);
+	font-size: 2em;
+	font-weight: 600;
+	line-height: 1.75em;
+}
+&:hover{
+background-color: darken($buttonbg, 5%);
+}
+}
+.profile-pub-back {
+  display: inline-block;
+  margin-left: 50.2%;
+  width: 50%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  color: white;
+  background-color: $buttonaccent2;
+  cursor: pointer;
+  font-weight: 200;
+  @media screen and (min-width: $break-large) {
+		border-top: 6px solid darken($buttonaccent2, 5%);
+		border-left: 6px solid darken($buttonaccent2, 5%);
+		font-size: 2em;
+		font-weight: 600;
+		line-height: 1.75em;
+	}
+  &:hover{
+	background-color: darken($buttonaccent2, 5%);
+  }
+}
+}

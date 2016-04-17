@@ -1,0 +1,181 @@
+.claimed-content-wrapper{
+  margin-top: 10%;
+  height: 88vh;
+  overflow: scroll;
+}
+.claimed-title {
+  font-size: 6em;
+  margin: 5% 0 2% 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.claimed-chat {
+  display: block;
+  margin: 5% 0 0 5%;
+  width: 90%;
+  font-size: 4em;
+  background-color: $buttonaccent2;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  &:hover{
+    background-color: darken($buttonaccent2, 5%);
+  }
+}
+.claimed-supplier-name {
+  margin: 5% 0 0 5%;
+  font-size: 3em;
+  span{
+    display: block;
+  }
+}
+.claimed-image {
+  margin: 5%;
+}
+.claimed-details {
+  margin: 5% 5% 0 5%;
+  font-size: 3em;
+}
+#claimed-map{
+  width: 600px;
+  height: 600px;
+  margin: 2% 0 2% 20%;
+}
+.claimed-location {
+  margin: 5% 0 0 5%;
+  font-size: 3em;
+}
+
+.claimed-location-image {
+  display: inline-block;
+  margin: 5% 0 0 5%;
+}
+.claimed-time-calendar-wrap {
+  display: inline-block;
+  margin-left: 10%;
+
+  .claimed-directions-link{
+    display: inline-block;
+    background-color: $buttonbg;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 0;
+    text-align: center;
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 3.5em;
+    line-height: 1.5em;
+    margin: 0 0 0 5%;
+    &:hover{
+      background-color: darken($buttonbg, 5%);
+    }
+  }
+
+.claimed-time-calendar-wrap {
+  // border: solid 1px red;
+  display: block;
+  font-size: 3em;
+
+  .claimed-time-wrap {
+    display: inline;
+    margin: 10px 0;
+    .claimed-start {
+      display: inline;
+      padding: 5px;
+      span{
+        display: block;
+        font-weight: bold;
+      }
+    }
+    .claimed-end {
+      display: inline;
+      padding: 5px;
+      span{
+        display: block;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .claimed-calendar-wrap {
+    display: block;
+    .claimed-iCal {
+      display: block;
+      margin-top: 10px;
+    }
+    .claimed-googleCal {
+      display: block;
+      margin-top: 10px;
+      margin: 5% 0 2% 5%;
+      background-color: $aubergine;
+      width: 90%;
+      text-align: center;
+      color: white;
+      padding: 2% 0;
+    }
+  }
+}
+}
+.claimed-details-title {
+  margin: 5%;
+  font-size: 3em;
+}
+.claimed-mark-as-complete{
+  display: block;
+  width: 90%;
+  text-align: center;
+  margin: 1% 0 1% 5%;
+  background-color: $buttonaccent;
+  color: white;
+  font-size: 3em;
+  line-height: 1.5em;
+}
+.claimed-bottom-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 49.7%;
+  text-align: center;
+  font-size: 5em;
+  line-height: 1.3em;
+  color: white;
+  cursor: pointer;
+  background-color: $buttonbg;
+  cursor: pointer;
+  @media screen and (min-width: $break-large) {
+        border-top: 6px solid darken($buttonbg, 5%);
+        border-right: 6px solid darken($buttonbg, 5%);
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em;
+    }
+  &:hover{
+    background-color: darken($buttonbg, 5%);
+  }
+}
+.claimed-remove-button {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  left: 50.1%;
+  text-align: center;
+  font-size: 5em;
+  line-height: 1.3em;
+  color: white;
+  cursor: pointer;
+  background-color: $buttonaccent2;
+  cursor: pointer;
+  @media screen and (min-width: $break-large) {
+        border-top: 6px solid darken($buttonaccent2, 5%);
+        border-left: 6px solid darken($buttonaccent2, 5%);
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em;
+  }
+  &:hover{
+    background-color: darken($buttonaccent2, 5%);
+  }
+}

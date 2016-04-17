@@ -2,8 +2,7 @@ body {
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
-  background-color: #FCF7F8;
-  /*------------------- LANDING PAGE TAB STYLING ---------------------- */ }
+  background-color: #FCF7F8; }
   @media screen and (min-width: 1200px) {
     body {
       margin-bottom: 200px; } }
@@ -203,7 +202,8 @@ body {
         margin: 1.5% 0 0 13%;
         font-size: 1.2em;
         width: 40%;
-        text-align: left; } }
+        text-align: left;
+        z-index: 1; } }
   body .sign-up-input {
     width: 80%;
     border: none;
@@ -220,7 +220,8 @@ body {
         margin: 0 0 0 13%;
         text-align: left;
         border: 1px solid #dbdbdb;
-        border-radius: 3px; } }
+        border-radius: 3px;
+        z-index: 1; } }
   body .sign-up-submit-btn {
     margin: 2% 0 2% 10%;
     background-color: #8bc34a;
@@ -822,26 +823,6 @@ body {
     color: #162e0d;
     font-family: sans-serif;
     text-align: center; }
-  body .cb {
-    list-style: none;
-    padding: 10px;
-    display: inline-block;
-    background-color: #063c3d;
-    color: #FFF;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
-  body .cb:hover {
-    background-color: #933a75;
-    color: #FFF; }
-  body .tab-container {
-    margin: 50px 0 0 2.5%; }
-  body .form-container {
-    padding: 2% 2%;
-    background-color: white;
-    width: 90%;
-    border: solid 2px #063c3d;
-    color: #162e0d;
-    font-family: sans-serif; }
   body .profile-public-info {
     position: relative; }
     body .profile-public-info .profile-pub-picture {
@@ -1225,7 +1206,7 @@ body {
       background-color: #7eb73d; }
   body .created-content-wrapper {
     margin-top: 12%;
-    overflow: scroll; }
+    overflow: hidden; }
   body .created-post-title {
     padding: 4% 0 1% 0;
     font-size: 3em;
@@ -1268,7 +1249,7 @@ body {
     body .created-post-chat:hover {
       background-color: #7eb73d; }
   body .created-post-images {
-    overflow: auto;
+    overflow: hidden;
     width: 100%;
     margin: 1em auto 1em;
     max-width: 650px; }
@@ -1668,5 +1649,7 @@ body {
         line-height: 1.75em; } }
     body .claimed-remove-button:hover {
       background-color: #7eb73d; }
+
+/*------------------- LANDING PAGE TAB STYLING ---------------------- */
 
 /*# sourceMappingURL=styles.css.map */
