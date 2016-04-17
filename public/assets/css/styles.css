@@ -65,6 +65,8 @@ body {
         background-color: #ffc08a; }
   body .edit-profile-image {
     margin: 2% 0 2% 25%; }
+  body .edit-profile-rating {
+    font-size: 3em; }
   body .edit-profile-add-image {
     background-color: #3DD6D0;
     color: white;

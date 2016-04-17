@@ -45,6 +45,8 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     $scope.userLocation = response.data.address_string;
     $scope.userDescription = response.data.description;
     $scope.profilePic = response.data.profile_image;
+    $scope.myRating = response.data.average_rating;
+    console.log(response);
   }, function error(response){
     console.log('GET failed', response);
   });
