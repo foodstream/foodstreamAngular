@@ -1,11 +1,11 @@
-$headerbg: #33691e;
+$headerbg:  #00f78c;
 $subheaderbg: #F2F24D;
 $itembg: #CCFFD7;
 $border: #F4F4F4;
 $bodybg: #FCF7F8;
-$buttonbg: #0c8183;
+$buttonbg: #3DD6D0;
 $buttonaccent: #f06e00;
-$buttonaccent2: #8bc34a;
+$buttonaccent2: #71F79F;
 $aubergine: #4a1d3b;
 // $bodybg: white;
 $cardHeight: 20vh;
@@ -14,7 +14,8 @@ body{
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
-  background-color: $bodybg;
+  // background-color: $bodybg;
+    background-color: lighten($bodybg, 3%);
   .ng-view{
     width: 100%;
   }
@@ -25,7 +26,7 @@ body{
     font-weight: 700;
     height: 5%;
     width: 100vw;
-    background-color: lighten($headerbg, 3%);
+    background-color: $headerbg;
     color: white;
     display: block;
     padding: 2% 0;
@@ -268,13 +269,16 @@ body{
 //------ Home Page/Dashboard ------ //
   .home-content-wrapper {
     margin: 30% 0 20% 0;
+    background-color: lighten($bodybg, 3%);
+
   }
 
   .home-subheader{
-    background-color:lighten($subheaderbg, 25%);
+    background-color:lighten($headerbg, 35%);
     width: 100%;
-    height: 7%;
-    color: darken($headerbg, 5%);
+    height: 3.5%;
+
+    color: darken($headerbg, 10%);
     font-size: 3em;
     position: fixed;
     top: 7%;
@@ -286,7 +290,7 @@ body{
       width: 32.5%;
       cursor: pointer;
       &:hover{
-        background-color: lighten($subheaderbg, 15%);
+        background-color: lighten($headerbg, 25%);
       }
     }
     .home-subheader-see-claimed{
@@ -316,16 +320,17 @@ body{
   .home-card {
     display: block;
     height: $cardHeight;
-    // border: solid 5px $border;
-    background-color: lighten($itembg, 10%);
-    width:95%;
-    margin: 5% 0 5% 2.5%;
+    border: solid 2px darken($border, 5%);
+    background-color: white;
+    width:100%;
+    margin: 2.5% 0;
     .home-header {
       height: $cardHeight / 5;
-      background-color: lightgray;
+      background-color:  lighten($border, 2%);
       font-size: 3em;
       font-weight: 700;
       .home-post-title {
+        padding: 0 0 0 1%;
         width: 50%;
         white-space: nowrap;
         display: inline-block;
@@ -336,24 +341,28 @@ body{
         font-size: .75em;
         float: right;
         display: inline;
+        color: lighten(black, 30%);
+        margin: 1% 1% 0 0;
       }
     }
     .home-transaction-details {
       display: inline-block;
       width: 60%;
       font-size: 2.5em;
+      padding: 0 0 0 1%;
     }
     .home-chat {
       display: inline-block;
-      background-color: $buttonbg;
-      width: 19%;
+      // background-color: lighten($itembg, 9%);
+      width: 20%;
       height: $cardHeight * 0.8;
       position: absolute;
       text-align: center;
       cursor: pointer;
+      border-left: solid thin $border;
       .fa-comment{
         margin: 20% 0 0 0;
-        color: white;
+        color: lighten(lightslategray, 15%);
         font-size: 6em;
         display: block;
         .home-chat-text{
@@ -367,19 +376,20 @@ body{
     }
     .home-details {
       display: inline-block;
-      background-color: $buttonaccent2;
-      width: 19%;
+      // background-color: $buttonaccent2;
+      width: 20%;
       height: $cardHeight * 0.8;
       position: absolute;
-      margin-left: 19%;
+      margin-left: 20%;
       text-align: center;
       cursor: pointer;
+      border-left: solid thin $border;
       &:hover{
-        background-color: darken($buttonaccent2, 5%);
+        background-color: lighten($border, 5%);
       }
       .fa-info-circle{
         margin: 20% 0 0 0;
-        color: white;
+        color: lighten(lightslategray, 15%);
         font-size: 6em;
         display: block;
         .home-details-text{
@@ -742,34 +752,6 @@ body{
 	font-family: sans-serif;
    	text-align: center;
   }
-
-  /*------------------- LANDING PAGE TAB STYLING ---------------------- */
-
-  .cb {
-      list-style: none;
-      padding: 10px;
-      display:inline-block;
-      background-color: darken($buttonbg, 15%);
-      color: #FFF;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-  }
-  .cb:hover{
-    background-color: lighten($aubergine, 20%);
-    color: #FFF;
-  }
-  .tab-container {
-    margin: 50px 0 0 2.5%;
-  }
-  .form-container {
-    padding: 2% 2%;
-  	background-color: white;
-  	width: 90%;
-  	border: solid 2px darken($buttonbg, 15%);
-  	color: darken($headerbg, 15%);
-  	font-family: sans-serif;
-  }
-
 
     //--------- Profile [public] View-------------//
       .profile-public-info {

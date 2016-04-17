@@ -103,6 +103,13 @@ angular.module('foodStream').run(function($rootScope, $location, $route, logged)
     });
 });
 
+//spoof a csrf token so rails stops being a butt
+foodStream.config([
+  "$httpProvider", function($httpProvider) {
+    $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+  }
+]);
+
 
 
 

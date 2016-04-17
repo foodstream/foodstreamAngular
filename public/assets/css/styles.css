@@ -2,8 +2,7 @@ body {
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
-  background-color: #FCF7F8;
-  /*------------------- LANDING PAGE TAB STYLING ---------------------- */ }
+  background-color: white; }
   body .ng-view {
     width: 100%; }
   body:visited {
@@ -12,7 +11,7 @@ body {
     font-weight: 700;
     height: 5%;
     width: 100vw;
-    background-color: #397521;
+    background-color: #00f78c;
     color: white;
     display: block;
     padding: 2% 0;
@@ -38,7 +37,7 @@ body {
     width: 100vw;
     height: 5%;
     display: block;
-    color: #295518;
+    color: #00de7e;
     position: fixed;
     top: 0; }
     body .edit-profile-subheader .edit-profile-subheader-txt {
@@ -67,7 +66,7 @@ body {
   body .edit-profile-image {
     margin: 2% 0 2% 25%; }
   body .edit-profile-add-image {
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     color: white;
     font-size: 3em;
     text-align: center; }
@@ -79,7 +78,7 @@ body {
     font-size: 2em;
     color: white; }
   body .edit-profile-image-upload {
-    background-color: #8bc34a;
+    background-color: #71F79F;
     font-size: 3em;
     color: white;
     margin: 0 2% 0 0; }
@@ -127,7 +126,7 @@ body {
     height: 18vh;
     font-size: 3em; }
   body #edit-profile-submit-btn {
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     color: white;
     font-size: 4em;
     padding: 1% 30%;
@@ -137,7 +136,7 @@ body {
     width: 100%;
     position: absolute;
     bottom: 0;
-    background-color: #8bc34a;
+    background-color: #71F79F;
     position: fixed;
     text-align: center;
     font-size: 4em;
@@ -146,7 +145,7 @@ body {
     cursor: pointer;
     font-weight: 200; }
     body .edit-profile-footer:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .sign-up-title {
     padding: 2% 0;
     font-size: 3em;
@@ -167,7 +166,7 @@ body {
     color: black; }
   body .sign-up-submit-btn {
     margin: 2% 0 2% 10%;
-    background-color: #8bc34a;
+    background-color: #71F79F;
     color: white;
     font-size: 2em;
     cursor: pointer;
@@ -176,7 +175,7 @@ body {
     font-size: 3em;
     line-height: 2em; }
     body .sign-up-submit-btn:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .sign-up-back-btn {
     position: absolute;
     bottom: 0;
@@ -184,18 +183,19 @@ body {
     font-size: 2.5em;
     line-height: 2em;
     color: white;
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     text-align: center;
     cursor: pointer; }
     body .sign-up-back-btn:hover {
-      background-color: #0a6a6c; }
+      background-color: #2ccec8; }
   body .home-content-wrapper {
-    margin: 30% 0 20% 0; }
+    margin: 30% 0 20% 0;
+    background-color: white; }
   body .home-subheader {
-    background-color: #fbfbc4;
+    background-color: #abffda;
     width: 100%;
-    height: 7%;
-    color: #295518;
+    height: 3.5%;
+    color: #00c46f;
     font-size: 3em;
     position: fixed;
     top: 7%;
@@ -207,7 +207,7 @@ body {
       width: 32.5%;
       cursor: pointer; }
       body .home-subheader .home-subheader-see-all:hover {
-        background-color: #f7f794; }
+        background-color: #78ffc4; }
     body .home-subheader .home-subheader-see-claimed {
       line-height: 1.2em;
       text-align: center;
@@ -229,15 +229,17 @@ body {
   body .home-card {
     display: block;
     height: 20vh;
+    border: solid 2px #e7e7e7;
     background-color: white;
-    width: 95%;
-    margin: 5% 0 5% 2.5%; }
+    width: 100%;
+    margin: 2.5% 0; }
     body .home-card .home-header {
       height: 4vh;
-      background-color: lightgray;
+      background-color: #f9f9f9;
       font-size: 3em;
       font-weight: 700; }
       body .home-card .home-header .home-post-title {
+        padding: 0 0 0 1%;
         width: 50%;
         white-space: nowrap;
         display: inline-block;
@@ -246,43 +248,46 @@ body {
       body .home-card .home-header .home-post-end {
         font-size: .75em;
         float: right;
-        display: inline; }
+        display: inline;
+        color: #4d4d4d;
+        margin: 1% 1% 0 0; }
     body .home-card .home-transaction-details {
       display: inline-block;
       width: 60%;
-      font-size: 2.5em; }
+      font-size: 2.5em;
+      padding: 0 0 0 1%; }
     body .home-card .home-chat {
       display: inline-block;
-      background-color: #0c8183;
-      width: 19%;
+      width: 20%;
       height: 16vh;
       position: absolute;
       text-align: center;
-      cursor: pointer; }
+      cursor: pointer;
+      border-left: solid thin #F4F4F4; }
       body .home-card .home-chat .fa-comment {
         margin: 20% 0 0 0;
-        color: white;
+        color: #a3aeba;
         font-size: 6em;
         display: block; }
         body .home-card .home-chat .fa-comment .home-chat-text {
           font-size: .5em;
           font-family: 'overpass', sans-serif; }
       body .home-card .home-chat:hover {
-        background-color: #0a6a6c; }
+        background-color: #2ccec8; }
     body .home-card .home-details {
       display: inline-block;
-      background-color: #8bc34a;
-      width: 19%;
+      width: 20%;
       height: 16vh;
       position: absolute;
-      margin-left: 19%;
+      margin-left: 20%;
       text-align: center;
-      cursor: pointer; }
+      cursor: pointer;
+      border-left: solid thin #F4F4F4; }
       body .home-card .home-details:hover {
-        background-color: #7eb73d; }
+        background-color: white; }
       body .home-card .home-details .fa-info-circle {
         margin: 20% 0 0 0;
-        color: white;
+        color: #a3aeba;
         font-size: 6em;
         display: block; }
         body .home-card .home-details .fa-info-circle .home-details-text {
@@ -294,28 +299,28 @@ body {
     right: 50%;
     display: inline-block;
     width: 50%;
-    background-color: #8bc34a;
+    background-color: #71F79F;
     text-align: center;
     font-size: 4em;
     line-height: 2em;
     color: white;
     cursor: pointer; }
     body .home-search:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .home-post {
     position: fixed;
     bottom: 0;
     left: 50%;
     display: inline-block;
     width: 50%;
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     text-align: center;
     font-size: 4em;
     line-height: 2em;
     color: white;
     cursor: pointer; }
     body .home-post:hover {
-      background-color: #0a6a6c; }
+      background-color: #2ccec8; }
   body .post-detail-title {
     font-size: 4em;
     font-weight: 700;
@@ -338,7 +343,7 @@ body {
     font-weight: bold; }
   body .post-detail-directions-link {
     color: white;
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     padding: 5px 15px;
     text-decoration: none;
     font-size: 2em; }
@@ -363,7 +368,7 @@ body {
       display: block;
       font-weight: bold; }
   body .post-detail-claim-button {
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     color: white;
     font-size: 4em;
     line-height: 1.5em;
@@ -374,9 +379,9 @@ body {
     width: 50%;
     cursor: pointer; }
     body .post-detail-claim-button:hover {
-      background-color: #0a6a6c; }
+      background-color: #2ccec8; }
   body .post-detail-bottom-button {
-    background-color: #8bc34a;
+    background-color: #71F79F;
     color: white;
     font-size: 4em;
     line-height: 1.5em;
@@ -386,7 +391,7 @@ body {
     width: 50%;
     cursor: pointer; }
     body .post-detail-bottom-button:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .results-subheader {
     position: fixed;
     margin: -20% 0 0 0;
@@ -410,12 +415,12 @@ body {
         float: right;
         line-height: 1em;
         margin: 0 2% 2% 0;
-        background-color: #5ab835;
+        background-color: #5effb9;
         padding: 1.5%;
         color: white;
         cursor: pointer; }
         body .results-subheader .results-subheader-text .results-subheader-search-button:hover {
-          background-color: #50a52f; }
+          background-color: #45ffae; }
   body .results-butt-content-wrapper {
     margin: 33% 0 10% 0; }
   body .results-card {
@@ -472,7 +477,7 @@ body {
           font-weight: 200; }
     body .results-card .results-details {
       display: inline-block;
-      background-color: #0c8183;
+      background-color: #3DD6D0;
       width: 23.8%;
       height: 15vh;
       position: absolute;
@@ -480,7 +485,7 @@ body {
       color: white;
       cursor: pointer; }
       body .results-card .results-details:hover {
-        background-color: #0c8183; }
+        background-color: #3DD6D0; }
       body .results-card .results-details .fa-info-circle {
         font-size: 6em;
         margin: 20% 0 0 0; }
@@ -489,7 +494,7 @@ body {
           font-family: 'overpass', sans-serif;
           font-size: .5em; }
   body .results-footer {
-    background-color: #8bc34a;
+    background-color: #71F79F;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -500,7 +505,7 @@ body {
     cursor: pointer;
     font-weight: 200; }
     body .results-footer:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .landing-login-email-input {
     width: 80%;
     border-style: solid thin #dbdbdb;
@@ -518,58 +523,38 @@ body {
     line-height: 1.8em;
     text-align: center;
     margin: 2% 0 5% 10%;
-    background-color: #8bc34a;
+    background-color: #71F79F;
     color: white;
     cursor: pointer; }
     body .landing-login-btn:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .landing-signup-btn {
     width: 80%;
     font-size: 2.5em;
     line-height: 1.8em;
     text-align: center;
     margin: 10% 0 5% 10%;
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     color: white;
     cursor: pointer; }
     body .landing-signup-btn:hover {
-      background-color: #0a6a6c; }
+      background-color: #2ccec8; }
   body .login-about {
     margin: 50px 2.5%;
     background-color: white;
     width: 90%;
     padding: 2% 2%;
     border: solid 2px #dbdbdb;
-    color: #162e0d;
+    color: #00ab61;
     font-family: sans-serif;
     text-align: center; }
   body .login-legal {
     margin: 50px 2.5%;
     width: 90%;
     padding: 2% 2%;
-    color: #162e0d;
+    color: #00ab61;
     font-family: sans-serif;
     text-align: center; }
-  body .cb {
-    list-style: none;
-    padding: 10px;
-    display: inline-block;
-    background-color: #063c3d;
-    color: #FFF;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px; }
-  body .cb:hover {
-    background-color: #933a75;
-    color: #FFF; }
-  body .tab-container {
-    margin: 50px 0 0 2.5%; }
-  body .form-container {
-    padding: 2% 2%;
-    background-color: white;
-    width: 90%;
-    border: solid 2px #063c3d;
-    color: #162e0d;
-    font-family: sans-serif; }
   body .profile-public-info {
     position: relative; }
     body .profile-public-info .profile-pub-picture {
@@ -635,11 +620,11 @@ body {
     font-size: 2.5em;
     line-height: 1.3em;
     color: white;
-    background-color: #8bc34a;
+    background-color: #71F79F;
     cursor: pointer;
     font-weight: 200; }
     body .profile-pub-footer .profile-pub-home:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .profile-pub-footer .profile-pub-back {
     display: inline-block;
     margin-left: 50%;
@@ -668,7 +653,7 @@ body {
     font-family: sans-serif;
     color: white;
     display: inline-block;
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     padding: 10px;
     white-space: nowrap;
     -webkit-user-select: none;
@@ -754,7 +739,7 @@ body {
     color: black;
     font-size: 3em; }
   body .create-submit-button {
-    background-color: #8bc34a;
+    background-color: #71F79F;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -765,7 +750,7 @@ body {
     cursor: pointer;
     font-weight: 200; }
     body .create-submit-button:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .edit-post-subheader {
     width: 100%;
     font-size: 4em;
@@ -781,7 +766,7 @@ body {
   body #file-input-edit-post {
     display: none; }
   body .edit-post-add-image {
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     width: 90%;
     color: white;
     text-align: center;
@@ -856,7 +841,7 @@ body {
     color: black;
     font-size: 3em; }
   body .edit-post-btn {
-    background-color: #8bc34a;
+    background-color: #71F79F;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -867,7 +852,7 @@ body {
     cursor: pointer;
     font-weight: 200; }
     body .edit-post-btn:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .created-content-wrapper {
     margin-top: 12%;
     overflow: scroll; }
@@ -886,7 +871,7 @@ body {
     display: inline; }
   body .created-post-chat {
     display: inline-block;
-    background-color: #8bc34a;
+    background-color: #71F79F;
     border-radius: 5px;
     color: white;
     padding: 8px 0;
@@ -898,7 +883,7 @@ body {
     line-height: 1.5em;
     margin: 2% 0 0 5%; }
     body .created-post-chat:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .created-post-images {
     display: block;
     margin: 2% 0; }
@@ -922,7 +907,7 @@ body {
     display: block; }
     body .created-post-location .created-post-directions-btn {
       display: inline-block;
-      background-color: #0c8183;
+      background-color: #3DD6D0;
       border-radius: 5px;
       color: white;
       padding: 8px 0;
@@ -935,7 +920,7 @@ body {
       line-height: 1.5em;
       margin: 0 0 0 7.5%; }
       body .created-post-location .created-post-directions-btn:hover {
-        background-color: #0a6a6c; }
+        background-color: #2ccec8; }
   body .created-post-start {
     margin: 2% 2.5%;
     font-size: 3em; }
@@ -968,7 +953,7 @@ body {
     body .ical i {
       font-size: 1em; }
   body .created-post-footer-home {
-    background-color: #8bc34a;
+    background-color: #71F79F;
     position: fixed;
     bottom: 0;
     width: 33.33%;
@@ -979,9 +964,9 @@ body {
     cursor: pointer;
     font-weight: 200; }
     body .created-post-footer-home:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .created-post-footer-edit {
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     position: fixed;
     bottom: 0;
     width: 33.33%;
@@ -993,7 +978,7 @@ body {
     cursor: pointer;
     font-weight: 200; }
     body .created-post-footer-edit:hover {
-      background-color: #0a6a6c; }
+      background-color: #2ccec8; }
   body .created-post-footer-delete {
     background-color: #4a1d3b;
     position: fixed;
@@ -1055,7 +1040,7 @@ body {
       font-size: 3em;
       line-height: 1.7em;
       margin: 0 0 0 5%;
-      border: solid 2px #0c8183;
+      border: solid 2px #3DD6D0;
       border-right: solid 2px transparent;
       border-radius: 5px; }
     body .chat-input-block .fa-paper-plane-o {
@@ -1063,15 +1048,15 @@ body {
       font-size: 3.5em;
       padding: 2%;
       color: white;
-      background-color: #0c8183;
+      background-color: #3DD6D0;
       border-radius: 5px; }
       body .chat-input-block .fa-paper-plane-o:hover {
-        color: #0c8183;
+        color: #3DD6D0;
         background-color: white;
-        border: solid 2px #0c8183; }
+        border: solid 2px #3DD6D0; }
   body .chat-home-btn {
     display: block;
-    background-color: #8bc34a;
+    background-color: #71F79F;
     font-size: 5em;
     line-height: 1.3em;
     text-align: center;
@@ -1082,10 +1067,10 @@ body {
     left: 0;
     cursor: pointer; }
     body .chat-home-btn:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .chat-back-to-post-btn {
     display: inline-block;
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     font-size: 5em;
     line-height: 1.3em;
     text-align: center;
@@ -1096,7 +1081,7 @@ body {
     left: 50%;
     cursor: pointer; }
     body .chat-back-to-post-btn:hover {
-      background-color: #0a6a6c; }
+      background-color: #2ccec8; }
   body .claimed-content-wrapper {
     margin-top: 10%;
     height: 88vh;
@@ -1112,13 +1097,13 @@ body {
     margin: 5% 0 0 5%;
     width: 90%;
     font-size: 4em;
-    background-color: #8bc34a;
+    background-color: #71F79F;
     color: white;
     padding: 5px;
     text-align: center;
     cursor: pointer; }
     body .claimed-chat:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
   body .claimed-supplier-name {
     margin: 5% 0 0 5%;
     font-size: 3em; }
@@ -1138,7 +1123,7 @@ body {
     font-size: 3em; }
   body .claimed-directions-link {
     display: inline-block;
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     border-radius: 5px;
     color: white;
     padding: 8px 0;
@@ -1150,7 +1135,7 @@ body {
     line-height: 1.5em;
     margin: 0 0 0 5%; }
     body .claimed-directions-link:hover {
-      background-color: #0a6a6c; }
+      background-color: #2ccec8; }
   body .claimed-time-calendar-wrap {
     display: block;
     font-size: 3em; }
@@ -1199,10 +1184,10 @@ body {
     line-height: 1.3em;
     color: white;
     cursor: pointer;
-    background-color: #0c8183;
+    background-color: #3DD6D0;
     cursor: pointer; }
     body .claimed-bottom-button:hover {
-      background-color: #0a6a6c; }
+      background-color: #2ccec8; }
   body .claimed-remove-button {
     position: fixed;
     bottom: 0;
@@ -1213,9 +1198,9 @@ body {
     line-height: 1.3em;
     color: white;
     cursor: pointer;
-    background-color: #8bc34a;
+    background-color: #71F79F;
     cursor: pointer; }
     body .claimed-remove-button:hover {
-      background-color: #7eb73d; }
+      background-color: #59f68f; }
 
 /*# sourceMappingURL=styles.css.map */
