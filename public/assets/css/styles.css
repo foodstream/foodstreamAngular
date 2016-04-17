@@ -188,9 +188,6 @@ body {
     cursor: pointer; }
     body .sign-up-back-btn:hover {
       background-color: #2ccec8; }
-  body .home-content-wrapper {
-    margin: 30% 0 20% 0;
-    background-color: white; }
   body .home-subheader {
     background-color: #abffda;
     width: 100%;
@@ -217,7 +214,7 @@ body {
       margin: 0 0 0 -1%;
       cursor: pointer; }
       body .home-subheader .home-subheader-see-claimed:hover {
-        background-color: #f7f794; }
+        background-color: #78ffc4; }
     body .home-subheader .home-subheader-see-provided {
       line-height: 1.2em;
       text-align: center;
@@ -225,74 +222,81 @@ body {
       width: 32.5%;
       cursor: pointer; }
       body .home-subheader .home-subheader-see-provided:hover {
-        background-color: #f7f794; }
-  body .home-card {
-    display: block;
-    height: 20vh;
-    border: solid 2px #e7e7e7;
+        background-color: #78ffc4; }
+  body .home-content-wrapper {
+    width: 99.8%;
+    margin: 19.5% 0 0 0;
     background-color: white;
-    width: 100%;
-    margin: 2.5% 0; }
-    body .home-card .home-header {
-      height: 4vh;
-      background-color: #f9f9f9;
-      font-size: 3em;
-      font-weight: 700; }
-      body .home-card .home-header .home-post-title {
-        padding: 0 0 0 1%;
-        width: 50%;
-        white-space: nowrap;
+    height: 82vh;
+    position: absolute;
+    overflow: scroll; }
+    body .home-content-wrapper .home-card {
+      display: block;
+      height: 20vh;
+      border: solid 2px #e7e7e7;
+      background-color: white;
+      width: 100%;
+      margin: 2.5% 0; }
+      body .home-content-wrapper .home-card .home-header {
+        height: 4vh;
+        background-color: #f9f9f9;
+        font-size: 3em;
+        font-weight: 700; }
+        body .home-content-wrapper .home-card .home-header .home-post-title {
+          padding: 0 0 0 1%;
+          width: 50%;
+          white-space: nowrap;
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        body .home-content-wrapper .home-card .home-header .home-post-end {
+          font-size: .75em;
+          float: right;
+          display: inline;
+          color: #4d4d4d;
+          margin: 1% 1% 0 0; }
+      body .home-content-wrapper .home-card .home-transaction-details {
         display: inline-block;
-        overflow: hidden;
-        text-overflow: ellipsis; }
-      body .home-card .home-header .home-post-end {
-        font-size: .75em;
-        float: right;
-        display: inline;
-        color: #4d4d4d;
-        margin: 1% 1% 0 0; }
-    body .home-card .home-transaction-details {
-      display: inline-block;
-      width: 60%;
-      font-size: 2.5em;
-      padding: 0 0 0 1%; }
-    body .home-card .home-chat {
-      display: inline-block;
-      width: 20%;
-      height: 16vh;
-      position: absolute;
-      text-align: center;
-      cursor: pointer;
-      border-left: solid thin #F4F4F4; }
-      body .home-card .home-chat .fa-comment {
-        margin: 20% 0 0 0;
-        color: #a3aeba;
-        font-size: 6em;
-        display: block; }
-        body .home-card .home-chat .fa-comment .home-chat-text {
-          font-size: .5em;
-          font-family: 'overpass', sans-serif; }
-      body .home-card .home-chat:hover {
-        background-color: #2ccec8; }
-    body .home-card .home-details {
-      display: inline-block;
-      width: 20%;
-      height: 16vh;
-      position: absolute;
-      margin-left: 20%;
-      text-align: center;
-      cursor: pointer;
-      border-left: solid thin #F4F4F4; }
-      body .home-card .home-details:hover {
-        background-color: white; }
-      body .home-card .home-details .fa-info-circle {
-        margin: 20% 0 0 0;
-        color: #a3aeba;
-        font-size: 6em;
-        display: block; }
-        body .home-card .home-details .fa-info-circle .home-details-text {
-          font-size: .5em;
-          font-family: 'overpass', sans-serif; }
+        width: 60%;
+        font-size: 2.5em;
+        padding: 0 0 0 1%; }
+      body .home-content-wrapper .home-card .home-chat {
+        display: inline-block;
+        width: 20%;
+        height: 16vh;
+        position: absolute;
+        text-align: center;
+        cursor: pointer;
+        border-left: solid thin #F4F4F4; }
+        body .home-content-wrapper .home-card .home-chat .fa-comment {
+          margin: 15% 0 0 0;
+          color: #a3aeba;
+          font-size: 6em;
+          display: block; }
+          body .home-content-wrapper .home-card .home-chat .fa-comment .home-chat-text {
+            font-size: .5em;
+            font-family: 'overpass', sans-serif; }
+        body .home-content-wrapper .home-card .home-chat:hover {
+          background-color: #2ccec8; }
+      body .home-content-wrapper .home-card .home-details {
+        display: inline-block;
+        width: 20%;
+        height: 16vh;
+        position: absolute;
+        margin-left: 20%;
+        text-align: center;
+        cursor: pointer;
+        border-left: solid thin #F4F4F4; }
+        body .home-content-wrapper .home-card .home-details:hover {
+          background-color: white; }
+        body .home-content-wrapper .home-card .home-details .fa-info-circle {
+          margin: 15% 0 0 0;
+          color: #a3aeba;
+          font-size: 6em;
+          display: block; }
+          body .home-content-wrapper .home-card .home-details .fa-info-circle .home-details-text {
+            font-size: .5em;
+            font-family: 'overpass', sans-serif; }
   body .home-search {
     position: fixed;
     bottom: 0;

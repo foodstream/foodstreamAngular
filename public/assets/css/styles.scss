@@ -267,11 +267,7 @@ body{
   }
 
 //------ Home Page/Dashboard ------ //
-  .home-content-wrapper {
-    margin: 30% 0 20% 0;
-    background-color: lighten($bodybg, 3%);
 
-  }
 
   .home-subheader{
     background-color:lighten($headerbg, 35%);
@@ -301,9 +297,8 @@ body{
       width: 32.5%;
       margin: 0 0 0 -1%;
       cursor: pointer;
-        // background-color: lighten($subheaderbg, 20%);
       &:hover{
-        background-color: lighten($subheaderbg, 15%);
+        background-color: lighten($headerbg, 25%);
       }
     }
     .home-subheader-see-provided{
@@ -313,10 +308,18 @@ body{
       width: 32.5%;
       cursor: pointer;
       &:hover{
-        background-color: lighten($subheaderbg, 15%);
+        background-color: lighten($headerbg, 25%);
       }
     }
   }
+  .home-content-wrapper {
+    width: 99.8%;
+    margin: 19.5% 0 0 0;
+    background-color: lighten($bodybg, 3%);
+    // border: solid thin black;
+    height: 82vh;
+    position: absolute;
+    overflow: scroll;
   .home-card {
     display: block;
     height: $cardHeight;
@@ -361,7 +364,7 @@ body{
       cursor: pointer;
       border-left: solid thin $border;
       .fa-comment{
-        margin: 20% 0 0 0;
+        margin: 15% 0 0 0;
         color: lighten(lightslategray, 15%);
         font-size: 6em;
         display: block;
@@ -388,7 +391,7 @@ body{
         background-color: lighten($border, 5%);
       }
       .fa-info-circle{
-        margin: 20% 0 0 0;
+        margin: 15% 0 0 0;
         color: lighten(lightslategray, 15%);
         font-size: 6em;
         display: block;
@@ -399,7 +402,7 @@ body{
       }
     }
   }
-
+}
     .home-search{
       position: fixed;
       bottom: 0;
