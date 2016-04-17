@@ -82,15 +82,18 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
       $location.path('/home');
     });
   };
+
+  modalShow = false;
+  console.log("modalShow value=", modalShow);
   //allow supplier to mark the post as completed
   $scope.markComplete = function(){
       console.log("marked as complete");
       console.log($scope.post.claimed);
       // $http.put(' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
-      //   console.log('put successful', response);
+      //   console.log('post completed successfully', response);
       // }, function errorCallback(response){
-      //   console.log('put hate')
+      //   console.log('post not marked as completed');
       // });
-
+      $location.path('/home');
   };
 }]);

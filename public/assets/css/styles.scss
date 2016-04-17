@@ -1266,6 +1266,43 @@ font-weight: 200;
     text-align: center;
   }
 
+  .created-post-modal {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    .created-post-modal-content {
+      font-size: 4em;
+      h1 {
+        text-align: center;
+      }
+      background-color: white;
+      color: black;
+      width: 60%;
+      height: 30%;
+      margin: 30% 20%;
+      .created-post-review-input {
+        border: solid 2px darken($border, 15%);
+        display: block;
+        font-size: 1em;
+        width: 30%;
+      }
+      .created-post-review-submit {
+        color: white;
+        background-color: $buttonbg;
+        display: inline-block;
+      }
+      .created-post-review-cancel {
+        color: white;
+        background-color: $buttonaccent;
+        display: inline-block;
+      }
+    }
+  }
+
 
   .created-post-footer-home {
     background-color: $buttonaccent2;

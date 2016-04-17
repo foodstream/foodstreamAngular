@@ -959,6 +959,36 @@ body {
     padding: 2%;
     font-size: 2em;
     text-align: center; }
+  body .created-post-modal {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999; }
+    body .created-post-modal .created-post-modal-content {
+      font-size: 4em;
+      background-color: white;
+      color: black;
+      width: 60%;
+      height: 30%;
+      margin: 30% 20%; }
+      body .created-post-modal .created-post-modal-content h1 {
+        text-align: center; }
+      body .created-post-modal .created-post-modal-content .created-post-review-input {
+        border: solid 2px #cecece;
+        display: block;
+        font-size: 1em;
+        width: 30%; }
+      body .created-post-modal .created-post-modal-content .created-post-review-submit {
+        color: white;
+        background-color: #3DD6D0;
+        display: inline-block; }
+      body .created-post-modal .created-post-modal-content .created-post-review-cancel {
+        color: white;
+        background-color: #f06e00;
+        display: inline-block; }
   body .created-post-footer-home {
     background-color: #71F79F;
     position: fixed;
