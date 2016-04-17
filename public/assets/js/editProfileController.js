@@ -51,6 +51,14 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     console.log('GET failed', response);
   });
 
+  $scope.starConverter = function(){
+    // console.log(Math.round($scope.myRating));
+    for (var i = 1; i <= Math.round($scope.myRating); i++){
+      // $(".edit-profile-rating").append();
+      console.log("star");
+    };
+  };
+
   //click on hidden image submit button to upload photo
   $scope.addImage = function(){
     $('#file-input-edit-profile').click();
