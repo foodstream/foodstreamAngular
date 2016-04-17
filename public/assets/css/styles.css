@@ -970,6 +970,7 @@ body {
     height: 100vh;
     z-index: 999; }
     body .created-post-modal .created-post-modal-content {
+      padding-top: 5%;
       font-size: 4em;
       background-color: white;
       color: black;
@@ -982,7 +983,8 @@ body {
         border: solid 2px #cecece;
         display: block;
         font-size: 1em;
-        width: 30%; }
+        width: 30%;
+        margin: 10% 35%; }
       body .created-post-modal .created-post-modal-content .created-post-review-submit {
         color: white;
         background-color: #3DD6D0;
@@ -993,6 +995,9 @@ body {
         background-color: #f06e00;
         display: inline-block;
         padding: 2%; }
+      body .created-post-modal .created-post-modal-content .created-post-button-wrap {
+        width: 80%;
+        margin: 20% 10%; }
   body .created-post-footer-home {
     background-color: #71F79F;
     position: fixed;

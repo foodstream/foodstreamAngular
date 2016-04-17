@@ -1279,6 +1279,7 @@ font-weight: 200;
     height: 100vh;
     z-index: 999;
     .created-post-modal-content {
+      padding-top: 5%;
       font-size: 4em;
       h1 {
         text-align: center;
@@ -1293,6 +1294,7 @@ font-weight: 200;
         display: block;
         font-size: 1em;
         width: 30%;
+        margin: 10% 35%;
       }
       .created-post-review-submit {
         color: white;
@@ -1305,6 +1307,11 @@ font-weight: 200;
         background-color: $buttonaccent;
         display: inline-block;
         padding: 2%;
+      }
+
+      .created-post-button-wrap {
+        width: 80%;
+        margin: 20% 10%;
       }
     }
   }
