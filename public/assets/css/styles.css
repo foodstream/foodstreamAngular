@@ -137,10 +137,10 @@ body {
     body .edit-profile-footer:hover {
       background-color: #59f68f; }
   body .sign-up-title {
+    margin-top: 25%;
     padding: 2% 0;
-    font-size: 3em;
-    text-align: center;
-    background-color: #fbfbc4; }
+    font-size: 5em;
+    text-align: center; }
   body .sign-up-label {
     display: block;
     margin-top: 5%;
@@ -149,11 +149,13 @@ body {
     margin: 5% 0 0 10%; }
   body .sign-up-input {
     width: 80%;
-    border: none;
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 1% 0 5% 10%;
-    color: black; }
+    border: solid 5px black;
+    margin: 1% 10% 5% 10%;
+    color: black;
+    font-size: 4em;
+    line-height: 1em;
+    padding: 3%;
+    box-sizing: border-box; }
   body .sign-up-submit-btn {
     margin: 2% 0 2% 10%;
     background-color: #71F79F;
@@ -162,7 +164,7 @@ body {
     cursor: pointer;
     width: 80%;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     line-height: 2em; }
     body .sign-up-submit-btn:hover {
       background-color: #59f68f; }
@@ -170,7 +172,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-size: 2.5em;
+    font-size: 4em;
     line-height: 2em;
     color: white;
     background-color: #3DD6D0;
@@ -554,24 +556,29 @@ body {
     background-repeat: no-repeat; }
   body .landing-login-email-input {
     width: 80%;
-    border: solid thin #dbdbdb;
-    font-size: 3em;
-    line-height: 2em;
+    border: solid 5px white;
+    font-size: 4em;
+    line-height: 1em;
     margin: 5%;
-    padding: 3%; }
+    padding: 3%;
+    background: transparent;
+    color: white; }
   body .landing-login-password-input {
     width: 80%;
-    border: solid thin #dbdbdb;
-    font-size: 3em;
-    line-height: 2em;
+    border: solid 5px white;
+    font-size: 4em;
+    line-height: 1em;
     margin: 5%;
-    padding: 3%; }
+    padding: 3%;
+    background: transparent;
+    color: white; }
   body .landing-login-btn {
     width: 80%;
     font-size: 2.5em;
     line-height: 1.8em;
     text-align: center;
     margin: 2% 0 5% 10%;
+    padding: 2%;
     background-color: #71F79F;
     color: white;
     cursor: pointer; }
@@ -582,7 +589,8 @@ body {
     font-size: 2.5em;
     line-height: 1.8em;
     text-align: center;
-    margin: 10% 0 5% 10%;
+    margin: 5% 0 5% 10%;
+    padding: 2%;
     background-color: #3DD6D0;
     color: white;
     cursor: pointer; }
@@ -593,16 +601,16 @@ body {
     background-color: transparent;
     width: 90%;
     padding: 2% 2%;
-    border: solid 2px #dbdbdb;
     color: white;
     font-family: "Overpass", sans-serif;
     text-align: center;
-    font-size: 4em; }
+    font-size: 4em;
+    line-height: 1.5em; }
   body .login-legal {
     margin: 50px 2.5%;
     width: 90%;
     padding: 2% 2%;
-    color: #00ab61;
+    color: white;
     font-family: sans-serif;
     text-align: center; }
   body .profile-public-info {
