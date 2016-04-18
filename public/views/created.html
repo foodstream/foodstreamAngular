@@ -24,15 +24,17 @@
 					<i class="fa fa-comment" aria-hidden="true"></i>
 					Go To Chat
 				</div>
-				<a href={{directionsLink}} class="created-post-directions-btn">
-					<i class="fa fa-google" aria-hidden="true"></i>
-					Get Directions
-				</a>
+
+
+			<a href={{directionsLink}} class="created-post-directions-btn">
+				Directions
+			</a>
 	</div>
 
 	<div class='created-post-claimed-info' ng-show = "post.claimed">
 		This post has been claimed
 	</div>
+
 
 	<div class = "created-post-complete-button" ng-click="modalShow = true" ng-show = "post.claimed">
 		Mark as complete

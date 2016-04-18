@@ -71,8 +71,9 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     //create the json to send the message
     var param = {"post_id":postId,"body":$('.chat-input').val(),"subject":"Foodstream app message from "+$scope.userFirstName+" "+$scope.userLastName+" regarding "+postTitle,"recipient":userEmail}
     console.log(param);
+    
     //make the call
-    $http.post('https://sheltered-wildwood-38449.herokuapp.com/messages/send_email?token='+token, param).then(function successCallback(response){
+    $http.post('https://sheltered-wildwood-38449.herokuapp.com/messages/send_email.json?token='+token, param).then(function successCallback(response){
       console.log('message sent');
       $('.chat-input').val('');
       //once the message is sent, get the new list of messages to display
