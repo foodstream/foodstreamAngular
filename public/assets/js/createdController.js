@@ -94,11 +94,11 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
   $scope.markComplete = function(){
       console.log("marked as complete");
       console.log($scope.post.claimed);
-      // $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
-      //   console.log('post completed successfully', response);
-      // }, function errorCallback(response){
-      //   console.log('post not marked as completed');
-      // });
+      $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
+        console.log('post completed successfully', response);
+      }, function errorCallback(response){
+        console.log('post not marked as completed');
+      });
 
       $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/' + postClaimer + '.json?token=' + token + "&user[ratings_attributes][][rating]=" + parseInt($(".created-post-review-input").val(), 10) + "&user[ratings_attributes][][reviewer_id]=" + userId + "&user[ratings_attributes][][reviewed_id]=" + postClaimer)
         .then(function successCallback(response){
