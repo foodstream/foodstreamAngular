@@ -140,13 +140,21 @@ body {
     width: 100%;
     position: absolute;
     bottom: 0;
-    background-color: #71F79F; }
-  body .sign-up-title {
-    padding: 4% 0 1% 0;
-    font-size: 3em;
-    color: black;
+    background-color: #71F79F;
+    position: fixed;
     text-align: center;
-    background-color: #fbfbc4; }
+    font-size: 4em;
+    line-height: 2em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200; }
+    body .edit-profile-footer:hover {
+      background-color: #59f68f; }
+  body .sign-up-title {
+    margin-top: 25%;
+    padding: 2% 0;
+    font-size: 5em;
+    text-align: center; }
     @media screen and (min-width: 1200px) {
       body .sign-up-title {
         background-color: white;
@@ -155,6 +163,7 @@ body {
         font-size: 2em; } }
   body .sign-up-label {
     display: block;
+    margin-top: 5%;
     text-align: left;
     font-size: 2em;
     margin: 5% 0 0 10%; }
@@ -168,11 +177,13 @@ body {
         z-index: 1; } }
   body .sign-up-input {
     width: 80%;
-    border: none;
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 1% 0 5% 10%;
-    color: black; }
+    border: solid 5px black;
+    margin: 1% 10% 5% 10%;
+    color: black;
+    font-size: 4em;
+    line-height: 1em;
+    padding: 3%;
+    box-sizing: border-box; }
     @media screen and (min-width: 1200px) {
       body .sign-up-input {
         display: block;
@@ -188,10 +199,11 @@ body {
     margin: 2% 0 2% 10%;
     background-color: #71F79F;
     color: white;
+    font-size: 2em;
     cursor: pointer;
     width: 80%;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     line-height: 2em; }
     @media screen and (min-width: 1200px) {
       body .sign-up-submit-btn {
@@ -206,7 +218,7 @@ body {
     body .sign-up-submit-btn:hover {
       background-color: #59f68f; }
   body .sign-up-back-btn {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     font-size: 4em;
@@ -459,46 +471,92 @@ body {
     top: 4.5%;
     background-color: #abffda;
     height: 5%; }
-  body .post-detail-supplier-name {
-    margin: 5%;
-    font-size: 3em; }
-    body .post-detail-supplier-name .post-detail-rating {
-      display: block; }
-    body .post-detail-supplier-name span {
-      font-weight: bold; }
-  body .post-detail-image {
-    margin: 5%; }
-  body .post-detail-details {
-    margin: 5%; }
-  body .post-detail-location {
-    margin: 5%;
-    font-weight: bold; }
-  body .post-detail-directions-link {
-    color: white;
-    background-color: #3DD6D0;
-    padding: 5px 15px;
-    text-decoration: none;
-    font-size: 2em; }
-  body .post-detail-location-image {
-    margin: 5%; }
-  body #post-detail-map {
-    height: 500px;
-    width: 500px;
-    margin-bottom: 25px; }
-  body .post-detail-start {
-    margin: 5%;
-    display: block; }
-    body .post-detail-start span {
-      font-size: 2em;
+  body .post-detail-content-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 12.5%;
+    height: 82vh; }
+    body .post-detail-content-wrapper .post-detail-supplier-wrap {
+      margin: 2% 0;
+      width: 100%;
       display: block;
-      font-weight: bold; }
-  body .post-detail-end {
-    margin: 5%;
-    display: block; }
-    body .post-detail-end span {
-      font-size: 2em;
+      font-size: 4em; }
+      body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name {
+        width: 47%;
+        display: inline-block;
+        margin: 0 0 0 2%; }
+        body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name span {
+          font-weight: bold;
+          font-size: .75em;
+          display: block; }
+      body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-org {
+        width: 49%;
+        display: inline-block; }
+        body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-org span {
+          font-weight: bold;
+          font-size: .75em;
+          display: block; }
+    body .post-detail-content-wrapper .post-detail-details {
+      width: 96%;
       display: block;
-      font-weight: bold; }
+      font-size: 4em;
+      margin: 2% 0 2% 2%; }
+      body .post-detail-content-wrapper .post-detail-details span {
+        display: block;
+        font-weight: bold;
+        font-size: .75em; }
+    body .post-detail-content-wrapper .post-detail-images {
+      display: block;
+      width: 100%; }
+      body .post-detail-content-wrapper .post-detail-images .post-detail-img {
+        height: 450px;
+        width: 450px;
+        display: inline-block;
+        margin: 0 2%; }
+      body .post-detail-content-wrapper .post-detail-images #post-detail-map {
+        height: 450px;
+        width: 450px;
+        display: inline-block; }
+    body .post-detail-content-wrapper .post-detail-location {
+      display: block;
+      width: 96%;
+      margin: 2% 0 2% 2%;
+      font-size: 4em;
+      font-weight: normal; }
+      body .post-detail-content-wrapper .post-detail-location span {
+        display: block;
+        font-size: .75em;
+        font-weight: bold; }
+    body .post-detail-content-wrapper .post-detail-directions-link {
+      display: block;
+      text-decoration: none;
+      border: solid 3px #F4F4F4;
+      text-align: center;
+      width: 95%;
+      margin: 2.5%  0 0 2.5%;
+      font-size: 4em;
+      line-height: 1.5em;
+      color: #595959;
+      background-color: #fcfcfc; }
+    body .post-detail-content-wrapper .post-detail-time-wrap {
+      width: 96%;
+      margin: 2% 0 2% 2%;
+      font-size: 4em;
+      font-weight: normal; }
+      body .post-detail-content-wrapper .post-detail-time-wrap .post-detail-start {
+        display: inline-block;
+        width: 49%; }
+        body .post-detail-content-wrapper .post-detail-time-wrap .post-detail-start span {
+          display: block;
+          font-weight: bold;
+          font-size: .75em; }
+      body .post-detail-content-wrapper .post-detail-time-wrap .post-detail-end {
+        display: inline-block;
+        width: 49%; }
+        body .post-detail-content-wrapper .post-detail-time-wrap .post-detail-end span {
+          display: block;
+          font-weight: bold;
+          font-size: .75em; }
   body #search-results-subheader {
     position: fixed;
     margin: 13% 0 0 0;
@@ -648,12 +706,22 @@ body {
         font-weight: 600; } }
     body .results-footer:hover {
       background-color: #59f68f; }
+  body .landing-overlay-content {
+    margin-top: 15%;
+    padding-top: 15%;
+    z-index: 999;
+    background: url("/assets/images/landing_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
   body .landing-login-email-input {
     width: 80%;
-    border: solid thin #b4b4b4;
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 15% 0 0 10%; }
+    border: solid 5px white;
+    font-size: 4em;
+    line-height: 1em;
+    margin: 5%;
+    padding: 3%;
+    background: transparent;
+    color: white; }
     @media screen and (min-width: 1200px) {
       body .landing-login-email-input {
         display: block;
@@ -663,10 +731,13 @@ body {
         text-align: left; } }
   body .landing-login-password-input {
     width: 80%;
-    border: solid thin #b4b4b4;
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 5% 0 5% 10%; }
+    border: solid 5px white;
+    font-size: 4em;
+    line-height: 1em;
+    margin: 5%;
+    padding: 3%;
+    background: transparent;
+    color: white; }
     @media screen and (min-width: 1200px) {
       body .landing-login-password-input {
         display: block;
@@ -680,6 +751,7 @@ body {
     line-height: 1.8em;
     text-align: center;
     margin: 2% 0 5% 10%;
+    padding: 2%;
     background-color: #71F79F;
     color: white;
     cursor: pointer; }
@@ -700,7 +772,8 @@ body {
     font-size: 2.5em;
     line-height: 1.8em;
     text-align: center;
-    margin: 10% 0 5% 10%;
+    margin: 5% 0 5% 10%;
+    padding: 2%;
     background-color: #3DD6D0;
     color: white;
     cursor: pointer; }
@@ -718,13 +791,14 @@ body {
       background-color: #2ccec8; }
   body .login-about {
     margin: 50px 2.5%;
-    background-color: white;
+    background-color: transparent;
     width: 90%;
     padding: 2% 2%;
-    border: solid 2px #dbdbdb;
-    color: #00ab61;
-    font-family: sans-serif;
-    text-align: center; }
+    color: white;
+    font-family: "Overpass", sans-serif;
+    text-align: center;
+    font-size: 4em;
+    line-height: 1.5em; }
     @media screen and (min-width: 1200px) {
       body .login-about {
         font-size: 1.5em;
@@ -736,11 +810,10 @@ body {
         background-color: #FCF7F8;
         border: none; } }
   body .login-legal {
-    position: fixed;
     margin: 50px 2.5%;
     width: 90%;
     padding: 2% 2%;
-    color: #00ab61;
+    color: white;
     font-family: sans-serif;
     text-align: center; }
   body .profile-public-info {
@@ -865,18 +938,24 @@ body {
         border-bottom: 3px solid #00de7e;
         color: #00de7e; } }
   body .create-post-add-pic {
-    width: 90%;
-    margin: 5% 5%;
-    background-color: #67dfda;
-    color: white;
-    font-size: 5em;
-    line-height: 1.3em;
-    text-align: center; }
+    border: solid 3px #F4F4F4;
+    text-align: center;
+    width: 95%;
+    margin: 2%  0 2%  2.5%;
+    font-size: 4em;
+    color: #595959;
+    background-color: #fcfcfc;
+    line-height: 1.2em; }
     @media screen and (min-width: 1200px) {
       body .create-post-add-pic {
         margin: 15% 2% 0 15%;
         width: 35.5%;
         font-size: 3em; } }
+    body .create-post-add-pic .fa-camera-retro {
+      display: block;
+      color: #8c8c8c;
+      margin: 2% 0;
+      font-size: 2em; }
   body #file-input {
     display: none; }
   body .create-title {
@@ -956,59 +1035,43 @@ body {
         width: 10%;
         font-size: 1em;
         margin: 1% 45% 0 5%; } }
-  body .create-description {
-    display: block;
-    height: 40vh;
-    background-color: white;
-    width: 95%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin: 2% 0 0 2.5%;
-    color: black; }
-    @media screen and (min-width: 1200px) {
-      body .create-description {
-        width: 35%;
-        font-size: 1em;
-        margin: 1% 0 0 15%;
-        height: 15vh; } }
   body .edit-post-subheader {
     width: 100%;
     font-size: 4em;
     text-align: center;
-    background-color: #fbfbc4;
+    background-color: #78ffc4;
     line-height: 1.5em;
-    margin-top: -8%;
-    position: fixed; }
+    margin-top: 12%;
+    position: fixed;
+    color: #00ab61; }
   body .edit-post-content-wrapper {
-    margin-top: 20%;
+    margin-top: 22%;
     overflow: scroll;
-    height: 90vh; }
+    height: 81vh;
+    border: solid thin black;
+    position: absolute; }
+    body .edit-post-content-wrapper .edit-post-image {
+      height: 450px;
+      width: 450px;
+      margin: 2% 0 0 28%; }
   body #file-input-edit-post {
     display: none; }
   body .edit-post-add-image {
-    background-color: #3DD6D0;
-    width: 90%;
-    color: white;
+    border: solid 3px #F4F4F4;
     text-align: center;
-    font-size: 3em; }
+    width: 95%;
+    margin: 1%  0 2%  2.5%;
+    font-size: 4em;
+    color: #595959;
+    background-color: #fcfcfc;
+    line-height: 1.2em; }
   body .edit-post-title {
     background-color: white;
     width: 95%;
     border: solid 2px #F4F4F4;
-    font-size: 3em;
+    font-size: 4em;
     margin: 2% 0 0 2.5%;
     color: black; }
-  body .edit-post-picture {
-    margin: 2% 0;
-    color: black;
-    text-align: center; }
-  body .fa-camera-retro {
-    color: #b4b4b4;
-    padding: 90px 50px;
-    display: inline-block;
-    border: solid thin #b4b4b4;
-    background-color: #f5e4e8;
-    cursor: pointer; }
   body .edit-post-location {
     background-color: white;
     width: 95%;
@@ -1016,13 +1079,13 @@ body {
     font-size: 1em;
     margin: 2% 0 2% 2.5%;
     color: black;
-    font-size: 3em; }
+    font-size: 4em; }
   body .edit-post-start-na {
     display: inline-block;
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
-    font-size: 3em;
+    font-size: 4em;
     margin: 2% 5%;
     color: black; }
   body .edit-post-start-time-na {
@@ -1030,7 +1093,7 @@ body {
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
-    font-size: 3em;
+    font-size: 4em;
     margin-top: 2%;
     color: black; }
   body .edit-post-end-na {
@@ -1039,7 +1102,7 @@ body {
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
-    font-size: 3em;
+    font-size: 4em;
     margin-top: 2%;
     color: black; }
   body .edit-post-end-time-na {
@@ -1047,7 +1110,7 @@ body {
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
-    font-size: 3em;
+    font-size: 4em;
     margin-top: 2%;
     color: black; }
   body .edit-post-description {
@@ -1056,10 +1119,9 @@ body {
     background-color: white;
     width: 95%;
     border: solid 2px #F4F4F4;
-    font-size: 1em;
     margin: 2% 0 0 2.5%;
     color: black;
-    font-size: 3em; }
+    font-size: 4em; }
   body .edit-post-btn {
     background-color: #71F79F;
     position: fixed;
@@ -1096,7 +1158,7 @@ body {
     height: 80vh; }
     body .created-content-wrapper .created-post-description {
       width: 95%;
-      font-size: 3em;
+      font-size: 4em;
       margin: 2% 0 0 2.5%;
       color: black;
       display: block; }
@@ -1116,18 +1178,20 @@ body {
         display: inline-block;
         height: 450px;
         width: 450px;
-        margin: 0 1%; }
+        margin: 0 1% 0 2%; }
       body .created-content-wrapper .created-post-images #created-post-gmap {
         width: 450px;
         height: 450px;
         display: inline-block;
-        margin: 0 1% 0 2%; }
+        margin: 0 1%; }
     body .created-content-wrapper .created-post-address {
-      display: inline-block;
-      margin: 15px 5% 15px 1.5%;
-      font-size: 3em; }
+      display: block;
+      width: 96%;
+      margin: 2% 0 0 2%;
+      font-size: 4em; }
       body .created-content-wrapper .created-post-address span {
         font-weight: 700;
+        font-size: .75em;
         display: block; }
     body .created-content-wrapper .created-buttons-wrap {
       width: 100%;
@@ -1180,26 +1244,38 @@ body {
           margin: 5% 0 4% 0;
           display: block;
           font-size: 2.5em; }
-    body .created-content-wrapper .created-post-start {
-      margin: 2% 2.5%;
-      font-size: 3em;
+    body .created-content-wrapper .created-post-time-wrap {
+      width: 96%;
+      margin: 2% 0 0 2%;
       display: block; }
-      body .created-content-wrapper .created-post-start span {
-        font-size: .75em;
-        display: block;
-        font-weight: bold; }
-    body .created-content-wrapper .created-post-end {
-      margin: 2% 2.5%;
-      font-size: 3em; }
-      body .created-content-wrapper .created-post-end span {
-        font-size: .75em;
-        display: block;
-        font-weight: bold; }
+      body .created-content-wrapper .created-post-time-wrap .created-post-start {
+        font-size: 4em;
+        display: inline-block;
+        width: 48%; }
+        body .created-content-wrapper .created-post-time-wrap .created-post-start span {
+          font-size: .75em;
+          display: block;
+          font-weight: bold; }
+      body .created-content-wrapper .created-post-time-wrap .created-post-end {
+        font-size: 4em;
+        display: inline-block;
+        width: 48%; }
+        body .created-content-wrapper .created-post-time-wrap .created-post-end span {
+          font-size: .75em;
+          display: block;
+          font-weight: bold; }
+    body .created-content-wrapper .created-post-claimed-info {
+      display: block;
+      font-size: 2em;
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      margin: 2% 0 0 0; }
     body .created-content-wrapper .created-post-complete-button {
       border: solid 3px #F4F4F4;
       text-align: center;
       width: 95%;
-      margin: 5%  0 0 2.5%;
+      margin: 1%  0 0 2.5%;
       font-size: 4em;
       color: #595959;
       background-color: #fcfcfc; }
@@ -1416,132 +1492,100 @@ body {
         line-height: 1.75em; } }
     body .chat-back-to-post-btn:hover {
       background-color: #2ccec8; }
-  body .claimed-title {
-    font-size: 5em;
-    margin: 12.5% 0 0 0;
-    display: block;
+  body .claimed-images {
+    margin: 2% 0 0 0;
     width: 100%;
-    text-align: center;
-    position: fixed;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    background-color: #abffda;
-    z-index: 9999999;
-    height: 5%;
-    color: #009152; }
-  body .claimed-content-wrapper {
-    margin-top: 21.5%;
-    height: 82vh;
-    overflow: scroll;
-    position: absolute;
-    width: 100%; }
-    body .claimed-content-wrapper .claimed-supplier-name-wrap {
-      width: 100%;
-      font-size: 4em;
-      margin: 2% 0 0 0; }
-      body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name {
-        display: inline-block;
-        width: 49%;
-        padding: 0 0 0 2%; }
-        body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name span {
-          font-size: .75em;
-          font-weight: 700;
-          display: block; }
-      body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org {
-        display: inline-block;
-        width: 46%; }
-        body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org span {
-          font-size: .75em;
-          font-weight: 700;
-          display: block; }
-    body .claimed-content-wrapper .claimed-images {
-      margin: 2% 0 0 0;
-      width: 100%;
-      display: block; }
-      body .claimed-content-wrapper .claimed-images #claimed-map {
-        width: 450px;
-        height: 450px;
-        margin: 2% 0 2% 2%;
-        display: inline-block; }
-      body .claimed-content-wrapper .claimed-images .claimed-post-photo {
-        width: 450px;
-        height: 450px;
-        margin: 2% 0 2% 2%;
-        display: inline-block; }
-    body .claimed-content-wrapper .claimed-buttons-wrap {
-      width: 100%;
-      display: block;
-      height: 15%;
-      border: solid thin #c1c1c1;
+    display: block; }
+    body .claimed-images #claimed-map {
+      width: 450px;
+      height: 450px;
+      margin: 2% 0 2% 2%;
+      display: inline-block; }
+    body .claimed-images .claimed-post-photo {
+      width: 450px;
+      height: 450px;
+      margin: 2% 0 2% 2%;
+      display: inline-block; }
+  body .claimed-buttons-wrap {
+    width: 100%;
+    display: block;
+    height: 15%;
+    border: solid thin #c1c1c1;
+    color: #a8a8a8;
+    margin: 3% 0 0 0; }
+    body .claimed-buttons-wrap .claimed-calendar {
+      display: inline-block;
+      width: 33%;
+      height: 100%;
+      text-align: center;
+      border-right: solid thin #c1c1c1;
+      height: 100%;
+      font-size: 2.5em; }
+      body .claimed-buttons-wrap .claimed-calendar .fa-calendar-plus-o {
+        margin: 5% 0 4% 0;
+        display: block;
+        font-size: 2.5em; }
+    body .claimed-buttons-wrap .claimed-chat {
+      display: inline-block;
+      width: 33%;
+      height: 100%;
+      text-align: center;
+      border-right: solid thin #c1c1c1;
+      height: 100%;
+      font-size: 2.5em; }
+      body .claimed-buttons-wrap .claimed-chat .fa-comment {
+        margin: 5% 0 4% 0;
+        display: block;
+        font-size: 2.5em; }
+    body .claimed-buttons-wrap .claimed-directions {
       color: #a8a8a8;
-      margin: 3% 0 0 0; }
-      body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar {
-        display: inline-block;
-        width: 33%;
-        height: 100%;
-        text-align: center;
-        border-right: solid thin #c1c1c1;
-        height: 100%;
+      display: inline-block;
+      width: 33%;
+      height: 100%;
+      text-align: center;
+      height: 100%;
+      text-decoration: none;
+      font-size: 2.5em; }
+      body .claimed-buttons-wrap .claimed-directions .fa-google {
+        margin: 5% 0 4% 0;
+        display: block;
         font-size: 2.5em; }
-        body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar .fa-calendar-plus-o {
-          margin: 5% 0 4% 0;
-          display: block;
-          font-size: 2.5em; }
-      body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat {
-        display: inline-block;
-        width: 33%;
-        height: 100%;
-        text-align: center;
-        border-right: solid thin #c1c1c1;
-        height: 100%;
-        font-size: 2.5em; }
-        body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat .fa-comment {
-          margin: 5% 0 4% 0;
-          display: block;
-          font-size: 2.5em; }
-      body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions {
-        color: #a8a8a8;
-        display: inline-block;
-        width: 33%;
-        height: 100%;
-        text-align: center;
-        height: 100%;
-        text-decoration: none;
-        font-size: 2.5em; }
-        body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions .fa-google {
-          margin: 5% 0 4% 0;
-          display: block;
-          font-size: 2.5em; }
-    body .claimed-content-wrapper .claimed-time-wrap {
+  body .claimed-time-wrap {
+    display: block;
+    width: 96%;
+    font-size: 4em;
+    margin: 2% 0 0 2%; }
+    body .claimed-time-wrap .claimed-start {
+      width: 49%;
+      display: inline-block; }
+      body .claimed-time-wrap .claimed-start span {
+        display: block;
+        font-weight: 700;
+        font-size: .75em; }
+    body .claimed-time-wrap .claimed-end {
+      width: 49%;
+      display: inline-block; }
+      body .claimed-time-wrap .claimed-end span {
+        display: block;
+        font-weight: 700;
+        font-size: .75em; }
+  body .claimed-location {
+    width: 95%;
+    font-size: 4em;
+    margin: 2% 0 0 2%;
+    display: block; }
+    body .claimed-location span {
       display: block;
-      width: 95%;
-      font-size: 3em;
-      margin: 2% 0 0 2%; }
-      body .claimed-content-wrapper .claimed-time-wrap .claimed-start span {
-        display: block;
-        font-weight: 700;
-        font-size: .75em; }
-      body .claimed-content-wrapper .claimed-time-wrap .claimed-end span {
-        display: block;
-        font-weight: 700;
-        font-size: .75em; }
-    body .claimed-content-wrapper .claimed-location {
-      width: 95%;
-      font-size: 3em;
-      margin: 2 0 0 2%; }
-      body .claimed-content-wrapper .claimed-location span {
-        display: block;
-        font-size: .75em;
-        font-weight: 700; }
-    body .claimed-content-wrapper .claimed-details {
-      font-size: 4em;
-      margin: 2% 0 0 2%;
-      display: block; }
-      body .claimed-content-wrapper .claimed-details span {
-        display: block;
-        font-size: .5em;
-        font-weight: 700; }
+      font-size: .75em;
+      font-weight: 700; }
+  body .claimed-details {
+    font-size: 4em;
+    margin: 2% 0 0 2%;
+    display: block; }
+    body .claimed-details span {
+      display: block;
+      font-size: .5em;
+      font-weight: 700; }
   body .claimed-bottom-button {
     position: fixed;
     bottom: 0;
@@ -1584,7 +1628,5 @@ body {
         line-height: 1.75em; } }
     body .claimed-remove-button:hover {
       background-color: #59f68f; }
-
-/*------------------- LANDING PAGE TAB STYLING ---------------------- */
 
 /*# sourceMappingURL=styles.css.map */

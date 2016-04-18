@@ -2,47 +2,46 @@
   width: 100%;
   font-size: 4em;
   text-align: center;
-  background-color: lighten($subheaderbg, 25%);
+  background-color: lighten($headerbg, 25%);
   line-height: 1.5em;
-  margin-top: -8%;
+  margin-top: 12%;
   position: fixed;
+  color: darken($headerbg, 15%);
 }
 .edit-post-content-wrapper{
-  margin-top: 20%;
+  margin-top: 22%;
   overflow: scroll;
-  height: 90vh;
+  height: 81vh;
+  border: solid thin black;
+  position: absolute;
+  .edit-post-image{
+    height: 450px;
+    width: 450px;
+    margin: 2% 0 0 28%;
+  }
 }
 #file-input-edit-post{
   display: none;
 }
 .edit-post-add-image{
-  background-color: $buttonbg;
-  width: 90%;
-  color: white;
+  border: solid 3px $border;
   text-align: center;
-  font-size: 3em;
+  width: 95%;
+  margin: 1%  0 2%  2.5%;
+  font-size: 4em;
+  color: lighten(black, 35%);
+  background-color: lighten($border,3%);
+  line-height: 1.2em;
 }
 .edit-post-title {
   background-color: white;
   width: 95%;
   border: solid 2px $border;
-  font-size: 3em;
+  font-size: 4em;
   margin: 2% 0 0 2.5%;
   color: black;
 }
-.edit-post-picture {
-  margin: 2% 0;
-  color: black;
-  text-align: center;
-}
-.fa-camera-retro{
-  color:darken($border, 25%);
-  padding: 90px 50px;
-  display: inline-block;
-  border: solid thin darken($border, 25%);
-  background-color: darken($bodybg, 5%);
-  cursor: pointer;
-}
+
 .edit-post-location {
   background-color: white;
   width: 95%;
@@ -50,14 +49,14 @@
   font-size: 1em;
   margin: 2% 0 2% 2.5%;
   color: black;
-  font-size: 3em;
+  font-size: 4em;
 }
 .edit-post-start-na {
   display: inline-block;
   background-color: white;
   width: 40%;
   border: solid 2px $border;
-  font-size: 3em;
+  font-size: 4em;
   margin: 2% 5%;
   color: black;
 }
@@ -66,7 +65,7 @@
   background-color: white;
   width: 40%;
   border: solid 2px $border;
-  font-size: 3em;
+  font-size: 4em;
   margin-top: 2%;
   color: black;
 }
@@ -76,7 +75,7 @@
   background-color: white;
   width: 40%;
   border: solid 2px $border;
-  font-size: 3em;
+  font-size: 4em;
   margin-top: 2%;
   color: black;
 }
@@ -85,7 +84,7 @@
   background-color: white;
   width: 40%;
   border: solid 2px $border;
-  font-size: 3em;
+  font-size: 4em;
   margin-top: 2%;
   color: black
 }
@@ -96,10 +95,9 @@
   background-color: white;
   width: 95%;
   border: solid 2px $border;
-  font-size: 1em;
   margin: 2% 0 0 2.5%;
   color: black;
-  font-size: 3em;
+  font-size: 4em;
 }
 
 

@@ -1,45 +1,52 @@
+<div class = "post-detail-title">
+  {{post.title}}
+</div>
 
-  <div class = "post-detail-title">{{post.title}}</div>
 <div class = "post-detail-content-wrapper">
 
-
-  <div class = "post-detail-image">
-    <img src ="{{post.post_image}}"></img>
+  <div class = "post-detail-supplier-wrap">
+    <div class='post-detail-supplier-name'>
+      <span>Supplier Name:</span>
+      {{post.supplier.first_name}} {{post.supplier.last_name}}
+    </div>
+    <div class='post-detail-org'>
+      <span>Organization:</span>
+      {{post.supplier.organization}}
+    </div>
   </div>
-
-  <div class = "post-detail-supplier-name">
-    <span>{{post.supplier.first_name}} {{post.supplier.last_name}}</span>
-    <br>{{post.supplier.organization}}
-    <!-- <span class='post-detail-rating'>
-      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i>
-    </span> -->
-  </div>
-
-
-
 
   <div class = "post-detail-details">
+    <span>Post Details:</span>
     {{post.details}}
   </div>
 
 
-<div class = "post-detail-location-image">
-  <div id='post-detail-map'></div>
-  <a href={{directionsLink}} class='post-detail-directions-link' >
-    Get directions
-  </a>
-</div>
+  <div class = "post-detail-images">
+    <img class='post-detail-img' ng-src ="{{post.post_image}}"></img>
+    <div id='post-detail-map'></div>
+  </div>
 
+    <a href={{directionsLink}} class='post-detail-directions-link'>
+      Get directions
+    </a>
 
-  <div class = "post-detail-location">{{post.address_string}}</div>
-  <!-- <div class = "post-detail-location-image">
-    <img src = "assets/images/map-thumbnail.png" width = "100px">
-  </div> -->
+    <div class = "post-detail-location">
+      <span>Pick Up Address:</span>
+      {{post.address_string}}
+    </div>
 
-  <div class = "post-detail-start"><span>Available at: </span>{{post.start_at}}</div>
-  <div class = "post-detail-end"><span> Pick Up by: </span>{{post.end_at}}</div>
+  <div class='post-detail-time-wrap'>
+    <div class = "post-detail-start">
+      <span>Available at:</span>
+      {{post.start_at}}
+    </div>
+    <div class = "post-detail-end">
+      <span>Pick Up by:</span>
+      {{post.end_at}}
+    </div>
+  </div>
 
 </div>
 
 <div class = "post-detail-bottom-button" ng-click='goHome()'>Back</div>
-<div class = "post-detail-claim-button" ng-click='claimPost()' >Claim Post</div>
+<div class = "post-detail-claim-button" ng-click='claimPost()'>Claim Post</div>

@@ -4,11 +4,11 @@
 
 <div class = "edit-post-content-wrapper">
 
-  <img class='edit-post-image' ng-src = "{{postPic}}" width = "500px"></img>
+  <img class='edit-post-image' ng-src = "{{postPic}}" ></img>
 
 	<input id="file-input-edit-post" name='file' type="file" ngf-select ng-model="file" ngf-pattern="'image/*'" ngf-capture="'other'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
 
-  <div class='edit-post-add-image' ng-click='addImage()'>Add an Image</div>
+  <div class='edit-post-add-image' ng-click='addImage()'>Replace Image</div>
 
 
 <input class = "edit-post-title" placeholder="Title" ng-model='title'></input>

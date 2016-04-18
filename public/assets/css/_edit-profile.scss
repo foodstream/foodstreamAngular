@@ -112,4 +112,15 @@
   position: absolute;
   bottom: 0;
   background-color: $buttonaccent2;
+
+  position: fixed;
+  text-align: center;
+  font-size: 4em;
+  line-height: 2em;
+  color: white;
+  cursor: pointer;
+  font-weight: 200;
+  &:hover{
+    background-color: darken($buttonaccent2, 5%);
   }
+}

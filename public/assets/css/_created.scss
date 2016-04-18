@@ -23,7 +23,7 @@
   height: 80vh;
     .created-post-description {
       width: 95%;
-      font-size: 3em;
+      font-size: 4em;
       margin: 2% 0 0 2.5%;
       color: black;
       display: block;
@@ -48,7 +48,8 @@
         display: inline-block;
         height: 450px;
         width: 450px;
-        margin: 0 1%;
+
+        margin: 0 1% 0 2%;
         // margin: 2% 0 0 5%;
         // border: solid thin black;
 
@@ -57,17 +58,18 @@
           width:450px;
           height: 450px;
           display: inline-block;
-          margin: 0 1% 0 2%;
+            margin: 0 1%;
         }
       }
 
       .created-post-address {
-        display: inline-block;
-        margin: 15px 5% 15px 1.5%;
-        font-size: 3em;
+        display: block;
+        width: 96%;
+        margin: 2% 0 0 2%;
+        font-size: 4em;
         span{
           font-weight: 700;
-
+          font-size: .75em;
           display: block;
         }
       }
@@ -130,11 +132,14 @@
           }
         }
       }
-
-    .created-post-start {
-      margin: 2% 2.5%;
-      font-size: 3em;
+    .created-post-time-wrap{
+      width: 96%;
+      margin: 2% 0 0 2%;
       display: block;
+    .created-post-start {
+      font-size: 4em;
+      display: inline-block;
+      width: 48%;
       span{
         font-size: .75em;
         display: block;
@@ -142,19 +147,29 @@
       }
     }
     .created-post-end {
-      margin: 2% 2.5%;
-      font-size: 3em;
+      font-size: 4em;
+      display: inline-block;
+      width: 48%;
       span{
         font-size: .75em;
         display: block;
         font-weight: bold;
       }
     }
+  }
+  .created-post-claimed-info{
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin: 2% 0 0 0;
+  }
     .created-post-complete-button{
       border: solid 3px $border;
       text-align: center;
       width: 95%;
-      margin: 5%  0 0 2.5%;
+      margin: 1%  0 0 2.5%;
       font-size: 4em;
       color: lighten(black, 35%);
       background-color: lighten($border,3%);
