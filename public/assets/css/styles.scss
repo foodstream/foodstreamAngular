@@ -708,68 +708,80 @@ body{
   }
   //------ Login View------ //
 
-  .landing-login-email-input{
-    width: 80%;
-    border-style: solid thin darken($border, 10%);
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 15% 0 0 10%;
-  }
-
-  .landing-login-password-input{
-    width: 80%;
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 5% 0 5% 10%;
-  }
-
-  .landing-login-btn{
-    width: 80%;
-    font-size: 2.5em;
-    line-height: 1.8em;
-    text-align: center;
-    margin: 2% 0 5% 10%;
-    background-color: $buttonaccent2;
-    color: white;
-    cursor: pointer;
-    &:hover{
-      background-color: darken($buttonaccent2, 5%);
+    .landing-login-email-input{
+      width: 80%;
+      border: solid thin darken($border, 10%);
+      font-size: 3em;
+      line-height: 2em;
+      margin: 15% 0 0 10%;
+      padding: 3%;
     }
-  }
 
-  .landing-signup-btn{
-    width: 80%;
-    font-size: 2.5em;
-    line-height: 1.8em;
-    text-align: center;
-    margin: 10% 0 5% 10%;
-    background-color: $buttonbg;
-    color: white;
-    cursor: pointer;
-    &:hover{
-      background-color: darken($buttonbg, 5%);
+    .landing-login-password-input{
+      width: 80%;
+      border: solid thin darken($border, 10%);
+      font-size: 3em;
+      line-height: 2em;
+      margin: 5% 0 5% 10%;
+      padding: 3%;
     }
-  }
 
-  .login-about {
-	margin: 50px 2.5%;
-	background-color: white;
-	width: 90%;
-	padding: 2% 2%;
-	border: solid 2px darken($border, 10%);
-	color: darken($headerbg, 15%);
-	font-family: sans-serif;
-	text-align: center;
-  }
+    .landing-login-btn{
+      width: 80%;
+      font-size: 2.5em;
+      line-height: 1.8em;
+      text-align: center;
+      margin: 2% 0 5% 10%;
+      background-color: $buttonaccent2;
+      color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: darken($buttonaccent2, 5%);
+      }
+    }
 
-  .login-legal {
-	margin: 50px 2.5%;
-	width: 90%;
-	padding: 2% 2%;
-	color: darken($headerbg, 15%);
-	font-family: sans-serif;
-   	text-align: center;
-  }
+    .landing-signup-btn{
+      width: 80%;
+      font-size: 2.5em;
+      line-height: 1.8em;
+      text-align: center;
+      margin: 10% 0 5% 10%;
+      background-color: $buttonbg;
+      color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: darken($buttonbg, 5%);
+      }
+    }
+
+    .login-about {
+    	margin: 50px 2.5%;
+    	background-color: white;
+    	width: 90%;
+    	padding: 2% 2%;
+    	border: solid 2px darken($border, 10%);
+    	color: white;
+    	font-family: sans-serif;
+    	text-align: center;
+    }
+
+    .login-legal {
+    	margin: 50px 2.5%;
+    	width: 90%;
+    	padding: 2% 2%;
+    	color: darken($headerbg, 15%);
+    	font-family: sans-serif;
+       	text-align: center;
+    }
+
+
+    // .login-background {
+    //   z-index: 1;
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    // }
 
     //--------- Profile [public] View-------------//
       .profile-public-info {

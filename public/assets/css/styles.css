@@ -513,15 +513,18 @@ body {
       background-color: #59f68f; }
   body .landing-login-email-input {
     width: 80%;
-    border-style: solid thin #dbdbdb;
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 15% 0 0 10%; }
+    border: solid thin #dbdbdb;
+    font-size: 3em;
+    line-height: 2em;
+    margin: 15% 0 0 10%;
+    padding: 3%; }
   body .landing-login-password-input {
     width: 80%;
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 5% 0 5% 10%; }
+    border: solid thin #dbdbdb;
+    font-size: 3em;
+    line-height: 2em;
+    margin: 5% 0 5% 10%;
+    padding: 3%; }
   body .landing-login-btn {
     width: 80%;
     font-size: 2.5em;
@@ -550,7 +553,7 @@ body {
     width: 90%;
     padding: 2% 2%;
     border: solid 2px #dbdbdb;
-    color: #00ab61;
+    color: white;
     font-family: sans-serif;
     text-align: center; }
   body .login-legal {
