@@ -3,9 +3,6 @@ body {
   box-sizing: border-box;
   text-decoration: none;
   background-color: white; }
-  @media screen and (min-width: 1200px) {
-    body {
-      margin-bottom: 200px; } }
   body .ng-view {
     width: 100%; }
   body:visited {
@@ -157,24 +154,17 @@ body {
     text-align: center; }
     @media screen and (min-width: 1200px) {
       body .sign-up-title {
-        background-color: white;
         text-align: left;
-        padding: 10% 0 1% 12%;
-        font-size: 2em; } }
+        padding: 1% 0 3% 12%;
+        margin-top: 8%;
+        font-size: 2.5em;
+        font-weight: 600; } }
   body .sign-up-label {
     display: block;
     margin-top: 5%;
     text-align: left;
     font-size: 2em;
     margin: 5% 0 0 10%; }
-    @media screen and (min-width: 1200px) {
-      body .sign-up-label {
-        display: block;
-        margin: 1.5% 0 0 13%;
-        font-size: 1.2em;
-        width: 40%;
-        text-align: left;
-        z-index: 1; } }
   body .sign-up-input {
     width: 80%;
     border: solid 5px black;
@@ -186,15 +176,11 @@ body {
     box-sizing: border-box; }
     @media screen and (min-width: 1200px) {
       body .sign-up-input {
-        display: block;
-        line-height: 1.5em;
-        font-size: 1.2em;
+        font-size: 1.5em;
         width: 35%;
-        margin: 0 0 0 13%;
-        text-align: left;
-        border: 1px solid #dbdbdb;
-        border-radius: 3px;
-        z-index: 1; } }
+        margin: 1% 10% 0 13%;
+        padding: 1%;
+        border: solid 3px black; } }
   body .sign-up-submit-btn {
     margin: 2% 0 2% 10%;
     background-color: #71F79F;
@@ -229,6 +215,7 @@ body {
     cursor: pointer; }
     @media screen and (min-width: 1200px) {
       body .sign-up-back-btn {
+        position: fixed;
         border-top: 6px solid #2ccec8;
         font-size: 2em;
         font-weight: 600;

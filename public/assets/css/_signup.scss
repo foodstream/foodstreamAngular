@@ -4,10 +4,11 @@
   font-size: 5em;
   text-align: center;
   @media screen and (min-width: $break-large) {
-      background-color: lighten($bodybg, 3%);
       text-align: left;
-      padding: 10% 0 1% 12%;
-      font-size: 2em;
+      padding: 1% 0 3% 12%;
+      margin-top: 8%;
+      font-size: 2.5em;
+      font-weight: 600;
   }
 }
 
@@ -18,14 +19,14 @@
   text-align: left;
   font-size: 2em;
   margin: 5% 0 0 10%;
-  @media screen and (min-width: $break-large) {
-      display: block;
-      margin: 1.5% 0 0 13%;
-      font-size: 1.2em;
-      width: 40%;
-      text-align: left;
-      z-index: 1;
-  }
+  // @media screen and (min-width: $break-large) {
+  //     display: block;
+  //     margin: 1.5% 0 0 13%;
+  //     font-size: 1.2em;
+  //     width: 40%;
+  //     text-align: left;
+  //     z-index: 1;
+  // }
 }
 .sign-up-input {
   width: 80%;
@@ -37,15 +38,11 @@
   padding: 3%;
   box-sizing: border-box;
   @media screen and (min-width: $break-large) {
-      display: block;
-      line-height: 1.5em;
-      font-size: 1.2em;
+      font-size: 1.5em;
       width: 35%;
-      margin: 0 0 0 13%;
-      text-align: left;
-      border: 1px solid darken($border, 10%);
-      border-radius: 3px;
-      z-index: 1;
+      margin: 1% 10% 0 13%;
+      padding: 1%;
+      border: solid 3px black;
   }
 }
 
@@ -86,6 +83,7 @@
   text-align: center;
   cursor: pointer;
   @media screen and (min-width: $break-large) {
+      position: fixed;
       border-top: 6px solid darken($buttonbg, 5%);
       font-size: 2em;
       font-weight: 600;

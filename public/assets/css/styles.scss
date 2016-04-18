@@ -20,7 +20,7 @@ body{
   text-decoration: none;
   background-color: lighten($bodybg, 3%);
   @media screen and (min-width: $break-large) {
-      margin-bottom: 200px;
+    //   margin-bottom: 200px;
   }
   .ng-view{
     width: 100%;
