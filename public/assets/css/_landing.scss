@@ -23,7 +23,7 @@
   @media screen and (min-width: $break-large) {
       font-size: 1.5em;
       width: 35%;
-      margin: 1% 10% 0 34%;
+      margin: 1% 10% 0 33%;
       padding: 1%;
       border: solid 3px black;
   }
@@ -41,7 +41,7 @@
   @media screen and (min-width: $break-large) {
       font-size: 1.5em;
       width: 35%;
-      margin: 1% 10% 0 34%;
+      margin: 1% 10% 0 33%;
       padding: 1%;
       border: solid 3px black;
   }
@@ -59,13 +59,12 @@
   cursor: pointer;
   @media screen and (min-width: $break-large) {
       display: block;
-      margin: 3% 0 0 34%;
-      width: 12%;
+      margin: 3% 0 0 33%;
       text-align: center;
+      width: 33.5%;
       border-radius: 10px;
       font-size: 1.5em;
       line-height: .5em;
-      border: 3px solid darken($buttonaccent2, 5%);
   }
   &:hover{
     background-color: darken($buttonaccent2, 5%);
@@ -84,13 +83,12 @@
   cursor: pointer;
   @media screen and (min-width: $break-large) {
       display: block;
-      margin: 1.5% 0 0 34%;
-      width: 12%;
+      margin: 1.5% 0 0 33%;
+      width: 33.5%;
       text-align: center;
       border-radius: 10px;
       font-size: 1.5em;
       line-height: .5em;
-      border: 3px solid darken($buttonbg, 5%);
   }
   &:hover{
     background-color: darken($buttonbg, 5%);
