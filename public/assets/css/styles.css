@@ -33,108 +33,94 @@ body {
         width: 100px;
         height: 100px;
         border-radius: 3em; }
-  body .edit-profile-content-wrapper {
-    margin-top: 12%;
-    overflow: scroll; }
   body .edit-profile-subheader {
-    background-color: #fbfbc4;
+    background-color: #abffda;
     width: 100vw;
     height: 5%;
     display: block;
-    color: #00de7e;
+    color: #00c46f;
     position: fixed;
-    top: 0; }
-    body .edit-profile-subheader .edit-profile-subheader-txt {
-      font-size: 3.5em;
-      padding: 2% 0 2% 4%;
-      display: inline-block; }
-    body .edit-profile-subheader .edit-profile-logout {
-      margin: 0 0 0 30%;
-      font-size: 2em;
-      background-color: #ffcda4;
-      padding: 2% 1.8%;
-      cursor: pointer; }
-      body .edit-profile-subheader .edit-profile-logout:hover {
-        background-color: #ffc08a; }
-    body .edit-profile-subheader .edit-profile-subheader-change-pass {
-      float: right;
-      text-align: center;
-      background-color: #ffcda4;
-      padding: 1.6% 2%;
+    top: 7%;
+    text-align: center;
+    font-size: 5em; }
+  body .edit-profile-top-btn-wrap {
+    position: fixed;
+    top: 12%;
+    width: 100%;
+    border: solid thin #F4F4F4;
+    display: block;
+    height: 4%;
+    font-size: 2.5em;
+    background-color: #fefefe; }
+    body .edit-profile-top-btn-wrap .edit-profile-change-email {
       display: inline-block;
+      width: 33%;
+      height: 100%;
+      border-right: solid thin #e7e7e7;
+      text-align: center; }
+      body .edit-profile-top-btn-wrap .edit-profile-change-email:hover {
+        background-color: #f9f9f9; }
+    body .edit-profile-top-btn-wrap .edit-profile-change-password {
+      display: inline-block;
+      height: 100%;
+      width: 33%;
+      border-right: solid thin #e7e7e7;
+      text-align: center; }
+    body .edit-profile-top-btn-wrap .edit-profile-logout-btn {
+      display: inline-block;
+      height: 100%;
+      width: 31%;
+      text-align: center; }
+  body .edit-profile-content-wrapper {
+    margin-top: 29%;
+    overflow: scroll;
+    width: 100%;
+    height: 73vh;
+    color: #595959; }
+    body .edit-profile-content-wrapper .edit-profile-image {
+      margin: 2% 0 2% 25%; }
+    body .edit-profile-content-wrapper .edit-profile-rating {
+      width: 100%;
+      text-align: center;
+      font-size: 3em; }
+    body .edit-profile-content-wrapper .edit-profile-add-image {
+      border: solid 3px #F4F4F4;
+      width: 95%;
+      background-color: #fcfcfc;
       color: white;
-      cursor: pointer;
-      font-size: 2em; }
-      body .edit-profile-subheader .edit-profile-subheader-change-pass:hover {
-        background-color: #ffc08a; }
-  body .edit-profile-image {
-    margin: 2% 0 2% 25%; }
-  body .edit-profile-add-image {
-    background-color: #3DD6D0;
-    color: white;
-    font-size: 3em;
-    text-align: center; }
+      color: #595959;
+      text-align: center;
+      font-size: 3em;
+      margin: 2% 0 0 2.5%; }
+    body .edit-profile-content-wrapper .edit-profile-first-name {
+      margin: 2% 0 2% 2%;
+      width: 45vw;
+      font-size: 4em;
+      border: solid thin #e7e7e7; }
+    body .edit-profile-content-wrapper .edit-profile-last-name {
+      margin: 2% 0 0 2%;
+      width: 47vw;
+      font-size: 4em;
+      border: solid thin #e7e7e7; }
+    body .edit-profile-content-wrapper .edit-profile-organization {
+      margin: 2%;
+      width: 96vw;
+      font-size: 4em;
+      border: solid thin #e7e7e7; }
+    body .edit-profile-content-wrapper .edit-profile-location {
+      margin: 2%;
+      width: 96vw;
+      font-size: 4em;
+      border: solid thin #e7e7e7; }
+    body .edit-profile-content-wrapper .edit-profile-description {
+      display: block;
+      margin: 2%;
+      width: 96vw;
+      height: 18vh;
+      font-size: 4em;
+      border: solid thin #e7e7e7; }
   body #file-input-edit-profile {
     display: none; }
-  body .edit-profile-choose-file {
-    font-size: 2em; }
-  body .edit-profile-image-input {
-    font-size: 2em;
-    color: white; }
-  body .edit-profile-image-upload {
-    background-color: #71F79F;
-    font-size: 3em;
-    color: white;
-    margin: 0 2% 0 0; }
-  body .edit-profile-add-picture {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 3% 0; }
-    body .edit-profile-add-picture .fa-camera-retro {
-      color: #b4b4b4;
-      font-size: 5em;
-      padding: 25vw;
-      border: solid thin #b4b4b4;
-      background-color: #f5e4e8;
-      cursor: pointer; }
-      body .edit-profile-add-picture .fa-camera-retro .edit-profile-add-picture-txt {
-        display: block;
-        font-size: .3em;
-        font-family: 'overpass', sans-serif;
-        font-weight: 200; }
-  body .edit-profile-first-name {
-    margin: 2% 0 2% 2%;
-    width: 45vw;
-    font-size: 3em; }
-  body .edit-profile-last-name {
-    margin: 2% 0 0 2%;
-    width: 47vw;
-    font-size: 3em; }
-  body .edit-profile-email {
-    margin: 2%;
-    width: 96vw;
-    font-size: 3em; }
-  body .edit-profile-organization {
-    margin: 2%;
-    width: 96vw;
-    font-size: 3em; }
-  body .edit-profile-location {
-    margin: 2%;
-    width: 96vw;
-    font-size: 3em; }
-  body .edit-profile-description {
-    display: block;
-    margin: 2%;
-    width: 96vw;
-    height: 18vh;
-    font-size: 3em; }
-  body #edit-profile-submit-btn {
-    background-color: #3DD6D0;
-    color: white;
-    font-size: 4em;
-    padding: 1% 30%;
-    margin: 0 0 10% 0; }
   body .edit-profile-footer {
     display: block;
     width: 100%;
@@ -943,7 +929,7 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); }
+    background-color: rgba(0, 0, 0, 0.2); }
     body .created-post-modal .created-post-modal-content {
       position: fixed;
       height: 30%;
