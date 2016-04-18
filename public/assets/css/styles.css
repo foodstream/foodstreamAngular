@@ -1061,98 +1061,132 @@ body {
     cursor: pointer; }
     body .chat-back-to-post-btn:hover {
       background-color: #2ccec8; }
-  body .claimed-content-wrapper {
-    margin-top: 10%;
-    height: 88vh;
-    overflow: scroll; }
   body .claimed-title {
-    font-size: 6em;
-    margin: 5% 0 2% 0;
-    display: inline-block;
+    font-size: 5em;
+    margin: 12.5% 0 0 0;
+    display: block;
     width: 100%;
-    text-align: center; }
-  body .claimed-chat {
-    display: block;
-    margin: 5% 0 0 5%;
-    width: 90%;
-    font-size: 4em;
-    background-color: #71F79F;
-    color: white;
-    padding: 5px;
     text-align: center;
-    cursor: pointer; }
-    body .claimed-chat:hover {
-      background-color: #59f68f; }
-  body .claimed-supplier-name {
-    margin: 5% 0 0 5%;
-    font-size: 3em; }
-    body .claimed-supplier-name span {
+    position: fixed;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #abffda;
+    z-index: 9999999;
+    height: 5%;
+    color: #009152; }
+  body .claimed-content-wrapper {
+    margin-top: 21.5%;
+    height: 82vh;
+    overflow: scroll;
+    position: absolute;
+    width: 100%; }
+    body .claimed-content-wrapper .claimed-supplier-name-wrap {
+      width: 100%;
+      font-size: 4em;
+      margin: 2% 0 0 0; }
+      body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name {
+        display: inline-block;
+        width: 49%;
+        padding: 0 0 0 2%; }
+        body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name span {
+          font-size: .75em;
+          font-weight: 700;
+          display: block; }
+      body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org {
+        display: inline-block;
+        width: 46%; }
+        body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org span {
+          font-size: .75em;
+          font-weight: 700;
+          display: block; }
+    body .claimed-content-wrapper .claimed-images {
+      margin: 2% 0 0 0;
+      width: 100%;
       display: block; }
-  body .claimed-image {
-    margin: 5%; }
-  body .claimed-details {
-    margin: 5% 5% 0 5%;
-    font-size: 3em; }
-  body #claimed-map {
-    width: 600px;
-    height: 600px;
-    margin: 2% 0 2% 20%; }
-  body .claimed-location {
-    margin: 5% 0 0 5%;
-    font-size: 3em; }
-  body .claimed-directions-link {
-    display: inline-block;
-    background-color: #3DD6D0;
-    border-radius: 5px;
-    color: white;
-    padding: 8px 0;
-    text-align: center;
-    width: 90%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 3.5em;
-    line-height: 1.5em;
-    margin: 0 0 0 5%; }
-    body .claimed-directions-link:hover {
-      background-color: #2ccec8; }
-  body .claimed-time-calendar-wrap {
-    display: block;
-    font-size: 3em; }
-    body .claimed-time-calendar-wrap .claimed-time-wrap {
-      display: inline;
-      margin: 10px 0; }
-      body .claimed-time-calendar-wrap .claimed-time-wrap .claimed-start {
-        display: inline;
-        padding: 5px; }
-        body .claimed-time-calendar-wrap .claimed-time-wrap .claimed-start span {
-          display: block;
-          font-weight: bold; }
-      body .claimed-time-calendar-wrap .claimed-time-wrap .claimed-end {
-        display: inline;
-        padding: 5px; }
-        body .claimed-time-calendar-wrap .claimed-time-wrap .claimed-end span {
-          display: block;
-          font-weight: bold; }
-    body .claimed-time-calendar-wrap .claimed-iCal {
+      body .claimed-content-wrapper .claimed-images #claimed-map {
+        width: 450px;
+        height: 450px;
+        margin: 2% 0 2% 2%;
+        display: inline-block; }
+      body .claimed-content-wrapper .claimed-images .claimed-post-photo {
+        width: 450px;
+        height: 450px;
+        margin: 2% 0 2% 2%;
+        display: inline-block; }
+    body .claimed-content-wrapper .claimed-buttons-wrap {
+      width: 100%;
       display: block;
-      margin: 5% 0 2% 5%;
-      background-color: #4a1d3b;
-      width: 90%;
-      text-align: center;
-      color: white;
-      padding: 2% 0; }
-  body .claimed-details-title {
-    margin: 5%;
-    font-size: 3em; }
-  body .claimed-mark-as-complete {
-    display: block;
-    width: 90%;
-    text-align: center;
-    margin: 1% 0 1% 5%;
-    background-color: #f06e00;
-    color: white;
-    font-size: 3em;
-    line-height: 1.5em; }
+      height: 15%;
+      border: solid thin #c1c1c1;
+      color: #a8a8a8;
+      margin: 3% 0 0 0; }
+      body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar {
+        display: inline-block;
+        width: 33%;
+        height: 100%;
+        text-align: center;
+        border-right: solid thin #c1c1c1;
+        height: 100%;
+        font-size: 2.5em; }
+        body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar .fa-calendar-plus-o {
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em; }
+      body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat {
+        display: inline-block;
+        width: 33%;
+        height: 100%;
+        text-align: center;
+        border-right: solid thin #c1c1c1;
+        height: 100%;
+        font-size: 2.5em; }
+        body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat .fa-comment {
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em; }
+      body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions {
+        color: #a8a8a8;
+        display: inline-block;
+        width: 33%;
+        height: 100%;
+        text-align: center;
+        height: 100%;
+        text-decoration: none;
+        font-size: 2.5em; }
+        body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions .fa-google {
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em; }
+    body .claimed-content-wrapper .claimed-time-wrap {
+      display: block;
+      width: 95%;
+      font-size: 3em;
+      margin: 2% 0 0 2%; }
+      body .claimed-content-wrapper .claimed-time-wrap .claimed-start span {
+        display: block;
+        font-weight: 700;
+        font-size: .75em; }
+      body .claimed-content-wrapper .claimed-time-wrap .claimed-end span {
+        display: block;
+        font-weight: 700;
+        font-size: .75em; }
+    body .claimed-content-wrapper .claimed-location {
+      width: 95%;
+      font-size: 3em;
+      margin: 2% 0 0 2%; }
+      body .claimed-content-wrapper .claimed-location span {
+        display: block;
+        font-size: .75em;
+        font-weight: 700; }
+    body .claimed-content-wrapper .claimed-details {
+      font-size: 4em;
+      margin: 2% 0 0 2%;
+      display: block; }
+      body .claimed-content-wrapper .claimed-details span {
+        display: block;
+        font-size: .5em;
+        font-weight: 700; }
   body .claimed-bottom-button {
     position: fixed;
     bottom: 0;

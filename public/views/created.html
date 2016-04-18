@@ -4,7 +4,6 @@
 
 <div class = "created-content-wrapper">
 
-
 	<div class="created-post-description">
 		<span>Description:</span>
 		{{post.details}}
@@ -22,7 +21,8 @@
 
 	<div class='created-buttons-wrap'>
 				<div class="created-add-cal" ng-click='addToCalendar()'>
-					<i class="fa fa-calendar-plus-o"></i> add to calendar
+					<i class="fa fa-calendar-plus-o"></i>
+					add to calendar
 				</div>
 				<div class='created-post-chat' ng-click='goToChat(post.id, post.supplier.id, post.claimant_id)'>
 					<i class="fa fa-comment" aria-hidden="true"></i>
@@ -48,7 +48,7 @@
 			<div class="created-add-cal" ng-click='addToCalendar()'>
 				<i class="fa fa-calendar-plus-o"></i> add to calendar
 			</div>
-			<div class='created-post-chat' ng-click='goToChat(post.id, post.supplier.id, post.claimant_id)'>
+			<div class='created-post-chat' ng-click='goToChat(post.id, post.supplier.id, post.claimant_id, post.title)'>
 				<i class="fa fa-comment" aria-hidden="true"></i>
 				Go To Chat
 			</div>
