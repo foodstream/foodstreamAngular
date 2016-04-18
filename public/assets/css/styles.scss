@@ -190,11 +190,10 @@ body{
 //---------sign up page styling------------//
 
   .sign-up-title{
-    // margin-top: 5%;
+    margin-top: 25%;
     padding: 2% 0;
-    font-size: 3em;
+    font-size: 5em;
     text-align: center;
-    background-color: lighten($subheaderbg, 25%)
   }
 
 
@@ -207,11 +206,13 @@ body{
   }
   .sign-up-input {
     width: 80%;
-    border: none;
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 1% 0 5% 10%;
+    border: solid 5px black;
+    margin: 1% 10% 5% 10%;
     color: black;
+    font-size: 4em;
+    line-height: 1em;
+    padding: 3%;
+    box-sizing: border-box;
   }
 
 
@@ -223,7 +224,7 @@ body{
     cursor: pointer;
     width: 80%;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     line-height: 2em;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
@@ -234,7 +235,7 @@ body{
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-size: 2.5em;
+    font-size: 4em;
     line-height: 2em;
     color: white;
     background-color: $buttonbg;
@@ -724,68 +725,97 @@ body{
   }
   //------ Login View------ //
 
-  .landing-login-email-input{
-    width: 80%;
-    border-style: solid thin darken($border, 10%);
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 15% 0 0 10%;
-  }
-
-  .landing-login-password-input{
-    width: 80%;
-    font-size: 2em;
-    line-height: 1.8em;
-    margin: 5% 0 5% 10%;
-  }
-
-  .landing-login-btn{
-    width: 80%;
-    font-size: 2.5em;
-    line-height: 1.8em;
-    text-align: center;
-    margin: 2% 0 5% 10%;
-    background-color: $buttonaccent2;
-    color: white;
-    cursor: pointer;
-    &:hover{
-      background-color: darken($buttonaccent2, 5%);
+    .landing-overlay-content {
+      margin-top: 15%;
+      padding-top: 15%;
+      z-index: 999;
+      background: url('/assets/images/landing_background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
     }
-  }
 
-  .landing-signup-btn{
-    width: 80%;
-    font-size: 2.5em;
-    line-height: 1.8em;
-    text-align: center;
-    margin: 10% 0 5% 10%;
-    background-color: $buttonbg;
-    color: white;
-    cursor: pointer;
-    &:hover{
-      background-color: darken($buttonbg, 5%);
+    .landing-login-email-input{
+      width: 80%;
+      border: solid 5px white;
+      font-size: 4em;
+      line-height: 1em;
+      margin: 5%;
+      padding: 3%;
+      background: transparent;
+      color: white;
     }
-  }
 
-  .login-about {
-	margin: 50px 2.5%;
-	background-color: white;
-	width: 90%;
-	padding: 2% 2%;
-	border: solid 2px darken($border, 10%);
-	color: darken($headerbg, 15%);
-	font-family: sans-serif;
-	text-align: center;
-  }
+    .landing-login-password-input{
+      width: 80%;
+      border: solid 5px white;
+      font-size: 4em;
+      line-height: 1em;
+      margin: 5%;
+      padding: 3%;
+      background: transparent;
+      color: white;
+    }
 
-  .login-legal {
-	margin: 50px 2.5%;
-	width: 90%;
-	padding: 2% 2%;
-	color: darken($headerbg, 15%);
-	font-family: sans-serif;
-   	text-align: center;
-  }
+    .landing-login-btn{
+      width: 80%;
+      font-size: 2.5em;
+      line-height: 1.8em;
+      text-align: center;
+      margin: 2% 0 5% 10%;
+      padding: 2%;
+      background-color: $buttonaccent2;
+      color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: darken($buttonaccent2, 5%);
+      }
+    }
+
+    .landing-signup-btn{
+      width: 80%;
+      font-size: 2.5em;
+      line-height: 1.8em;
+      text-align: center;
+      margin: 5% 0 5% 10%;
+      padding: 2%;
+      background-color: $buttonbg;
+      color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: darken($buttonbg, 5%);
+      }
+    }
+
+    .login-about {
+    	margin: 50px 2.5%;
+    	background-color: transparent;
+    	width: 90%;
+    	padding: 2% 2%;
+    	// border: solid 2px darken($border, 10%);
+    	color: white;
+    	font-family: "Overpass", sans-serif;
+    	text-align: center;
+      font-size: 4em;
+      line-height: 1.5em;
+    }
+
+    .login-legal {
+    	margin: 50px 2.5%;
+    	width: 90%;
+    	padding: 2% 2%;
+    	color: white;
+    	font-family: sans-serif;
+      text-align: center;
+    }
+
+
+    // .login-background {
+    //   z-index: 1;
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    // }
 
     //--------- Profile [public] View-------------//
       .profile-public-info {
