@@ -700,6 +700,10 @@ body {
     background: url("/assets/images/landing_background.jpg");
     background-size: cover;
     background-repeat: no-repeat; }
+    @media screen and (min-width: 1200px) {
+      body .landing-overlay-content {
+        margin-top: 15%;
+        padding-top: 8%; } }
   body .landing-login-email-input {
     width: 80%;
     border: solid 5px white;
@@ -711,11 +715,11 @@ body {
     color: white; }
     @media screen and (min-width: 1200px) {
       body .landing-login-email-input {
-        display: block;
-        margin: .5% 0 0 13%;
-        font-size: 1.2em;
-        width: 30%;
-        text-align: left; } }
+        font-size: 1.5em;
+        width: 35%;
+        margin: 1% 10% 0 13%;
+        padding: 1%;
+        border: solid 3px black; } }
   body .landing-login-password-input {
     width: 80%;
     border: solid 5px white;
@@ -727,11 +731,11 @@ body {
     color: white; }
     @media screen and (min-width: 1200px) {
       body .landing-login-password-input {
-        display: block;
-        margin: .5% 0 0 13%;
-        font-size: 1.2em;
-        width: 30%;
-        text-align: left; } }
+        font-size: 1.5em;
+        width: 35%;
+        margin: 1% 10% 0 13%;
+        padding: 1%;
+        border: solid 3px black; } }
   body .landing-login-btn {
     width: 80%;
     font-size: 2.5em;
@@ -746,11 +750,11 @@ body {
       body .landing-login-btn {
         display: block;
         margin: 3% 0 0 13%;
-        width: 12%;
+        width: 20%;
         text-align: center;
         border-radius: 10px;
         font-size: 2em;
-        line-height: 1.5em;
+        line-height: 1em;
         border: 3px solid #59f68f; } }
     body .landing-login-btn:hover {
       background-color: #59f68f; }
@@ -766,14 +770,14 @@ body {
     cursor: pointer; }
     @media screen and (min-width: 1200px) {
       body .landing-signup-btn {
-        font-size: 1.25em;
         display: block;
+        margin: 3% 0 0 13%;
         width: 20%;
-        margin: 5% 0 0 13%;
         text-align: center;
         border-radius: 10px;
-        line-height: 1.5em;
-        border: 4px solid #2ccec8; } }
+        font-size: 2em;
+        line-height: 1em;
+        border: 3px solid #2ccec8; } }
     body .landing-signup-btn:hover {
       background-color: #2ccec8; }
   body .login-about {
