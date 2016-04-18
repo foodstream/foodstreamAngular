@@ -939,6 +939,38 @@ body {
       font-size: 4em;
       color: #595959;
       background-color: #fcfcfc; }
+  body .created-post-modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
+    body .created-post-modal .created-post-modal-content {
+      position: fixed;
+      height: 30%;
+      width: 60%;
+      margin: 50% 0 0 20%;
+      background-color: white;
+      text-align: center; }
+      body .created-post-modal .created-post-modal-content h1 {
+        font-size: 4em; }
+      body .created-post-modal .created-post-modal-content .created-post-review-input {
+        margin: 5% 0 0 0;
+        width: 50%;
+        border: solid thin #c1c1c1;
+        font-size: 4em; }
+      body .created-post-modal .created-post-modal-content .created-post-button-wrap {
+        font-size: 4em;
+        border: solid thin #c1c1c1;
+        width: 100%;
+        display: block; }
+        body .created-post-modal .created-post-modal-content .created-post-button-wrap .created-post-review-submit {
+          display: inline-block;
+          width: 50%;
+          border: solid thin #c1c1c1; }
+        body .created-post-modal .created-post-modal-content .created-post-button-wrap .created-post-review-cancel {
+          display: inline-block;
+          width: 50%;
+          border: solid thin #c1c1c1; }
   body .created-post-footer-home {
     background-color: #71F79F;
     position: fixed;
