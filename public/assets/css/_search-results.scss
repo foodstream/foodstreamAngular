@@ -62,11 +62,11 @@
           font-size: .75em;
           margin: -4% 25% 1% 0;
           padding: .5%;
-          border: 3px solid lighten($headerbg, 15%);
+          border: 3px solid lighten($buttonbg, 5%);
           border-radius: 7px;
       }
       &:hover{
-        background-color: lighten($headerbg, 10%);
+        background-color: lighten($buttonbg, 10%);
       }
     }
   }
