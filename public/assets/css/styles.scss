@@ -192,7 +192,7 @@ body{
   .sign-up-title{
     margin-top: 25%;
     padding: 2% 0;
-    font-size: 3em;
+    font-size: 5em;
     text-align: center;
   }
 
@@ -207,11 +207,12 @@ body{
   .sign-up-input {
     width: 80%;
     border: solid 5px black;
-    margin: 1% 0 5% 10%;
+    margin: 1% 10% 5% 10%;
     color: black;
     font-size: 4em;
     line-height: 1em;
     padding: 3%;
+    box-sizing: border-box;
   }
 
 
@@ -223,7 +224,7 @@ body{
     cursor: pointer;
     width: 80%;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     line-height: 2em;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
@@ -234,7 +235,7 @@ body{
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-size: 2.5em;
+    font-size: 4em;
     line-height: 2em;
     color: white;
     background-color: $buttonbg;
@@ -733,10 +734,9 @@ body{
       font-size: 2.5em;
       line-height: 1.8em;
       text-align: center;
-      margin: 10% 0 5% 10%;
+      margin: 5% 0 5% 10%;
       padding: 2%;
       background-color: $buttonbg;
-      opacity: 0.8;
       color: white;
       cursor: pointer;
       &:hover{
@@ -754,6 +754,7 @@ body{
     	font-family: "Overpass", sans-serif;
     	text-align: center;
       font-size: 4em;
+      line-height: 1.5em;
     }
 
     .login-legal {
