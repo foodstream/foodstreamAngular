@@ -190,11 +190,10 @@ body{
 //---------sign up page styling------------//
 
   .sign-up-title{
-    // margin-top: 5%;
+    margin-top: 25%;
     padding: 2% 0;
     font-size: 3em;
     text-align: center;
-    background-color: lighten($subheaderbg, 25%)
   }
 
 
@@ -207,11 +206,12 @@ body{
   }
   .sign-up-input {
     width: 80%;
-    border: none;
-    font-size: 2em;
-    line-height: 1.8em;
+    border: solid 5px black;
     margin: 1% 0 5% 10%;
     color: black;
+    font-size: 4em;
+    line-height: 1em;
+    padding: 3%;
   }
 
 
