@@ -1243,6 +1243,15 @@ font-weight: 200;
         font-weight: bold;
       }
     }
+    .created-post-complete-button{
+      border: solid 3px $border;
+      text-align: center;
+      width: 95%;
+      margin: 5%  0 0 2.5%;
+      font-size: 4em;
+      color: lighten(black, 35%);
+      background-color: lighten($border,3%);
+    }
   }
 
 
@@ -1544,7 +1553,7 @@ font-weight: 200;
     .claimed-location{
       width: 95%;
       font-size: 3em;
-      margin: 2% 0 0 2%;
+      margin: 2 0 0 2%;
       span{
         display: block;
         font-size: .75em;

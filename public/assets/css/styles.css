@@ -931,6 +931,14 @@ body {
         font-size: .75em;
         display: block;
         font-weight: bold; }
+    body .created-content-wrapper .created-post-complete-button {
+      border: solid 3px #F4F4F4;
+      text-align: center;
+      width: 95%;
+      margin: 5%  0 0 2.5%;
+      font-size: 4em;
+      color: #595959;
+      background-color: #fcfcfc; }
   body .created-post-footer-home {
     background-color: #71F79F;
     position: fixed;
@@ -1174,7 +1182,7 @@ body {
     body .claimed-content-wrapper .claimed-location {
       width: 95%;
       font-size: 3em;
-      margin: 2% 0 0 2%; }
+      margin: 2 0 0 2%; }
       body .claimed-content-wrapper .claimed-location span {
         display: block;
         font-size: .75em;

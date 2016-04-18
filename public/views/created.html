@@ -42,21 +42,27 @@
 		<span>Pick up by:</span>{{post.end_at}}
 	</div>
 
+	<div class = "created-post-complete-button" ng-click="modalShow = true" ng-show = "post.claimed">
+		Mark as complete
+	</div>
+
+	<div class = "created-post-modal" ng-show = "modalShow">
+		<div class = "created-post-modal-content">
+			<h1>Please rate this claimer from 1-5.</h1>
+			<!-- replace with stars! -->
+			<input class = "created-post-review-input"></input>
+			<div class = "created-post-button-wrap">
+				<div class = "created-post-review-submit" ng-click = "markComplete()">Submit</div>
+				<div class = "created-post-review-cancel" ng-click = "modalShow = false">Cancel</div>
+			</div>
+		</div>
+	</div>
 
 </div>
-<div class='created-buttons-wrap'>
-			<div class="created-add-cal" ng-click='addToCalendar()'>
-				<i class="fa fa-calendar-plus-o"></i> add to calendar
-			</div>
-			<div class='created-post-chat' ng-click='goToChat(post.id, post.supplier.id, post.claimant_id, post.title)'>
-				<i class="fa fa-comment" aria-hidden="true"></i>
-				Go To Chat
-			</div>
-			<a href={{directionsLink}} class="created-post-directions-btn">
-				<i class="fa fa-google" aria-hidden="true"></i>
-				Get Directions
-			</a>
-</div>
+
+
+
+
 
 <!-- Below is footer -->
 
