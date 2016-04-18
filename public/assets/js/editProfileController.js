@@ -17,18 +17,18 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   var lat;
   var lng;
 
-
+  //allow user to logout
   $scope.logout = function(){
-
+    //log them out of the server
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/sessions/logout?token='+$scope.userToken).then(function successCallback(){
       console.log('logged out');
+      //clear everything out of LS on success to log them out of the angular app
       localStorage.clear();
-      logged.token = undefined;
       $location.path('/landing');
     }, function errorCallback(){
       console.log('not logged out');
+      //they arent logged out of the server but we can still 'log them out' on our end by deleting LS
       localStorage.clear();
-      logged.token = undefined;
       $location.path('/landing');
     });
 
@@ -37,7 +37,7 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
   //get user info to migrate onto page
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+$scope.userToken).then(function success(response){
-    console.log(response);
+    //migrate response data to page
     $scope.first = response.data.first_name;
     $scope.last = response.data.last_name;
     $scope.email = response.data.email;
@@ -45,10 +45,14 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     $scope.userLocation = response.data.address_string;
     $scope.userDescription = response.data.description;
     $scope.profilePic = response.data.profile_image;
-    // console.log($scope.profilePic);
   }, function error(response){
     console.log('GET failed', response);
   });
+
+  //click on hidden image submit button to upload photo
+  $scope.addImage = function(){
+    $('#file-input-edit-profile').click();
+  }
 
   //point google places autocomplete to the proper field
   var inputFrom = document.getElementById('edit-profile-location-input');
@@ -57,27 +61,23 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   var autocompleteFrom = new google.maps.places.Autocomplete(inputFrom);
       google.maps.event.addListener(autocompleteFrom, 'place_changed', function() {
           var place = autocompleteFrom.getPlace();
-
+          //set lat/lng
           lat = place.geometry.location.lat();
           lng = place.geometry.location.lng();
           $scope.userLocation = place.formatted_address;
             console.log(lat, lng, $scope.userLocation)
       });
 
+  //click on the submit div to click hidden submit button
+  $scope.submitProfile = function(){
+    $('#edit-profile-submit-btn').click();
+  };
 
   //grab the profile info field info and send it
   $scope.submitEdit = function(file){
-
-    console.log("submit edit button clicked");
-    console.log(file)
-
-    // var param = {first_name:$scope.first, last_name:$scope.last, description:$scope.userDescription, email:$scope.email, orgainization:$scope.org, address_string:$scope.userLocation, latitude:lat, longitude:lng, location_id:null, profile_image: file};
-
-
-    // console.log(param)
-    // $scope.base64file
-    console.log($scope.org);
+    //render profile info as form data
     var formData = new FormData();
+    //if there's no new file, don't send any data
     if( file != undefined){
       formData.append('user[profile_image]', file);
     };
@@ -87,29 +87,30 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     formData.append('user[email]', $scope.email);
     formData.append('user[organization]', $scope.org);
     formData.append('user[address_string]', $scope.userLocation);
+    //if there's no updated lat/long, don't send it
     if(lat != undefined){
       formData.append('user[latitude]', lat);
     };
     if(lng != undefined){
       formData.append('user[longitude]', lng);
     }
-    console.log(formData);
 
-      $http({
-        method: 'PUT',
-        url:'https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+$scope.userToken,
-        data: formData,
-        headers : {'Content-Type': undefined}
-      }).then(function success(response){
-          console.log("edited successfully", response);
-          localStorage.setItem('email', response.data.email);
-          $location.path('/home');
-        }, function error(response){
-          console.log("edit profile failed");
-          console.log(response);
-          // alert('edit failed');
-          $location.path('/home');
-        });
+    //send the updated profile to rails on submit
+    $http({
+      method: 'PUT',
+      url:'https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'?token='+$scope.userToken,
+      data: formData,
+      headers : {'Content-Type': undefined}
+    }).then(function success(response){
+        console.log("edited successfully", response);
+        localStorage.setItem('email', response.data.email);
+        $location.path('/home');
+      }, function error(response){
+        console.log("edit profile failed");
+        console.log(response);
+        // alert('edit failed');
+        $location.path('/home');
+      });
 
   };//close submitEdit function
 

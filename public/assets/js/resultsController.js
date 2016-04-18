@@ -11,25 +11,26 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
   var userLng;
   var param;
 
-  //get the user's geolocation in lat/long
+  //get the user's geolocation in lat/long and use it to send intial search request
   geolocation().then(function (position) {
     $scope.position = position;
-    // console.log($scope.position.coords.latitude)
-    // console.log($scope.position.coords.longitude)
+
+    //set variables to send to rails for search response
     userLat = $scope.position.coords.latitude
     userLng = $scope.position.coords.longitude
-    param = {latitude:userLat, longitude:userLng, radius:$scope.distanceInput}
-    console.log(param)
+    // param = {latitude:userLat, longitude:userLng, radius:$scope.distanceInput}
+    // console.log(param)
+    //send variables to rails for search by location diameter response
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/search.json?token='+token+'&latitude='+userLat+'&longitude='+userLng+'&radius='+$scope.distanceInput).then(function successCallback(response){
       console.log(response.data);
+      //set the data for showing the search results
       $scope.posts = response.data;
     }, function errorCallback(resonse){
       console.log(response);
     });
-  }, function (reason) {
-    $scope.message = "Could not be determined."
   });
 
+  //subsequent search requests
   $scope.search = function(){
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/search.json?token='+token+'&latitude='+userLat+'&longitude='+userLng+'&radius='+$scope.distanceInput).then(function successCallback(response){
       console.log(response.data);
@@ -40,21 +41,10 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
   }
 
 
-
-
-
-  //get posts data
-  // $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/search.json?token='+token).then(function successCallback(response){
-  //   // console.log(response.data);
-  //   $scope.posts = response.data;
-  // }, function errorCallback(resonse){
-  //   console.log(response);
-  // });
-
   //get details of clicked post
   $scope.getDetails = function(postId){
     // console.log('clicked');
-    // console.log(postId);
+    console.log(postId);
     localStorage.setItem('resultsPostId', postId);
     $location.path('/details')
   }

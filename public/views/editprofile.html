@@ -11,7 +11,7 @@
 
 <img class='edit-profile-image' ng-src = "{{profilePic}}" width = "500px"></img>
 
-
+<div class='edit-profile-add-image' ng-click='addImage()'>Add An Image</div>
 
 
   <input class='edit-profile-first-name' type=text placeholder='First Name' ng-model = "first">
@@ -23,9 +23,10 @@
 
   <textarea class='edit-profile-description' type=text placeholder='Describe Yourself' ng-model = "userDescription"></textarea>
 
-  <input type = "submit" value = "Submit Profile" class='edit-profile-submit-btn' ng-click = "submitEdit(file)"/>
+  <input type = "submit" value = "Submit Profile" id='edit-profile-submit-btn' ng-click = "submitEdit(file)"/>
 
 
-  <input id="file-input" name='file' type="file" ngf-select ng-model="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
+  <input id="file-input-edit-profile" name='file' type="file" ngf-select ng-model="file" ngf-pattern="'image/*'" ngf-capture="'other'" accept="image/*" ngf-max-size="20MB" ngf-min-height="100">
 
 </div>
+<!-- <div class='edit-profile-footer' ng-click='submitProfile()'>Submit Profile</div> -->

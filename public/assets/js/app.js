@@ -1,10 +1,8 @@
-//add fastclick.js to make site more mobile-friendly
-
 //initiate angular app
 var foodStream = angular.module("foodStream", ['ngRoute', 'ngFileUpload']);
 
 
-//this controller shows an icon in the header upon user login
+//this controller shows an icon in the header upon user login and deals with routing in the app header
 foodStream.controller('appController', ['$http', '$scope', '$location', function($http, $scope, $location){
 
   //create a variable that changes when user is logged in for ng-show
@@ -104,6 +102,13 @@ angular.module('foodStream').run(function($rootScope, $location, $route, logged)
         }
     });
 });
+
+//spoof a csrf token so rails stops being a butt
+foodStream.config([
+  "$httpProvider", function($httpProvider) {
+    $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+  }
+]);
 
 
 

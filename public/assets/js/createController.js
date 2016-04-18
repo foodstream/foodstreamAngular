@@ -22,7 +22,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
   var autocompleteFrom = new google.maps.places.Autocomplete(inputFrom);
     google.maps.event.addListener(autocompleteFrom, 'place_changed', function() {
         var place = autocompleteFrom.getPlace();
-
+        //set lat/lng/addy
         lat = place.geometry.location.lat();
         lng = place.geometry.location.lng();
         address = place.formatted_address;
@@ -42,28 +42,26 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
   $(".create-end-time-na").pickatime({
   format: 'h:iA'});
 
-
-
-  $scope.nonce = Math.floor(Math.random()*99999);
-
-
+  //submit the post
   $scope.submitNewPost = function(file){
-
+    //set post values
     title = $('.create-title').val();
-
+    //create starting date for rails
     startDate = $('.create-start-na').val()
     startTime = $('.create-start-time-na').val();
-    //create starting date for rails
     startString = startDate.concat(' ' + startTime);
+    //create ending date for rails
     endDate = $('.create-end-na').val();
     endTime = $(".create-end-time-na").val();
-    //create ending date for rails
     endString = endDate.concat(' ' + endTime);
-
     description = $('.create-description').val();
 
+    //set form data
     var formData = new FormData();
+        //only send the image if the user sets an image
+        if(file != undefined){
         formData.append('post[post_image]', file);
+        };
         formData.append('post[title]', title);
         formData.append('post[details]', description);
         formData.append('post[start_at]', startString);
@@ -78,19 +76,16 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
     //send post values to rails to create a post!
     $http({
       method: 'POST',
-      url:'https://sheltered-wildwood-38449.herokuapp.com/posts.json?token=' + token,
+      url:'https://sheltered-wildwood-38449.herokuapp.com/posts?token=' + token,
       data : formData,
       headers : {'Content-Type': undefined}
     }).then(function successCallback(response){
       console.log('new post was created');
-      // console.log(response, response.data.id);
-      localStorage.setItem('createdPostId', response.data.id)
-
-
+      //set post id into LS so that we can migrate data to created view
+      localStorage.setItem('postId', response.data.id)
       $location.path('/created')
     }, function errorCallback(response){
       console.log('post not created', response);
-      // console.log(startString, endString);
     });
 
   };//end of submit new post

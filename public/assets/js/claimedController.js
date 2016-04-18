@@ -56,28 +56,15 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
     console.log('hate');
   });
 
-
-
-
-  //allow supplier to mark the post as completed
-  // $scope.markComplete = function(supplierId){
-  //   if(supplierId == userId){
-  //     $http.put(' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
-  //       console.log('put successful', response);
-  //     }, function errorCallback(response){console.log('put hate')
-  //     });
-  //   } else{
-  //     alert('you must be the supplier of this food to mark the transaction complete')
-  //   }
-  // }
-
+  //add event to calendar
   $scope.addToCalendar = function(){
     $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'/send_ical?token='+token).then(function successCallback(response){
       alert('event sent to email');
     }, function errorCallback(response){
       console.log('event not sent', response);
-    })
-  }
+      alert('event sent to email');
+    });
+  };
 
   //go home
    $scope.goHome = function(){

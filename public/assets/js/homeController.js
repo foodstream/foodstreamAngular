@@ -4,8 +4,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
   var token = localStorage.getItem('token');
   //get userID out of ls
   var userId = localStorage.getItem('userId');
-  // console.log(userId)
-  // console.log(token);
+
 
 
   //define post variables
@@ -17,6 +16,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
     url:' https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token
   }).then(function successCallback(response){
     console.log(response.data);
+    //set data for ng-repeat
     $scope.posts = response.data;
   }, function errorCallback(response){
     // console.log(response)
@@ -36,8 +36,9 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
   $scope.seeProvided = function(){
     $scope.filters = {};
     $scope.filters.supplier_id = userId;
-  }
+  };
 
+  //go to the chat
   $scope.goToChat = function(chatId, claimantId, supplierId, postTitle){
     console.log(chatId, claimantId, supplierId, postTitle)
     localStorage.setItem('chatId', chatId);
@@ -47,8 +48,9 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
     $location.path('/chat');
   }
 
-  //get the ID of the post a user wants more details on, and take them to that page
+  //get the ID of the post a user wants more details on, and take them to claimed if they are the claimer and created if they are the supplier
   $scope.detailsId = function(postId, supplierId, claimantId){
+    console.log(postId, supplierId, claimantId)
     localStorage.setItem('postId', postId);
     if(supplierId == userId){
       $location.path('/created');
