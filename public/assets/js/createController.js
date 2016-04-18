@@ -15,6 +15,7 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
   var lat;
   var lng;
 
+
   //point google places autocomplete to proper field
   var inputFrom = document.getElementById('create-post-location');
 
@@ -41,6 +42,10 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
   format: 'yyyy/mm/dd'});
   $(".create-end-time-na").pickatime({
   format: 'h:iA'});
+
+  $scope.addPic = function(){
+    $('#file-input').click();
+  }
 
   //submit the post
   $scope.submitNewPost = function(file){

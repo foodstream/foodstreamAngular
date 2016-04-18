@@ -3,10 +3,16 @@ var foodStream = angular.module("foodStream", ['ngRoute', 'ngFileUpload']);
 
 
 //this controller shows an icon in the header upon user login and deals with routing in the app header
-foodStream.controller('appController', ['$http', '$scope', '$location', function($http, $scope, $location){
+foodStream.controller('appController', ['$http', '$scope', '$location', 'logged', '$rootScope', function($http, $scope, $location, logged, $rootScope){
 
   //create a variable that changes when user is logged in for ng-show
-  $scope.logged=false;
+
+$scope.pic = logged.pic;
+  // $scope.logged = function($scope, logged){
+  //         return logged.pic;
+  //       };
+
+
   //get login token out of localstorage
   $scope.userToken = localStorage.getItem('token');
   //get userId out of localstorage
@@ -19,15 +25,16 @@ foodStream.controller('appController', ['$http', '$scope', '$location', function
         $scope.last = response.data.last_name;
         $scope.email = response.data.email;
         $scope.org = response.data.organization;
+        $scope.pic = response.data.profile_image
     }, function error(response){
       console.log('GET failed in appController');
   });
 
   //if a token exists, log the user in
-  if($scope.userToken != null){
-    $scope.logged = true;
-    // console.log('logged', $scope.logged)
-  };
+  // if($scope.userToken != null){
+  //   $scope.logged = true;
+  //   // console.log('logged', $scope.logged)
+  // };
 
   //when you click on the user icon, you go to the edit profile page...
   $scope.goToProfile = function(){
@@ -48,11 +55,12 @@ foodStream.factory('getPostDetail', function() {
  });
 
 //this factory checks for a token, and if there is one tells the routing to let the user see more than just login/landing
-foodStream.factory('logged', function(){
+foodStream.factory('logged', function($rootScope){
  var logged = {}
    var userToken = localStorage.getItem('token');
    if(userToken != null){
      logged.token = userToken;
+     logged.pic = true;
    }
 
  return logged;
@@ -96,20 +104,13 @@ angular.module('foodStream').run(function($rootScope, $location, $route, logged)
 
     //allow user to use non-public routes only if token present
     $rootScope.$on('$routeChangeStart', function(event, nextLoc, currentLoc) {
+
         var closedToPublic = (-1 === routesOpenToPublic.indexOf($location.path()));
         if(closedToPublic && logged.token == undefined) {
             $location.path('/login');
-        }
+        };
     });
 });
-
-//spoof a csrf token so rails stops being a butt
-foodStream.config([
-  "$httpProvider", function($httpProvider) {
-    $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
-  }
-]);
-
 
 
 

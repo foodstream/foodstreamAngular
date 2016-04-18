@@ -1,53 +1,67 @@
-<!-- <div class = "created-content-wrapper"> -->
-	<!-- <div class = "created-info"> -->
-		<div class="created-post-title">{{post.title}}</div>
+<div class="created-post-title">
+	{{post.title}}
+</div>
 
-
-    <div class = "created-info">
-
-		<div class="created-post-images">
-
+<div class = "created-content-wrapper">
 
 	<div class="created-post-description">
-	{{post.details}}
+		<span>Description:</span>
+		{{post.details}}
 	</div>
-	<div class='created-post-chat' ng-click='goToChat(post.id, post.supplier.id, post.claimant_id)'>
-		Go To Chat <i class="fa fa-comment" aria-hidden="true"></i>
-	</div>
+
+
 	<div class="created-post-images">
+	  <div id='created-post-gmap'></div>
+		<img class='created-post-photo' ng-src = "{{post.post_image}}" width = "400px" height='400px'></img>
+	</div>
+	<div class="created-post-address">
+		<span>Address:</span>{{post.address_string}}
+	</div>
 
-			  <div id='created-post-gmap'></div>
-				<img class='created-post-photo' ng-src = "{{post.post_image}}" width = "400px" height='400px'></img>
 
-		</div>
+	<div class='created-buttons-wrap'>
+				<div class="created-add-cal" ng-click='addToCalendar()'>
+					<i class="fa fa-calendar-plus-o"></i>
+					add to calendar
+				</div>
+				<div class='created-post-chat' ng-click='goToChat(post.id, post.supplier.id, post.claimant_id)'>
+					<i class="fa fa-comment" aria-hidden="true"></i>
+					Go To Chat
+				</div>
+				<a href={{directionsLink}} class="created-post-directions-btn">
+					<i class="fa fa-google" aria-hidden="true"></i>
+					Get Directions
+				</a>
+	</div>
 
-		<div class="created-post-location">
 
+<<<<<<< HEAD
 			<a href={{directionsLink}} class="created-post-directions-btn">
 				Directions
 			</a>
-
-		</div>
-
-		<div class="created-post-address">
-			<span>Address:</span>{{post.address_string}}
-		</div>
-
-
-
-				<div class="created-post-start">
-					<span>Starts at:</span>{{post.start_at}}
-				</div>
-				<div class="created-post-end">
-					<span>Pick up by:</span>{{post.end_at}}
-				</div>
-
-				<div class="ical" ng-click='addToCalendar()'>
-					<i class="fa fa-calendar-plus-o fa-4x"></i> add to calendar
-				</div>
-		</div>
+=======
+	<div class="created-post-start">
+		<span>Starts at:</span>{{post.start_at}}
 	</div>
+	<div class="created-post-end">
+		<span>Pick up by:</span>{{post.end_at}}
+	</div>
+>>>>>>> dev
+
+	<div class = "created-post-complete-button" ng-click="modalShow = true" ng-show = "post.claimed">
+		Mark as complete
+	</div>
+
+
+
+</div>
+
+
+
+
+
 <!-- Below is footer -->
+
 	<div class="created-post-footer-home" ng-click='goHome()'>
 		Home
 	</div>
@@ -57,4 +71,19 @@
 	<div class="created-post-footer-delete" ng-click='deletePost()'>
 		Delete
 	</div>
+<<<<<<< HEAD
 <!-- </div> -->
+=======
+
+	<div class = "created-post-modal" ng-show = "modalShow">
+		<div class = "created-post-modal-content">
+			<h1>Please rate this claimer from 1-5.</h1>
+			<!-- replace with stars! -->
+			<input class = "created-post-review-input"></input>
+			<div class = "created-post-button-wrap">
+				<div class = "created-post-review-submit" ng-click = "markComplete()">Submit</div>
+				<div class = "created-post-review-cancel" ng-click = "modalShow = false">Cancel</div>
+			</div>
+		</div>
+	</div>
+>>>>>>> dev

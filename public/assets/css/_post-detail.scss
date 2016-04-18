@@ -4,6 +4,10 @@
   margin: 5% 0;
   width: 100%;
   text-align: center;
+  position: fixed;
+  top: 4.5%;
+  background-color: lighten($headerbg, 35%);
+  height: 5%;
 
 }
 
@@ -11,10 +15,10 @@
   margin: 5%;
   font-size: 3em;
   .post-detail-rating{
-	display: block;
+    display: block;
   }
   span {
-	font-weight: bold;
+    font-weight: bold;
   }
 }
 
@@ -52,62 +56,22 @@
 .post-detail-start {
   margin: 5%;
   display: block;
+  // border: solid thin black;
   span{
-	font-size: 2em;
-	display: block;
-	font-weight: bold;
+    font-size: 2em;
+    display: block;
+    font-weight: bold;
   }
+
 }
+
 .post-detail-end {
   margin: 5%;
   display: block;
+  // border: solid thin black;
   span{
-	font-size: 2em;
-	display: block;
-	font-weight: bold;
-  }
-}
-.post-detail-claim-button {
-  background-color: $buttonaccent2;
-  color: white;
-  font-size: 4em;
-  line-height: 1.5em;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 50.2%;
-  width: 49.8%;
-  cursor: pointer;
-  @media screen and (min-width: $break-large) {
-		border-top: 6px solid darken($buttonaccent2, 5%);
-		border-left: 6px solid darken($buttonaccent2, 5%);
-		font-size: 2em;
-		font-weight: 600;
-		line-height: 1.75em;
-	}
-  &:hover{
-	background-color: darken($buttonaccent2, 5%);
-  }
-}
-
-.post-detail-bottom-button {
-  background-color: $buttonbg;
-  color: white;
-  font-size: 4em;
-  line-height: 1.5em;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 49.7%;
-  cursor: pointer;
-  @media screen and (min-width: $break-large) {
-		border-top: 6px solid darken($buttonbg, 5%);
-		border-right: 6px solid darken($buttonbg, 5%);
-		font-size: 2em;
-		font-weight: 600;
-		line-height: 1.75em;
-	}
-  &:hover{
-	background-color: darken($buttonbg, 5%);
+    font-size: 2em;
+    display: block;
+    font-weight: bold;
   }
 }

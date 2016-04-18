@@ -1,20 +1,21 @@
-.home-content-wrapper {
-    margin: 30% 0 20% 0;
-    background-color: lighten($bodybg, 3%);
-    @media screen and (min-width: $break-large) {
-        margin: 15% 0 15% 0;
-    }
-}
+// .home-content-wrapper {
+//     margin: 30% 0 20% 0;
+//     background-color: lighten($bodybg, 3%);
+//     @media screen and (min-width: $break-large) {
+//         margin: 15% 0 15% 0;
+//     }
+// }
 
 .home-subheader{
-    background-color:lighten($headerbg, 35%);
-    width: 100%;
-    height: 3.5%;
-    color: darken($headerbg, 10%);
-    font-size: 3em;
-    position: fixed;
-    top: 7%;
-    z-index: 999;
+  background-color:lighten($headerbg, 35%);
+  width: 100%;
+  height: 3.5%;
+
+  color: darken($headerbg, 10%);
+  font-size: 3em;
+  position: fixed;
+  top: 7%;
+  z-index: 999;
     @media screen and (min-width: $break-large) {
         padding: 1.75% 0 .15% 0;
         font-size: 1.5em;
@@ -24,15 +25,15 @@
         top: 50px;
         z-index: 0;
     }
-  .home-subheader-see-all{
-    line-height: 1.2em;
-    text-align: center;
-    display: inline-block;
-    width: 32.5%;
-    cursor: pointer;
-    &:hover{
-      background-color: lighten($headerbg, 25%);
-    }
+    .home-subheader-see-all{
+      line-height: 1.2em;
+      text-align: center;
+      display: inline-block;
+      width: 32.5%;
+      cursor: pointer;
+      &:hover{
+        background-color: lighten($headerbg, 25%);
+      }
     @media screen and (min-width: $break-large) {
     &:hover{
       background-color: lighten($headerbg, 25%);
@@ -48,9 +49,8 @@
     width: 32.5%;
     margin: 0 0 0 -1%;
     cursor: pointer;
-      // background-color: lighten($subheaderbg, 20%);
     &:hover{
-      background-color: lighten($subheaderbg, 15%);
+      background-color: lighten($headerbg, 25%);
     }
     @media screen and (min-width: $break-large) {
     &:hover{
@@ -66,7 +66,7 @@
     width: 32.5%;
     cursor: pointer;
     &:hover{
-      background-color: lighten($subheaderbg, 15%);
+      background-color: lighten($headerbg, 25%);
     }
     @media screen and (min-width: $break-large) {
     &:hover{
@@ -76,7 +76,15 @@
     }
   }
 }
-.home-card {
+.home-content-wrapper {
+  width: 100%;
+  margin: 19.5% 0 0 0;
+  background-color: lighten($bodybg, 3%);
+  // border: solid thin black;
+  height: 83vh;
+  position: absolute;
+  overflow: scroll;
+  .home-card {
     display: block;
     height: $cardHeight;
     border: solid 2px darken($border, 5%);
@@ -89,11 +97,11 @@
         margin: 3% 0 3% 2.5%;
         z-index: 1;
     }
-  .home-header {
-    height: $cardHeight / 5;
-    background-color:  lighten($border, 2%);
-    font-size: 3em;
-    font-weight: 700;
+    .home-header {
+      height: $cardHeight / 5;
+      background-color:  lighten($border, 2%);
+      font-size: 3em;
+      font-weight: 700;
     @media screen and (min-width: $break-large) {
         font-size: 1.75em;
         border: 3px solid black;
@@ -148,8 +156,8 @@
         margin-left: 11%;
     }
     .fa-comment{
-      margin: 20% 0 0 0;
-      color: lighten(lightslategray, 15%);
+      margin: 15% 0 0 0;
+      color: lighten(lightslategray, 20%);
       font-size: 6em;
       display: block;
       @media screen and (min-width: $break-large) {
@@ -170,7 +178,7 @@
   }
   .home-details {
     display: inline-block;
-    // background-color: $buttonaccent2;
+
     width: 20%;
     height: $cardHeight * 0.8;
     position: absolute;
@@ -193,8 +201,8 @@
       background-color: lighten($border, 5%);
     }
     .fa-info-circle{
-      margin: 20% 0 0 0;
-      color: lighten(lightslategray, 15%);
+      margin: 15% 0 0 0;
+      color: lighten(lightslategray, 20%);
       font-size: 6em;
       display: block;
       @media screen and (min-width: $break-large) {
@@ -211,19 +219,20 @@
     }
   }
 }
-
-  .home-search{
-    position: fixed;
-    bottom: 0;
-    right: 50%;
-    display: inline-block;
-    width: 50%;
-    background-color: $buttonaccent2;
-    text-align: center;
-    font-size: 4em;
-    line-height: 2em;
-    color: white;
-    cursor: pointer;
+}
+.home-search{
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  display: inline-block;
+  width: 50%;
+  background-color: $buttonaccent2;
+  text-align: center;
+  font-size: 4em;
+  line-height: 1.5em;
+  color: white;
+  cursor: pointer;
+  font-weight: 200;
     @media screen and (min-width: $break-large) {
         border-top: 6px solid darken($buttonaccent2, 5%);
         border-right: 6px solid darken($buttonaccent2, 5%);
@@ -244,9 +253,10 @@
     background-color: $buttonbg;
     text-align: center;
     font-size: 4em;
-    line-height: 2em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
+    font-weight: 200;
     @media screen and (min-width: $break-large) {
         border-top: 6px solid darken($buttonbg, 5%);
         border-left: 6px solid darken($buttonbg, 5%);

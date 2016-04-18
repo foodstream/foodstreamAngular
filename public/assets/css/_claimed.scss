@@ -1,143 +1,165 @@
-.claimed-content-wrapper{
-  margin-top: 10%;
-  height: 88vh;
-  overflow: scroll;
-}
 .claimed-title {
-  font-size: 6em;
-  margin: 5% 0 2% 0;
-  display: inline-block;
+  font-size: 5em;
+  margin: 12.5% 0 0 0;
+  display: block;
   width: 100%;
   text-align: center;
+  position: fixed;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: lighten($headerbg, 35%);
+  z-index: 9999999;
+  height: 5%;
+  color: darken($headerbg, 20%);
 }
-.claimed-chat {
-  display: block;
-  margin: 5% 0 0 5%;
-  width: 90%;
-  font-size: 4em;
-  background-color: $buttonaccent2;
-  color: white;
-  padding: 5px;
-  text-align: center;
-  cursor: pointer;
-  &:hover{
-    background-color: darken($buttonaccent2, 5%);
-  }
-}
-.claimed-supplier-name {
-  margin: 5% 0 0 5%;
-  font-size: 3em;
-  span{
-    display: block;
-  }
-}
-.claimed-image {
-  margin: 5%;
-}
-.claimed-details {
-  margin: 5% 5% 0 5%;
-  font-size: 3em;
-}
-#claimed-map{
-  width: 600px;
-  height: 600px;
-  margin: 2% 0 2% 20%;
-}
-.claimed-location {
-  margin: 5% 0 0 5%;
-  font-size: 3em;
-}
-
-.claimed-location-image {
-  display: inline-block;
-  margin: 5% 0 0 5%;
-}
-.claimed-time-calendar-wrap {
-  display: inline-block;
-  margin-left: 10%;
-
-  .claimed-directions-link{
-    display: inline-block;
-    background-color: $buttonbg;
-    border-radius: 5px;
-    color: white;
-    padding: 8px 0;
-    text-align: center;
-    width: 90%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 3.5em;
-    line-height: 1.5em;
-    margin: 0 0 0 5%;
-    &:hover{
-      background-color: darken($buttonbg, 5%);
-    }
-  }
-
-.claimed-time-calendar-wrap {
-  // border: solid 1px red;
-  display: block;
-  font-size: 3em;
-
-  .claimed-time-wrap {
-    display: inline;
-    margin: 10px 0;
-    .claimed-start {
-      display: inline;
-      padding: 5px;
+.claimed-content-wrapper{
+  margin-top: 21.5%;
+  height: 82vh;
+  overflow: scroll;
+  position: absolute;
+  width: 100%;
+  .claimed-supplier-name-wrap {
+    width: 100%;
+    font-size: 4em;
+    margin: 2% 0 0 0;
+    .claimed-supplier-name{
+      display: inline-block;
+      width: 49%;
+      padding: 0 0 0 2%;
       span{
+        font-size: .75em;
+        font-weight: 700;
         display: block;
-        font-weight: bold;
       }
     }
-    .claimed-end {
-      display: inline;
-      padding: 5px;
+    .claimed-supplier-org{
+      display: inline-block;
+      width: 46%;
       span{
+        font-size: .75em;
+        font-weight: 700;
         display: block;
-        font-weight: bold;
       }
     }
   }
 
-  .claimed-calendar-wrap {
-    display: block;
-    .claimed-iCal {
+    .claimed-images{
+      margin: 2% 0 0 0;
+      width: 100%;
       display: block;
-      margin-top: 10px;
+      // border: solid thin black;
+      #claimed-map{
+        width: 450px;
+        height: 450px;
+        margin: 2% 0 2% 2%;
+        display: inline-block;
+      }
+      .claimed-post-photo{
+        width: 450px;
+        height: 450px;
+        margin: 2% 0 2% 2%;
+        display: inline-block;
+      }
     }
-    .claimed-googleCal {
+    .claimed-buttons-wrap{
+      width: 100%;
       display: block;
-      margin-top: 10px;
-      margin: 5% 0 2% 5%;
-      background-color: $aubergine;
-      width: 90%;
-      text-align: center;
-      color: white;
-      padding: 2% 0;
+      height: 15%;
+      border: solid thin darken($border, 20%);
+      color: darken($border, 30%);
+      margin: 3% 0 0 0;
+      .claimed-calendar{
+        display: inline-block;
+        width: 33%;
+        height: 100%;
+        text-align: center;
+        border-right: solid thin darken($border, 20%);
+        height: 100%;
+        font-size: 2.5em;
+        .fa-calendar-plus-o{
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em;
+        }
+      }
+      .claimed-chat{
+        display: inline-block;
+        width: 33%;
+        height: 100%;
+        text-align: center;
+        border-right: solid thin darken($border, 20%);
+        height: 100%;
+        font-size: 2.5em;
+        .fa-comment{
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em;
+        }
+      }
+      .claimed-directions{
+        color: darken($border, 30%);
+        display: inline-block;
+        width: 33%;
+        height: 100%;
+        text-align: center;
+        height: 100%;
+        text-decoration: none;
+        font-size: 2.5em;
+        .fa-google{
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em;
+        }
+      }
+    }
+    .claimed-time-wrap{
+      display: block;
+      width: 95%;
+      font-size: 3em;
+      margin: 2% 0 0 2%;
+      .claimed-start{
+        span{
+          display: block;
+          font-weight: 700;
+          font-size: .75em;
+        }
+      }
+      .claimed-end{
+        span{
+          display: block;
+          font-weight: 700;
+          font-size: .75em;
+        }
+      }
+    }
+    .claimed-location{
+      width: 95%;
+      font-size: 3em;
+      margin: 2 0 0 2%;
+      span{
+        display: block;
+        font-size: .75em;
+        font-weight: 700;
+      }
+    }
+    .claimed-details{
+      font-size: 4em;
+      margin: 2% 0 0 2%;
+      display: block;
+      span{
+        display: block;
+        font-size: .5em;
+        font-weight: 700;
+      }
     }
   }
-}
-}
-.claimed-details-title {
-  margin: 5%;
-  font-size: 3em;
-}
-.claimed-mark-as-complete{
-  display: block;
-  width: 90%;
-  text-align: center;
-  margin: 1% 0 1% 5%;
-  background-color: $buttonaccent;
-  color: white;
-  font-size: 3em;
-  line-height: 1.5em;
-}
+
 .claimed-bottom-button {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 49.7%;
+  width: 50%;
   text-align: center;
   font-size: 5em;
   line-height: 1.3em;
@@ -156,11 +178,12 @@
     background-color: darken($buttonbg, 5%);
   }
 }
+
 .claimed-remove-button {
   position: fixed;
   bottom: 0;
   width: 50%;
-  left: 50.1%;
+  left: 50%;
   text-align: center;
   font-size: 5em;
   line-height: 1.3em;

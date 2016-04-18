@@ -17,11 +17,14 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
     $location.path('/chat');
   };
 
+  $scope.claimerId;
   //get post information
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
     $scope.post = response.data;
+    console.log($scope.post)
+    $scope.claimerId = response.data.claimant_id;
     console.log($scope.post);
-
+    console.log($scope.post.claimed);
     //use callback lat/long to display google map of post location
     var marker;
     var myLatLng;
@@ -83,16 +86,29 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
     });
   };
 
-}]);
+  modalShow = false;
 
-//allow supplier to mark the post as completed
-// $scope.markComplete = function(supplierId){
-//   if(supplierId == userId){
-//     $http.put(' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
-//       console.log('put successful', response);
-//     }, function errorCallback(response){console.log('put hate')
-//     });
-//   } else{
-//     alert('you must be the supplier of this food to mark the transaction complete')
-//   }
-// }
+  console.log("modalShow value=", modalShow);
+
+  postClaimer = localStorage.getItem("claimer");
+
+  //allow supplier to mark the post as completed
+  $scope.markComplete = function(){
+      console.log("marked as complete");
+      console.log($scope.post.claimed);
+      $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
+        console.log('post completed successfully', response);
+      }, function errorCallback(response){
+        console.log('post not marked as completed');
+      });
+
+      $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/' + postClaimer + '.json?token=' + token + "&user[ratings_attributes][][rating]=" + parseInt($(".created-post-review-input").val(), 10) + "&user[ratings_attributes][][reviewer_id]=" + userId + "&user[ratings_attributes][][reviewed_id]=" + $scope.claimerId)
+        .then(function successCallback(response){
+          console.log('review submitted!');
+        }, function errorCallback(response){
+          console.log("review didn't submit");
+        });
+
+      $location.path('/home');
+  };
+}]);
