@@ -10,7 +10,9 @@ $aubergine: #4a1d3b;
 // $bodybg: white;
 $cardHeight: 20vh;
 
+
 body{
+
   font-family: 'overpass', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
@@ -25,7 +27,7 @@ body{
   .app-header{
     font-weight: 700;
     height: 5%;
-    width: 100vw;
+    width: 100%;
     background-color: $headerbg;
     color: white;
     display: block;
@@ -35,17 +37,22 @@ body{
     top: 0;
     z-index:999;
     img {
-      margin-left: 2%;
+      padding-left: 2%;
     }
     .app-header-txt{
       display: inline-block;
       cursor: pointer;
-      margin: 0 0 0 1%;
+      padding: 0 0 0 1%;
     }
     .app-header-login-icon{
       float: right;
-      margin: 0 2% 0 0;
+      margin: -1% 2% 0 0;
       cursor: pointer;
+      img{
+        width: 100px;
+        height: 100px;
+        border-radius: 3em;
+      }
     }
   }
 
@@ -271,11 +278,7 @@ body{
   }
 
 //------ Home Page/Dashboard ------ //
-  .home-content-wrapper {
-    margin: 30% 0 20% 0;
-    background-color: lighten($bodybg, 3%);
 
-  }
 
   .home-subheader{
     background-color:lighten($headerbg, 35%);
@@ -305,9 +308,8 @@ body{
       width: 32.5%;
       margin: 0 0 0 -1%;
       cursor: pointer;
-        // background-color: lighten($subheaderbg, 20%);
       &:hover{
-        background-color: lighten($subheaderbg, 15%);
+        background-color: lighten($headerbg, 25%);
       }
     }
     .home-subheader-see-provided{
@@ -317,10 +319,18 @@ body{
       width: 32.5%;
       cursor: pointer;
       &:hover{
-        background-color: lighten($subheaderbg, 15%);
+        background-color: lighten($headerbg, 25%);
       }
     }
   }
+  .home-content-wrapper {
+    width: 100%;
+    margin: 19.5% 0 0 0;
+    background-color: lighten($bodybg, 3%);
+    // border: solid thin black;
+    height: 83vh;
+    position: absolute;
+    overflow: scroll;
   .home-card {
     display: block;
     height: $cardHeight;
@@ -365,8 +375,8 @@ body{
       cursor: pointer;
       border-left: solid thin $border;
       .fa-comment{
-        margin: 20% 0 0 0;
-        color: lighten(lightslategray, 15%);
+        margin: 15% 0 0 0;
+        color: lighten(lightslategray, 20%);
         font-size: 6em;
         display: block;
         .home-chat-text{
@@ -375,12 +385,12 @@ body{
         }
       }
       &:hover{
-        background-color: darken($buttonbg, 5%);
+        background-color: lighten($border, 3%);
       }
     }
     .home-details {
       display: inline-block;
-      // background-color: $buttonaccent2;
+
       width: 20%;
       height: $cardHeight * 0.8;
       position: absolute;
@@ -392,8 +402,8 @@ body{
         background-color: lighten($border, 5%);
       }
       .fa-info-circle{
-        margin: 20% 0 0 0;
-        color: lighten(lightslategray, 15%);
+        margin: 15% 0 0 0;
+        color: lighten(lightslategray, 20%);
         font-size: 6em;
         display: block;
         .home-details-text{
@@ -403,7 +413,7 @@ body{
       }
     }
   }
-
+}
     .home-search{
       position: fixed;
       bottom: 0;
@@ -413,9 +423,10 @@ body{
       background-color: $buttonaccent2;
       text-align: center;
       font-size: 4em;
-      line-height: 2em;
+      line-height: 1.5em;
       color: white;
       cursor: pointer;
+      font-weight: 200;
       &:hover{
         background-color: darken($buttonaccent2, 5%);
       }
@@ -429,9 +440,10 @@ body{
       background-color: $buttonbg;
       text-align: center;
       font-size: 4em;
-      line-height: 2em;
+      line-height: 1.5em;
       color: white;
       cursor: pointer;
+      font-weight: 200;
       &:hover{
         background-color: darken($buttonbg, 5%);
       }
@@ -548,79 +560,99 @@ body{
 
   //-------------search results page styling--------------//
 
-  .results-subheader{
+  #search-results-subheader{
     position: fixed;
-    margin: -20% 0 0 0;
+    margin: 13% 0 0 0;
     z-index: 999;
-    background-color: lighten($subheaderbg, 25%);
-    .results-search{
+    background-color:lighten($headerbg, 35%);
+    width: 100%;
+    #search-results-search{
       margin: 2% 0 0 2%;
       width: 95%;
       font-size: 2em;
     }
-    .results-subheader-text{
+    #search-results-subheader-text{
       font-size: 2em;
       margin: 2% 0 0 2%;
       padding: 0 0 2% 0;
       line-height: 2em;
-      .results-distance-input{
+      #search-results-distance-input{
         width: 10%;
         font-size: 1em;
         border: none;
       }
-      .results-subheader-search-button{
+      #search-results-subheader-search-button{
         display: inline-block;
         float: right;
+        // border: solid thin black;
         line-height: 1em;
         margin: 0 2% 2% 0;
-        background-color: lighten($headerbg, 20%);
+        background-color: lighten($buttonbg, 10%);
         padding: 1.5%;
         color: white;
         cursor: pointer;
         &:hover{
-          background-color: lighten($headerbg, 15%);
+          background-color: lighten($headerbg, 10%);
         }
       }
     }
   }
-  .results-butt-content-wrapper{
-  margin: 33% 0 10% 0;
-  }
+.search-results-content-wrapper{
+  margin: 32% 0 0 0;
+  position: absolute;
+  width: 100%;
+  // border: solid thin black;
+  height: 77vh;
+  overflow: scroll;
   .results-card {
     display: block;
     height: $cardHeight;
-    // border: solid 5px $border;
-    background-color: lighten($itembg, 10%);
-    width:95%;
-    margin: 5% 0 5% 2.5%;
+    border: solid 2px darken($border, 5%);
+    background-color: white;
+    width:99.8%;
+    margin: 2.5% 0;
     .results-header {
-      // height: $cardHeight / 4;
-      background-color: lightgray;
-      padding: 2%;
+      height: $cardHeight / 5;
+      background-color: lighten($border, 2%);
+      // padding: 2%;
       font-size: 3em;
       font-weight: 700;
+      width: 100%;
+      // border: solid thin black;
       .results-card-title {
-        width: 60%;
+        // border: solid thin black;
+        padding: 1% 0 0 1%;
+        width: 59%;
         white-space: nowrap;
         display: inline-block;
         overflow: hidden;
         text-overflow: ellipsis;
       }
       .results-card-end {
-        font-size: .5em;
+          // border: solid thin black;
+        font-size: .75em;
         float: right;
-        display: inline;
+        display: inline-block;
+        padding: 1.5% 1% 0 0;
       }
+    }
+
+    .results-add-picture{
+      // position: absolute;
+      margin: 1% 0 0 1%;
+      // display: inline-block;
+      width: 19%;
+
+
     }
     .results-transaction-details {
       display: inline-block;
-      width: 50%;
-      height: $cardHeight * 0.75;
-      // border: solid thin black;
-      margin: 0 0 0 25%;
+      width: 55%;
+      height: $cardHeight * 0.8;
       font-size: 2em;
+
       .results-supplier-name-text{
-        line-height: 1.2em;
+        line-height: 1.5em;
         font-weight: 500;
       }
       .results-transaction-location{
@@ -629,45 +661,26 @@ body{
       }
 
     }
+  }
 
-    .results-add-picture{
-      position: absolute;
-      margin: 2% 0 0 0;
-      display: inline-block;
-      height: $cardHeight * 0.75;
-      width: 20%;
-      text-align: center;
-      .fa-camera-retro{
-        color:darken($border, 25%);
-        font-size: 3em;
-        padding: 25% ;
-        border: solid thin darken($border, 25%);
-        background-color: darken($bodybg, 5%);
-        cursor: pointer;
-        .results-add-picture-txt{
-          display: block;
-          font-size: .3em;
-          font-family: 'overpass', sans-serif;
-          font-weight: 200;
-        }
-      }
-    }
     .results-details {
       display: inline-block;
-      background-color: $buttonbg;
-      width: 23.8%;
-      height: $cardHeight * 0.75;
       position: absolute;
+      width: 22.5%;
+      height: $cardHeight * 0.8;
+      // position: absolute;
       // margin: -33.25% 0 0 72%;
       text-align: center;
       color: white;
       cursor: pointer;
+      border-left: solid thin $border;
       &:hover{
-        background-color: $buttonbg;
+        background-color: lighten($border, 3%);
       }
       .fa-info-circle{
         font-size: 6em;
         margin: 20% 0 0 0;
+          color: lighten(lightslategray, 20%);
         .search-details-text{
           display: block;
           font-family: 'overpass', sans-serif;
@@ -675,6 +688,7 @@ body{
         }
       }
     }
+
   }
   .results-footer{
     background-color: $buttonaccent2;
@@ -682,7 +696,7 @@ body{
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 4.5em;
+    font-size: 4em;
     line-height: 1.3em;
     color: white;
     cursor: pointer;
@@ -862,83 +876,57 @@ body{
 
   //--------- Create View -------------//
     .create-content-wrapper{
-      margin-top: 12%;
+      // margin-top: 12%;
+      // border: solid thin black;
     }
 
-    #create-fileName {
-      margin-left: 2%;
-      background-color: transparent;
-      color: transparent;
-    }
 
-    #create-fileName::-webkit-file-upload-button{
-      visibility: hidden;
-    }
-
-    #create-fileName::before {
-      content: 'Choose image';
-      font-family: sans-serif;
-      color: white;
-      display: inline-block;
-      // border: 1px solid $border;
-      background-color: $buttonbg;
-      padding: 10px;
-      // outline: none;
-      white-space: nowrap;
-      -webkit-user-select: none;
-      cursor: pointer;
-      font-size: 3em;
-    }
-
-    .create-choose-file{
-      margin-left: 2%;
-      font-size: 3em;
-    }
 
     .create-subheader {
       width: 100%;
       font-size: 4em;
       text-align: center;
-      background-color: lighten($subheaderbg, 25%);
+      background-color: lighten($headerbg, 35%);
       line-height: 1.5em;
-      margin-top: 15%;
+      margin-top: 13%;
     }
+    .create-post-add-pic{
+      width: 90%;
+      margin: 5% 5%;
+      background-color: lighten($buttonbg, 10%);
+      color: white;
+      font-size: 5em;
+      line-height: 1.3em;
+      text-align: center;
+
+    }
+    #file-input{
+      display: none;
+    }
+
     .create-title {
       background-color: white;
       width: 95%;
       border: solid 2px $border;
-      font-size: 3em;
+      font-size: 4em;
       margin: 2% 0 0 2.5%;
-      color: black;
+      color: darken($headerbg, 30%);
     }
-    .create-picture {
-      margin: 2% 0;
-      color: black;
-      text-align: center;
-    }
-    .fa-camera-retro{
-      color:darken($border, 25%);
-      padding: 90px 50px;
-      display: inline-block;
-      border: solid thin darken($border, 25%);
-      background-color: darken($bodybg, 5%);
-      cursor: pointer;
-    }
+
     .create-location {
       background-color: white;
       width: 95%;
       border: solid 2px $border;
-      font-size: 1em;
+      font-size: 4em;
       margin: 2% 0 2% 2.5%;
       color: black;
-      font-size: 3em;
     }
     .create-start-na {
       display: inline-block;
       background-color: white;
       width: 40%;
       border: solid 2px $border;
-      font-size: 3em;
+      font-size: 4em;
       margin: 2% 5%;
       color: black;
     }
@@ -947,7 +935,7 @@ body{
       background-color: white;
       width: 40%;
       border: solid 2px $border;
-      font-size: 3em;
+      font-size: 4em;
       margin-top: 2%;
       color: black;
     }
@@ -957,7 +945,7 @@ body{
       background-color: white;
       width: 40%;
       border: solid 2px $border;
-      font-size: 3em;
+      font-size: 4em;
       margin-top: 2%;
       color: black;
     }
@@ -966,21 +954,20 @@ body{
       background-color: white;
       width: 40%;
       border: solid 2px $border;
-      font-size: 3em;
+      font-size: 4em;
       margin-top: 2%;
       color: black
     }
 
     .create-description {
       display: block;
-      height: 25vh;
+      height: 40vh;
       background-color: white;
       width: 95%;
       border: solid 2px $border;
-      font-size: 1em;
+      font-size: 4em;
       margin: 2% 0 0 2.5%;
       color: black;
-      font-size: 3em;
     }
 
 
@@ -1123,143 +1110,143 @@ color: white;
 cursor: pointer;
 font-weight: 200;
 
-&:hover{
- background-color: darken($buttonaccent2, 5%);
-}
+  &:hover{
+   background-color: darken($buttonaccent2, 5%);
+  }
 }
 
 //-------- Created View --------------//
 
-      .created-content-wrapper{
-        margin-top: 12%;
-        overflow: scroll;
-
-      }
-
-      .created-post-title {
-        width: 100%;
-        font-size: 5em;
-        line-height: 1.5em;
-        color: black;
-        text-align: center;
-        background-color: lighten($subheaderbg, 25%);
-      }
-      .created-post-description {
-        width: 95%;
-        font-size: 3em;
-        margin-top: 2%;
-        color: black;
-        display: inline;
-      }
-      .created-post-chat{
-        display: inline-block;
-        background-color: $buttonaccent2;
-        border-radius: 5px;
-        color: white;
-        padding: 8px 0;
-        text-align: center;
-        width: 90%;
-        text-align: center;
-        cursor: pointer;
-        font-size: 3em;
-        line-height: 1.5em;
-        margin: 2% 0 0 5%;
-        &:hover{
-          background-color: darken($buttonaccent2, 5%);
-        }
-      }
-      .created-post-images {
+.created-post-title {
+  width: 100%;
+  font-size: 5em;
+  line-height: 1.5em;
+  color: black;
+  text-align: center;
+  background-color: lighten($headerbg, 35%);
+  position: fixed;
+  margin: 12% 0 0 0;
+}
+.created-content-wrapper{
+  margin-top: 24%;
+  overflow: scroll;
+  // border: solid thin black;
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+    .created-post-description {
+      width: 95%;
+      font-size: 3em;
+      margin: 2% 0 0 2.5%;
+      color: black;
+      display: block;
+      span{
+        font-size: .75em;
+        font-weight: 700;
         display: block;
+      }
+    }
+
+
+    .created-post-images {
+      display: block;
+      // border: solid thin black;
+      margin: 2% 0;
+      .created-post-photo {
+        display: inline-block;
+        height: 450px;
+        width: 450px;
+        margin: 0 1%;
+        // margin: 2% 0 0 5%;
         // border: solid thin black;
-        margin: 2% 0;
-        .created-post-photo {
-          display: inline-block;
+
+        }
+        #created-post-gmap{
+          width:450px;
           height: 450px;
-          width: 450px;
-          margin: 0 1%;
-          // margin: 2% 0 0 5%;
-          // border: solid thin black;
-
-          }
-          #created-post-gmap{
-            width:450px;
-            height: 450px;
-            display: inline-block;
-            margin: 0 1% 0 2%;
-          }
-        }
-
-        .created-post-address {
           display: inline-block;
-          margin: 15px 5% 15px 1.5%;
-          font-size: 3em;
-          span{
-            display: block;
-          }
-        }
-      .created-post-location {
-        display: block;
-
-        .created-post-directions-btn {
-          display: inline-block;
-          background-color: $buttonbg;
-          border-radius: 5px;
-          color: white;
-          padding: 8px 0;
-          text-align: center;
-          width: 80%;
-          text-decoration: none;
-          text-align: center;
-          cursor: pointer;
-          font-size: 3em;
-          line-height: 1.5em;
-          margin: 0 0 0 7.5%;
-          &:hover{
-            background-color: darken($buttonbg, 5%);
-          }
+          margin: 0 1% 0 2%;
         }
       }
 
-      .created-post-start {
-        margin: 2% 2.5%;
-        font-size: 3em;
-        span{
-          font-size: .75em;
-          display: block;
-          font-weight: bold;
-        }
-      }
-      .created-post-end {
-        margin: 2% 2.5%;
-        font-size: 3em;
-        span{
-          font-size: .75em;
-          display: block;
-          font-weight: bold;
-        }
-      }
-
-
-      .ical {
+      .created-post-address {
         display: inline-block;
-        background-color: $aubergine;
-        border-radius: 5px;
-        color: white;
-        padding: 8px 0;
-        text-align: center;
-        width: 90%;
-        text-align: center;
-        cursor: pointer;
+        margin: 15px 5% 15px 1.5%;
         font-size: 3em;
-        line-height: 1.5em;
-        margin: 2% 0 0 5%;
-        &:hover{
-          background-color: darken($aubergine, 5%);
-        }
-        i{
-          font-size:1em;
+        span{
+          font-weight: 700;
+
+          display: block;
         }
       }
+
+      .created-buttons-wrap{
+        width: 100%;
+        height: 15%;
+        border: solid thin darken($border, 20%);
+        display: block;
+        color: darken($border, 30%);
+        .created-add-cal{
+          display: inline-block;
+          width: 33%;
+          text-align: center;
+          border-right: solid thin darken($border, 20%);
+          height: 100%;
+          font-size: 2.5em;
+          .fa-calendar-plus-o{
+            margin: 5% 0 4% 0;
+            display: block;
+            font-size: 2.5em;
+          }
+        }
+        .created-post-chat{
+          display: inline-block;
+          width: 33%;
+          text-align: center;
+          border-right: solid thin darken($border, 20%);
+          height: 100%;
+          font-size: 2.5em;
+          .fa-comment{
+            margin: 5% 0 4% 0;
+            display: block;
+            font-size: 2.5em;
+          }
+        }
+        .created-post-directions-btn{
+          color: darken($border, 30%);
+          display: inline-block;
+          width: 33%;
+          text-align: center;
+          height: 100%;
+          text-decoration: none;
+          font-size: 2.5em;
+          .fa-google{
+            margin: 5% 0 4% 0;
+            display: block;
+            font-size: 2.5em;
+          }
+        }
+      }
+
+    .created-post-start {
+      margin: 2% 2.5%;
+      font-size: 3em;
+      display: block;
+      span{
+        font-size: .75em;
+        display: block;
+        font-weight: bold;
+      }
+    }
+    .created-post-end {
+      margin: 2% 2.5%;
+      font-size: 3em;
+      span{
+        font-size: .75em;
+        display: block;
+        font-weight: bold;
+      }
+
 
   .created-post-complete-button {
     color: white;
@@ -1268,6 +1255,9 @@ font-weight: 200;
     padding: 2%;
     font-size: 2em;
     text-align: center;
+
+    }
+
   }
 
   .created-post-modal {
@@ -1349,7 +1339,7 @@ font-weight: 200;
     }
   }
   .created-post-footer-delete {
-    background-color: $aubergine;
+    background-color: $buttonaccent2;
     position: fixed;
     bottom: 0;
     width: 33.33%;
@@ -1361,7 +1351,7 @@ font-weight: 200;
     cursor: pointer;
     font-weight: 200;
     &:hover{
-      background-color: darken($aubergine, 5%);
+      background-color: darken($buttonaccent2, 5%);
     }
   }
 
@@ -1397,7 +1387,6 @@ font-weight: 200;
         box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     }
     .chat-current-user-response{
-      // border: solid thin black;
       margin: 2% 0 2% 30%;
       width: 65%;
       display: block;
@@ -1428,7 +1417,6 @@ font-weight: 200;
       .fa-paper-plane-o{
         display: inline-block;
         font-size: 3.5em;
-        // margin: 0 0 0 -1%;
         padding: 2%;
         color: white;
         background-color: $buttonbg;
@@ -1476,61 +1464,62 @@ font-weight: 200;
 
 // ------------ Your Claimed Posts --------- //
 
-.claimed-content-wrapper{
-  margin-top: 10%;
-  height: 88vh;
-  overflow: scroll;
-}
-
-.claimed-title {
-  font-size: 6em;
-  margin: 5% 0 2% 0;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-}
-
-.claimed-chat {
-  display: block;
-  margin: 5% 0 0 5%;
-  width: 90%;
-  font-size: 4em;
-  background-color: $buttonaccent2;
-  color: white;
-  padding: 5px;
-  text-align: center;
-  cursor: pointer;
-  &:hover{
-    background-color: darken($buttonaccent2, 5%);
+  .claimed-content-wrapper{
+    margin-top: 10%;
+    height: 88vh;
+    overflow: scroll;
   }
-}
 
-.claimed-supplier-name {
-  margin: 5% 0 0 5%;
-  font-size: 3em;
-  span{
+  .claimed-title {
+    font-size: 6em;
+    margin: 5% 0 2% 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .claimed-chat {
     display: block;
+    margin: 5% 0 0 5%;
+    width: 90%;
+    font-size: 4em;
+    background-color: $buttonaccent2;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
   }
-}
 
-.claimed-image {
-  margin: 5%;
-}
+  .claimed-supplier-name {
+    margin: 5% 0 0 5%;
+    font-size: 3em;
+    span{
+      display: block;
+    }
+  }
 
-.claimed-details {
-  margin: 5% 5% 0 5%;
-  font-size: 3em;
-}
-#claimed-map{
-  width: 600px;
-  height: 600px;
-  margin: 2% 0 2% 20%;
-}
+  .claimed-image {
+    margin: 5%;
+  }
 
-.claimed-location {
-  margin: 5% 0 0 5%;
-  font-size: 3em;
-}
+  .claimed-details {
+    margin: 5% 5% 0 5%;
+    font-size: 3em;
+  }
+
+  #claimed-map{
+    width: 600px;
+    height: 600px;
+    margin: 2% 0 2% 20%;
+  }
+
+  .claimed-location {
+    margin: 5% 0 0 5%;
+    font-size: 3em;
+  }
 
 
   .claimed-directions-link{
@@ -1595,56 +1584,56 @@ font-weight: 200;
   }
 
 
-.claimed-details-title {
-  margin: 5%;
-  font-size: 3em;
-}
-
-.claimed-mark-as-complete{
-  display: block;
-  width: 90%;
-  text-align: center;
-  margin: 1% 0 1% 5%;
-  background-color: $buttonaccent;
-  color: white;
-  font-size: 3em;
-  line-height: 1.5em;
-}
-
-
-.claimed-bottom-button {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  text-align: center;
-  font-size: 5em;
-  line-height: 1.3em;
-  color: white;
-  cursor: pointer;
-  background-color: $buttonbg;
-  cursor: pointer;
-  &:hover{
-    background-color: darken($buttonbg, 5%);
+  .claimed-details-title {
+    margin: 5%;
+    font-size: 3em;
   }
-}
 
-.claimed-remove-button {
-  position: fixed;
-  bottom: 0;
-  width: 50%;
-  left: 50%;
-  text-align: center;
-  font-size: 5em;
-  line-height: 1.3em;
-  color: white;
-  cursor: pointer;
-  background-color: $buttonaccent2;
-  cursor: pointer;
-  &:hover{
-    background-color: darken($buttonaccent2, 5%);
+  .claimed-mark-as-complete{
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 1% 0 1% 5%;
+    background-color: $buttonaccent;
+    color: white;
+    font-size: 3em;
+    line-height: 1.5em;
   }
-}
+
+  .claimed-bottom-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    background-color: $buttonbg;
+    cursor: pointer;
+      &:hover{
+        background-color: darken($buttonbg, 5%);
+      }
+  }
+
+  .claimed-remove-button {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    left: 50%;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    background-color: $buttonaccent2;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($buttonaccent2, 5%);
+    }
+  }
 
 }
 //close body
+}

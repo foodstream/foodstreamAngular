@@ -10,7 +10,7 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
   // console.log(postId);
 
   //remove the post ID b/c it's a one-time need..or not, because people will go back after getting directions
-  // localStorage.removeItem('postId');
+  // localhttps://sheltered-wildwood-38449.herokuapp.com
 
   $scope.goToChat = function(postId, supplierId, claimantId){
     localStorage.setItem('chatId', postId);

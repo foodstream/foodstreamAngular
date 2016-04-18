@@ -68,3 +68,4 @@ foodStream.controller('detailController', ['$http', '$scope', '$location', funct
   }
 
 }]);
+// https://sheltered-wildwood-38449.herokuapp.com
