@@ -23,9 +23,8 @@
   @media screen and (min-width: $break-large) {
       font-size: 1.5em;
       width: 35%;
-      margin: 1% 10% 0 33%;
+      margin: 5% 10% 0 33%;
       padding: 1%;
-      border: solid 3px black;
   }
 }
 
@@ -43,7 +42,6 @@
       width: 35%;
       margin: 1% 10% 0 33%;
       padding: 1%;
-      border: solid 3px black;
   }
 }
 
@@ -119,10 +117,18 @@
 }
 
 .login-legal {
-    margin: 50px 2.5% 0 2.5%;
+    margin: 50px 2.5%;
     width: 90%;
-    padding: 6% 2%;
+    padding: 2% 2%;
     color: white;
     font-family: sans-serif;
-  text-align: center;
+    text-align: center;
+    @media screen and (min-width: $break-large) {
+        margin: 50px 2.5% 0 2.5%;
+        width: 90%;
+        padding: 4% 2%;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+    }
 }

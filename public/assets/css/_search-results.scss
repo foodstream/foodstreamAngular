@@ -11,7 +11,6 @@
       z-index: 0;
       font-size: 1.75em;
       text-align: left;
-      border-bottom: 3px solid darken($headerbg, 5%);
       color: darken($headerbg, 5%);
   }
   #search-results-search{
@@ -176,7 +175,6 @@ overflow: scroll;
   cursor: pointer;
   font-weight: 200;
   @media screen and (min-width: $break-large) {
-      border-top: 6px solid darken($buttonaccent2, 5%);
       font-size: 2em;
       line-height: 1.75em;
       font-weight: 600;

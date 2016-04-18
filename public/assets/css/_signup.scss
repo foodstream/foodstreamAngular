@@ -82,7 +82,6 @@
   cursor: pointer;
   @media screen and (min-width: $break-large) {
       position: fixed;
-      border-top: 6px solid darken($buttonbg, 5%);
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em;
