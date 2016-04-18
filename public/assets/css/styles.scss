@@ -432,71 +432,113 @@ body{
     top: 4.5%;
     background-color: lighten($headerbg, 35%);
     height: 5%;
-
   }
 
-  .post-detail-supplier-name {
-    margin: 5%;
-    font-size: 3em;
-    .post-detail-rating{
+  .post-detail-content-wrapper{
+    width: 100%;
+    position: absolute;
+    top: 12.5%;
+    height: 82vh;
+    .post-detail-supplier-wrap{
+      margin: 2% 0;
+      width: 100%;
       display: block;
+      font-size: 4em;
+      .post-detail-supplier-name {
+        width: 47%;
+        display: inline-block;
+        margin: 0 0 0 2%;
+        span {
+          font-weight: bold;
+          font-size: .75em;
+          display: block;
+        }
+      }
+      .post-detail-org{
+        width: 49%;
+        display: inline-block;
+        span {
+          font-weight: bold;
+          font-size: .75em;
+          display: block;
+        }
+      }
     }
-    span {
-      font-weight: bold;
-    }
-  }
-
-  .post-detail-image {
-    margin: 5%;
-  }
-
-  .post-detail-details {
-    margin: 5%;
-  }
-
-  .post-detail-location {
-    margin: 5%;
-    font-weight: bold;
-  }
-
-  .post-detail-directions-link {
-    color: white;
-    background-color: $buttonbg;
-    padding: 5px 15px;
-    text-decoration: none;
-    font-size: 2em;
-  }
-
-  .post-detail-location-image {
-    margin: 5%;
-  }
-
-  #post-detail-map{
-    height: 500px;
-    width: 500px;
-    margin-bottom: 25px;
-  }
-
-  .post-detail-start {
-    margin: 5%;
-    display: block;
-    // border: solid thin black;
-    span{
-      font-size: 2em;
+    .post-detail-details{
+      width: 96%;
       display: block;
-      font-weight: bold;
+      font-size: 4em;
+      margin: 2% 0 2% 2%;
+      span{
+        display: block;
+        font-weight: bold;
+        font-size: .75em;
+      }
     }
-
-  }
-
-  .post-detail-end {
-    margin: 5%;
-    display: block;
-    // border: solid thin black;
-    span{
-      font-size: 2em;
+    .post-detail-images{
       display: block;
-      font-weight: bold;
+      width: 100%;
+      .post-detail-img{
+        height: 450px;
+        width: 450px;
+        display: inline-block;
+        // margin: 2%;
+          margin: 0 2%;
+      }
+      #post-detail-map{
+        height: 450px;
+        width: 450px;
+        display: inline-block;
+
+      }
+    }
+    .post-detail-location{
+      display: block;
+      width: 96%;
+      margin: 2% 0 2% 2%;
+      font-size: 4em;
+      font-weight: normal;
+      span{
+        display:block;
+        font-size: .75em;
+        font-weight: bold;
+      }
+    }
+    .post-detail-directions-link{
+      display: block;
+      text-decoration: none;
+      border: solid 3px $border;
+      text-align: center;
+      width: 95%;
+      margin: 2.5%  0 0 2.5%;
+      font-size: 4em;
+      line-height: 1.5em;
+      color: lighten(black, 35%);
+      background-color: lighten($border,3%);
+    }
+    .post-detail-time-wrap{
+      width: 96%;
+      margin: 2% 0 2% 2%;
+      font-size: 4em;
+      font-weight: normal;
+      .post-detail-start{
+        display: inline-block;
+        width: 49%;
+        span{
+          display: block;
+          font-weight: bold;
+          font-size: .75em;
+        }
+      }
+      .post-detail-end{
+        display: inline-block;
+        width: 49%;
+        span{
+          display: block;
+          font-weight: bold;
+          font-size: .75em;
+        }
+      }
     }
   }
 
@@ -865,14 +907,21 @@ body{
       margin-top: 13%;
     }
     .create-post-add-pic{
-      width: 90%;
-      margin: 5% 5%;
-      background-color: lighten($buttonbg, 10%);
-      color: white;
-      font-size: 5em;
-      line-height: 1.3em;
-      text-align: center;
 
+      border: solid 3px $border;
+      text-align: center;
+      width: 95%;
+      margin: 2%  0 2%  2.5%;
+      font-size: 4em;
+      color: lighten(black, 35%);
+      background-color: lighten($border,3%);
+      line-height: 1.2em;
+      .fa-camera-retro{
+        display:block;
+        color: lighten(black, 55%);
+        margin: 2% 0;
+        font-size: 2em;
+      }
     }
     #file-input{
       display: none;
@@ -971,47 +1020,46 @@ body{
   width: 100%;
   font-size: 4em;
   text-align: center;
-  background-color: lighten($subheaderbg, 25%);
+  background-color: lighten($headerbg, 25%);
   line-height: 1.5em;
-  margin-top: -8%;
+  margin-top: 12%;
   position: fixed;
+  color: darken($headerbg, 15%);
 }
 .edit-post-content-wrapper{
-  margin-top: 20%;
+  margin-top: 22%;
   overflow: scroll;
-  height: 90vh;
+  height: 81vh;
+  border: solid thin black;
+  position: absolute;
+  .edit-post-image{
+    height: 450px;
+    width: 450px;
+    margin: 2% 0 0 28%;
+  }
 }
 #file-input-edit-post{
   display: none;
 }
 .edit-post-add-image{
-  background-color: $buttonbg;
-  width: 90%;
-  color: white;
+  border: solid 3px $border;
   text-align: center;
-  font-size: 3em;
+  width: 95%;
+  margin: 1%  0 2%  2.5%;
+  font-size: 4em;
+  color: lighten(black, 35%);
+  background-color: lighten($border,3%);
+  line-height: 1.2em;
 }
 .edit-post-title {
   background-color: white;
   width: 95%;
   border: solid 2px $border;
-  font-size: 3em;
+  font-size: 4em;
   margin: 2% 0 0 2.5%;
   color: black;
 }
-.edit-post-picture {
-  margin: 2% 0;
-  color: black;
-  text-align: center;
-}
-.fa-camera-retro{
-  color:darken($border, 25%);
-  padding: 90px 50px;
-  display: inline-block;
-  border: solid thin darken($border, 25%);
-  background-color: darken($bodybg, 5%);
-  cursor: pointer;
-}
+
 .edit-post-location {
   background-color: white;
   width: 95%;
@@ -1019,14 +1067,14 @@ body{
   font-size: 1em;
   margin: 2% 0 2% 2.5%;
   color: black;
-  font-size: 3em;
+  font-size: 4em;
 }
 .edit-post-start-na {
   display: inline-block;
   background-color: white;
   width: 40%;
   border: solid 2px $border;
-  font-size: 3em;
+  font-size: 4em;
   margin: 2% 5%;
   color: black;
 }
@@ -1035,7 +1083,7 @@ body{
   background-color: white;
   width: 40%;
   border: solid 2px $border;
-  font-size: 3em;
+  font-size: 4em;
   margin-top: 2%;
   color: black;
 }
@@ -1045,7 +1093,7 @@ body{
   background-color: white;
   width: 40%;
   border: solid 2px $border;
-  font-size: 3em;
+  font-size: 4em;
   margin-top: 2%;
   color: black;
 }
@@ -1054,7 +1102,7 @@ body{
   background-color: white;
   width: 40%;
   border: solid 2px $border;
-  font-size: 3em;
+  font-size: 4em;
   margin-top: 2%;
   color: black
 }
@@ -1065,10 +1113,9 @@ body{
   background-color: white;
   width: 95%;
   border: solid 2px $border;
-  font-size: 1em;
   margin: 2% 0 0 2.5%;
   color: black;
-  font-size: 3em;
+  font-size: 4em;
 }
 
 
@@ -1110,7 +1157,7 @@ font-weight: 200;
   height: 80vh;
     .created-post-description {
       width: 95%;
-      font-size: 3em;
+      font-size: 4em;
       margin: 2% 0 0 2.5%;
       color: black;
       display: block;
@@ -1130,7 +1177,8 @@ font-weight: 200;
         display: inline-block;
         height: 450px;
         width: 450px;
-        margin: 0 1%;
+
+        margin: 0 1% 0 2%;
         // margin: 2% 0 0 5%;
         // border: solid thin black;
 
@@ -1139,17 +1187,18 @@ font-weight: 200;
           width:450px;
           height: 450px;
           display: inline-block;
-          margin: 0 1% 0 2%;
+            margin: 0 1%;
         }
       }
 
       .created-post-address {
-        display: inline-block;
-        margin: 15px 5% 15px 1.5%;
-        font-size: 3em;
+        display: block;
+        width: 96%;
+        margin: 2% 0 0 2%;
+        font-size: 4em;
         span{
           font-weight: 700;
-
+          font-size: .75em;
           display: block;
         }
       }
@@ -1201,11 +1250,14 @@ font-weight: 200;
           }
         }
       }
-
-    .created-post-start {
-      margin: 2% 2.5%;
-      font-size: 3em;
+    .created-post-time-wrap{
+      width: 96%;
+      margin: 2% 0 0 2%;
       display: block;
+    .created-post-start {
+      font-size: 4em;
+      display: inline-block;
+      width: 48%;
       span{
         font-size: .75em;
         display: block;
@@ -1213,19 +1265,29 @@ font-weight: 200;
       }
     }
     .created-post-end {
-      margin: 2% 2.5%;
-      font-size: 3em;
+      font-size: 4em;
+      display: inline-block;
+      width: 48%;
       span{
         font-size: .75em;
         display: block;
         font-weight: bold;
       }
     }
+  }
+  .created-post-claimed-info{
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin: 2% 0 0 0;
+  }
     .created-post-complete-button{
       border: solid 3px $border;
       text-align: center;
       width: 95%;
-      margin: 5%  0 0 2.5%;
+      margin: 1%  0 0 2.5%;
       font-size: 4em;
       color: lighten(black, 35%);
       background-color: lighten($border,3%);
@@ -1549,10 +1611,12 @@ font-weight: 200;
     }
     .claimed-time-wrap{
       display: block;
-      width: 95%;
-      font-size: 3em;
+      width: 96%;
+      font-size: 4em;
       margin: 2% 0 0 2%;
       .claimed-start{
+        width: 49%;
+        display: inline-block;
         span{
           display: block;
           font-weight: 700;
@@ -1560,6 +1624,8 @@ font-weight: 200;
         }
       }
       .claimed-end{
+        width: 49%;
+        display: inline-block;
         span{
           display: block;
           font-weight: 700;
@@ -1569,8 +1635,9 @@ font-weight: 200;
     }
     .claimed-location{
       width: 95%;
-      font-size: 3em;
-      margin: 2 0 0 2%;
+      font-size: 4em;
+      margin: 2% 0 0 2%;
+      display: block;
       span{
         display: block;
         font-size: .75em;
