@@ -322,7 +322,11 @@ body {
     font-weight: 700;
     margin: 5% 0;
     width: 100%;
-    text-align: center; }
+    text-align: center;
+    position: fixed;
+    top: 4.5%;
+    background-color: #abffda;
+    height: 5%; }
   body .post-detail-supplier-name {
     margin: 5%;
     font-size: 3em; }

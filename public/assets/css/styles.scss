@@ -420,12 +420,18 @@ body{
 
 // ---------- Post Detail from Search ---------
 
+
+
   .post-detail-title {
     font-size: 4em;
     font-weight: 700;
     margin: 5% 0;
     width: 100%;
     text-align: center;
+    position: fixed;
+    top: 4.5%;
+    background-color: lighten($headerbg, 35%);
+    height: 5%;
 
   }
 
