@@ -69,8 +69,6 @@ body {
         background-color: #ffc08a; }
   body .edit-profile-image {
     margin: 2% 0 2% 25%; }
-  body .edit-profile-rating {
-    font-size: 3em; }
   body .edit-profile-add-image {
     background-color: #3DD6D0;
     color: white;
@@ -936,299 +934,297 @@ body {
         font-size: .75em;
         display: block;
         font-weight: bold; }
-      body .created-content-wrapper .created-post-end .created-post-complete-button {
-        color: white;
-        background-color: #3DD6D0;
-        margin: 2% 10%;
-        padding: 2%;
-        font-size: 2em;
-        text-align: center; }
-    body .created-content-wrapper .created-post-modal {
-      background: rgba(0, 0, 0, 0.8);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 999; }
-      body .created-content-wrapper .created-post-modal .created-post-modal-content {
-        padding-top: 5%;
-        font-size: 4em;
-        background-color: white;
-        color: black;
-        width: 60%;
-        height: 30%;
-        margin: 30% 20%; }
-        body .created-content-wrapper .created-post-modal .created-post-modal-content h1 {
-          text-align: center; }
-        body .created-content-wrapper .created-post-modal .created-post-modal-content .created-post-review-input {
-          border: solid 2px #cecece;
-          display: block;
-          font-size: 1em;
-          width: 30%;
-          margin: 10% 35%; }
-        body .created-content-wrapper .created-post-modal .created-post-modal-content .created-post-review-submit {
-          color: white;
-          background-color: #3DD6D0;
-          display: inline-block;
-          padding: 2%; }
-        body .created-content-wrapper .created-post-modal .created-post-modal-content .created-post-review-cancel {
-          color: white;
-          background-color: #f06e00;
-          display: inline-block;
-          padding: 2%; }
-        body .created-content-wrapper .created-post-modal .created-post-modal-content .created-post-button-wrap {
-          width: 80%;
-          margin: 20% 10%; }
-    body .created-content-wrapper .created-post-footer-home {
-      background-color: #71F79F;
-      position: fixed;
-      bottom: 0;
-      width: 33.33%;
+    body .created-content-wrapper .created-post-complete-button {
+      border: solid 3px #F4F4F4;
       text-align: center;
-      font-size: 5em;
-      line-height: 1.3em;
-      color: white;
-      cursor: pointer;
-      font-weight: 200; }
-      body .created-content-wrapper .created-post-footer-home:hover {
-        background-color: #59f68f; }
-    body .created-content-wrapper .created-post-footer-edit {
-      background-color: #3DD6D0;
-      position: fixed;
-      bottom: 0;
-      width: 33.33%;
-      margin-left: 33.33%;
-      text-align: center;
-      font-size: 5em;
-      line-height: 1.3em;
-      color: white;
-      cursor: pointer;
-      font-weight: 200; }
-      body .created-content-wrapper .created-post-footer-edit:hover {
-        background-color: #2ccec8; }
-    body .created-content-wrapper .created-post-footer-delete {
-      background-color: #71F79F;
-      position: fixed;
-      bottom: 0;
-      width: 33.33%;
-      margin-left: 66.33%;
-      text-align: center;
-      font-size: 5em;
-      line-height: 1.3em;
-      color: white;
-      cursor: pointer;
-      font-weight: 200; }
-      body .created-content-wrapper .created-post-footer-delete:hover {
-        background-color: #59f68f; }
-    body .created-content-wrapper .chat-subheader {
-      background-color: #fbfbc4;
+      width: 95%;
+      margin: 5%  0 0 2.5%;
       font-size: 4em;
-      line-height: 1.5em;
-      position: fixed;
-      top: 7%;
-      width: 100%;
+      color: #595959;
+      background-color: #fcfcfc; }
+  body .created-post-footer-home {
+    background-color: #71F79F;
+    position: fixed;
+    bottom: 0;
+    width: 33.33%;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200; }
+    body .created-post-footer-home:hover {
+      background-color: #59f68f; }
+  body .created-post-footer-edit {
+    background-color: #3DD6D0;
+    position: fixed;
+    bottom: 0;
+    width: 33.33%;
+    margin-left: 33.33%;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200; }
+    body .created-post-footer-edit:hover {
+      background-color: #2ccec8; }
+  body .created-post-footer-delete {
+    background-color: #71F79F;
+    position: fixed;
+    bottom: 0;
+    width: 33.33%;
+    margin-left: 66.33%;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200; }
+    body .created-post-footer-delete:hover {
+      background-color: #59f68f; }
+  body .chat-subheader {
+    background-color: #fbfbc4;
+    font-size: 4em;
+    line-height: 1.5em;
+    position: fixed;
+    top: 7%;
+    width: 100%;
+    display: block;
+    text-align: center; }
+    body .chat-subheader .chat-other-user-text {
+      font-weight: 700; }
+  body .chat-content-wrapper {
+    margin: 25% 0 0 0;
+    height: 73vh;
+    overflow: scroll; }
+    body .chat-content-wrapper .chat-other-user-response {
+      width: 65%;
       display: block;
-      text-align: center; }
-      body .created-content-wrapper .chat-subheader .chat-other-user-text {
-        font-weight: 700; }
-    body .created-content-wrapper .chat-content-wrapper {
-      margin: 25% 0 0 0;
-      height: 73vh;
-      overflow: scroll; }
-      body .created-content-wrapper .chat-content-wrapper .chat-other-user-response {
-        width: 65%;
-        display: block;
-        font-size: 3em;
-        line-height: 1.2em;
-        background-color: white;
-        border-radius: 0 .3em .3em .3em;
-        margin: 2%;
-        padding: 2% 1%;
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); }
-      body .created-content-wrapper .chat-content-wrapper .chat-current-user-response {
-        margin: 2% 0 2% 30%;
-        width: 65%;
-        display: block;
-        font-size: 3em;
-        line-height: 1.2em;
-        background-color: white;
-        padding: 2% 1%;
-        border-radius: .3em .3em 0 .3em;
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); }
-    body .created-content-wrapper .chat-input-block {
-      margin: 1% 0 1% 0;
-      position: absolute;
-      bottom: 7%;
-      width: 100%;
-      border-top: #a8a8a8;
-      display: block; }
-      body .created-content-wrapper .chat-input-block .chat-input {
-        width: 80%;
-        font-size: 3em;
-        line-height: 1.7em;
-        margin: 0 0 0 5%;
-        border: solid 2px #3DD6D0;
-        border-right: solid 2px transparent;
-        border-radius: 5px; }
-      body .created-content-wrapper .chat-input-block .fa-paper-plane-o {
-        display: inline-block;
-        font-size: 3.5em;
-        padding: 2%;
-        color: white;
-        background-color: #3DD6D0;
-        border-radius: 5px; }
-        body .created-content-wrapper .chat-input-block .fa-paper-plane-o:hover {
-          color: #3DD6D0;
-          background-color: white;
-          border: solid 2px #3DD6D0; }
-    body .created-content-wrapper .chat-home-btn {
-      display: block;
-      background-color: #71F79F;
-      font-size: 5em;
-      line-height: 1.3em;
-      text-align: center;
-      color: white;
-      width: 50%;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      cursor: pointer; }
-      body .created-content-wrapper .chat-home-btn:hover {
-        background-color: #59f68f; }
-    body .created-content-wrapper .chat-back-to-post-btn {
-      display: inline-block;
-      background-color: #3DD6D0;
-      font-size: 5em;
-      line-height: 1.3em;
-      text-align: center;
-      color: white;
-      width: 50%;
-      position: fixed;
-      bottom: 0;
-      left: 50%;
-      cursor: pointer; }
-      body .created-content-wrapper .chat-back-to-post-btn:hover {
-        background-color: #2ccec8; }
-    body .created-content-wrapper .claimed-content-wrapper {
-      margin-top: 10%;
-      height: 88vh;
-      overflow: scroll; }
-    body .created-content-wrapper .claimed-title {
-      font-size: 6em;
-      margin: 5% 0 2% 0;
-      display: inline-block;
-      width: 100%;
-      text-align: center; }
-    body .created-content-wrapper .claimed-chat {
-      display: block;
-      margin: 5% 0 0 5%;
-      width: 90%;
-      font-size: 4em;
-      background-color: #71F79F;
-      color: white;
-      padding: 5px;
-      text-align: center;
-      cursor: pointer; }
-      body .created-content-wrapper .claimed-chat:hover {
-        background-color: #59f68f; }
-    body .created-content-wrapper .claimed-supplier-name {
-      margin: 5% 0 0 5%;
-      font-size: 3em; }
-      body .created-content-wrapper .claimed-supplier-name span {
-        display: block; }
-    body .created-content-wrapper .claimed-image {
-      margin: 5%; }
-    body .created-content-wrapper .claimed-details {
-      margin: 5% 5% 0 5%;
-      font-size: 3em; }
-    body .created-content-wrapper #claimed-map {
-      width: 600px;
-      height: 600px;
-      margin: 2% 0 2% 20%; }
-    body .created-content-wrapper .claimed-location {
-      margin: 5% 0 0 5%;
-      font-size: 3em; }
-    body .created-content-wrapper .claimed-directions-link {
-      display: inline-block;
-      background-color: #3DD6D0;
-      border-radius: 5px;
-      color: white;
-      padding: 8px 0;
-      text-align: center;
-      width: 90%;
-      text-align: center;
-      cursor: pointer;
-      font-size: 3.5em;
-      line-height: 1.5em;
-      margin: 0 0 0 5%; }
-      body .created-content-wrapper .claimed-directions-link:hover {
-        background-color: #2ccec8; }
-    body .created-content-wrapper .claimed-time-calendar-wrap {
-      display: block;
-      font-size: 3em; }
-      body .created-content-wrapper .claimed-time-calendar-wrap .claimed-time-wrap {
-        display: inline;
-        margin: 10px 0; }
-        body .created-content-wrapper .claimed-time-calendar-wrap .claimed-time-wrap .claimed-start {
-          display: inline;
-          padding: 5px; }
-          body .created-content-wrapper .claimed-time-calendar-wrap .claimed-time-wrap .claimed-start span {
-            display: block;
-            font-weight: bold; }
-        body .created-content-wrapper .claimed-time-calendar-wrap .claimed-time-wrap .claimed-end {
-          display: inline;
-          padding: 5px; }
-          body .created-content-wrapper .claimed-time-calendar-wrap .claimed-time-wrap .claimed-end span {
-            display: block;
-            font-weight: bold; }
-      body .created-content-wrapper .claimed-time-calendar-wrap .claimed-iCal {
-        display: block;
-        margin: 5% 0 2% 5%;
-        background-color: #4a1d3b;
-        width: 90%;
-        text-align: center;
-        color: white;
-        padding: 2% 0; }
-    body .created-content-wrapper .claimed-details-title {
-      margin: 5%;
-      font-size: 3em; }
-    body .created-content-wrapper .claimed-mark-as-complete {
-      display: block;
-      width: 90%;
-      text-align: center;
-      margin: 1% 0 1% 5%;
-      background-color: #f06e00;
-      color: white;
       font-size: 3em;
-      line-height: 1.5em; }
-    body .created-content-wrapper .claimed-bottom-button {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 50%;
-      text-align: center;
-      font-size: 5em;
-      line-height: 1.3em;
+      line-height: 1.2em;
+      background-color: white;
+      border-radius: 0 .3em .3em .3em;
+      margin: 2%;
+      padding: 2% 1%;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); }
+    body .chat-content-wrapper .chat-current-user-response {
+      margin: 2% 0 2% 30%;
+      width: 65%;
+      display: block;
+      font-size: 3em;
+      line-height: 1.2em;
+      background-color: white;
+      padding: 2% 1%;
+      border-radius: .3em .3em 0 .3em;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); }
+  body .chat-input-block {
+    margin: 1% 0 1% 0;
+    position: absolute;
+    bottom: 7%;
+    width: 100%;
+    border-top: #a8a8a8;
+    display: block; }
+    body .chat-input-block .chat-input {
+      width: 80%;
+      font-size: 3em;
+      line-height: 1.7em;
+      margin: 0 0 0 5%;
+      border: solid 2px #3DD6D0;
+      border-right: solid 2px transparent;
+      border-radius: 5px; }
+    body .chat-input-block .fa-paper-plane-o {
+      display: inline-block;
+      font-size: 3.5em;
+      padding: 2%;
       color: white;
-      cursor: pointer;
       background-color: #3DD6D0;
-      cursor: pointer; }
-      body .created-content-wrapper .claimed-bottom-button:hover {
-        background-color: #2ccec8; }
-    body .created-content-wrapper .claimed-remove-button {
-      position: fixed;
-      bottom: 0;
-      width: 50%;
-      left: 50%;
-      text-align: center;
-      font-size: 5em;
-      line-height: 1.3em;
-      color: white;
-      cursor: pointer;
-      background-color: #71F79F;
-      cursor: pointer; }
-      body .created-content-wrapper .claimed-remove-button:hover {
-        background-color: #59f68f; }
+      border-radius: 5px; }
+      body .chat-input-block .fa-paper-plane-o:hover {
+        color: #3DD6D0;
+        background-color: white;
+        border: solid 2px #3DD6D0; }
+  body .chat-home-btn {
+    display: block;
+    background-color: #71F79F;
+    font-size: 5em;
+    line-height: 1.3em;
+    text-align: center;
+    color: white;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    cursor: pointer; }
+    body .chat-home-btn:hover {
+      background-color: #59f68f; }
+  body .chat-back-to-post-btn {
+    display: inline-block;
+    background-color: #3DD6D0;
+    font-size: 5em;
+    line-height: 1.3em;
+    text-align: center;
+    color: white;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    cursor: pointer; }
+    body .chat-back-to-post-btn:hover {
+      background-color: #2ccec8; }
+  body .claimed-title {
+    font-size: 5em;
+    margin: 12.5% 0 0 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #abffda;
+    z-index: 9999999;
+    height: 5%;
+    color: #009152; }
+  body .claimed-content-wrapper {
+    margin-top: 21.5%;
+    height: 82vh;
+    overflow: scroll;
+    position: absolute;
+    width: 100%; }
+    body .claimed-content-wrapper .claimed-supplier-name-wrap {
+      width: 100%;
+      font-size: 4em;
+      margin: 2% 0 0 0; }
+      body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name {
+        display: inline-block;
+        width: 49%;
+        padding: 0 0 0 2%; }
+        body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name span {
+          font-size: .75em;
+          font-weight: 700;
+          display: block; }
+      body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org {
+        display: inline-block;
+        width: 46%; }
+        body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org span {
+          font-size: .75em;
+          font-weight: 700;
+          display: block; }
+    body .claimed-content-wrapper .claimed-images {
+      margin: 2% 0 0 0;
+      width: 100%;
+      display: block; }
+      body .claimed-content-wrapper .claimed-images #claimed-map {
+        width: 450px;
+        height: 450px;
+        margin: 2% 0 2% 2%;
+        display: inline-block; }
+      body .claimed-content-wrapper .claimed-images .claimed-post-photo {
+        width: 450px;
+        height: 450px;
+        margin: 2% 0 2% 2%;
+        display: inline-block; }
+    body .claimed-content-wrapper .claimed-buttons-wrap {
+      width: 100%;
+      display: block;
+      height: 15%;
+      border: solid thin #c1c1c1;
+      color: #a8a8a8;
+      margin: 3% 0 0 0; }
+      body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar {
+        display: inline-block;
+        width: 33%;
+        height: 100%;
+        text-align: center;
+        border-right: solid thin #c1c1c1;
+        height: 100%;
+        font-size: 2.5em; }
+        body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar .fa-calendar-plus-o {
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em; }
+      body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat {
+        display: inline-block;
+        width: 33%;
+        height: 100%;
+        text-align: center;
+        border-right: solid thin #c1c1c1;
+        height: 100%;
+        font-size: 2.5em; }
+        body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat .fa-comment {
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em; }
+      body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions {
+        color: #a8a8a8;
+        display: inline-block;
+        width: 33%;
+        height: 100%;
+        text-align: center;
+        height: 100%;
+        text-decoration: none;
+        font-size: 2.5em; }
+        body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions .fa-google {
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em; }
+    body .claimed-content-wrapper .claimed-time-wrap {
+      display: block;
+      width: 95%;
+      font-size: 3em;
+      margin: 2% 0 0 2%; }
+      body .claimed-content-wrapper .claimed-time-wrap .claimed-start span {
+        display: block;
+        font-weight: 700;
+        font-size: .75em; }
+      body .claimed-content-wrapper .claimed-time-wrap .claimed-end span {
+        display: block;
+        font-weight: 700;
+        font-size: .75em; }
+    body .claimed-content-wrapper .claimed-location {
+      width: 95%;
+      font-size: 3em;
+      margin: 2 0 0 2%; }
+      body .claimed-content-wrapper .claimed-location span {
+        display: block;
+        font-size: .75em;
+        font-weight: 700; }
+    body .claimed-content-wrapper .claimed-details {
+      font-size: 4em;
+      margin: 2% 0 0 2%;
+      display: block; }
+      body .claimed-content-wrapper .claimed-details span {
+        display: block;
+        font-size: .5em;
+        font-weight: 700; }
+  body .claimed-bottom-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    background-color: #3DD6D0;
+    cursor: pointer; }
+    body .claimed-bottom-button:hover {
+      background-color: #2ccec8; }
+  body .claimed-remove-button {
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    left: 50%;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.3em;
+    color: white;
+    cursor: pointer;
+    background-color: #71F79F;
+    cursor: pointer; }
+    body .claimed-remove-button:hover {
+      background-color: #59f68f; }
 
 /*# sourceMappingURL=styles.css.map */

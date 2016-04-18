@@ -17,10 +17,12 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
     $location.path('/chat');
   };
 
+  $scope.claimerId;
   //get post information
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
     $scope.post = response.data;
-    localStorage.setItem('claimer', $scope.post.claimant.id);
+    console.log($scope.post)
+    $scope.claimerId = response.data.claimant_id;
     console.log($scope.post);
     console.log($scope.post.claimed);
     //use callback lat/long to display google map of post location
@@ -100,7 +102,7 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
         console.log('post not marked as completed');
       });
 
-      $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/' + postClaimer + '.json?token=' + token + "&user[ratings_attributes][][rating]=" + parseInt($(".created-post-review-input").val(), 10) + "&user[ratings_attributes][][reviewer_id]=" + userId + "&user[ratings_attributes][][reviewed_id]=" + postClaimer)
+      $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/' + postClaimer + '.json?token=' + token + "&user[ratings_attributes][][rating]=" + parseInt($(".created-post-review-input").val(), 10) + "&user[ratings_attributes][][reviewer_id]=" + userId + "&user[ratings_attributes][][reviewed_id]=" + $scope.claimerId)
         .then(function successCallback(response){
           console.log('review submitted!');
         }, function errorCallback(response){
