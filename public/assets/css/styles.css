@@ -27,8 +27,12 @@ body {
       padding: 0 0 0 1%; }
     body .app-header .app-header-login-icon {
       float: right;
-      margin: 0 2% 0 0;
+      margin: -1% 2% 0 0;
       cursor: pointer; }
+      body .app-header .app-header-login-icon img {
+        width: 100px;
+        height: 100px;
+        border-radius: 3em; }
   body .edit-profile-content-wrapper {
     margin-top: 12%;
     overflow: scroll; }
@@ -639,67 +643,43 @@ body {
     font-weight: 200; }
     body .profile-pub-footer .profile-pub-back:hover {
       background-color: #38162c; }
-  body .create-content-wrapper {
-    margin-top: 12%; }
-  body #create-fileName {
-    margin-left: 2%;
-    background-color: transparent;
-    color: transparent; }
-  body #create-fileName::-webkit-file-upload-button {
-    visibility: hidden; }
-  body #create-fileName::before {
-    content: 'Choose image';
-    font-family: sans-serif;
-    color: white;
-    display: inline-block;
-    background-color: #3DD6D0;
-    padding: 10px;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    cursor: pointer;
-    font-size: 3em; }
-  body .create-choose-file {
-    margin-left: 2%;
-    font-size: 3em; }
   body .create-subheader {
     width: 100%;
     font-size: 4em;
     text-align: center;
-    background-color: #fbfbc4;
+    background-color: #abffda;
     line-height: 1.5em;
-    margin-top: 15%; }
+    margin-top: 13%; }
+  body .create-post-add-pic {
+    width: 90%;
+    margin: 5% 5%;
+    background-color: #67dfda;
+    color: white;
+    font-size: 5em;
+    line-height: 1.3em;
+    text-align: center; }
+  body #file-input {
+    display: none; }
   body .create-title {
     background-color: white;
     width: 95%;
     border: solid 2px #F4F4F4;
-    font-size: 3em;
+    font-size: 4em;
     margin: 2% 0 0 2.5%;
-    color: black; }
-  body .create-picture {
-    margin: 2% 0;
-    color: black;
-    text-align: center; }
-  body .fa-camera-retro {
-    color: #b4b4b4;
-    padding: 90px 50px;
-    display: inline-block;
-    border: solid thin #b4b4b4;
-    background-color: #f5e4e8;
-    cursor: pointer; }
+    color: #005e35; }
   body .create-location {
     background-color: white;
     width: 95%;
     border: solid 2px #F4F4F4;
-    font-size: 1em;
+    font-size: 4em;
     margin: 2% 0 2% 2.5%;
-    color: black;
-    font-size: 3em; }
+    color: black; }
   body .create-start-na {
     display: inline-block;
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
-    font-size: 3em;
+    font-size: 4em;
     margin: 2% 5%;
     color: black; }
   body .create-start-time-na {
@@ -707,7 +687,7 @@ body {
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
-    font-size: 3em;
+    font-size: 4em;
     margin-top: 2%;
     color: black; }
   body .create-end-na {
@@ -716,7 +696,7 @@ body {
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
-    font-size: 3em;
+    font-size: 4em;
     margin-top: 2%;
     color: black; }
   body .create-end-time-na {
@@ -724,19 +704,18 @@ body {
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
-    font-size: 3em;
+    font-size: 4em;
     margin-top: 2%;
     color: black; }
   body .create-description {
     display: block;
-    height: 25vh;
+    height: 40vh;
     background-color: white;
     width: 95%;
     border: solid 2px #F4F4F4;
-    font-size: 1em;
+    font-size: 4em;
     margin: 2% 0 0 2.5%;
-    color: black;
-    font-size: 3em; }
+    color: black; }
   body .create-submit-button {
     background-color: #71F79F;
     position: fixed;
@@ -852,105 +831,106 @@ body {
     font-weight: 200; }
     body .edit-post-btn:hover {
       background-color: #59f68f; }
-  body .created-content-wrapper {
-    margin-top: 12%;
-    overflow: scroll; }
   body .created-post-title {
     width: 100%;
     font-size: 5em;
     line-height: 1.5em;
     color: black;
     text-align: center;
-    background-color: #fbfbc4; }
-  body .created-post-description {
-    width: 95%;
-    font-size: 3em;
-    margin-top: 2%;
-    color: black;
-    display: inline; }
-  body .created-post-chat {
-    display: inline-block;
-    background-color: #71F79F;
-    border-radius: 5px;
-    color: white;
-    padding: 8px 0;
-    text-align: center;
-    width: 90%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 3em;
-    line-height: 1.5em;
-    margin: 2% 0 0 5%; }
-    body .created-post-chat:hover {
-      background-color: #59f68f; }
-  body .created-post-images {
-    display: block;
-    margin: 2% 0; }
-    body .created-post-images .created-post-photo {
-      display: inline-block;
-      height: 450px;
-      width: 450px;
-      margin: 0 1%; }
-    body .created-post-images #created-post-gmap {
-      width: 450px;
-      height: 450px;
-      display: inline-block;
-      margin: 0 1% 0 2%; }
-  body .created-post-address {
-    display: inline-block;
-    margin: 15px 5% 15px 1.5%;
-    font-size: 3em; }
-    body .created-post-address span {
-      display: block; }
-  body .created-post-location {
-    display: block; }
-    body .created-post-location .created-post-directions-btn {
-      display: inline-block;
-      background-color: #3DD6D0;
-      border-radius: 5px;
-      color: white;
-      padding: 8px 0;
-      text-align: center;
-      width: 80%;
-      text-decoration: none;
-      text-align: center;
-      cursor: pointer;
+    background-color: #abffda;
+    position: fixed;
+    margin: 12% 0 0 0; }
+  body .created-content-wrapper {
+    margin-top: 24%;
+    overflow: scroll;
+    position: absolute;
+    width: 100%;
+    height: 80vh; }
+    body .created-content-wrapper .created-post-description {
+      width: 95%;
       font-size: 3em;
-      line-height: 1.5em;
-      margin: 0 0 0 7.5%; }
-      body .created-post-location .created-post-directions-btn:hover {
-        background-color: #2ccec8; }
-  body .created-post-start {
-    margin: 2% 2.5%;
-    font-size: 3em; }
-    body .created-post-start span {
-      font-size: .75em;
+      margin: 2% 0 0 2.5%;
+      color: black;
+      display: block; }
+      body .created-content-wrapper .created-post-description span {
+        font-size: .75em;
+        font-weight: 700;
+        display: block; }
+    body .created-content-wrapper .created-post-images {
       display: block;
-      font-weight: bold; }
-  body .created-post-end {
-    margin: 2% 2.5%;
-    font-size: 3em; }
-    body .created-post-end span {
-      font-size: .75em;
+      margin: 2% 0; }
+      body .created-content-wrapper .created-post-images .created-post-photo {
+        display: inline-block;
+        height: 450px;
+        width: 450px;
+        margin: 0 1%; }
+      body .created-content-wrapper .created-post-images #created-post-gmap {
+        width: 450px;
+        height: 450px;
+        display: inline-block;
+        margin: 0 1% 0 2%; }
+    body .created-content-wrapper .created-post-address {
+      display: inline-block;
+      margin: 15px 5% 15px 1.5%;
+      font-size: 3em; }
+      body .created-content-wrapper .created-post-address span {
+        font-weight: 700;
+        display: block; }
+    body .created-content-wrapper .created-buttons-wrap {
+      width: 100%;
+      height: 15%;
+      border: solid thin #c1c1c1;
       display: block;
-      font-weight: bold; }
-  body .ical {
-    display: inline-block;
-    background-color: #4a1d3b;
-    border-radius: 5px;
-    color: white;
-    padding: 8px 0;
-    text-align: center;
-    width: 90%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 3em;
-    line-height: 1.5em;
-    margin: 2% 0 0 5%; }
-    body .ical:hover {
-      background-color: #38162c; }
-    body .ical i {
-      font-size: 1em; }
+      color: #a8a8a8; }
+      body .created-content-wrapper .created-buttons-wrap .created-add-cal {
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+        border-right: solid thin #c1c1c1;
+        height: 100%;
+        font-size: 2.5em; }
+        body .created-content-wrapper .created-buttons-wrap .created-add-cal .fa-calendar-plus-o {
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em; }
+      body .created-content-wrapper .created-buttons-wrap .created-post-chat {
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+        border-right: solid thin #c1c1c1;
+        height: 100%;
+        font-size: 2.5em; }
+        body .created-content-wrapper .created-buttons-wrap .created-post-chat .fa-comment {
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em; }
+      body .created-content-wrapper .created-buttons-wrap .created-post-directions-btn {
+        color: #a8a8a8;
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+        height: 100%;
+        text-decoration: none;
+        font-size: 2.5em; }
+        body .created-content-wrapper .created-buttons-wrap .created-post-directions-btn .fa-google {
+          margin: 5% 0 4% 0;
+          display: block;
+          font-size: 2.5em; }
+    body .created-content-wrapper .created-post-start {
+      margin: 2% 2.5%;
+      font-size: 3em;
+      display: block; }
+      body .created-content-wrapper .created-post-start span {
+        font-size: .75em;
+        display: block;
+        font-weight: bold; }
+    body .created-content-wrapper .created-post-end {
+      margin: 2% 2.5%;
+      font-size: 3em; }
+      body .created-content-wrapper .created-post-end span {
+        font-size: .75em;
+        display: block;
+        font-weight: bold; }
   body .created-post-footer-home {
     background-color: #71F79F;
     position: fixed;
@@ -979,7 +959,7 @@ body {
     body .created-post-footer-edit:hover {
       background-color: #2ccec8; }
   body .created-post-footer-delete {
-    background-color: #4a1d3b;
+    background-color: #71F79F;
     position: fixed;
     bottom: 0;
     width: 33.33%;
@@ -991,7 +971,7 @@ body {
     cursor: pointer;
     font-weight: 200; }
     body .created-post-footer-delete:hover {
-      background-color: #38162c; }
+      background-color: #59f68f; }
   body .chat-subheader {
     background-color: #fbfbc4;
     font-size: 4em;
