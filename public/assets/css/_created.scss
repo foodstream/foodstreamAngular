@@ -230,7 +230,6 @@
     font-weight: 200;
     @media screen and (min-width: $break-large) {
       border-top: 6px solid darken($buttonaccent2, 5%);
-      border-right: 6px solid darken($buttonaccent2, 5%);
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em;
@@ -252,9 +251,7 @@
     cursor: pointer;
     font-weight: 200;
     @media screen and (min-width: $break-large) {
-      border-top: 6px solid darken($aubergine, 5%);
-      border-left: 6px solid darken($aubergine, 5%);
-      border-right: 6px solid darken($aubergine, 5%);
+      border-top: 6px solid darken($buttonbg, 5%);
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em;
@@ -276,8 +273,7 @@
     cursor: pointer;
     font-weight: 200;
     @media screen and (min-width: $break-large) {
-      border-top: 6px solid darken($buttonaccent, 5%);
-      border-left: 6px solid darken($buttonaccent, 5%);
+      border-top: 6px solid darken($buttonaccent2, 5%);
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em;
