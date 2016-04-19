@@ -698,7 +698,8 @@ body {
     width: 100%;
     text-align: center;
     font-size: 4em;
-    line-height: 1.3em;
+    line-height: 1.5em;
+    font-weight: 300;
     color: white;
     cursor: pointer;
     font-weight: 200; }
@@ -1051,7 +1052,6 @@ body {
     margin-top: 22%;
     overflow: scroll;
     height: 81vh;
-    border: solid thin black;
     position: absolute; }
     body .edit-post-content-wrapper .edit-post-image {
       height: 450px;
@@ -1640,7 +1640,8 @@ body {
     position: fixed;
     top: 7%;
     text-align: center;
-    font-size: 5em; }
+    font-size: 5em;
+    z-index: 999; }
   body .edit-profile-top-btn-wrap {
     position: fixed;
     top: 12%;
@@ -1649,7 +1650,8 @@ body {
     display: block;
     height: 4%;
     font-size: 2.5em;
-    background-color: #fefefe; }
+    background-color: #fefefe;
+    z-index: 999; }
     body .edit-profile-top-btn-wrap .edit-profile-change-email {
       display: inline-block;
       width: 33%;
@@ -1728,10 +1730,11 @@ body {
     position: absolute;
     bottom: 0;
     background-color: #71F79F;
+    z-index: 999;
     position: fixed;
     text-align: center;
     font-size: 4em;
-    line-height: 2em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
     font-weight: 200; }
@@ -1766,7 +1769,7 @@ body {
     width: 80%;
     text-align: center;
     font-size: 4em;
-    line-height: 2em; }
+    line-height: 1.5em; }
     body .sign-up-submit-btn:hover {
       background-color: #59f68f; }
   body .sign-up-back-btn {
@@ -1774,7 +1777,7 @@ body {
     bottom: 0;
     width: 100%;
     font-size: 4em;
-    line-height: 2em;
+    line-height: 1.5em;
     color: white;
     background-color: #3DD6D0;
     text-align: center;
@@ -1902,7 +1905,8 @@ body {
     line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    font-weight: 200;
+    z-index: 999; }
     body .home-search:hover {
       background-color: #59f68f; }
   body .home-post {
@@ -1917,7 +1921,8 @@ body {
     line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    font-weight: 200;
+    z-index: 999; }
     body .home-post:hover {
       background-color: #2ccec8; }
   body .post-detail-title {
@@ -1927,9 +1932,10 @@ body {
     width: 100%;
     text-align: center;
     position: fixed;
-    top: 4.5%;
+    top: 4.3%;
     background-color: #abffda;
-    height: 5%; }
+    height: 5%;
+    z-index: 999; }
   body .post-detail-content-wrapper {
     width: 100%;
     position: absolute;
@@ -2021,12 +2027,14 @@ body {
     color: white;
     font-size: 4em;
     line-height: 1.5em;
+    font-weight: 300;
     text-align: center;
     position: fixed;
     bottom: 0;
     left: 50%;
     width: 50%;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 999; }
     body .post-detail-claim-button:hover {
       background-color: #2ccec8; }
   body .post-detail-bottom-button {
@@ -2034,11 +2042,13 @@ body {
     color: white;
     font-size: 4em;
     line-height: 1.5em;
+    font-weight: 300;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 50%;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 999; }
     body .post-detail-bottom-button:hover {
       background-color: #59f68f; }
   body #search-results-subheader {
@@ -2046,7 +2056,8 @@ body {
     margin: 13% 0 0 0;
     z-index: 999;
     background-color: #abffda;
-    width: 100%; }
+    width: 100%;
+    z-index: 999; }
     body #search-results-subheader #search-results-search {
       margin: 2% 0 0 2%;
       width: 95%;
@@ -2057,7 +2068,7 @@ body {
       padding: 0 0 2% 0;
       line-height: 2em; }
       body #search-results-subheader #search-results-subheader-text #search-results-distance-input {
-        width: 10%;
+        width: 7%;
         font-size: 1em;
         border: none; }
       body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button {
@@ -2070,7 +2081,7 @@ body {
         color: white;
         cursor: pointer; }
         body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button:hover {
-          background-color: #2bffa3; }
+          background-color: #52dad5; }
   body .search-results-content-wrapper {
     margin: 32% 0 0 0;
     position: absolute;
@@ -2150,10 +2161,11 @@ body {
     width: 100%;
     text-align: center;
     font-size: 4em;
-    line-height: 1.3em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    font-weight: 300;
+    z-index: 999; }
     body .results-footer:hover {
       background-color: #59f68f; }
   body .landing-overlay-content {
@@ -2313,90 +2325,97 @@ body {
     text-align: center;
     background-color: #abffda;
     line-height: 1.5em;
-    margin-top: 13%; }
-  body .create-post-add-pic {
-    border: solid 3px #F4F4F4;
-    text-align: center;
-    width: 95%;
-    margin: 2%  0 2%  2.5%;
-    font-size: 4em;
-    color: #595959;
-    background-color: #fcfcfc;
-    line-height: 1.2em; }
-    body .create-post-add-pic .fa-camera-retro {
+    margin-top: 13%;
+    z-index: 999; }
+  body .create-content-wrapper {
+    width: 100%;
+    top: 13%;
+    height: 82vh;
+    position: absolute; }
+    body .create-content-wrapper .create-post-add-pic {
+      border: solid 3px #F4F4F4;
+      text-align: center;
+      width: 95%;
+      margin: 2%  0 2%  2.5%;
+      font-size: 4em;
+      color: #595959;
+      background-color: #fcfcfc;
+      line-height: 1.2em; }
+      body .create-content-wrapper .create-post-add-pic .fa-camera-retro {
+        display: block;
+        color: #8c8c8c;
+        margin: 2% 0;
+        font-size: 2em; }
+    body .create-content-wrapper #file-input {
+      display: none; }
+    body .create-content-wrapper .create-title {
+      background-color: white;
+      width: 95%;
+      border: solid 2px #F4F4F4;
+      font-size: 4em;
+      margin: 2% 0 0 2.5%;
+      color: #005e35; }
+    body .create-content-wrapper .create-location {
+      background-color: white;
+      width: 95%;
+      border: solid 2px #F4F4F4;
+      font-size: 4em;
+      margin: 2% 0 2% 2.5%;
+      color: black; }
+    body .create-content-wrapper .create-start-na {
+      display: inline-block;
+      background-color: white;
+      width: 40%;
+      border: solid 2px #F4F4F4;
+      font-size: 4em;
+      margin: 2% 14% 2% 2%;
+      color: black; }
+    body .create-content-wrapper .create-start-time-na {
+      display: inline-block;
+      background-color: white;
+      width: 40%;
+      border: solid 2px #F4F4F4;
+      font-size: 4em;
+      margin-top: 2%;
+      color: black; }
+    body .create-content-wrapper .create-end-na {
+      display: inline-block;
+      margin: 2% 14% 2% 2%;
+      background-color: white;
+      width: 40%;
+      border: solid 2px #F4F4F4;
+      font-size: 4em;
+      color: black; }
+    body .create-content-wrapper .create-end-time-na {
+      display: inline-block;
+      background-color: white;
+      width: 40%;
+      border: solid 2px #F4F4F4;
+      font-size: 4em;
+      margin-top: 2%;
+      color: black; }
+    body .create-content-wrapper .create-description {
       display: block;
-      color: #8c8c8c;
-      margin: 2% 0;
-      font-size: 2em; }
-  body #file-input {
-    display: none; }
-  body .create-title {
-    background-color: white;
-    width: 95%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin: 2% 0 0 2.5%;
-    color: #005e35; }
-  body .create-location {
-    background-color: white;
-    width: 95%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin: 2% 0 2% 2.5%;
-    color: black; }
-  body .create-start-na {
-    display: inline-block;
-    background-color: white;
-    width: 40%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin: 2% 5%;
-    color: black; }
-  body .create-start-time-na {
-    display: inline-block;
-    background-color: white;
-    width: 40%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin-top: 2%;
-    color: black; }
-  body .create-end-na {
-    display: inline-block;
-    margin: 2% 5%;
-    background-color: white;
-    width: 40%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin-top: 2%;
-    color: black; }
-  body .create-end-time-na {
-    display: inline-block;
-    background-color: white;
-    width: 40%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin-top: 2%;
-    color: black; }
-  body .create-description {
-    display: block;
-    height: 40vh;
-    background-color: white;
-    width: 95%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin: 2% 0 0 2.5%;
-    color: black; }
+      height: 40vh;
+      background-color: white;
+      width: 95%;
+      border: solid 2px #F4F4F4;
+      font-size: 4em;
+      margin: 2% 0 0 2.5%;
+      color: black;
+      z-index: 1; }
   body .create-submit-button {
     background-color: #71F79F;
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    font-weight: 200;
+    z-index: 999; }
     body .create-submit-button:hover {
       background-color: #59f68f; }
   body .edit-post-subheader {
@@ -2407,12 +2426,12 @@ body {
     line-height: 1.5em;
     margin-top: 12%;
     position: fixed;
-    color: #00ab61; }
+    color: #00ab61;
+    z-index: 999; }
   body .edit-post-content-wrapper {
     margin-top: 22%;
     overflow: scroll;
     height: 81vh;
-    border: solid thin black;
     position: absolute; }
     body .edit-post-content-wrapper .edit-post-image {
       height: 450px;
@@ -2450,7 +2469,7 @@ body {
     width: 40%;
     border: solid 2px #F4F4F4;
     font-size: 4em;
-    margin: 2% 5%;
+    margin: 2% 15% 2% 2%;
     color: black; }
   body .edit-post-start-time-na {
     display: inline-block;
@@ -2462,7 +2481,7 @@ body {
     color: black; }
   body .edit-post-end-na {
     display: inline-block;
-    margin: 2% 5%;
+    margin: 2% 15% 2% 2%;
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
@@ -2492,11 +2511,12 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    font-weight: 200;
+    z-index: 999; }
     body .edit-post-btn:hover {
       background-color: #59f68f; }
   body .created-post-title {
@@ -2768,7 +2788,8 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    font-weight: 300; }
     body .chat-home-btn:hover {
       background-color: #59f68f; }
   body .chat-back-to-post-btn {
@@ -2782,7 +2803,8 @@ body {
     position: fixed;
     bottom: 0;
     left: 50%;
-    cursor: pointer; }
+    cursor: pointer;
+    font-weight: 300; }
     body .chat-back-to-post-btn:hover {
       background-color: #2ccec8; }
   body .claimed-title {
@@ -2924,8 +2946,9 @@ body {
     left: 0;
     width: 50%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: 300;
     color: white;
     cursor: pointer;
     background-color: #3DD6D0;
@@ -2938,8 +2961,9 @@ body {
     width: 50%;
     left: 50%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: 300;
     color: white;
     cursor: pointer;
     background-color: #71F79F;
