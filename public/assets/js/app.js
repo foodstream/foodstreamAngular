@@ -1,24 +1,12 @@
-// $(document).ready(function(){
-//   'use strict';
-//
-// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-//   // tasks to do if it is a Mobile Device
-//   console.log("Mobile Detected");
-
 //initiate angular app
 var foodStream = angular.module("foodStream", ['ngRoute', 'ngFileUpload']);
 
 
 //this controller shows an icon in the header upon user login and deals with routing in the app header
-foodStream.controller('appController', ['$http', '$scope', '$location', 'logged', '$rootScope', function($http, $scope, $location, logged, $rootScope){
+foodStream.controller('appController', ['$http', '$scope', '$location', 'logged', function($http, $scope, $location, logged){
 
   //create a variable that changes when user is logged in for ng-show
-
-$scope.pic = logged.pic;
-  // $scope.logged = function($scope, logged){
-  //         return logged.pic;
-  //       };
-
+  $scope.pic = logged.pic;
 
   //get login token out of localstorage
   $scope.userToken = localStorage.getItem('token');
@@ -26,6 +14,7 @@ $scope.pic = logged.pic;
   userId = localStorage.getItem('userId');
   $scope.first;
   //check and see if user is logged in...if they are, show a user icon in the header that is a link to the edit-profile page
+  if($scope.pic === true){
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+$scope.userToken).then(function success(response){
         // console.log(response);
         $scope.first = response.data.first_name;
@@ -36,6 +25,7 @@ $scope.pic = logged.pic;
     }, function error(response){
       console.log('GET failed in appController');
   });
+  };
 
   //if a token exists, log the user in
   // if($scope.userToken != null){
@@ -68,6 +58,7 @@ foodStream.factory('logged', function($rootScope){
    if(userToken != null){
      logged.token = userToken;
      logged.pic = true;
+     console.log(logged.pic);
    }
 
  return logged;
@@ -202,16 +193,3 @@ foodStream.config(function($routeProvider){
     });
 
 });
-// else {
-//   $(".app-header").hide();
-//   $(".app-header-txt").hide();
-//   $(".app-header-login-icon").hide();
-//   $(".title").hide();
-//   $(".app-header-login-icon").hide();
-//   $("ng-view").hide();
-//
-//   console.log("Please use your mobile device!!")
-//   $("body").append('<div class = "no-mobile">Please use your mobile device to access this app.</div><img class = "mobile-phone" src = "assets/img/sadPhone.png"></img>')
-//
-// };
-// });
