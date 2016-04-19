@@ -47,7 +47,9 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
     .then(function successCallback(response){
       console.log(response.data);
       $scope.posts = response.data;
-
+      if ($scope.posts.length == 0){
+        $(".search-results-content-wrapper").append("<div>No posts within this radius.</div>");
+      };
     }, function errorCallback(response){
       console.log(response);
     });
