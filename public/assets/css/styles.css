@@ -2159,7 +2159,8 @@ body {
     body .results-footer:hover {
       background-color: #59f68f; }
   body .landing-overlay-content {
-    padding: 15% 0 5% 0;
+    margin-top: -2%;
+    padding: 25% 0 5% 0;
     z-index: 999;
     background: url("/assets/images/landing_background.jpg");
     background-size: cover;
