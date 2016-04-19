@@ -657,6 +657,17 @@ body{
   // border: solid thin black;
   height: 77vh;
   overflow: scroll;
+  .search-results-loading-icon {
+    margin-top: 15%;
+    font-size: 4em;
+    i {
+      margin-left: 32%;
+    }
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
   .results-card {
     display: block;
     height: $cardHeight;
