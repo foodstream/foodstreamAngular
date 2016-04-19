@@ -92,7 +92,6 @@ foodStream.factory("geoLocationService", ['$q', '$window', '$rootScope', functio
 }]);
 
 
-
 //this module locks down any routes not marked as public access unless there is a token present in the logged factory.
 angular.module('foodStream').run(function($rootScope, $location, $route, logged) {
     //tell route provider which routes are public

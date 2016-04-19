@@ -477,6 +477,10 @@ body{
     background-color: lighten($headerbg, 35%);
     height: 5%;
     z-index: 999;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .post-detail-content-wrapper{
@@ -997,8 +1001,9 @@ body{
       text-align: center;
       background-color: lighten($headerbg, 35%);
       line-height: 1.5em;
-      margin-top: 13%;
+      margin-top: 12.5%;
       z-index: 999;
+      position: fixed;
     }
     .create-content-wrapper{
       width: 100%;
@@ -1048,7 +1053,7 @@ body{
       width: 40%;
       border: solid 2px $border;
       font-size: 4em;
-      margin: 2% 14% 2% 2%;
+      margin: 2% 12% 2% 2%;
       color: black;
     }
     .create-start-time-na{
@@ -1062,7 +1067,7 @@ body{
     }
     .create-end-na {
       display: inline-block;
-      margin: 2% 14% 2% 2%;
+      margin: 2% 12% 2% 2%;
       background-color: white;
       width: 40%;
       border: solid 2px $border;
@@ -1553,7 +1558,7 @@ z-index: 999;
       width: 80%;
       font-size: 3em;
       line-height: 1.7em;
-      margin: 0 0 0 5%;
+      margin: 0 0 0 2%;
       border: solid 2px $buttonbg;
       border-right: solid 2px transparent;
       border-radius: 5px;

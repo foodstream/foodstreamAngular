@@ -32,6 +32,13 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
     });
   });
 
+
+  //seach when someone hits enter
+  $scope.searchEnter = function(keyEvent) {
+  if (keyEvent.which === 13)
+    $scope.search();
+  };
+
   //subsequent search requests
   $scope.search = function(){
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/search.json?token='+token+'&latitude='+userLat+'&longitude='+userLng+'&radius='+$scope.distanceInput)

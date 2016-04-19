@@ -68,6 +68,11 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     console.log('user not got', response);
   });
 
+  //send message on enter
+  $scope.chatEnter = function(keyEvent) {
+  if (keyEvent.which === 13)
+    $scope.sendMessage();
+  };
   //send a message
   $scope.sendMessage = function(){
     //create the json to send the message

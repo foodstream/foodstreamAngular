@@ -4,9 +4,9 @@
 
   <div id='search-results-subheader-text'>
     Search for food within
-    <input id= "search-results-distance-input" ng-model='distanceInput'></input>
+    <input id= "search-results-distance-input" ng-model='distanceInput' ng-keypress="searchEnter($event)"></input>
     mi. of my location
-    <div id='search-results-subheader-search-button' ng-click='search()'>
+    <div id='search-results-subheader-search-button' ng-click='search()' >
       Search
       <i class="fa fa-search"></i>
     </div>
