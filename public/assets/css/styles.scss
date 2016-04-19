@@ -156,10 +156,10 @@ body{
     .edit-profile-rating{
       width: 100%;
       text-align: center;
-      font-size: 3em;
+      font-size: 2em;
       .actual-stars {
-        font-size: 2em;
-        color: black;
+        font-size: 1.5em;
+        color: lighten(black, 35%);
       }
     }
     .edit-profile-add-image{
@@ -170,17 +170,18 @@ body{
       color: lighten(black, 35%);
       text-align: center;
       font-size: 3em;
+      line-height: 1.5em;
       margin: 2% 0 0 2.5%;
     }
     .edit-profile-first-name{
       margin: 2% 0 2% 2%;
-      width: 45vw;
+      width: 40vw;
       font-size: 4em;
       border: solid thin darken($border, 5%);
     }
     .edit-profile-last-name{
       margin: 2% 0 0 2%;
-      width: 47vw;
+      width: 40vw;
       font-size: 4em;
       border: solid thin darken($border, 5%);
     }
