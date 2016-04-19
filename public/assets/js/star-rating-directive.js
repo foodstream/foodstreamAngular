@@ -1,4 +1,4 @@
-//based on http://jsfiddle.net/2fahpk7s/
+//based on directive found at http://jsfiddle.net/2fahpk7s/
 
 foodStream.directive('starRating', function () {
     return {
