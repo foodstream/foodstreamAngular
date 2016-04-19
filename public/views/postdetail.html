@@ -10,8 +10,11 @@
       {{post.supplier.first_name}} {{post.supplier.last_name}}
     </div>
     <div class='post-detail-org'>
-      <span>Organization:</span>
-      {{post.supplier.organization}}
+      <!-- <span>Organization:</span>
+      {{post.supplier.organization}} -->
+      <span>Supplier Rating:</span>
+      <div class = "actual-stars" star-rating rating="userRating" read-only="true" max-rating="5"></div>
+
     </div>
 
   </div>
@@ -48,8 +51,7 @@
   </div>
 
   <div class = "post-detail-rating">
-    <span>Supplier Rating:</span>
-    <div class = "actual-stars" star-rating rating="userRating" read-only="true" max-rating="5"></div>
+
   </div>
 
 </div>
