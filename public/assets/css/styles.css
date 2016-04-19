@@ -56,7 +56,6 @@ body {
     width: 100vw;
     height: 5%;
     display: block;
-    color: #00c46f;
     position: fixed;
     top: 7%;
     text-align: center;
@@ -1636,7 +1635,6 @@ body {
     width: 100vw;
     height: 5%;
     display: block;
-    color: #00c46f;
     position: fixed;
     top: 7%;
     text-align: center;
@@ -2527,7 +2525,8 @@ body {
     text-align: center;
     background-color: #abffda;
     position: fixed;
-    margin: 12% 0 0 0; }
+    margin: 12% 0 0 0;
+    z-index: 999; }
   body .created-content-wrapper {
     margin-top: 24%;
     overflow: scroll;
@@ -2681,11 +2680,12 @@ body {
     bottom: 0;
     width: 33.33%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    font-weight: 300;
+    z-index: 999; }
     body .created-post-footer-home:hover {
       background-color: #59f68f; }
   body .created-post-footer-edit {
@@ -2695,11 +2695,12 @@ body {
     width: 33.33%;
     margin-left: 33.33%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    z-index: 999;
+    font-weight: 300; }
     body .created-post-footer-edit:hover {
       background-color: #2ccec8; }
   body .created-post-footer-delete {
@@ -2709,11 +2710,12 @@ body {
     width: 33.33%;
     margin-left: 66.33%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    font-weight: 300;
+    z-index: 999; }
     body .created-post-footer-delete:hover {
       background-color: #59f68f; }
   body .chat-subheader {
@@ -2724,7 +2726,8 @@ body {
     top: 7%;
     width: 100%;
     display: block;
-    text-align: center; }
+    text-align: center;
+    z-index: 999; }
     body .chat-subheader .chat-other-user-text {
       font-weight: 700; }
   body .chat-content-wrapper {
@@ -2780,8 +2783,8 @@ body {
   body .chat-home-btn {
     display: block;
     background-color: #71F79F;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     text-align: center;
     color: white;
     width: 50%;
@@ -2795,8 +2798,8 @@ body {
   body .chat-back-to-post-btn {
     display: inline-block;
     background-color: #3DD6D0;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     text-align: center;
     color: white;
     width: 50%;
