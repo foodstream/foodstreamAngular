@@ -29,6 +29,8 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
       $scope.loadingIcon = false;
     }, function errorCallback(response){
       console.log(response);
+      $scope.loadingIcon = false;
+      $(".search-results-content-wrapper").append("<div class = 'search-error-message'>Sorry, an error occurred.</div>");
     });
   });
 

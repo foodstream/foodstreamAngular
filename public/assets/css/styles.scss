@@ -810,6 +810,13 @@ body{
       background-color: darken($buttonaccent2, 5%);
     }
   }
+
+  .search-error-message {
+    text-align: center;
+    width: 50%;
+    margin: 10% 25%;
+    font-size: 3em;
+  }
   //------ Login View------ //
 
   .landing-overlay-content {
