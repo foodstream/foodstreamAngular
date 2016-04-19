@@ -1938,7 +1938,7 @@ body {
         margin: 2% 0 0 0; }
         body .search-results-content-wrapper .results-card .results-pic-wrap .results-add-picture {
           width: 95%;
-          height: 95%; }
+          height: 200px; }
       body .search-results-content-wrapper .results-card .results-transaction-details {
         margin: 0 0 0 20%;
         display: inline-block;
