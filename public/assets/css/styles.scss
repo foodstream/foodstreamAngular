@@ -45,18 +45,25 @@ body{
         border-bottom: 6px solid darken($headerbg, 5%);
         height: 30px;
         padding: 1.5% 0;
+
+    }
     img {
       padding-left: 2%;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
       @media screen and (min-width: $break-large) {
           width: 40px;
       }
-    }
       padding-left: 2%;
     }
     .app-header-txt{
       display: inline-block;
       cursor: pointer;
       padding: 0 0 0 1%;
+      margin: 1.85% 0 0 0;
+      // border: solid thin black;
+      position: absolute;
     }
     .app-header-login-icon{
       float: right;
@@ -650,6 +657,17 @@ body{
   // border: solid thin black;
   height: 77vh;
   overflow: scroll;
+  .search-results-loading-icon {
+    margin-top: 15%;
+    font-size: 4em;
+    i {
+      margin-left: 32%;
+    }
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
   .results-card {
     display: block;
     height: $cardHeight;

@@ -41,7 +41,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
   //go to the chat
   $scope.goToChat = function(chatId, claimantId, supplierId, postTitle){
     console.log(chatId, claimantId, supplierId, postTitle)
-    localStorage.setItem('chatId', chatId);
+    localStorage.setItem('postId', chatId);
     localStorage.setItem('chatClaimantId', claimantId);
     localStorage.setItem('chatSupplierId', supplierId);
     localStorage.setItem('chatPostTitle', postTitle);
