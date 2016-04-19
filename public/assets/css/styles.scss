@@ -1013,7 +1013,7 @@ body{
       text-align: center;
       background-color: lighten($headerbg, 35%);
       line-height: 1.5em;
-      margin-top: 12%;
+      margin-top: 11%;
       z-index: 999;
       position: fixed;
     }
@@ -1022,12 +1022,12 @@ body{
       top: 13%;
       height: 82vh;
       position: absolute;
-      border: solid thin black;
+      // border: solid thin black;
     .create-post-add-pic{
       border: solid 3px $border;
       text-align: center;
       width: 95%;
-      margin: 2%  0 2%  2.5%;
+      margin: 4%  0 2%  2.5%;
       font-size: 4em;
       color: lighten(black, 35%);
       background-color: lighten($border,3%);
@@ -1049,7 +1049,7 @@ body{
       border: solid 2px $border;
       font-size: 4em;
       margin: 2% 0 0 2.5%;
-      color: darken($headerbg, 30%);
+      color: black;
     }
 
     .create-location {
@@ -1066,7 +1066,7 @@ body{
       width: 40%;
       border: solid 2px $border;
       font-size: 4em;
-      margin: 2% 12% 2% 2%;
+      margin: 2% 9% 2% 2%;
       color: black;
     }
     .create-start-time-na{
@@ -1080,7 +1080,7 @@ body{
     }
     .create-end-na {
       display: inline-block;
-      margin: 2% 12% 2% 2%;
+      margin: 2% 9% 2% 2%;
       background-color: white;
       width: 40%;
       border: solid 2px $border;

@@ -2232,20 +2232,19 @@ body {
     text-align: center;
     background-color: #abffda;
     line-height: 1.5em;
-    margin-top: 12%;
+    margin-top: 11%;
     z-index: 999;
     position: fixed; }
   body .create-content-wrapper {
     width: 100%;
     top: 13%;
     height: 82vh;
-    position: absolute;
-    border: solid thin black; }
+    position: absolute; }
     body .create-content-wrapper .create-post-add-pic {
       border: solid 3px #F4F4F4;
       text-align: center;
       width: 95%;
-      margin: 2%  0 2%  2.5%;
+      margin: 4%  0 2%  2.5%;
       font-size: 4em;
       color: #595959;
       background-color: #fcfcfc;
@@ -2263,7 +2262,7 @@ body {
       border: solid 2px #F4F4F4;
       font-size: 4em;
       margin: 2% 0 0 2.5%;
-      color: #005e35; }
+      color: black; }
     body .create-content-wrapper .create-location {
       background-color: white;
       width: 95%;
@@ -2277,7 +2276,7 @@ body {
       width: 40%;
       border: solid 2px #F4F4F4;
       font-size: 4em;
-      margin: 2% 12% 2% 2%;
+      margin: 2% 9% 2% 2%;
       color: black; }
     body .create-content-wrapper .create-start-time-na {
       display: inline-block;
@@ -2289,7 +2288,7 @@ body {
       color: black; }
     body .create-content-wrapper .create-end-na {
       display: inline-block;
-      margin: 2% 12% 2% 2%;
+      margin: 2% 9% 2% 2%;
       background-color: white;
       width: 40%;
       border: solid 2px #F4F4F4;
