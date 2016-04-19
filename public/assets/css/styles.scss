@@ -605,6 +605,18 @@ body{
     }
   }
 
+  .post-detail-rating {
+    text-align: center;
+    font-size: 4em;
+    color: gray;
+    span {
+      display: block;
+      font-weight: bold;
+      font-size: .75em;
+
+    }
+  }
+
   .post-detail-bottom-button {
     background-color: $buttonaccent2;
     color: white;
