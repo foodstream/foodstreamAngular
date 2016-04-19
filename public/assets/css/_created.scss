@@ -1,115 +1,61 @@
 .created-post-title {
-  width: 100%;
-  font-size: 5em;
-  line-height: 1.5em;
-  color: black;
-  text-align: center;
-  background-color: lighten($headerbg, 35%);
-  position: fixed;
-  margin: 12% 0 0 0;
+  @media screen and (min-width: $break-large) {
+      font-size: 2em;
+      line-height: 1em;
+      margin: 5% 0 0 0;
+      padding: .5% 0;
+  }
 }
 .created-content-wrapper{
-  margin-top: 24%;
-  overflow: scroll;
-  // border: solid thin black;
-  position: absolute;
-  width: 100%;
-  height: 80vh;
   @media screen and (min-width: $break-large) {
-      margin-top: 12%;
+      margin-top: 9%;
+      padding-top: 1%;
   }
     .created-post-description {
-      width: 95%;
-      font-size: 4em;
-      margin: 2% 0 0 2.5%;
-      color: black;
-      display: block;
       @media screen and (min-width: $break-large) {
-        font-size: 2em;
-        margin: 0 3% 0 6%;
+        font-size: 1em;
+        margin: 0 3% 0 15%;
+        width: 75%;
       }
       span{
-        font-size: .75em;
-        font-weight: 700;
-        display: block;
+        @media screen and (min-width: $break-large) {
+            padding-bottom: 1%;
+            font-size: 1em;
+        }
       }
     }
-
-
     .created-post-images {
-      display: block;
-      // border: solid thin black;
-      margin: 2% 0;
       @media screen and (min-width: $break-large) {
-          margin-left: 24%;
+          margin-left: 28%;
       }
       .created-post-photo {
-        display: inline-block;
-        height: 450px;
-        width: 450px;
-
-        margin: 0 1% 0 2%;
         @media screen and (min-width: $break-large) {
-            height: 300px;
-            width: 300px;
+            height: 250px;
+            width: 250px;
         }
-
         }
         #created-post-gmap{
-          width:450px;
-          height: 450px;
-          display: inline-block;
-          margin: 0 1%;
           @media screen and (min-width: $break-large) {
-              height: 300px;
-              width: 300px;
-              border: 1px solid;
+              height: 250px;
+              width: 250px;
           }
         }
       }
-
       .created-post-address {
-        display: block;
-        width: 96%;
-        margin: 2% 0 0 2%;
-        font-size: 4em;
         @media screen and (min-width: $break-large) {
-            width: 45%;
             margin: 5% 0 1% 15%;
-            font-size: 2em;
-            font-weight: 600;
+            font-size: 2.5em;
         }
         .create
         span{
-          font-weight: 700;
-          font-size: .75em;
-          display: block;
         }
       }
-
       .created-buttons-wrap{
-        width: 100%;
-        height: 15%;
-        border: solid thin darken($border, 20%);
-        display: block;
-        color: darken($border, 30%);
-        @media screen and (min-width: $break-large) {
-            height: 20%;
-        }
         .created-add-cal{
-          display: inline-block;
-          width: 33%;
-          text-align: center;
-          border-right: solid thin darken($border, 20%);
-          height: 100%;
-          font-size: 2.5em;
           @media screen and (min-width: $break-large) {
               font-size: 1.25em;
           }
           .fa-calendar-plus-o{
-            margin: 5% 0 4% 0;
-            display: block;
-            font-size: 2.5em;
             @media screen and (min-width: $break-large) {
                 font-size: 1.25em;
                 margin: 4% 0 2% 0;
@@ -117,19 +63,10 @@
           }
         }
         .created-post-chat{
-          display: inline-block;
-          width: 33%;
-          text-align: center;
-          border-right: solid thin darken($border, 20%);
-          height: 100%;
-          font-size: 2.5em;
           @media screen and (min-width: $break-large) {
               font-size: 1.25em;
           }
           .fa-comment{
-            margin: 5% 0 4% 0;
-            display: block;
-            font-size: 2.5em;
             @media screen and (min-width: $break-large) {
                 font-size: 1.25em;
                 margin: 4% 0 2% 0;
@@ -137,20 +74,10 @@
           }
         }
         .created-post-directions-btn{
-          color: darken($border, 30%);
-          display: inline-block;
-          width: 33%;
-          text-align: center;
-          height: 100%;
-          text-decoration: none;
-          font-size: 2.5em;
           @media screen and (min-width: $break-large) {
               font-size: 1.25em;
           }
           .fa-google{
-            margin: 5% 0 4% 0;
-            display: block;
-            font-size: 2.5em;
             @media screen and (min-width: $break-large) {
                 font-size: 1.25em;
                 margin: 4% 0 2% 0;
@@ -159,163 +86,65 @@
         }
       }
     .created-post-time-wrap{
-      width: 96%;
-      margin: 2% 0 0 2%;
-      display: block;
       @media screen and (min-width: $break-large) {
-          width: 45%;
-          margin: 2% 0 15% 15%;
+          width: 75%;
+          margin: 3% 0 15% 15%;
           font-size: 1em;
       }
     .created-post-start {
-      font-size: 4em;
-      display: inline-block;
-      width: 48%;
       @media screen and (min-width: $break-large) {
-          font-size: 2em;
-          width: 22%;
-          margin-right: 30%;
+          font-size: 2.5em;
       }
       span{
-        font-size: .75em;
-        display: block;
-        font-weight: bold;
       }
     }
     .created-post-end {
-      font-size: 4em;
-      display: inline-block;
-      width: 48%;
       @media screen and (min-width: $break-large) {
-          font-size: 2em;
-          width: 22%;
+          font-size: 2.5em;
       }
       span{
-        font-size: .75em;
-        display: block;
-        font-weight: bold;
       }
     }
   }
   .created-post-claimed-info{
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    width: 100%;
-    text-align: center;
-    margin: 2% 0 0 0;
   }
     .created-post-complete-button{
-      border: solid 3px $border;
-      text-align: center;
-      width: 95%;
-      margin: 1%  0 0 2.5%;
-      font-size: 4em;
-      color: lighten(black, 35%);
-      background-color: lighten($border,3%);
     }
-
   }
-
   .created-post-modal{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
     .created-post-modal-content{
-      position: fixed;
-      height: 30%;
-      width: 60%;
-      margin: 50% 0 0 20%;
-      background-color: white;
-      text-align: center;
       h1{
-        font-size: 4em;
+      }
+      .created-stars {
       }
       .created-post-review-input{
-        margin: 5% 0 0 0;
-        width: 50%;
-        border:solid thin darken($border, 20%);
-        font-size: 4em;
       }
       .created-post-button-wrap{
-        font-size: 4em;
-        border:solid thin darken($border, 20%);
-        width: 100%;
-        display: block;
         .created-post-review-submit{
-          display: inline-block;
-          width: 50%;
-          border:solid thin darken($border, 20%);
         }
         .created-post-review-cancel{
-          display: inline-block;
-          width: 50%;
-          border:solid thin darken($border, 20%);
         }
       }
     }
   }
-
   .created-post-footer-home {
-    background-color: $buttonaccent2;
-    position: fixed;
-    bottom: 0;
-    width: 33.33%;
-    text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
-    color: white;
-    cursor: pointer;
-    font-weight: 200;
     @media screen and (min-width: $break-large) {
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em;
-    }
-    &:hover{
-      background-color: darken($buttonaccent2, 5%);
     }
   }
   .created-post-footer-edit {
-    background-color: $buttonbg;
-    position: fixed;
-    bottom: 0;
-    width: 33.33%;
-    margin-left: 33.33%;
-    text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
-    color: white;
-    cursor: pointer;
-    font-weight: 200;
     @media screen and (min-width: $break-large) {
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em;
-    }
-    &:hover{
-      background-color: darken($buttonbg, 5%);
     }
   }
   .created-post-footer-delete {
-    background-color: $buttonaccent2;
-    position: fixed;
-    bottom: 0;
-    width: 33.33%;
-    margin-left: 66.33%;
-    text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
-    color: white;
-    cursor: pointer;
-    font-weight: 200;
     @media screen and (min-width: $break-large) {
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em;
-    }
-    &:hover{
-      background-color: darken($buttonaccent2, 5%);
     }
   }
