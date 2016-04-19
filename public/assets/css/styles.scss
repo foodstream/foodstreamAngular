@@ -49,6 +49,9 @@ body{
     }
     img {
       padding-left: 2%;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
       @media screen and (min-width: $break-large) {
           width: 40px;
       }
@@ -58,6 +61,9 @@ body{
       display: inline-block;
       cursor: pointer;
       padding: 0 0 0 1%;
+      margin: 1.85% 0 0 0;
+      // border: solid thin black;
+      position: absolute;
     }
     .app-header-login-icon{
       float: right;

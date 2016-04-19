@@ -30,6 +30,9 @@ body {
         padding: 1.5% 0; } }
     body .app-header img {
       padding-left: 2%;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
       padding-left: 2%; }
       @media screen and (min-width: 1200px) {
         body .app-header img {
@@ -37,7 +40,9 @@ body {
     body .app-header .app-header-txt {
       display: inline-block;
       cursor: pointer;
-      padding: 0 0 0 1%; }
+      padding: 0 0 0 1%;
+      margin: 1.85% 0 0 0;
+      position: absolute; }
     body .app-header .app-header-login-icon {
       float: right;
       margin: -1% 2% 0 0;
@@ -987,7 +992,6 @@ body {
     width: 40%;
     border: solid 2px #F4F4F4;
     font-size: 4em;
-    margin: 2% 5%;
     color: black; }
     @media screen and (min-width: 1200px) {
       body .create-start-na {
