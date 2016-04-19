@@ -24,6 +24,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
   }, function errorCallback(response){
     // console.log(response)
     $scope.loadingIcon = false;
+    $(".home-content-wrapper").append("<div class = 'search-error-message'>Sorry, an error occurred.</div>");
   });
 
   //declare filter variable for post filters
