@@ -30,7 +30,7 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
     }, function errorCallback(response){
       console.log(response);
       $scope.loadingIcon = false;
-      console.log("error occurred");
+      $(".search-results-content-wrapper").append("<div class = 'search-error-message'>Sorry, an error occurred.</div>");
     });
   });
 
