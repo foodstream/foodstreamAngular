@@ -1039,6 +1039,20 @@ body{
       z-index: 999;
       position: fixed;
     }
+
+    .create-upload-verify {
+      .fa-check-square-o{
+        color: $buttonaccent2;
+        font-size: 5em;
+        margin-left: 30%;
+        display: inline;
+      }
+      div {
+        display: inline;
+        font-size: 3em;
+      }
+    }
+
     .create-content-wrapper{
       width: 100%;
       top: 13%;

@@ -47,6 +47,16 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
     $('#file-input').click();
   }
 
+  $scope.fileNameContents = false;
+
+  $scope.fileVerify = function(){
+    if ($('#file-input').val() != ""){
+      fileNameContents = true;
+      return fileNameContents;
+    }
+
+  };
+
   //submit the post
   $scope.submitNewPost = function(file){
     //set post values
