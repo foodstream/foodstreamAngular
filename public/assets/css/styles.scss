@@ -106,6 +106,7 @@ body{
     text-align: center;
     font-size: 5em;
     // margin-top: 12%;
+    z-index: 999;
   }
   .edit-profile-top-btn-wrap{
     position: fixed;
@@ -116,6 +117,7 @@ body{
     height: 4%;
     font-size: 2.5em;
     background-color: lighten($border, 4%);
+    z-index: 999;
     .edit-profile-change-email{
       display: inline-block;
       width: 33%;
@@ -209,11 +211,11 @@ body{
     position: absolute;
     bottom: 0;
     background-color: $buttonaccent2;
-
+    z-index: 999;
     position: fixed;
     text-align: center;
     font-size: 4em;
-    line-height: 2em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
     font-weight: 200;
@@ -261,7 +263,7 @@ body{
     width: 80%;
     text-align: center;
     font-size: 4em;
-    line-height: 2em;
+    line-height: 1.5em;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -272,7 +274,7 @@ body{
     bottom: 0;
     width: 100%;
     font-size: 4em;
-    line-height: 2em;
+    line-height: 1.5em;
     color: white;
     background-color: $buttonbg;
     text-align: center;
@@ -289,7 +291,6 @@ body{
     background-color:lighten($headerbg, 35%);
     width: 100%;
     height: 3.5%;
-
     color: darken($headerbg, 10%);
     font-size: 3em;
     position: fixed;
@@ -432,6 +433,7 @@ body{
       color: white;
       cursor: pointer;
       font-weight: 200;
+      z-index: 999;
       &:hover{
         background-color: darken($buttonaccent2, 5%);
       }
@@ -444,11 +446,12 @@ body{
       width: 50%;
       background-color: $buttonbg;
       text-align: center;
-      font-size: 4em;
-      line-height: 1.5em;
+        font-size: 4em;
+        line-height: 1.5em;
       color: white;
       cursor: pointer;
       font-weight: 200;
+      z-index: 999;
       &:hover{
         background-color: darken($buttonbg, 5%);
       }
@@ -469,6 +472,7 @@ body{
     top: 4.5%;
     background-color: lighten($headerbg, 35%);
     height: 5%;
+    z-index: 999;
   }
 
   .post-detail-content-wrapper{
@@ -590,6 +594,7 @@ body{
     left: 50%;
     width: 50%;
     cursor: pointer;
+    z-index: 999;
     &:hover{
       background-color: darken($buttonbg, 5%);
     }
@@ -605,6 +610,7 @@ body{
     bottom: 0;
     width: 50%;
     cursor: pointer;
+    z-index: 999;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -619,6 +625,7 @@ body{
     z-index: 999;
     background-color:lighten($headerbg, 35%);
     width: 100%;
+    z-index: 999;
     #search-results-search{
       margin: 2% 0 0 2%;
       width: 95%;
@@ -630,7 +637,7 @@ body{
       padding: 0 0 2% 0;
       line-height: 2em;
       #search-results-distance-input{
-        width: 10%;
+        width: 7%;
         font-size: 1em;
         border: none;
       }
@@ -645,7 +652,7 @@ body{
         color: white;
         cursor: pointer;
         &:hover{
-          background-color: lighten($headerbg, 10%);
+          background-color: lighten($buttonbg, 5%);
         }
       }
     }
@@ -761,11 +768,11 @@ body{
     width: 100%;
     text-align: center;
     font-size: 4em;
-    line-height: 1.3em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
     font-weight: 200;
-
+    z-index: 999;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -968,13 +975,6 @@ body{
     }
 
   //--------- Create View -------------//
-    .create-content-wrapper{
-      // margin-top: 12%;
-      // border: solid thin black;
-    }
-
-
-
     .create-subheader {
       width: 100%;
       font-size: 4em;
@@ -982,9 +982,14 @@ body{
       background-color: lighten($headerbg, 35%);
       line-height: 1.5em;
       margin-top: 13%;
+      z-index: 999;
     }
+    .create-content-wrapper{
+      width: 100%;
+      top: 13%;
+      height: 82vh;
+      position: absolute;
     .create-post-add-pic{
-
       border: solid 3px $border;
       text-align: center;
       width: 95%;
@@ -1027,7 +1032,7 @@ body{
       width: 40%;
       border: solid 2px $border;
       font-size: 4em;
-      margin: 2% 5%;
+      margin: 2% 14% 2% 2%;
       color: black;
     }
     .create-start-time-na{
@@ -1041,12 +1046,11 @@ body{
     }
     .create-end-na {
       display: inline-block;
-      margin: 2% 5%;
+      margin: 2% 14% 2% 2%;
       background-color: white;
       width: 40%;
       border: solid 2px $border;
       font-size: 4em;
-      margin-top: 2%;
       color: black;
     }
     .create-end-time-na{
@@ -1068,8 +1072,9 @@ body{
       font-size: 4em;
       margin: 2% 0 0 2.5%;
       color: black;
+      z-index: 1;
     }
-
+  }
 
   .create-submit-button {
     background-color: $buttonaccent2;
@@ -1077,12 +1082,12 @@ body{
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
     font-weight: 200;
-
+    z-index: 999;
     &:hover{
      background-color: darken($buttonaccent2, 5%);
     }
@@ -1102,12 +1107,13 @@ body{
   margin-top: 12%;
   position: fixed;
   color: darken($headerbg, 15%);
+  z-index: 999;
 }
 .edit-post-content-wrapper{
   margin-top: 22%;
   overflow: scroll;
   height: 81vh;
-  border: solid thin black;
+  // border: solid thin black;
   position: absolute;
   .edit-post-image{
     height: 450px;
@@ -1152,7 +1158,7 @@ body{
   width: 40%;
   border: solid 2px $border;
   font-size: 4em;
-  margin: 2% 5%;
+  margin: 2% 12% 2% 2%;
   color: black;
 }
 .edit-post-start-time-na{
@@ -1202,12 +1208,12 @@ position: fixed;
 bottom: 0;
 width: 100%;
 text-align: center;
-font-size: 5em;
-line-height: 1.3em;
+font-size: 4em;
+line-height: 1.5em;
 color: white;
 cursor: pointer;
 font-weight: 200;
-
+z-index: 999;
 &:hover{
  background-color: darken($buttonaccent2, 5%);
 }
@@ -1548,6 +1554,7 @@ font-weight: 200;
     bottom: 0;
     left: 0;
     cursor: pointer;
+    font-weight: 300;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -1564,6 +1571,7 @@ font-weight: 200;
     bottom: 0;
     left: 50%;
     cursor: pointer;
+    font-weight: 300;
     &:hover{
       background-color: darken($buttonbg, 5%);
     }
