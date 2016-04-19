@@ -2077,6 +2077,11 @@ body {
     z-index: 999; }
     body .results-footer:hover {
       background-color: #59f68f; }
+  body .search-error-message {
+    text-align: center;
+    width: 50%;
+    margin: 10% 25%;
+    font-size: 3em; }
   body .landing-overlay-content {
     margin-top: -2%;
     padding: 25% 0 5% 0;
