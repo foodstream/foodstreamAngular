@@ -56,7 +56,6 @@ body {
     width: 100vw;
     height: 5%;
     display: block;
-    color: #00c46f;
     position: fixed;
     top: 7%;
     text-align: center;
@@ -1294,16 +1293,8 @@ body {
       margin: 50% 0 0 20%;
       background-color: white;
       text-align: center; }
-      body .created-post-modal .created-post-modal-content h1 {
-        font-size: 4em; }
-      body .created-post-modal .created-post-modal-content .created-post-review-input {
-        margin: 5% 0 0 0;
-        width: 50%;
-        border: solid thin #c1c1c1;
-        font-size: 4em; }
       body .created-post-modal .created-post-modal-content .created-post-button-wrap {
         font-size: 4em;
-        border: solid thin #c1c1c1;
         width: 100%;
         display: block; }
         body .created-post-modal .created-post-modal-content .created-post-button-wrap .created-post-review-submit {
@@ -1636,7 +1627,6 @@ body {
     width: 100vw;
     height: 5%;
     display: block;
-    color: #00c46f;
     position: fixed;
     top: 7%;
     text-align: center;
@@ -2527,7 +2517,8 @@ body {
     text-align: center;
     background-color: #abffda;
     position: fixed;
-    margin: 12% 0 0 0; }
+    margin: 12% 0 0 0;
+    z-index: 999; }
   body .created-content-wrapper {
     margin-top: 24%;
     overflow: scroll;
@@ -2645,7 +2636,7 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2); }
+    background-color: rgba(0, 0, 0, 0.7); }
     body .created-post-modal .created-post-modal-content {
       position: fixed;
       height: 30%;
@@ -2654,38 +2645,47 @@ body {
       background-color: white;
       text-align: center; }
       body .created-post-modal .created-post-modal-content h1 {
+        margin-top: 5%;
         font-size: 4em; }
       body .created-post-modal .created-post-modal-content .created-stars {
-        font-size: 5em;
-        margin: 5% 0; }
+        font-size: 6em;
+        margin: 10% 0 5% 0;
+        color: black; }
       body .created-post-modal .created-post-modal-content .created-post-review-input {
         margin: 5% 20% 15% 20%;
         width: 60%;
         border: solid thin #c1c1c1; }
       body .created-post-modal .created-post-modal-content .created-post-button-wrap {
         font-size: 4em;
-        border: solid thin #c1c1c1;
         width: 100%;
-        display: block; }
+        display: block;
+        margin-top: 15%; }
         body .created-post-modal .created-post-modal-content .created-post-button-wrap .created-post-review-submit {
-          display: inline-block;
-          width: 50%;
-          border: solid thin #c1c1c1; }
+          display: inline;
+          padding: 2px 5px;
+          border: solid thin #c1c1c1;
+          box-sizing: border-box;
+          background-color: #3DD6D0;
+          color: white; }
         body .created-post-modal .created-post-modal-content .created-post-button-wrap .created-post-review-cancel {
-          display: inline-block;
-          width: 50%;
-          border: solid thin #c1c1c1; }
+          display: inline;
+          padding: 2px 5px;
+          border: solid thin #c1c1c1;
+          box-sizing: border-box;
+          background-color: #f06e00;
+          color: white; }
   body .created-post-footer-home {
     background-color: #71F79F;
     position: fixed;
     bottom: 0;
     width: 33.33%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    font-weight: 300;
+    z-index: 999; }
     body .created-post-footer-home:hover {
       background-color: #59f68f; }
   body .created-post-footer-edit {
@@ -2695,11 +2695,12 @@ body {
     width: 33.33%;
     margin-left: 33.33%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    z-index: 999;
+    font-weight: 300; }
     body .created-post-footer-edit:hover {
       background-color: #2ccec8; }
   body .created-post-footer-delete {
@@ -2709,11 +2710,12 @@ body {
     width: 33.33%;
     margin-left: 66.33%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200; }
+    font-weight: 300;
+    z-index: 999; }
     body .created-post-footer-delete:hover {
       background-color: #59f68f; }
   body .chat-subheader {
@@ -2724,7 +2726,8 @@ body {
     top: 7%;
     width: 100%;
     display: block;
-    text-align: center; }
+    text-align: center;
+    z-index: 999; }
     body .chat-subheader .chat-other-user-text {
       font-weight: 700; }
   body .chat-content-wrapper {
@@ -2780,8 +2783,8 @@ body {
   body .chat-home-btn {
     display: block;
     background-color: #71F79F;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     text-align: center;
     color: white;
     width: 50%;
@@ -2795,8 +2798,8 @@ body {
   body .chat-back-to-post-btn {
     display: inline-block;
     background-color: #3DD6D0;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     text-align: center;
     color: white;
     width: 50%;

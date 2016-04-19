@@ -100,7 +100,7 @@ body{
     width: 100vw;
     height: 5%;
     display: block;
-    color: darken($headerbg, 10%);
+    // color: darken($headerbg, 10%);
     position: fixed;
     top: 7%;
     text-align: center;
@@ -1239,6 +1239,7 @@ z-index: 999;
   background-color: lighten($headerbg, 35%);
   position: fixed;
   margin: 12% 0 0 0;
+  z-index: 999;
 }
 .created-content-wrapper{
   margin-top: 24%;
@@ -1444,11 +1445,12 @@ z-index: 999;
     bottom: 0;
     width: 33.33%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200;
+    font-weight: 300;
+    z-index: 999;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -1460,11 +1462,12 @@ z-index: 999;
     width: 33.33%;
     margin-left: 33.33%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200;
+    z-index: 999;
+    font-weight: 300;
     &:hover{
       background-color: darken($buttonbg, 5%);
     }
@@ -1476,11 +1479,12 @@ z-index: 999;
     width: 33.33%;
     margin-left: 66.33%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200;
+    font-weight: 300;
+    z-index: 999;
     &:hover{
       background-color: darken($buttonaccent2, 5%);
     }
@@ -1496,6 +1500,7 @@ z-index: 999;
     width: 100%;
     display: block;
     text-align: center;
+    z-index: 999;
     .chat-other-user-text{
       font-weight: 700;
     }
@@ -1565,8 +1570,8 @@ z-index: 999;
   .chat-home-btn{
     display:block;
     background-color: $buttonaccent2;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     text-align: center;
     color: white;
     width: 50%;
@@ -1582,8 +1587,8 @@ z-index: 999;
   .chat-back-to-post-btn{
     display:inline-block;
     background-color: $buttonbg;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
     text-align: center;
     color: white;
     width:50%;
