@@ -2159,8 +2159,7 @@ body {
     body .results-footer:hover {
       background-color: #59f68f; }
   body .landing-overlay-content {
-    margin-top: 15%;
-    padding-top: 15%;
+    padding: 15% 0 5% 0;
     z-index: 999;
     background: url("/assets/images/landing_background.jpg");
     background-size: cover;
@@ -2168,43 +2167,45 @@ body {
   body .landing-login-email-input {
     width: 80%;
     border: solid 5px white;
+    box-sizing: border-box;
     font-size: 4em;
     line-height: 1em;
-    margin: 5%;
+    margin: 5% 10%;
     padding: 3%;
     background: transparent;
     color: white; }
   body .landing-login-password-input {
     width: 80%;
     border: solid 5px white;
+    box-sizing: border-box;
     font-size: 4em;
     line-height: 1em;
-    margin: 5%;
+    margin: 5% 10% 15% 10%;
     padding: 3%;
     background: transparent;
     color: white; }
   body .landing-login-btn {
-    width: 80%;
-    font-size: 2.5em;
-    line-height: 1.8em;
+    width: 50%;
+    font-size: 3em;
     text-align: center;
-    margin: 2% 0 5% 10%;
+    margin: 2% 25%;
     padding: 2%;
     background-color: #71F79F;
     color: white;
-    cursor: pointer; }
+    cursor: pointer;
+    box-sizing: border-box; }
     body .landing-login-btn:hover {
       background-color: #59f68f; }
   body .landing-signup-btn {
-    width: 80%;
-    font-size: 2.5em;
-    line-height: 1.8em;
+    width: 50%;
+    font-size: 3em;
     text-align: center;
-    margin: 5% 0 5% 10%;
+    margin: 5% 25%;
     padding: 2%;
     background-color: #3DD6D0;
     color: white;
-    cursor: pointer; }
+    cursor: pointer;
+    box-sizing: border-box; }
     body .landing-signup-btn:hover {
       background-color: #2ccec8; }
   body .login-about {
@@ -2215,7 +2216,7 @@ body {
     color: white;
     font-family: "Overpass", sans-serif;
     text-align: center;
-    font-size: 4em;
+    font-size: 4.2em;
     line-height: 1.5em; }
   body .login-legal {
     margin: 50px 2.5%;
