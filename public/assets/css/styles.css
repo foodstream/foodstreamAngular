@@ -21,7 +21,7 @@ body {
     font-size: 4em;
     position: fixed;
     top: 0;
-    z-index: 998; }
+    z-index: 1000; }
     @media screen and (min-width: 1200px) {
       body .app-header {
         font-size: 3em;
@@ -1568,10 +1568,10 @@ body {
     body .edit-profile-content-wrapper .edit-profile-rating {
       width: 100%;
       text-align: center;
-      font-size: 3em; }
+      font-size: 2em; }
       body .edit-profile-content-wrapper .edit-profile-rating .actual-stars {
-        font-size: 2em;
-        color: black; }
+        font-size: 1.5em;
+        color: #595959; }
     body .edit-profile-content-wrapper .edit-profile-add-image {
       border: solid 3px #F4F4F4;
       width: 95%;
@@ -1580,15 +1580,16 @@ body {
       color: #595959;
       text-align: center;
       font-size: 3em;
+      line-height: 1.5em;
       margin: 2% 0 0 2.5%; }
     body .edit-profile-content-wrapper .edit-profile-first-name {
       margin: 2% 0 2% 2%;
-      width: 45vw;
+      width: 40vw;
       font-size: 4em;
       border: solid thin #e7e7e7; }
     body .edit-profile-content-wrapper .edit-profile-last-name {
       margin: 2% 0 0 2%;
-      width: 47vw;
+      width: 40vw;
       font-size: 4em;
       border: solid thin #e7e7e7; }
     body .edit-profile-content-wrapper .edit-profile-organization {
@@ -1822,8 +1823,8 @@ body {
     background-color: #abffda;
     height: 5%;
     z-index: 999;
-    white-space: nowrap;
     display: inline-block;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
   body .post-detail-content-wrapper {
@@ -2043,7 +2044,7 @@ body {
       body .search-results-content-wrapper .results-card .results-details {
         display: inline-block;
         position: absolute;
-        width: 22.5%;
+        width: 25%;
         height: 16vh;
         text-align: center;
         color: white;
@@ -2238,7 +2239,7 @@ body {
   body .create-content-wrapper {
     width: 100%;
     top: 13%;
-    height: 82vh;
+    height: 81vh;
     position: absolute; }
     body .create-content-wrapper .create-post-add-pic {
       border: solid 3px #F4F4F4;
@@ -2276,7 +2277,7 @@ body {
       width: 40%;
       border: solid 2px #F4F4F4;
       font-size: 4em;
-      margin: 2% 5% 2% 2%;
+      margin: 2% 2% 2% 2%;
       color: black; }
     body .create-content-wrapper .create-start-time-na {
       display: inline-block;
@@ -2288,7 +2289,7 @@ body {
       color: black; }
     body .create-content-wrapper .create-end-na {
       display: inline-block;
-      margin: 2% 5% 2% 2%;
+      margin: 2% 2% 2% 2%;
       background-color: white;
       width: 40%;
       border: solid 2px #F4F4F4;
@@ -2334,8 +2335,11 @@ body {
     line-height: 1.5em;
     margin-top: 12%;
     position: fixed;
-    color: #00ab61;
-    z-index: 999; }
+    color: black;
+    z-index: 999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   body .edit-post-content-wrapper {
     margin-top: 22%;
     overflow: scroll;
@@ -2377,7 +2381,7 @@ body {
     width: 40%;
     border: solid 2px #F4F4F4;
     font-size: 4em;
-    margin: 2% 15% 2% 2%;
+    margin: 2% 2% 2% 2%;
     color: black; }
   body .edit-post-start-time-na {
     display: inline-block;
@@ -2389,7 +2393,7 @@ body {
     color: black; }
   body .edit-post-end-na {
     display: inline-block;
-    margin: 2% 15% 2% 2%;
+    margin: 2% 2% 2% 2%;
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
@@ -2436,7 +2440,10 @@ body {
     background-color: #abffda;
     position: fixed;
     margin: 12% 0 0 0;
-    z-index: 999; }
+    z-index: 999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   body .created-content-wrapper {
     margin-top: 24%;
     overflow: scroll;
@@ -2645,7 +2652,10 @@ body {
     width: 100%;
     display: block;
     text-align: center;
-    z-index: 999; }
+    z-index: 999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
     body .chat-subheader .chat-other-user-text {
       font-weight: 700; }
   body .chat-content-wrapper {
