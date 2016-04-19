@@ -560,156 +560,52 @@ body {
           display: block;
           font-weight: bold;
           font-size: .75em; }
-  body #search-results-subheader {
-    position: fixed;
-    margin: 13% 0 0 0;
-    z-index: 999;
-    background-color: #abffda;
-    width: 100%; }
-    @media screen and (min-width: 1200px) {
-      body #search-results-subheader {
-        width: 100%;
-        padding: 4% 0 0 0;
-        margin: 2% 0 0 0;
-        z-index: 0;
-        font-size: 1.75em;
-        text-align: left;
-        border-bottom: 3px solid #00de7e;
-        color: #00de7e; } }
+  @media screen and (min-width: 1200px) {
+    body #search-results-subheader {
+      width: 100%;
+      padding: 4% 0 0 0;
+      margin: 2% 0 0 0;
+      z-index: 0;
+      font-size: 1.75em;
+      text-align: left;
+      border-bottom: 3px solid #00de7e;
+      color: #00de7e; } }
+  @media screen and (min-width: 1200px) {
     body #search-results-subheader #search-results-search {
-      margin: 2% 0 0 2%;
-      width: 95%;
-      font-size: 2em; }
-      @media screen and (min-width: 1200px) {
-        body #search-results-subheader #search-results-search {
-          font-size: .75em;
-          line-height: 1em;
-          margin: 1.5% 0 0 10%;
-          width: 58%;
-          border: none; } }
+      font-size: .75em;
+      line-height: 1em;
+      margin: 1.5% 0 0 10%;
+      width: 58%;
+      border: none; } }
+  @media screen and (min-width: 1200px) {
     body #search-results-subheader #search-results-subheader-text {
-      font-size: 2em;
-      margin: 2% 0 0 2%;
-      padding: 0 0 2% 0;
-      line-height: 2em; }
-      @media screen and (min-width: 1200px) {
-        body #search-results-subheader #search-results-subheader-text {
-          font-size: .6em;
-          padding: 0 0 .75% 0;
-          margin: 1.1% 0 0 11%;
-          line-height: 1em; } }
-      body #search-results-subheader #search-results-subheader-text #search-results-distance-input {
-        width: 10%;
-        font-size: 1em;
-        border: none; }
-        @media screen and (min-width: 1200px) {
-          body #search-results-subheader #search-results-subheader-text #search-results-distance-input {
-            font-size: 1em;
-            text-align: center;
-            width: 5%;
-            color: #00de7e; } }
-      body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button {
-        display: inline-block;
-        float: right;
-        line-height: 1em;
-        margin: 0 2% 2% 0;
-        background-color: #67dfda;
-        padding: 1.5%;
-        color: white;
-        cursor: pointer; }
-        @media screen and (min-width: 1200px) {
-          body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button {
-            font-size: .75em;
-            margin: -4% 25% 1% 0;
-            padding: .5%;
-            border: 3px solid #45ffae;
-            border-radius: 7px; } }
-        body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button:hover {
-          background-color: #2bffa3; }
-  body .search-results-content-wrapper {
-    margin: 32% 0 0 0;
-    position: absolute;
-    width: 100%;
-    height: 77vh;
-    overflow: scroll; }
-    body .search-results-content-wrapper .results-card {
-      display: block;
-      height: 20vh;
-      border: solid 2px #e7e7e7;
-      background-color: white;
-      width: 99.8%;
-      margin: 2.5% 0; }
-      body .search-results-content-wrapper .results-card .results-header {
-        height: 4vh;
-        background-color: #f9f9f9;
-        font-size: 3em;
-        font-weight: 700;
-        width: 100%; }
-        body .search-results-content-wrapper .results-card .results-header .results-card-title {
-          padding: 1% 0 0 1%;
-          width: 59%;
-          white-space: nowrap;
-          display: inline-block;
-          overflow: hidden;
-          text-overflow: ellipsis; }
-        body .search-results-content-wrapper .results-card .results-header .results-card-end {
-          font-size: .75em;
-          float: right;
-          display: inline-block;
-          padding: 1.5% 1% 0 0; }
-      body .search-results-content-wrapper .results-card .results-add-picture {
-        margin: 1% 0 0 1%;
-        width: 19%; }
-      body .search-results-content-wrapper .results-card .results-transaction-details {
-        display: inline-block;
-        width: 55%;
-        height: 16vh;
-        font-size: 2em; }
-        body .search-results-content-wrapper .results-card .results-transaction-details .results-supplier-name-text {
-          line-height: 1.5em;
-          font-weight: 500; }
-        body .search-results-content-wrapper .results-card .results-transaction-details .results-transaction-location {
-          line-height: 1.2em;
-          font-weight: 500; }
-    body .search-results-content-wrapper .results-details {
-      display: inline-block;
-      position: absolute;
-      width: 22.5%;
-      height: 16vh;
+      font-size: .6em;
+      padding: 0 0 .75% 0;
+      margin: 1.1% 0 0 11%;
+      line-height: 1em; } }
+  @media screen and (min-width: 1200px) {
+    body #search-results-subheader #search-results-subheader-text #search-results-distance-input {
+      font-size: 1em;
       text-align: center;
-      color: white;
-      cursor: pointer;
-      border-left: solid thin #F4F4F4; }
-      body .search-results-content-wrapper .results-details:hover {
-        background-color: #fcfcfc; }
-      body .search-results-content-wrapper .results-details .fa-info-circle {
-        font-size: 6em;
-        margin: 20% 0 0 0;
-        color: #b1bbc5; }
-        body .search-results-content-wrapper .results-details .fa-info-circle .search-details-text {
-          display: block;
-          font-family: 'overpass', sans-serif;
-          font-size: .5em; }
-  body .results-footer {
-    background-color: #71F79F;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 4em;
-    line-height: 1.5em;
-    font-weight: 300;
-    color: white;
-    cursor: pointer;
-    font-weight: 200; }
-    @media screen and (min-width: 1200px) {
-      body .results-footer {
-        border-top: 6px solid #59f68f;
-        font-size: 2em;
-        line-height: 1.75em;
-        font-weight: 600; } }
-    body .results-footer:hover {
-      background-color: #59f68f; }
+      width: 5%;
+      color: #00de7e; } }
+  @media screen and (min-width: 1200px) {
+    body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button {
+      font-size: .75em;
+      margin: -4% 25% 1% 0;
+      padding: .5%;
+      border: 3px solid #45ffae;
+      border-radius: 7px; } }
+  body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button:hover {
+    background-color: #2bffa3; }
+  @media screen and (min-width: 1200px) {
+    body .results-footer {
+      border-top: 6px solid #59f68f;
+      font-size: 2em;
+      line-height: 1.75em;
+      font-weight: 600; } }
+  body .results-footer:hover {
+    background-color: #59f68f; }
   body .landing-overlay-content {
     margin-top: 15%;
     padding-top: 15%;
@@ -2043,7 +1939,7 @@ body {
       background-color: #59f68f; }
   body #search-results-subheader {
     position: fixed;
-    margin: 13% 0 0 0;
+    margin: 12% 0 0 0;
     z-index: 999;
     background-color: #abffda;
     width: 100%;
@@ -2051,7 +1947,7 @@ body {
     body #search-results-subheader #search-results-search {
       margin: 2% 0 0 2%;
       width: 95%;
-      font-size: 2em; }
+      font-size: 3em; }
     body #search-results-subheader #search-results-subheader-text {
       font-size: 2em;
       margin: 2% 0 0 2%;
@@ -2111,39 +2007,46 @@ body {
           float: right;
           display: inline-block;
           padding: 1.5% 1% 0 0; }
-      body .search-results-content-wrapper .results-card .results-add-picture {
-        margin: 1% 0 0 1%;
-        width: 19%; }
+      body .search-results-content-wrapper .results-card .results-pic-wrap {
+        position: absolute;
+        width: 20%;
+        margin: 2% 0 0 0; }
+        body .search-results-content-wrapper .results-card .results-pic-wrap .results-add-picture {
+          width: 95%; }
       body .search-results-content-wrapper .results-card .results-transaction-details {
+        margin: 0 0 0 20%;
         display: inline-block;
         width: 55%;
         height: 16vh;
-        font-size: 2em; }
+        font-size: 2em;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis; }
         body .search-results-content-wrapper .results-card .results-transaction-details .results-supplier-name-text {
           line-height: 1.5em;
-          font-weight: 500; }
+          font-weight: 700; }
         body .search-results-content-wrapper .results-card .results-transaction-details .results-transaction-location {
           line-height: 1.2em;
           font-weight: 500; }
-    body .search-results-content-wrapper .results-details {
-      display: inline-block;
-      position: absolute;
-      width: 22.5%;
-      height: 16vh;
-      text-align: center;
-      color: white;
-      cursor: pointer;
-      border-left: solid thin #F4F4F4; }
-      body .search-results-content-wrapper .results-details:hover {
-        background-color: #fcfcfc; }
-      body .search-results-content-wrapper .results-details .fa-info-circle {
-        font-size: 6em;
-        margin: 20% 0 0 0;
-        color: #b1bbc5; }
-        body .search-results-content-wrapper .results-details .fa-info-circle .search-details-text {
-          display: block;
-          font-family: 'overpass', sans-serif;
-          font-size: .5em; }
+      body .search-results-content-wrapper .results-card .results-details {
+        display: inline-block;
+        position: absolute;
+        width: 22.5%;
+        height: 16vh;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        border-left: solid thin #F4F4F4; }
+        body .search-results-content-wrapper .results-card .results-details:hover {
+          background-color: #fcfcfc; }
+        body .search-results-content-wrapper .results-card .results-details .fa-info-circle {
+          font-size: 6em;
+          margin: 20% 0 0 0;
+          color: #b1bbc5; }
+          body .search-results-content-wrapper .results-card .results-details .fa-info-circle .search-details-text {
+            display: block;
+            font-family: 'overpass', sans-serif;
+            font-size: .5em; }
   body .results-footer {
     background-color: #71F79F;
     position: fixed;

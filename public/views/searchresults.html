@@ -5,7 +5,7 @@
   <div id='search-results-subheader-text'>
     Search for food within
     <input id= "search-results-distance-input" ng-model='distanceInput'></input>
-    miles of my location
+    mi. of my location
     <div id='search-results-subheader-search-button' ng-click='search()'>
       Search
       <i class="fa fa-search"></i>
@@ -33,9 +33,9 @@
       </div>
 
 
-
-        <img class='results-add-picture' src = "{{post.post_image}}" width = "200px"></img>
-
+      <div class='results-pic-wrap'>
+        <img class='results-add-picture' src = "{{post.post_image}}"></img>
+      </div>
 
 
 

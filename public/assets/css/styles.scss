@@ -627,7 +627,7 @@ body{
 
   #search-results-subheader{
     position: fixed;
-    margin: 13% 0 0 0;
+    margin: 12% 0 0 0;
     z-index: 999;
     background-color:lighten($headerbg, 35%);
     width: 100%;
@@ -635,7 +635,7 @@ body{
     #search-results-search{
       margin: 2% 0 0 2%;
       width: 95%;
-      font-size: 2em;
+      font-size: 3em;
     }
     #search-results-subheader-text{
       font-size: 2em;
@@ -713,24 +713,30 @@ body{
         padding: 1.5% 1% 0 0;
       }
     }
-
+    .results-pic-wrap{
+      position: absolute;
+      width: 20%;
+      margin: 2% 0 0 0;
     .results-add-picture{
       // position: absolute;
-      margin: 1% 0 0 1%;
+      // margin: -10% 0 0 1%;
       // display: inline-block;
-      width: 19%;
-
-
+      width: 95%;
     }
+    }
+
     .results-transaction-details {
+      margin: 0 0 0 20%;
       display: inline-block;
       width: 55%;
       height: $cardHeight * 0.8;
       font-size: 2em;
-
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
       .results-supplier-name-text{
         line-height: 1.5em;
-        font-weight: 500;
+        font-weight: 700;
       }
       .results-transaction-location{
         line-height: 1.2em;
@@ -738,7 +744,7 @@ body{
       }
 
     }
-  }
+
 
     .results-details {
       display: inline-block;
@@ -765,6 +771,7 @@ body{
         }
       }
     }
+  }
 
   }
   .results-footer{
