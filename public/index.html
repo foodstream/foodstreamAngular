@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>foodstream</title>
+    <link rel="icon" href="./assets/images/foodstream_logo_transparent.png" type="image/x-icon"/>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://overpass-30e2.kxcdn.com/overpass.css" rel="stylesheet" />
@@ -18,7 +19,7 @@
   <body ng-app="foodStream" ng-controller = "appController">
 
     <div class="app-header">
-      <img src = "assets/images/logo.jpeg" width = "60px" ng-click='goHome()'></img>
+      <img src = "assets/images/foodstream_logo_transparent.png" ng-click='goHome()'></img>
       <div  class='app-header-txt' ng-click='goHome()'>foodstream</div>
       <span class='app-header-login-icon' ng-show='pic'  ng-click='goToProfile()'>
         <img ng-src='{{pic}}' class='app-header-profile-pic'></img>

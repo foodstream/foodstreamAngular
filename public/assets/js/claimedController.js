@@ -42,9 +42,11 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
     var map = new google.maps.Map(document.getElementById("claimed-map"),
       mapOptions);
     //set marker
+    var image = { url: './assets/images/foodstream_logo_marker.png', scaledSize: new google.maps.Size(100, 100)};
     var marker = new google.maps.Marker({
       position: myLatlng,
-      title:"Food Is here"
+      title:"Food Is here",
+      icon: image
     });
     //render marker
     marker.setMap(map);

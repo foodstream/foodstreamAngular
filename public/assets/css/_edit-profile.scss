@@ -1,0 +1,126 @@
+.edit-profile-subheader{
+  background-color: lighten($headerbg, 35%);
+  width: 100vw;
+  height: 5%;
+  display: block;
+  color: darken($headerbg, 10%);
+  position: fixed;
+  top: 7%;
+  text-align: center;
+  font-size: 5em;
+  // margin-top: 12%;
+}
+.edit-profile-top-btn-wrap{
+  position: fixed;
+  top: 12%;
+  width: 100%;
+  border: solid thin $border;
+  display: block;
+  height: 4%;
+  font-size: 2.5em;
+  background-color: lighten($border, 4%);
+  .edit-profile-change-email{
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    border-right: solid thin darken($border, 5%);
+    text-align: center;
+    &:hover{
+      background-color: lighten($border, 2%);
+    }
+  }
+  .edit-profile-change-password{
+    display: inline-block;
+    height: 100%;
+    width: 33%;
+    border-right: solid thin darken($border, 5%);
+    text-align: center;
+  }
+  .edit-profile-logout-btn{
+    display: inline-block;
+    height: 100%;
+    width: 31%;
+    text-align: center;
+  }
+}
+.edit-profile-content-wrapper {
+  margin-top: 29%;
+  overflow: scroll;
+  width: 100%;
+  height: 73vh;
+  // border: solid thin black;
+  color: lighten(black, 35%);
+
+  .edit-profile-image{
+    margin: 2% 0 2% 25%;
+  }
+  .edit-profile-rating{
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+  }
+  .edit-profile-add-image{
+    border: solid 3px $border;
+    width: 95%;
+    background-color: lighten($border,3%);
+    color: white;
+    color: lighten(black, 35%);
+    text-align: center;
+    font-size: 3em;
+    margin: 2% 0 0 2.5%;
+  }
+  .edit-profile-first-name{
+    margin: 2% 0 2% 2%;
+    width: 45vw;
+    font-size: 4em;
+    border: solid thin darken($border, 5%);
+  }
+  .edit-profile-last-name{
+    margin: 2% 0 0 2%;
+    width: 47vw;
+    font-size: 4em;
+    border: solid thin darken($border, 5%);
+  }
+  .edit-profile-organization{
+    margin: 2%;
+    width: 96vw;
+    font-size: 4em;
+    border: solid thin darken($border, 5%);
+  }
+  .edit-profile-location{
+    margin: 2%;
+    width: 96vw;
+    font-size: 4em;
+    border: solid thin darken($border, 5%);
+  }
+  .edit-profile-description{
+    display: block;
+    margin: 2%;
+    width: 96vw;
+    height: 18vh;
+    font-size: 4em;
+    border: solid thin darken($border, 5%);
+  }
+}
+#file-input-edit-profile{
+  display: none;
+}
+
+.edit-profile-footer{
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: $buttonaccent2;
+
+  position: fixed;
+  text-align: center;
+  font-size: 4em;
+  line-height: 2em;
+  color: white;
+  cursor: pointer;
+  font-weight: 200;
+  &:hover{
+    background-color: darken($buttonaccent2, 5%);
+  }
+}
