@@ -15,6 +15,12 @@
 
 
 <div class='search-results-content-wrapper'>
+
+<div ng-show = "loadingIcon" class = "search-results-loading-icon">
+  <i class="fa fa-cog fa-spin fa-4x fa-fw margin-bottom"></i>
+  <span class="sr-only">Loading search results...</span>
+</div>
+
   <div  ng-repeat='post in posts | orderBy : "end_at" | filter:type' >
     <div class = "results-card">
       <div class = "results-header">

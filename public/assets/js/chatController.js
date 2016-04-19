@@ -26,6 +26,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+supplierId+'.json?token='+token).then( function successCallback(response){
       console.log('other user got', response.data);
       $scope.otherUserName = response.data.first_name+' '+response.data.last_name;
+      $scope.otherUserEmail = response.data.email
     }, function errorCallback(response){
       console.log('other user not got', response);
     });
@@ -35,6 +36,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+claimantId+'.json?token='+token).then( function successCallback(response){
       console.log('other user got', response.data);
         $scope.otherUserName = response.data.first_name+' '+response.data.last_name;
+        $scope.otherUserEmail = response.data.email
       }, function errorCallback(response){
     console.log('other user not got', response);
     });
@@ -69,9 +71,9 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   //send a message
   $scope.sendMessage = function(){
     //create the json to send the message
-    var param = {"post_id":postId,"body":$('.chat-input').val(),"subject":"Foodstream app message from "+$scope.userFirstName+" "+$scope.userLastName+" regarding "+postTitle,"recipient":userEmail}
+    var param = {"post_id":postId,"body":$('.chat-input').val(),"subject":"Foodstream app message from "+$scope.userFirstName+" "+$scope.userLastName+" regarding "+postTitle,"recipient":$scope.otherUserEmail, "sender_id":userId}
     console.log(param);
-    
+
     //make the call
     $http.post('https://sheltered-wildwood-38449.herokuapp.com/messages/send_email.json?token='+token, param).then(function successCallback(response){
       console.log('message sent');
@@ -109,7 +111,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
 
   //go to claimed on click of go to post if claimant, go to created if supplier
   $scope.backToPost = function(){
-    console.log(supplierId, claimantId, userId);
+    console.log(supplierId, claimantId);
     if(userId == supplierId){
       $location.path('/created');
     }else if(userId == claimantId)

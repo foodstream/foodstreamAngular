@@ -15,14 +15,8 @@ foodStream.controller('signUpController', ['$http', '$scope', '$location', funct
       method: 'POST',
       url: "https://sheltered-wildwood-38449.herokuapp.com/users?user[email]=" + $scope.email + "&user[password]=" + $scope.password + "&user[organization]=" + $scope.organization
     }).then(function successCallback(response) {
-          // console.log(response.data.token)
-          // console.log(response.data.id)
-          //put token and userid into LS on POST success
-          localStorage.setItem('token', response.data.token);
-          localStorage.setItem('userId', response.data.id);
-          // console.log('new user posted');
-
-          $location.path('/editProfile');
+          //go back to login page and wait for email
+          $location.path('/landing');
       }, function errorCallback(response) {
           console.log(response);
           console.log('user not posted');
