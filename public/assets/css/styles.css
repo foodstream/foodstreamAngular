@@ -2232,14 +2232,15 @@ body {
     text-align: center;
     background-color: #abffda;
     line-height: 1.5em;
-    margin-top: 12.5%;
+    margin-top: 12%;
     z-index: 999;
     position: fixed; }
   body .create-content-wrapper {
     width: 100%;
     top: 13%;
     height: 82vh;
-    position: absolute; }
+    position: absolute;
+    border: solid thin black; }
     body .create-content-wrapper .create-post-add-pic {
       border: solid 3px #F4F4F4;
       text-align: center;
