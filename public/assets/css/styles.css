@@ -1927,6 +1927,14 @@ body {
     z-index: 999; }
     body .post-detail-claim-button:hover {
       background-color: #2ccec8; }
+  body .post-detail-rating {
+    text-align: center;
+    font-size: 4em;
+    color: gray; }
+    body .post-detail-rating span {
+      display: block;
+      font-weight: bold;
+      font-size: .75em; }
   body .post-detail-bottom-button {
     background-color: #71F79F;
     color: white;

@@ -19,7 +19,8 @@ foodStream.controller('detailController', ['$http', '$scope', '$location', funct
   }).then(function successCallback(response){
     console.log(response.data);
     $scope.post = response.data;
-    console.log($scope.post.location);
+    $scope.userRating = Math.round(response.data.supplier_average_rating);
+    // console.log($scope.post.location);
     //google map
     var marker;
     var myLatLng;
