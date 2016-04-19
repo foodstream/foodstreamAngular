@@ -1,19 +1,73 @@
+.claimed-content-wrapper{
+  margin-top: 21.5%;
+  height: 82vh;
+  overflow: scroll;
+  position: absolute;
+  width: 100%;
+  @media screen and (min-width: $break-large) {
+      margin-top: 10%;
+  }
+  .claimed-supplier-name-wrap {
+    width: 100%;
+    font-size: 4em;
+    margin: 2% 0 0 0;
+    @media screen and (min-width: $break-large) {
+        font-size: 2em;
+        margin: 2% 0 0 15%;
+    }
+    .claimed-supplier-name{
+      display: inline-block;
+      width: 49%;
+      padding: 0 0 0 2%;
+      @media screen and (min-width: $break-large) {
+        width: 30%;
+      }
+      span{
+        font-size: .75em;
+        font-weight: 700;
+        display: block;
+      }
+    }
+    .claimed-supplier-org{
+      display: inline-block;
+      width: 46%;
+      span{
+        font-size: .75em;
+        font-weight: 700;
+        display: block;
+      }
+    }
+  }
+
+
 .claimed-images{
   margin: 2% 0 0 0;
   width: 100%;
   display: block;
   // border: solid thin black;
+  @media screen and (min-width: $break-large) {
+      margin-left: 24%;
+  }
   #claimed-map{
     width: 450px;
     height: 450px;
     margin: 2% 0 2% 2%;
     display: inline-block;
+    @media screen and (min-width: $break-large) {
+        height: 300px;
+        width: 300px;
+        border: 1px solid;
+    }
   }
   .claimed-post-photo{
     width: 450px;
     height: 450px;
     margin: 2% 0 2% 2%;
     display: inline-block;
+    @media screen and (min-width: $break-large) {
+        height: 300px;
+        width: 300px;
+    }
   }
 }
 .claimed-buttons-wrap{
@@ -23,6 +77,9 @@
   border: solid thin darken($border, 20%);
   color: darken($border, 30%);
   margin: 3% 0 0 0;
+  @media screen and (min-width: $break-large) {
+      height: 20%;
+  }
   .claimed-calendar{
     display: inline-block;
     width: 33%;
@@ -31,10 +88,17 @@
     border-right: solid thin darken($border, 20%);
     height: 100%;
     font-size: 2.5em;
+    @media screen and (min-width: $break-large) {
+        font-size: 1.25em;
+    }
     .fa-calendar-plus-o{
       margin: 5% 0 4% 0;
       display: block;
       font-size: 2.5em;
+      @media screen and (min-width: $break-large) {
+          font-size: 1.25em;
+          margin: 4% 0 2% 0;
+      }
     }
   }
   .claimed-chat{
@@ -45,10 +109,17 @@
     border-right: solid thin darken($border, 20%);
     height: 100%;
     font-size: 2.5em;
+    @media screen and (min-width: $break-large) {
+        font-size: 1.25em;
+    }
     .fa-comment{
       margin: 5% 0 4% 0;
       display: block;
       font-size: 2.5em;
+      @media screen and (min-width: $break-large) {
+          font-size: 1.25em;
+          margin: 4% 0 2% 0;
+      }
     }
   }
   .claimed-directions{
@@ -60,10 +131,17 @@
     height: 100%;
     text-decoration: none;
     font-size: 2.5em;
+    @media screen and (min-width: $break-large) {
+        font-size: 1.25em;
+    }
     .fa-google{
       margin: 5% 0 4% 0;
       display: block;
       font-size: 2.5em;
+      @media screen and (min-width: $break-large) {
+          font-size: 1.25em;
+          margin: 4% 0 2% 0;
+      }
     }
   }
 }
@@ -72,9 +150,19 @@
   width: 96%;
   font-size: 4em;
   margin: 2% 0 0 2%;
+  @media screen and (min-width: $break-large) {
+      width: 45%;
+      margin: 2% 0 15% 15%;
+      font-size: 1em;
+  }
   .claimed-start{
     width: 49%;
     display: inline-block;
+    @media screen and (min-width: $break-large) {
+        font-size: 2em;
+        width: 22%;
+        margin-right: 30%;
+    }
     span{
       display: block;
       font-weight: 700;
@@ -84,6 +172,10 @@
   .claimed-end{
     width: 49%;
     display: inline-block;
+    @media screen and (min-width: $break-large) {
+        font-size: 2em;
+        width: 22%;
+    }
     span{
       display: block;
       font-weight: 700;
@@ -96,6 +188,12 @@
   font-size: 4em;
   margin: 2% 0 0 2%;
   display: block;
+  @media screen and (min-width: $break-large) {
+      width: 45%;
+      margin: 5% 0 1% 15%;
+      font-size: 2em;
+      font-weight: 600;
+  }
   span{
     display: block;
     font-size: .75em;
@@ -106,13 +204,17 @@
   font-size: 4em;
   margin: 2% 0 0 2%;
   display: block;
+  @media screen and (min-width: $break-large) {
+      font-size: 3em;
+      margin: 2% 0 0 17%;
+  }
   span{
     display: block;
     font-size: .5em;
     font-weight: 700;
   }
 }
-
+}
 
 .claimed-bottom-button {
 position: fixed;
