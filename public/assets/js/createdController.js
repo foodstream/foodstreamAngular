@@ -96,16 +96,18 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
 
   $scope.claimerRating = 0;
 
+  userId = localStorage.getItem("userId");
+
   //allow supplier to mark the post as completed
   $scope.markComplete = function(){
       console.log($scope.post.claimed);
-      // $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
-      //   console.log('post completed successfully', response);
-      // }, function errorCallback(response){
-      //   console.log('post not marked as completed');
-      // });
+      $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
+        console.log('post completed successfully', response);
+      }, function errorCallback(response){
+        console.log('post not marked as completed');
+      });
 
-      $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/' + postClaimer + '.json?token=' + token + "&user[ratings_attributes][][rating]=" + $scope.claimerRating + "&user[ratings_attributes][][reviewer_id]=" + userId + "&user[ratings_attributes][][reviewed_id]=" + $scope.claimerId)
+      $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/' + $scope.claimerId + '.json?token=' + token + "&user[ratings_attributes][][rating]=" + $scope.claimerRating + "&user[ratings_attributes][][reviewer_id]=" + userId + "&user[ratings_attributes][][reviewed_id]=" + $scope.claimerId)
         .then(function successCallback(response){
           console.log('review submitted!');
         }, function errorCallback(response){
