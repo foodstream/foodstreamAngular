@@ -27,8 +27,10 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
       //set the data for showing the search results
       $scope.posts = response.data;
       $scope.loadingIcon = false;
-    }, function errorCallback(resonse){
+    }, function errorCallback(response){
       console.log(response);
+      $scope.loadingIcon = false;
+      console.log("error occurred");
     });
   });
 
