@@ -1823,8 +1823,8 @@ body {
     background-color: #abffda;
     height: 5%;
     z-index: 999;
-    white-space: nowrap;
     display: inline-block;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
   body .post-detail-content-wrapper {
@@ -2335,8 +2335,11 @@ body {
     line-height: 1.5em;
     margin-top: 12%;
     position: fixed;
-    color: #00ab61;
-    z-index: 999; }
+    color: black;
+    z-index: 999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   body .edit-post-content-wrapper {
     margin-top: 22%;
     overflow: scroll;
@@ -2378,7 +2381,7 @@ body {
     width: 40%;
     border: solid 2px #F4F4F4;
     font-size: 4em;
-    margin: 2% 15% 2% 2%;
+    margin: 2% 2% 2% 2%;
     color: black; }
   body .edit-post-start-time-na {
     display: inline-block;
@@ -2390,7 +2393,7 @@ body {
     color: black; }
   body .edit-post-end-na {
     display: inline-block;
-    margin: 2% 15% 2% 2%;
+    margin: 2% 2% 2% 2%;
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
@@ -2437,7 +2440,10 @@ body {
     background-color: #abffda;
     position: fixed;
     margin: 12% 0 0 0;
-    z-index: 999; }
+    z-index: 999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   body .created-content-wrapper {
     margin-top: 24%;
     overflow: scroll;
@@ -2646,7 +2652,10 @@ body {
     width: 100%;
     display: block;
     text-align: center;
-    z-index: 999; }
+    z-index: 999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
     body .chat-subheader .chat-other-user-text {
       font-weight: 700; }
   body .chat-content-wrapper {
