@@ -293,7 +293,17 @@ body{
   }
 
 //------ Home Page/Dashboard ------ //
-
+  .home-loading-icon {
+    margin-top: 15%;
+    font-size: 4em;
+    i {
+      margin-left: 32%;
+    }
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
 
   .home-subheader{
     background-color:lighten($headerbg, 35%);

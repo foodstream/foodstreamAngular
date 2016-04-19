@@ -12,6 +12,12 @@
 </div>
 
 <div class = "home-content-wrapper">
+
+  <div ng-show = "loadingIcon" class = "home-loading-icon">
+    <i class="fa fa-cog fa-spin fa-4x fa-fw margin-bottom"></i>
+    <span class="sr-only">Loading search results...</span>
+  </div>
+
   <div ng-repeat = "post in posts | filter:filters | orderBy:'end_at'" >
 
     <div class = "home-card">

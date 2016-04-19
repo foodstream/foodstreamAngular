@@ -10,6 +10,8 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
   //define post variables
   $scope.posts;
 
+  $scope.loadingIcon = true;
+
   //get user's posts.
   $http({
     method: 'GET',
@@ -18,8 +20,10 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
     console.log(response.data);
     //set data for ng-repeat
     $scope.posts = response.data;
+    $scope.loadingIcon = false;
   }, function errorCallback(response){
     // console.log(response)
+    $scope.loadingIcon = false;
   });
 
   //declare filter variable for post filters

@@ -1674,6 +1674,14 @@ body {
     cursor: pointer; }
     body .sign-up-back-btn:hover {
       background-color: #2ccec8; }
+  body .home-loading-icon {
+    margin-top: 15%;
+    font-size: 4em; }
+    body .home-loading-icon i {
+      margin-left: 32%; }
+    body .home-loading-icon span {
+      display: block;
+      text-align: center; }
   body .home-subheader {
     background-color: #abffda;
     width: 100%;
