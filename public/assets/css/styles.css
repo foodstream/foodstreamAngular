@@ -698,7 +698,8 @@ body {
     width: 100%;
     text-align: center;
     font-size: 4em;
-    line-height: 1.3em;
+    line-height: 1.5em;
+    font-weight: 300;
     color: white;
     cursor: pointer;
     font-weight: 200; }
@@ -1931,7 +1932,7 @@ body {
     width: 100%;
     text-align: center;
     position: fixed;
-    top: 4.5%;
+    top: 4.3%;
     background-color: #abffda;
     height: 5%;
     z-index: 999; }
@@ -2026,6 +2027,7 @@ body {
     color: white;
     font-size: 4em;
     line-height: 1.5em;
+    font-weight: 300;
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -2040,6 +2042,7 @@ body {
     color: white;
     font-size: 4em;
     line-height: 1.5em;
+    font-weight: 300;
     text-align: center;
     position: fixed;
     bottom: 0;
@@ -2161,7 +2164,7 @@ body {
     line-height: 1.5em;
     color: white;
     cursor: pointer;
-    font-weight: 200;
+    font-weight: 300;
     z-index: 999; }
     body .results-footer:hover {
       background-color: #59f68f; }
@@ -2466,7 +2469,7 @@ body {
     width: 40%;
     border: solid 2px #F4F4F4;
     font-size: 4em;
-    margin: 2% 12% 2% 2%;
+    margin: 2% 15% 2% 2%;
     color: black; }
   body .edit-post-start-time-na {
     display: inline-block;
@@ -2478,7 +2481,7 @@ body {
     color: black; }
   body .edit-post-end-na {
     display: inline-block;
-    margin: 2% 5%;
+    margin: 2% 15% 2% 2%;
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
@@ -2943,8 +2946,9 @@ body {
     left: 0;
     width: 50%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: 300;
     color: white;
     cursor: pointer;
     background-color: #3DD6D0;
@@ -2957,8 +2961,9 @@ body {
     width: 50%;
     left: 50%;
     text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: 300;
     color: white;
     cursor: pointer;
     background-color: #71F79F;
