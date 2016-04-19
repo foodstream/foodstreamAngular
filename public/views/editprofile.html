@@ -20,7 +20,8 @@
   <img class='edit-profile-image' ng-src = "{{profilePic}}" width = "500px"></img>
 
   <div class = "edit-profile-rating">
-    avg rating: {{myRating}} / 5 {{starConverter()}}
+    Average rating:
+    <div class = "actual-stars" star-rating rating="myRating" read-only="true" max-rating="5"></div>
   </div>
 
   <div class='edit-profile-add-image' ng-click='addImage()'>Add An Image</div>
