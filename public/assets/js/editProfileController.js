@@ -14,6 +14,7 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   $scope.org;
   $scope.userLocation;
   $scope.userDescription;
+  $scope.myRating = 0;
   var lat;
   var lng;
 
@@ -35,6 +36,7 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   };//close logout function
 
 
+
   //get user info to migrate onto page
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+$scope.userToken).then(function success(response){
     //migrate response data to page
@@ -45,7 +47,8 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     $scope.userLocation = response.data.address_string;
     $scope.userDescription = response.data.description;
     $scope.profilePic = response.data.profile_image;
-    $scope.myRating = response.data.average_rating;
+    $scope.myRating = Math.round(response.data.average_rating);
+
     console.log(response);
   }, function error(response){
     console.log('GET failed', response);
