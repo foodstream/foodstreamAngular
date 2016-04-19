@@ -21,7 +21,7 @@ body {
     font-size: 4em;
     position: fixed;
     top: 0;
-    z-index: 998; }
+    z-index: 1000; }
     @media screen and (min-width: 1200px) {
       body .app-header {
         font-size: 3em;
@@ -2043,7 +2043,7 @@ body {
       body .search-results-content-wrapper .results-card .results-details {
         display: inline-block;
         position: absolute;
-        width: 22.5%;
+        width: 25%;
         height: 16vh;
         text-align: center;
         color: white;
@@ -2238,7 +2238,7 @@ body {
   body .create-content-wrapper {
     width: 100%;
     top: 13%;
-    height: 82vh;
+    height: 81vh;
     position: absolute; }
     body .create-content-wrapper .create-post-add-pic {
       border: solid 3px #F4F4F4;
@@ -2276,7 +2276,7 @@ body {
       width: 40%;
       border: solid 2px #F4F4F4;
       font-size: 4em;
-      margin: 2% 5% 2% 2%;
+      margin: 2% 2% 2% 2%;
       color: black; }
     body .create-content-wrapper .create-start-time-na {
       display: inline-block;
@@ -2288,7 +2288,7 @@ body {
       color: black; }
     body .create-content-wrapper .create-end-na {
       display: inline-block;
-      margin: 2% 5% 2% 2%;
+      margin: 2% 2% 2% 2%;
       background-color: white;
       width: 40%;
       border: solid 2px #F4F4F4;

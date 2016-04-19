@@ -39,7 +39,7 @@ body{
     font-size: 4em;
     position: fixed;
     top: 0;
-    z-index:998;
+    z-index:1000;
     @media screen and (min-width: $break-large) {
         font-size: 3em;
         border-bottom: 6px solid darken($headerbg, 5%);
@@ -765,7 +765,7 @@ body{
     .results-details {
       display: inline-block;
       position: absolute;
-      width: 22.5%;
+      width: 25%;
       height: $cardHeight * 0.8;
       // position: absolute;
       // margin: -33.25% 0 0 72%;
@@ -1020,7 +1020,7 @@ body{
     .create-content-wrapper{
       width: 100%;
       top: 13%;
-      height: 82vh;
+      height: 81vh;
       position: absolute;
       // border: solid thin black;
     .create-post-add-pic{
@@ -1066,7 +1066,7 @@ body{
       width: 40%;
       border: solid 2px $border;
       font-size: 4em;
-      margin: 2% 5% 2% 2%;
+      margin: 2% 2% 2% 2%;
       color: black;
     }
     .create-start-time-na{
@@ -1080,7 +1080,7 @@ body{
     }
     .create-end-na {
       display: inline-block;
-      margin: 2% 5% 2% 2%;
+      margin: 2% 2% 2% 2%;
       background-color: white;
       width: 40%;
       border: solid 2px $border;
