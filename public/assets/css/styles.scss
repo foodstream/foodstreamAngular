@@ -752,6 +752,7 @@ body{
       // margin: -10% 0 0 1%;
       // display: inline-block;
       width: 95%;
+      height: 95%;
     }
     }
 
@@ -1172,7 +1173,7 @@ body{
   width: 100%;
   font-size: 4em;
   text-align: center;
-  background-color: lighten($headerbg, 25%);
+  background-color:lighten($headerbg, 35%);
   line-height: 1.5em;
   margin-top: 12%;
   position: fixed;
@@ -1231,7 +1232,7 @@ body{
   width: 40%;
   border: solid 2px $border;
   font-size: 4em;
-  margin: 2% 2% 2% 2%;
+  margin: 1%;
   color: black;
 }
 .edit-post-start-time-na{
@@ -1245,7 +1246,7 @@ body{
 }
 .edit-post-end-na {
   display: inline-block;
-  margin: 2% 2% 2% 2%;
+  margin: 1%;
   background-color: white;
   width: 40%;
   border: solid 2px $border;

@@ -937,105 +937,6 @@ body {
         width: 10%;
         font-size: 1em;
         margin: 1% 45% 0 5%; } }
-  body .edit-post-subheader {
-    width: 100%;
-    font-size: 4em;
-    text-align: center;
-    background-color: #78ffc4;
-    line-height: 1.5em;
-    margin-top: 12%;
-    position: fixed;
-    color: #00ab61; }
-  body .edit-post-content-wrapper {
-    margin-top: 22%;
-    overflow: scroll;
-    height: 81vh;
-    position: absolute; }
-    body .edit-post-content-wrapper .edit-post-image {
-      height: 450px;
-      width: 450px;
-      margin: 2% 0 0 28%; }
-  body #file-input-edit-post {
-    display: none; }
-  body .edit-post-add-image {
-    border: solid 3px #F4F4F4;
-    text-align: center;
-    width: 95%;
-    margin: 1%  0 2%  2.5%;
-    font-size: 4em;
-    color: #595959;
-    background-color: #fcfcfc;
-    line-height: 1.2em; }
-  body .edit-post-title {
-    background-color: white;
-    width: 95%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin: 2% 0 0 2.5%;
-    color: black; }
-  body .edit-post-location {
-    background-color: white;
-    width: 95%;
-    border: solid 2px #F4F4F4;
-    font-size: 1em;
-    margin: 2% 0 2% 2.5%;
-    color: black;
-    font-size: 4em; }
-  body .edit-post-start-na {
-    display: inline-block;
-    background-color: white;
-    width: 40%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin: 2% 5%;
-    color: black; }
-  body .edit-post-start-time-na {
-    display: inline-block;
-    background-color: white;
-    width: 40%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin-top: 2%;
-    color: black; }
-  body .edit-post-end-na {
-    display: inline-block;
-    margin: 2% 5%;
-    background-color: white;
-    width: 40%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin-top: 2%;
-    color: black; }
-  body .edit-post-end-time-na {
-    display: inline-block;
-    background-color: white;
-    width: 40%;
-    border: solid 2px #F4F4F4;
-    font-size: 4em;
-    margin-top: 2%;
-    color: black; }
-  body .edit-post-description {
-    display: block;
-    height: 25vh;
-    background-color: white;
-    width: 95%;
-    border: solid 2px #F4F4F4;
-    margin: 2% 0 0 2.5%;
-    color: black;
-    font-size: 4em; }
-  body .edit-post-btn {
-    background-color: #71F79F;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 5em;
-    line-height: 1.3em;
-    color: white;
-    cursor: pointer;
-    font-weight: 200; }
-    body .edit-post-btn:hover {
-      background-color: #59f68f; }
   body .created-post-title {
     width: 100%;
     font-size: 5em;
@@ -2036,7 +1937,8 @@ body {
         width: 20%;
         margin: 2% 0 0 0; }
         body .search-results-content-wrapper .results-card .results-pic-wrap .results-add-picture {
-          width: 95%; }
+          width: 95%;
+          height: 95%; }
       body .search-results-content-wrapper .results-card .results-transaction-details {
         margin: 0 0 0 20%;
         display: inline-block;
@@ -2253,6 +2155,14 @@ body {
     margin-top: 11%;
     z-index: 999;
     position: fixed; }
+  body .create-upload-verify .fa-check-square-o {
+    color: #71F79F;
+    font-size: 5em;
+    margin-left: 30%;
+    display: inline; }
+  body .create-upload-verify div {
+    display: inline;
+    font-size: 3em; }
   body .create-content-wrapper {
     width: 100%;
     top: 13%;
@@ -2348,7 +2258,7 @@ body {
     width: 100%;
     font-size: 4em;
     text-align: center;
-    background-color: #78ffc4;
+    background-color: #abffda;
     line-height: 1.5em;
     margin-top: 12%;
     position: fixed;
@@ -2398,7 +2308,7 @@ body {
     width: 40%;
     border: solid 2px #F4F4F4;
     font-size: 4em;
-    margin: 2% 2% 2% 2%;
+    margin: 1%;
     color: black; }
   body .edit-post-start-time-na {
     display: inline-block;
@@ -2410,7 +2320,7 @@ body {
     color: black; }
   body .edit-post-end-na {
     display: inline-block;
-    margin: 2% 2% 2% 2%;
+    margin: 1%;
     background-color: white;
     width: 40%;
     border: solid 2px #F4F4F4;
