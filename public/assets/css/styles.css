@@ -2253,6 +2253,14 @@ body {
     margin-top: 11%;
     z-index: 999;
     position: fixed; }
+  body .create-upload-verify .fa-check-square-o {
+    color: #71F79F;
+    font-size: 5em;
+    margin-left: 30%;
+    display: inline; }
+  body .create-upload-verify div {
+    display: inline;
+    font-size: 3em; }
   body .create-content-wrapper {
     width: 100%;
     top: 13%;
@@ -2581,7 +2589,7 @@ body {
     background-color: rgba(0, 0, 0, 0.7); }
     body .created-post-modal .created-post-modal-content {
       position: fixed;
-      height: 30%;
+      height: 35%;
       width: 60%;
       margin: 50% 0 0 20%;
       background-color: white;
