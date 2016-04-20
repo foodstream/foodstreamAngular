@@ -1,7 +1,5 @@
 foodStream.controller('loginController', ['$http', '$scope', '$location', 'logged', function($http, $scope, $location, logged){
 
-
-
   //log in
   $scope.submitLogin = function(){
     console.log('click');

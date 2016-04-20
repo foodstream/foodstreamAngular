@@ -6,7 +6,7 @@ var foodStream = angular.module("foodStream", ['ngRoute', 'ngFileUpload']);
 foodStream.controller('appController', ['$http', '$scope', '$location', 'logged', function($http, $scope, $location, logged){
 
   //create a variable that changes when user is logged in for ng-show
-  $scope.pic = logged.pic;
+  $scope.logged = logged.pic;
 
   //get login token out of localstorage
   $scope.userToken = localStorage.getItem('token');
@@ -14,24 +14,18 @@ foodStream.controller('appController', ['$http', '$scope', '$location', 'logged'
   userId = localStorage.getItem('userId');
   $scope.first;
   //check and see if user is logged in...if they are, show a user icon in the header that is a link to the edit-profile page
-  if($scope.pic === true){
-  $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+$scope.userToken).then(function success(response){
-        // console.log(response);
-        $scope.first = response.data.first_name;
-        $scope.last = response.data.last_name;
-        $scope.email = response.data.email;
-        $scope.org = response.data.organization;
-        $scope.pic = response.data.profile_image
-    }, function error(response){
-      console.log('GET failed in appController');
-  });
+  if($scope.logged === true){
+    $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+$scope.userToken).then(function success(response){
+          // console.log(response);
+          $scope.first = response.data.first_name;
+          $scope.last = response.data.last_name;
+          $scope.email = response.data.email;
+          $scope.org = response.data.organization;
+          $scope.pic = response.data.profile_image
+      }, function error(response){
+        console.log('GET failed in appController');
+    });
   };
-
-  //if a token exists, log the user in
-  // if($scope.userToken != null){
-  //   $scope.logged = true;
-  //   // console.log('logged', $scope.logged)
-  // };
 
   //when you click on the user icon, you go to the edit profile page...
   $scope.goToProfile = function(){
@@ -44,12 +38,6 @@ foodStream.controller('appController', ['$http', '$scope', '$location', 'logged'
 
 }]);
 
-
-//this factory does nothing, but it's a dependency of some controller and the site breaks if it isnt here...we should fix that
-foodStream.factory('getPostDetail', function() {
-  var clickedPost = {};
-  return clickedPost;
- });
 
 //this factory checks for a token, and if there is one tells the routing to let the user see more than just login/landing
 foodStream.factory('logged', function($rootScope){
