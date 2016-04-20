@@ -54,7 +54,6 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
       fileNameContents = true;
       return fileNameContents;
     }
-
   };
 
   //submit the post
