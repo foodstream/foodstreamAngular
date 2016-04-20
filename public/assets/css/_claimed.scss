@@ -19,7 +19,7 @@
       @media screen and (min-width: $break-large) {
           font-size: .5em;
           line-height: 1em;
-          width: 30%;
+          width: 26%;
       }
       span{
         @media screen and (min-width: $break-large) {
@@ -42,7 +42,7 @@
   }
 .claimed-images{
   @media screen and (min-width: $break-large) {
-        margin: 0 0 0 28%;
+        margin: 0 0 0 27%;
   }
   #claimed-map{
     @media screen and (min-width: $break-large) {
@@ -60,6 +60,10 @@
   }
 }
 .claimed-buttons-wrap{
+    @media screen and (min-width: $break-large) {
+        width: 90%;
+        margin-left: 5%;
+    }
   .claimed-calendar{
     @media screen and (min-width: $break-large) {
         font-size: 1.25em;
@@ -96,19 +100,22 @@
 }
 .claimed-time-wrap{
   @media screen and (min-width: $break-large) {
-      margin: 2% 0 15% 15%;
+      width: 75%;
+      margin: 3% 0 15% 30%;
       font-size: 1em;
   }
   .claimed-start{
     @media screen and (min-width: $break-large) {
-        font-size: 2em;
+        font-size: 2.5em;
+        width: 35%;
     }
     span{
     }
   }
   .claimed-end{
     @media screen and (min-width: $break-large) {
-        font-size: 2em;
+        font-size: 2.5em;
+        width: 35%;
     }
     span{
     }
@@ -116,7 +123,7 @@
 }
 .claimed-location{
   @media screen and (min-width: $break-large) {
-      margin: 5% 0 1% 15%;
+      margin: 5% 0 1% 30%;
       font-size: 2.5em;
   }
   span{
@@ -124,8 +131,8 @@
 }
 .claimed-details{
   @media screen and (min-width: $break-large) {
-      font-size: 1em;
-      margin: 0 3% 0 15%;
+      font-size: 2.5em;
+      margin: 1% 3% 0 29%;
       width: 75%;
   }
   span{

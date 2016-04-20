@@ -11,11 +11,11 @@
 }
 .edit-post-content-wrapper{
   @media screen and (min-width: $break-large) {
-      margin: 7% 0 0 29%;
+      margin: 7% 0 0 30%;
   }
   .edit-post-image{
     @media screen and (min-width: $break-large) {
-        margin: 2% 0 0 15.5%;
+        margin: 2% 0 0 14%;
         height: 250px;
         width: 250px;
     }
@@ -79,7 +79,7 @@
   @media screen and (min-width: $break-large) {
       width: 50%;
       font-size: 1.5em;
-      margin: 1% 0 2% 2%;
+      margin: 1% 0 4% 2%;
       height: 15vh;
   }
 }

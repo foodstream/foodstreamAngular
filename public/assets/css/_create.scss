@@ -11,61 +11,63 @@
 }
 .create-post-add-pic{
   @media screen and (min-width: $break-large) {
-      margin: 12% 2% 0 38.5%;
-      width: 35%;
+      margin: 12% 2% 4% 38%;
+      width: 25%;
       font-size: 2.5em;
+      text-align: center;
   }
   .fa-camera-retro{
   }
 }
 #file-input{
+
 }
 .create-title {
   @media screen and (min-width: $break-large) {
     width: 35.5%;
-    font-size: 1em;
+    font-size: 1.5em;
     margin: 1.5% 0 0 32%;
   }
 }
 .create-location {
   @media screen and (min-width: $break-large) {
       width: 35.5%;
-      font-size: 1em;
+      font-size: 1.5em;
       margin: 1% 0 0 32%;
   }
 }
 .create-start-na {
   @media screen and (min-width: $break-large) {
     width: 10%;
-    font-size: 1em;
+    font-size: 1.5em;
     margin: 1% 0 0 37%;
   }
 }
 .create-start-time-na{
   @media screen and (min-width: $break-large) {
     width: 10%;
-    font-size: 1em;
+    font-size: 1.5em;
     margin: 1% 35% 0 5%;
   }
 }
 .create-end-na {
   @media screen and (min-width: $break-large) {
       width: 10%;
-      font-size: 1em;
+      font-size: 1.5em;
       margin: 1% 0 0 37%;
   }
 }
 .create-end-time-na{
   @media screen and (min-width: $break-large) {
       width: 10%;
-      font-size: 1em;
+      font-size: 1.5em;
       margin: 1% 35% 0 5%;
   }
 }
 .create-description {
   @media screen and (min-width: $break-large) {
       width: 35.5%;
-      font-size: 1em;
+      font-size: 1.5em;
       margin: 1% 0 0 32%;
       height: 15vh;
   }
