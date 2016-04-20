@@ -17,10 +17,10 @@ foodStream.controller('detailController', ['$http', '$scope', '$location', funct
     method: 'GET',
     url:' https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token
   }).then(function successCallback(response){
-    console.log(response.data);
+    // console.log(response.data);
     $scope.post = response.data;
     $scope.userRating = Math.round(response.data.supplier_average_rating);
-    // console.log($scope.post.location);
+
     //google map
     var marker;
     var myLatLng;
@@ -45,10 +45,9 @@ foodStream.controller('detailController', ['$http', '$scope', '$location', funct
     marker.setMap(map);
     //set the directions link
     $scope.directionsLink = 'https://maps.google.com?saddr=Current+Location&daddr='+$scope.post.latitude+','+$scope.post.longitude;
-    console.log($scope.directionsLink);
 
   }, function errorCallback(response){
-    console.log('hate')
+    console.log('hate getting post details', response)
   });
 
 
@@ -68,7 +67,6 @@ foodStream.controller('detailController', ['$http', '$scope', '$location', funct
     }, function errorCallback(response){
       console.log('that aint claimed')
     });
-  }
+  };
 
 }]);
-// https://sheltered-wildwood-38449.herokuapp.com

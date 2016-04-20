@@ -1,17 +1,15 @@
 foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', '$location', function($http, $scope, getPostDetail, $location) {
-  //  console.log("claimed ctrllr up");
-  //  console.log(getPostDetail.clickedPost);
+
   //get the ID of the post you just clicked
   var postId = localStorage.getItem('postId');
   //get the user token
   var token = localStorage.getItem('token');
   //get the user ID
   var userId  = localStorage.getItem('userId');
-  // console.log(postId);
 
-  //remove the post ID b/c it's a one-time need..or not, because people will go back after getting directions
-  // localhttps://sheltered-wildwood-38449.herokuapp.com
 
+
+  //grab the post user supplier and claimant ID plus title of clicked post and go to chat
   $scope.goToChat = function(postId, supplierId, claimantId, title){
     localStorage.setItem('postId', postId);
     localStorage.setItem('chatSupplierId', supplierId);
@@ -20,14 +18,16 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
     $location.path('/chat');
   }
 
+  //set directions variable
   $scope.directionsLink;
+
   //get the post info
   $http.get(
    'https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
     // console.log(response.data);
-    //post info = callback response
+
     $scope.post = response.data;
-    // console.log($scope.post.latitude, $scope.post.longitude)
+
     //use callback lat/long to display google map of post location
     var marker;
     var myLatLng;
@@ -59,13 +59,13 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
     console.log('hate');
   });
 
-  //add event to calendar
+  //add event to calendar via email
   $scope.addToCalendar = function(){
     $http.post('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'/send_ical?token='+token).then(function successCallback(response){
       alert('event sent to email');
     }, function errorCallback(response){
       console.log('event not sent', response);
-      alert('event sent to email');
+      alert('there was an error, this event was not sent to email');
     });
   };
 
@@ -74,6 +74,7 @@ foodStream.controller('claimedController', ['$http', '$scope', 'getPostDetail', 
      $location.path('/home');
    }
 
+//remove the user's claim from a post....the if/else is from  previous iteration but it works so it's there for now
  $scope.removePost = function(claimantId, supplierId){
   //  console.log(claimantId, supplierId)
    //if the user is the supplier, delete the post

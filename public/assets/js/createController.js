@@ -43,18 +43,19 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
   $(".create-end-time-na").pickatime({
   format: 'h:iA'});
 
+  //click on the styled add pic div = click on hidden file input button
   $scope.addPic = function(){
     $('#file-input').click();
   }
 
+  //declare photo upload check variable
   $scope.fileNameContents = false;
-
+  //show that user has uploaded a file
   $scope.fileVerify = function(){
     if ($('#file-input').val() != ""){
       fileNameContents = true;
       return fileNameContents;
     }
-
   };
 
   //submit the post
@@ -73,18 +74,18 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
 
     //set form data
     var formData = new FormData();
-        //only send the image if the user sets an image
-        if(file != undefined){
-        formData.append('post[post_image]', file);
-        };
-        formData.append('post[title]', title);
-        formData.append('post[details]', description);
-        formData.append('post[start_at]', startString);
-        formData.append('post[end_at]', endString);
-        formData.append('post[supplier_id]', userId);
-        formData.append('post[address_string]', address);
-        formData.append('post[latitude]', lat);
-        formData.append('post[longitude]', lng);
+    //only send the image if the user sets an image
+    if(file != undefined){
+    formData.append('post[post_image]', file);
+    };
+    formData.append('post[title]', title);
+    formData.append('post[details]', description);
+    formData.append('post[start_at]', startString);
+    formData.append('post[end_at]', endString);
+    formData.append('post[supplier_id]', userId);
+    formData.append('post[address_string]', address);
+    formData.append('post[latitude]', lat);
+    formData.append('post[longitude]', lng);
 
 
 
@@ -104,7 +105,5 @@ foodStream.controller('createController', ['$http', '$scope', '$location', 'Uplo
     });
 
   };//end of submit new post
-
-
 
 }]);

@@ -933,7 +933,7 @@ body{
 
 
     //--------- Profile [public] View-------------//
-    
+
     .profile-public-info {
         width: 100%;
         position: absolute;
@@ -1866,5 +1866,43 @@ z-index: 999;
 }
 
   @import 'claimed';
+
+}
+
+//mobile only styling
+.no-mobile-overlay-content{
+  margin-top: -2%;
+  padding: 5% 0 5% 0;
+  z-index: 999;
+  background: url('/assets/images/landing_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.no-mobile-about{
+  margin: 5% 2.5% 1% 2.5%;
+  background-color: transparent;
+  width: 90%;
+  padding: 2% 2%;
+  // border: solid 2px darken($border, 10%);
+  color: white;
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+  font-size: 4.2em;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+.no-mobile {
+  font-family: "overpass", sans-serif;
+  font-size: 3em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+.mobile-phone {
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
 
 }

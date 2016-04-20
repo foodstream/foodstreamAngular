@@ -1,14 +1,14 @@
 foodStream.controller('editPostController', ['$http', '$scope', '$location', function($http, $scope, $location){
-  console.log('你好！我叫edit post controller!');
+  // console.log('你好！我叫edit post controller!');
 
   //get user token for API auth
   var token = localStorage.getItem('token');
   //get the id of the post to edit out of LS
   var postId = localStorage.getItem('postId');
 
-
+  //get the info for the post you want to edit
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token).then(function successCallback(response){
-    console.log(response.data);
+    // console.log(response.data);
     //migrate data onto page
     $scope.postPic = response.data.post_image;
     $scope.title = response.data.title;
@@ -26,6 +26,7 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
     console.log('not get?', response);
   });
 
+  //click on styled add image div = click on hidden file upload button
   $scope.addImage = function(){
     $('#file-input-edit-post').click();
   }
@@ -45,6 +46,7 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
         address = place.formatted_address;
           // console.log(lat, lng, address)
     });
+
   //declare variable for grabbing location value w/jquery
   var location;
 
@@ -79,7 +81,7 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
     description = $scope.description;
     address = $('#edit-post-location-ga').val();
 
-    console.log($scope.title, location, startString, endString, $scope.description, lat, lng, file, address);
+    // console.log($scope.title, location, startString, endString, $scope.description, lat, lng, file, address);
 
     //create new formdata to send to server
     var formData = new FormData();
@@ -108,9 +110,8 @@ foodStream.controller('editPostController', ['$http', '$scope', '$location', fun
       headers : {'Content-Type': undefined}
     }).then(function successCallback(response){
       //set the id of the post on success callback so that the info can be displayed on the created page
-      localStorage.setItem('createdPostId', response.data.id)
-
-      $location.path('/created')
+      localStorage.setItem('createdPostId', response.data.id);
+      $location.path('/created');
     }, function errorCallback(response){
       console.log('post not created', response);
     });

@@ -20,7 +20,7 @@ foodStream.controller('loginController', ['$http', '$scope', '$location', 'logge
   }//end of submit login
 
   $scope.submitSignup = function(){
-    console.log('click!!');
+    // console.log('click!!');
     $location.path('/signUp')
   }
 

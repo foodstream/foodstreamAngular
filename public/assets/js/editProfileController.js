@@ -22,7 +22,7 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
   $scope.logout = function(){
     //log them out of the server
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/sessions/logout?token='+$scope.userToken).then(function successCallback(){
-      console.log('logged out');
+      // console.log('logged out');
       //clear everything out of LS on success to log them out of the angular app
       localStorage.clear();
       $location.path('/landing');
@@ -49,16 +49,17 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
     $scope.profilePic = response.data.profile_image;
     $scope.myRating = Math.round(response.data.average_rating);
 
-    console.log(response);
+    // console.log(response);
   }, function error(response){
     console.log('GET failed', response);
   });
 
+  //conert server response to stars for ratings
   $scope.starConverter = function(){
     // console.log(Math.round($scope.myRating));
     for (var i = 1; i <= Math.round($scope.myRating); i++){
       // $(".edit-profile-rating").append();
-      console.log("star");
+      // console.log("star");
     };
   };
 
@@ -78,7 +79,7 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
           lat = place.geometry.location.lat();
           lng = place.geometry.location.lng();
           $scope.userLocation = place.formatted_address;
-            console.log(lat, lng, $scope.userLocation)
+            // console.log(lat, lng, $scope.userLocation)
       });
 
   //click on the submit div to click hidden submit button
@@ -115,12 +116,12 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
       data: formData,
       headers : {'Content-Type': undefined}
     }).then(function success(response){
-        console.log("edited successfully", response);
+        // console.log("edited successfully", response);
         localStorage.setItem('email', response.data.email);
         $location.path('/home');
       }, function error(response){
-        console.log("edit profile failed");
-        console.log(response);
+        // console.log("edit profile failed");
+        // console.log(response);
         // alert('edit failed');
         $location.path('/home');
       });

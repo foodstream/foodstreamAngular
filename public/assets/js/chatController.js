@@ -9,9 +9,9 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', '$timeo
   var claimantId = localStorage.getItem('chatClaimantId');
   var supplierId = localStorage.getItem('chatSupplierId');
   var postTitle = localStorage.getItem('chatPostTitle');
-
+  //create a scope variable for the ng-if
   $scope.userId = userId;
-  console.log(claimantId)
+  // console.log(claimantId)
 
   //push the scroll
   $(document).ready(function(){
@@ -24,7 +24,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', '$timeo
   //if the user is not the claimant, grab the claimants email to send the message
   if(claimantId === userId && claimantId != null ){
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+supplierId+'.json?token='+token).then( function successCallback(response){
-      console.log('other user got', response.data);
+      // console.log('other user got', response.data);
       $scope.otherUserName = response.data.first_name+' '+response.data.last_name;
       $scope.otherUserEmail = response.data.email
     }, function errorCallback(response){
@@ -34,7 +34,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', '$timeo
   //if the user is not the supplier, grab the suppliers email to send the message
   else if(supplierId === userId && claimantId != null){
     $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+claimantId+'.json?token='+token).then( function successCallback(response){
-      console.log('other user got', response.data);
+      // console.log('other user got', response.data);
         $scope.otherUserName = response.data.first_name+' '+response.data.last_name;
         $scope.otherUserEmail = response.data.email
       }, function errorCallback(response){
@@ -48,12 +48,13 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', '$timeo
 
   //get messages
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
-    console.log('get messages worked', response)
+    // console.log('get messages worked', response)
     $scope.messages = response.data;
     $scope.ajaxPeriodicall();
   }, function errorCallback(response){
     console.log('didnt get messages');
   });
+
   //keep getting messages
   $scope.count = 0;
   $scope.ajaxPeriodicall = function() {
@@ -62,13 +63,14 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', '$timeo
       //  console.log('get messages worked', response)
        $scope.messages = response.data;
        $scope.count = $scope.count + 1;
-       console.log($scope.count)
+      //  console.log($scope.count)
        //re-push the scroll with new content
        $(document).ready(function(){
        $('.chat-content-wrapper').animate({
        scrollTop: $('.chat-content-wrapper').get(0).scrollHeight}, 300);
        $scope.apply;
        });
+
        $timeout($scope.ajaxPeriodicall, 1000);
      }, function errorCallback(response){
        console.log('didnt get messages');
@@ -81,7 +83,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', '$timeo
   $scope.userLastName;
   //get user information for to fill message email subject line
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/users/'+userId+'.json?token='+token).then( function successCallback(response){
-    console.log('user info got', response.data);
+    // console.log('user info got', response.data);
     $scope.userFirstName = response.data.first_name;
     $scope.userLastName =  response.data.last_name;
   }, function errorCallback(response){
@@ -97,35 +99,35 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', '$timeo
   $scope.sendMessage = function(){
     //create the json to send the message
     var param = {"post_id":postId,"body":$('.chat-input').val(),"subject":"Foodstream app message from "+$scope.userFirstName+" "+$scope.userLastName+" regarding "+postTitle,"recipient":$scope.otherUserEmail, "sender_id":userId}
-    console.log(param);
+    // console.log(param);
 
     //make the call
     $http.post('https://sheltered-wildwood-38449.herokuapp.com/messages/send_email.json?token='+token, param).then(function successCallback(response){
-      console.log('message sent');
+      // console.log('message sent');
       $('.chat-input').val('');
       //once the message is sent, get the new list of messages to display
       $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
-        console.log('get messages worked', response)
+        // console.log('get messages worked', response)
         $scope.messages = response.data;
       }, function errorCallback(response){
         console.log('didnt get messages');
       });
     }, function errorCallback(response){
       console.log('message not sent', response);
-      $('.chat-input').val('');
+      // $('.chat-input').val('');
       //once the message is sent, get the new list of messages to display (this is here b/c the server is issuing an error but still sending the message..change that once the issue is resolved)
-      $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
-        console.log('get messages worked', response)
-        $scope.messages = response.data;
-        //re-push the scroll with new content
-        $(document).ready(function(){
-        $('.chat-content-wrapper').animate({
-        scrollTop: $('.chat-content-wrapper').get(0).scrollHeight}, 300);
-        $scope.apply;
-        });
-      }, function errorCallback(response){
-        console.log('didnt get messages');
-      });
+      // $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
+      //   console.log('get messages worked', response)
+      //   $scope.messages = response.data;
+      //   //re-push the scroll with new content
+      //   $(document).ready(function(){
+      //   $('.chat-content-wrapper').animate({
+      //   scrollTop: $('.chat-content-wrapper').get(0).scrollHeight}, 300);
+      //   $scope.apply;
+      //   });
+      // }, function errorCallback(response){
+      //   console.log('didnt get messages');
+      // });
     });
   };
 
