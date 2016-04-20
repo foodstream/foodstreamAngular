@@ -1,4 +1,4 @@
-foodStream.controller('chatController', ['$http', '$scope', '$location', function($http, $scope, $location){
+foodStream.controller('chatController', ['$http', '$scope', '$location', '$timeout', function($http, $scope, $location, $timeout){
   console.log('你好我叫谈论controller!')
   //grab login token and userId and postId from localstorage
   var token = localStorage.getItem('token');
@@ -50,10 +50,30 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
     console.log('get messages worked', response)
     $scope.messages = response.data;
-
+    $scope.ajaxPeriodicall();
   }, function errorCallback(response){
     console.log('didnt get messages');
   });
+  //keep getting messages
+  $scope.count = 0;
+  $scope.ajaxPeriodicall = function() {
+
+     $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
+      //  console.log('get messages worked', response)
+       $scope.messages = response.data;
+       $scope.count = $scope.count + 1;
+       console.log($scope.count)
+       //re-push the scroll with new content
+       $(document).ready(function(){
+       $('.chat-content-wrapper').animate({
+       scrollTop: $('.chat-content-wrapper').get(0).scrollHeight}, 300);
+       $scope.apply;
+       });
+       $timeout($scope.ajaxPeriodicall, 1000);
+     }, function errorCallback(response){
+       console.log('didnt get messages');
+     });
+};
 
 
   //declare the variables for filling the subject line in the email that's sent along with the message

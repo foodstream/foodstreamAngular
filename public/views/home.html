@@ -15,7 +15,7 @@
 
   <div ng-show = "loadingIcon" class = "home-loading-icon">
     <i class="fa fa-cog fa-spin fa-4x fa-fw margin-bottom"></i>
-    <span class="sr-only">Loading search results...</span>
+    <span class="sr-only">Loading...</span>
   </div>
 
   <div ng-repeat = "post in posts | filter:filters | orderBy:'end_at'" >
@@ -28,8 +28,12 @@
 
       <div class = "home-transaction-details">
 
-        <div>{{post.supplier.first_name}} {{post.supplier.last_name}}<br>{{post.supplier.organization}}</div>
+        <div>{{post.supplier.first_name}} {{post.supplier.last_name}}
+          <div class='home-claimsupply' ng-if='post.supplier_id == userId'>You Supplied This Post</div>
+          <div class='home-claimsupply' ng-if='post.claimant_id == userId'>You Claimed This Post</div>
+          {{post.supplier.organization}}</div>
         <div>{{post.address_string}}</div>
+
       </div>
 
       <div class = "home-chat" ng-click='goToChat(post.id, post.claimant_id, post.supplier_id, post.title)'>

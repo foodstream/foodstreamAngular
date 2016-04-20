@@ -216,10 +216,11 @@ body {
       font-weight: 600;
       line-height: 1.75em; } }
   body .sign-up-title {
-    margin-top: 25%;
+    margin-top: 10%;
     padding: 2% 0;
     font-size: 5em;
-    text-align: center; }
+    text-align: center;
+    color: white; }
   body .sign-up-label {
     display: block;
     margin-top: 5%;
@@ -228,13 +229,14 @@ body {
     margin: 5% 0 0 10%; }
   body .sign-up-input {
     width: 80%;
-    border: solid 5px black;
     margin: 1% 10% 5% 10%;
-    color: black;
     font-size: 4em;
     line-height: 1em;
     padding: 3%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    border: solid 5px white;
+    background: transparent;
+    color: white; }
   body .sign-up-submit-btn {
     margin: 2% 0 2% 10%;
     background-color: #71F79F;
@@ -367,6 +369,10 @@ body {
         width: 60%;
         font-size: 2.5em;
         padding: 0 0 0 1%; }
+        body .home-content-wrapper .home-card .home-transaction-details .home-claimsupply {
+          color: #cecece;
+          font-size: .75em;
+          line-height: 1.5em; }
       body .home-content-wrapper .home-card .home-chat {
         display: inline-block;
         width: 20%;
@@ -895,7 +901,7 @@ body {
     font-size: 3em; }
   body .landing-overlay-content {
     margin-top: -2%;
-    padding: 25% 0 5% 0;
+    padding: 25% 0 30% 0;
     z-index: 999;
     background: url("/assets/images/landing_background.jpg");
     background-size: cover;
@@ -1589,7 +1595,7 @@ body {
     background-color: rgba(0, 0, 0, 0.7); }
     body .created-post-modal .created-post-modal-content {
       position: fixed;
-      height: 30%;
+      height: 35%;
       width: 60%;
       margin: 50% 0 0 20%;
       background-color: white;
