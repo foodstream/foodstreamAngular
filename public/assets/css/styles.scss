@@ -1470,7 +1470,7 @@ z-index: 999;
     background-color: rgba(0, 0, 0, 0.7);
     .created-post-modal-content{
       position: fixed;
-      height: 30%;
+      height: 35%;
       width: 60%;
       margin: 50% 0 0 20%;
       background-color: white;
@@ -1494,6 +1494,7 @@ z-index: 999;
         width: 100%;
         display: block;
         margin-top: 15%;
+        // margin-bottom: 20%;
         .created-post-review-submit{
           display: inline;
           padding: 2px 5px;
