@@ -219,7 +219,21 @@ body{
     }
   }
 
+
 @import 'edit-profile';
+
+  .edit-profile-upload-verify {
+    .fa-check-square-o{
+      color: $buttonaccent2;
+      font-size: 5em;
+      margin-left: 30%;
+      display: inline;
+    }
+    div {
+      display: inline;
+      font-size: 3em;
+    }
+  }
 
 //---------sign up page styling------------//
 

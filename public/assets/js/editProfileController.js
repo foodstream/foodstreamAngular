@@ -128,4 +128,11 @@ foodStream.controller('editProfileController', ['$http', '$scope', '$location', 
 
   };//close submitEdit function
 
+  $scope.fileVerify = function(){
+    if ($('#file-input-edit-profile').val() != ""){
+      fileNameContents = true;
+      return fileNameContents;
+    }
+  };
+
 }]);

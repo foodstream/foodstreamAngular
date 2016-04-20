@@ -215,6 +215,14 @@ body {
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em; } }
+  body .edit-profile-upload-verify .fa-check-square-o {
+    color: #71F79F;
+    font-size: 5em;
+    margin-left: 30%;
+    display: inline; }
+  body .edit-profile-upload-verify div {
+    display: inline;
+    font-size: 3em; }
   body .sign-up-title {
     margin-top: 10%;
     padding: 2% 0;
