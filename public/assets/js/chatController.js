@@ -50,10 +50,23 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', functio
   $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
     console.log('get messages worked', response)
     $scope.messages = response.data;
-
+    $scope.ajaxPeriodicall;
   }, function errorCallback(response){
     console.log('didnt get messages');
   });
+
+  $scope.count = 0;
+  $scope.ajaxPeriodicall = function() {
+
+     $http.get('https://sheltered-wildwood-38449.herokuapp.com/messages?token='+token+'&post_id='+postId).then(function successCallback(response){
+       console.log('get messages worked', response)
+       $scope.messages = response.data;
+       $scope.count = $scope.count + 1;
+       $timeout($scope.ajaxPeriodicall, 1000);
+     }, function errorCallback(response){
+       console.log('didnt get messages');
+     });
+};
 
 
   //declare the variables for filling the subject line in the email that's sent along with the message
