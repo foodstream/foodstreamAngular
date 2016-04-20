@@ -1,5 +1,5 @@
 foodStream.controller('createdController', ['$http', '$scope','$location', function($http, $scope, $location){
-  console.log('你好！');
+
   //get the id of the created post out of LS
   var postId = localStorage.getItem('postId');
   //get token out of LS
@@ -94,17 +94,18 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
 
   postClaimer = localStorage.getItem("claimer");
 
+  $scope.claimerRating = 0;
+
   //allow supplier to mark the post as completed
   $scope.markComplete = function(){
-      console.log("marked as complete");
       console.log($scope.post.claimed);
-      $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
-        console.log('post completed successfully', response);
-      }, function errorCallback(response){
-        console.log('post not marked as completed');
-      });
+      // $http.put('https://sheltered-wildwood-38449.herokuapp.com/posts/'+postId+'.json?token='+token, {completed:true}).then(function successCallback(response){
+      //   console.log('post completed successfully', response);
+      // }, function errorCallback(response){
+      //   console.log('post not marked as completed');
+      // });
 
-      $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/' + postClaimer + '.json?token=' + token + "&user[ratings_attributes][][rating]=" + parseInt($(".created-post-review-input").val(), 10) + "&user[ratings_attributes][][reviewer_id]=" + userId + "&user[ratings_attributes][][reviewed_id]=" + $scope.claimerId)
+      $http.put('https://sheltered-wildwood-38449.herokuapp.com/users/' + postClaimer + '.json?token=' + token + "&user[ratings_attributes][][rating]=" + $scope.claimerRating + "&user[ratings_attributes][][reviewer_id]=" + userId + "&user[ratings_attributes][][reviewed_id]=" + $scope.claimerId)
         .then(function successCallback(response){
           console.log('review submitted!');
         }, function errorCallback(response){
@@ -112,5 +113,7 @@ foodStream.controller('createdController', ['$http', '$scope','$location', funct
         });
 
       $location.path('/home');
+
+      console.log($scope.claimerRating);
   };
 }]);

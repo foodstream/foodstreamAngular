@@ -1,119 +1,99 @@
 .post-detail-title {
-  font-size: 4em;
-  font-weight: 700;
-  margin: 5% 0;
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  top: 4.5%;
-  background-color: lighten($headerbg, 35%);
-  height: 5%;
+  @media screen and (min-width: $break-large) {
+        position: fixed;
+        top: 65px;
+        line-height: .75em;
+        margin-top: 0;
+        color: darken($headerbg, 10%);
+        padding: .5% 0;
+        font-size: 1.75em;
+  }
 }
-
 .post-detail-content-wrapper{
-  width: 100%;
-  position: absolute;
-  top: 12.5%;
-  height: 82vh;
   .post-detail-supplier-wrap{
-    margin: 2% 0;
-    width: 100%;
-    display: block;
-    font-size: 4em;
+    @media screen and (min-width: $break-large) {
+        font-size: 2em;
+    }
     .post-detail-supplier-name {
-      width: 47%;
-      display: inline-block;
-      margin: 0 0 0 2%;
+      @media screen and (min-width: $break-large) {
+          margin: 2% 0 0 30%;
+          width: 45%;
+      }
       span {
-        font-weight: bold;
-        font-size: .75em;
-        display: block;
       }
     }
     .post-detail-org{
-      width: 49%;
-      display: inline-block;
+      @media screen and (min-width: $break-large) {
+          width: 20%;
+      }
       span {
-        font-weight: bold;
-        font-size: .75em;
-        display: block;
       }
     }
   }
   .post-detail-details{
-    width: 96%;
-    display: block;
-    font-size: 4em;
-    margin: 2% 0 2% 2%;
+    @media screen and (min-width: $break-large) {
+        font-size: 2em;
+        margin: 2% 0 2% 30%;
+    }
     span{
-      display: block;
-      font-weight: bold;
-      font-size: .75em;
     }
   }
   .post-detail-images{
-    display: block;
-    width: 100%;
     .post-detail-img{
-      height: 450px;
-      width: 450px;
-      display: inline-block;
-      // margin: 2%;
-        margin: 0 2%;
+        @media screen and (min-width: $break-large) {
+            height: 300px;
+            width: 300px;
+            margin: 0 6% 0 32%;
+        }
     }
     #post-detail-map{
-      height: 450px;
-      width: 450px;
-      display: inline-block;
-
+      @media screen and (min-width: $break-large) {
+          height: 300px;
+          width: 300px;
+      }
     }
   }
   .post-detail-location{
-    display: block;
-    width: 96%;
-    margin: 2% 0 2% 2%;
-    font-size: 4em;
-    font-weight: normal;
+    @media screen and (min-width: $break-large) {
+        margin: 2% 0 2% 30%;
+        font-size: 2em;
+    }
     span{
-      display:block;
-      font-size: .75em;
-      font-weight: bold;
     }
   }
   .post-detail-directions-link{
-    display: block;
-    text-decoration: none;
-    border: solid 3px $border;
-    text-align: center;
-    width: 95%;
-    margin: 2.5%  0 0 2.5%;
-    font-size: 4em;
-    line-height: 1.5em;
-    color: lighten(black, 35%);
-    background-color: lighten($border,3%);
+    @media screen and (min-width: $break-large) {
+        width: 53%;
+        margin: 2% 0 2% 32%;
+        font-size: 3em;
+    }
   }
   .post-detail-time-wrap{
-    width: 96%;
-    margin: 2% 0 2% 2%;
-    font-size: 4em;
-    font-weight: normal;
+    @media screen and (min-width: $break-large) {
+        margin: 2% 0 5% 30%;
+        font-size: 2em;
+    }
     .post-detail-start{
-      display: inline-block;
-      width: 49%;
       span{
-        display: block;
-        font-weight: bold;
-        font-size: .75em;
       }
     }
     .post-detail-end{
-      display: inline-block;
-      width: 49%;
       span{
-        display: block;
-        font-weight: bold;
-        font-size: .75em;
       }
     }
+  }
+}
+.post-detail-claim-button {
+  @media screen and (min-width: $break-large) {
+      font-size: 2em;
+      font-weight: 600;
+      line-height: 1.75em;
+  }
+}
+.post-detail-bottom-button {
+  @media screen and (min-width: $break-large) {
+      font-size: 2em;
+      font-weight: 600;
+      line-height: 1.75em;
   }
 }

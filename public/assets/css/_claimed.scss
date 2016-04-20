@@ -1,163 +1,148 @@
+.claimed-title {
+  @media screen and (min-width: $break-large) {
+      margin-top: 5%;
+      padding: .5% 0 .2% 0;
+      font-size: 2em;
+      font-weight: 600;
+  }
+}
+.claimed-content-wrapper{
+  @media screen and (min-width: $break-large) {
+      margin-top: 9%;
+  }
+  .claimed-supplier-name-wrap {
+    @media screen and (min-width: $break-large) {
+        font-size: 3em;
+        margin: 1% 0 0 27%;
+    }
+    .claimed-supplier-name{
+      @media screen and (min-width: $break-large) {
+          font-size: .5em;
+          line-height: 1em;
+          width: 30%;
+      }
+      span{
+        @media screen and (min-width: $break-large) {
+            font-size: 1em;
+        }
+      }
+    }
+    .claimed-supplier-org{
+      @media screen and (min-width: $break-large) {
+          font-size: .5em;
+          line-height: 1em;
+          width: 30%;
+      }
+      span{
+        @media screen and (min-width: $break-large) {
+            font-size: 1em;
+        }
+      }
+    }
+  }
 .claimed-images{
-  margin: 2% 0 0 0;
-  width: 100%;
-  display: block;
-  // border: solid thin black;
+  @media screen and (min-width: $break-large) {
+        margin: 0 0 0 28%;
+  }
   #claimed-map{
-    width: 450px;
-    height: 450px;
-    margin: 2% 0 2% 2%;
-    display: inline-block;
+    @media screen and (min-width: $break-large) {
+        height: 250px;
+        width: 250px;
+        margin: 1% 0 0 2%;
+    }
   }
   .claimed-post-photo{
-    width: 450px;
-    height: 450px;
-    margin: 2% 0 2% 2%;
-    display: inline-block;
+    @media screen and (min-width: $break-large) {
+        height: 250px;
+        width: 250px;
+        margin: 1% 0 0 2%;
+    }
   }
 }
 .claimed-buttons-wrap{
-  width: 100%;
-  display: block;
-  height: 15%;
-  border: solid thin darken($border, 20%);
-  color: darken($border, 30%);
-  margin: 3% 0 0 0;
   .claimed-calendar{
-    display: inline-block;
-    width: 33%;
-    height: 100%;
-    text-align: center;
-    border-right: solid thin darken($border, 20%);
-    height: 100%;
-    font-size: 2.5em;
+    @media screen and (min-width: $break-large) {
+        font-size: 1.25em;
+    }
     .fa-calendar-plus-o{
-      margin: 5% 0 4% 0;
-      display: block;
-      font-size: 2.5em;
+      @media screen and (min-width: $break-large) {
+          font-size: 1.25em;
+          margin: 4% 0 2% 0;
+      }
     }
   }
   .claimed-chat{
-    display: inline-block;
-    width: 33%;
-    height: 100%;
-    text-align: center;
-    border-right: solid thin darken($border, 20%);
-    height: 100%;
-    font-size: 2.5em;
+    @media screen and (min-width: $break-large) {
+        font-size: 1.25em;
+    }
     .fa-comment{
-      margin: 5% 0 4% 0;
-      display: block;
-      font-size: 2.5em;
+      @media screen and (min-width: $break-large) {
+          font-size: 1.25em;
+          margin: 4% 0 2% 0;
+      }
     }
   }
   .claimed-directions{
-    color: darken($border, 30%);
-    display: inline-block;
-    width: 33%;
-    height: 100%;
-    text-align: center;
-    height: 100%;
-    text-decoration: none;
-    font-size: 2.5em;
+    @media screen and (min-width: $break-large) {
+        font-size: 1.25em;
+    }
     .fa-google{
-      margin: 5% 0 4% 0;
-      display: block;
-      font-size: 2.5em;
+      @media screen and (min-width: $break-large) {
+          font-size: 1.25em;
+          margin: 4% 0 2% 0;
+      }
     }
   }
 }
 .claimed-time-wrap{
-  display: block;
-  width: 96%;
-  font-size: 4em;
-  margin: 2% 0 0 2%;
+  @media screen and (min-width: $break-large) {
+      margin: 2% 0 15% 15%;
+      font-size: 1em;
+  }
   .claimed-start{
-    width: 49%;
-    display: inline-block;
+    @media screen and (min-width: $break-large) {
+        font-size: 2em;
+    }
     span{
-      display: block;
-      font-weight: 700;
-      font-size: .75em;
     }
   }
   .claimed-end{
-    width: 49%;
-    display: inline-block;
+    @media screen and (min-width: $break-large) {
+        font-size: 2em;
+    }
     span{
-      display: block;
-      font-weight: 700;
-      font-size: .75em;
     }
   }
 }
 .claimed-location{
-  width: 95%;
-  font-size: 4em;
-  margin: 2% 0 0 2%;
-  display: block;
+  @media screen and (min-width: $break-large) {
+      margin: 5% 0 1% 15%;
+      font-size: 2.5em;
+  }
   span{
-    display: block;
-    font-size: .75em;
-    font-weight: 700;
   }
 }
 .claimed-details{
-  font-size: 4em;
-  margin: 2% 0 0 2%;
-  display: block;
+  @media screen and (min-width: $break-large) {
+      font-size: 1em;
+      margin: 0 3% 0 15%;
+      width: 75%;
+  }
   span{
-    display: block;
-    font-size: .5em;
-    font-weight: 700;
   }
 }
-
-
+}
 .claimed-bottom-button {
-position: fixed;
-bottom: 0;
-left: 0;
-width: 50%;
-text-align: center;
-font-size: 5em;
-line-height: 1.3em;
-color: white;
-cursor: pointer;
-background-color: $buttonbg;
-cursor: pointer;
 @media screen and (min-width: $break-large) {
-    border-top: 6px solid darken($buttonbg, 5%);
-    border-right: 6px solid darken($buttonbg, 5%);
     font-size: 2em;
     font-weight: 600;
     line-height: 1.75em;
 }
-&:hover{
-background-color: darken($buttonbg, 5%);
 }
-}
-
 .claimed-remove-button {
-position: fixed;
-bottom: 0;
-width: 50%;
-left: 50%;
-text-align: center;
-font-size: 5em;
-line-height: 1.3em;
-color: white;
-cursor: pointer;
-background-color: $buttonaccent2;
-cursor: pointer;
 @media screen and (min-width: $break-large) {
-    border-top: 6px solid darken($buttonaccent2, 5%);
-    border-left: 6px solid darken($buttonaccent2, 5%);
     font-size: 2em;
     font-weight: 600;
     line-height: 1.75em;
-}
-&:hover{
-background-color: darken($buttonaccent2, 5%);
 }
 }
