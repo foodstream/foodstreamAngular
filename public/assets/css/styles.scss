@@ -926,106 +926,82 @@ body{
 
 
     //--------- Profile [public] View-------------//
-      .profile-public-info {
-        position: relative;
-        .profile-pub-picture {
-          position: absolute;
-          top: 20px;
-          left: 75px;
-          display: block;
-        }
-        .profile-pub-name {
-          position: absolute;
-          .profile-pub-firstname {
-            position: absolute;
-            top: 300px;
-            width: 125px;
-            left: 75px;
-            height: 20px;
-            text-align: center;
+    
+    .profile-public-info {
+        width: 100%;
+        position: absolute;
+      .profile-pub-picture {
+          width: 100%;
+      }
+      .profile-pub-name {
+        .profile-pub-firstname {
             display: inline-block;
-          }
-          .profile-pub-lastname {
-            position: absolute;
-            top: 300px;
-            width: 125px;
-            left: 200px;
-            height: 20px;
-            text-align: center;
+            font-size: 4em;
+            margin: 2% 4% 2% 0;
+        }
+        .profile-pub-lastname {
             display: inline-block;
-          }
-        }
-        .profile-pub-data {
-          position: absolute;
-          .profile-pub-org {
-            position: absolute;
-            top: 335px;
-            width: 125px;
-            left: 135px;
-            height: 20px;
-            text-align: center;
-          }
-          .profile-pub-location {
-            position: absolute;
-            position: absolute;
-            top: 360px;
-            width: 125px;
-            left: 135px;
-            height: 20px;
-            text-align: center;
-          }
-          .profile-pub-rating {
-            position: absolute;
-            position: absolute;
-            top: 390px;
-            width: 125px;
-            left: 135px;
-            height: 20px;
-            text-align: center;
-          }
-        }
-        .profile-pub-about {
-          position: absolute;
-          top: 435px;
-          width: 385px;
-          left: 15px;
-          height: 20px;
+            font-size: 4em;
+            margin: 2% 0 2% 4%;
         }
       }
+      .profile-pub-data {
+        .profile-pub-org {
+            width: 95%;
+            border: solid 2px $border;
+            font-size: 4em;
+            margin: 2% 0 0 2.5%;
+        }
+        .profile-pub-location {
+            width: 95%;
+            border: solid 2px $border;
+            font-size: 4em;
+            margin: 2% 0 2% 2.5%;
+        }
+        .actual-stars {
+        }
+      }
+      .profile-pub-about {
+          width: 95%;
+          border: solid 2px $border;
+          font-size: 4em;
+          margin: 2% 0 0 2.5%;
+      }
+    }
     .profile-pub-footer {
-      .profile-pub-home {
-        display: inline-block;
-        width: 50%;
-        position: fixed;
-        bottom: 0;
-        text-align: center;
-        font-size: 2.5em;
-        line-height: 1.3em;
-        color: white;
-        background-color: $buttonaccent2;
-        cursor: pointer;
-        font-weight: 200;
-        &:hover{
-          background-color: darken($buttonaccent2, 5%);
-        }
+    .profile-pub-home {
+      display: inline-block;
+      width: 50%;
+      position: fixed;
+      bottom: 0;
+      text-align: center;
+      font-size: 2.5em;
+      line-height: 1.3em;
+      color: white;
+      background-color: $buttonaccent2;
+      cursor: pointer;
+      font-weight: 200;
+      &:hover{
+        background-color: darken($buttonaccent2, 5%);
       }
-      .profile-pub-back {
-        display: inline-block;
-        margin-left: 50%;
-        width: 50%;
-        position: fixed;
-        bottom: 0;
-        text-align: center;
-        font-size: 2.5em;
-        line-height: 1.3em;
-        color: white;
-        background-color: $aubergine;
-        cursor: pointer;
-        font-weight: 200;
-        &:hover{
-          background-color: darken($aubergine, 5%);
-        }
+    }
+    .profile-pub-back {
+      display: inline-block;
+      margin-left: 50%;
+      width: 50%;
+      position: fixed;
+      bottom: 0;
+      text-align: center;
+      font-size: 2.5em;
+      line-height: 1.3em;
+      color: white;
+      background-color: lighten($buttonbg, 10%);
+      cursor: pointer;
+      font-weight: 200;
+      &:hover{
+        background-color: darken($buttonbg, 5%);
       }
+    }
     }
 
       @import 'profile-public';
