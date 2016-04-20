@@ -30,7 +30,7 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
     }, function errorCallback(response){
       console.log(response);
       $scope.loadingIcon = false;
-      $(".search-results-content-wrapper").append("<div class = 'search-error-message'>Sorry, an error occurred.</div>");
+      $(".search-results-content-wrapper").html("<div class = 'search-error-message'>Sorry, an error occurred.</div>");
     });
   });
 
@@ -48,7 +48,7 @@ foodStream.controller('resultsController', ["$http", '$scope', '$location', 'geo
       console.log(response.data);
       $scope.posts = response.data;
       if ($scope.posts.length == 0){
-        $(".search-results-content-wrapper").append("<div>No posts within this radius.</div>");
+        $(".search-results-content-wrapper").html("<div class='search-error-message'>No posts within this radius.</div>");
       };
     }, function errorCallback(response){
       console.log(response);
