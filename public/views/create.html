@@ -5,12 +5,16 @@
 
 <!-- <div class = "create-content-wrapper"> -->
 
-
+<div class='create-content-wrapper'>
 <div class='create-post-add-pic' ng-click='addPic()'>
 	<i class="fa fa-camera-retro" aria-hidden="true"></i>
 	Add a Picture
 </div>
 
+	<div class = "create-upload-verify" ng-show = "fileVerify()">
+		<i class="fa fa-check-square-o" aria-hidden="true"></i>
+		<div>Image selected</div>
+	</div>
 
 	<input class = "create-title" id='title' placeholder="Title" ng-model='title'></input>
 

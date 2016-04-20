@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>foodstream</title>
-    <link rel="icon" href="./assets/images/foodstream_logo_transparent.png" type="image/x-icon"/>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://overpass-30e2.kxcdn.com/overpass.css" rel="stylesheet" />
@@ -12,13 +11,17 @@
     <link href="assets/js/pickadate/lib/themes/default.date.css" rel="stylesheet" type='text/css'>
     <link href="assets/js/pickadate/lib/themes/default.time.css" rel="stylesheet" type='text/css'>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-floating-label/dist/floating-label.css">
     </head>
   </head>
 
-  <body ng-app="foodStream" ng-controller = "appController">
+  <body ng-app="foodStream" ng-controller = "appController"><script type='text/javascript' id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
 
     <div class="app-header">
-      <img src = "assets/images/foodstream_logo_transparent.png" ng-click='goHome()'></img>
+      <img src = "assets/images/logo.jpeg" width = "60px" ng-click='goHome()'></img>
       <div  class='app-header-txt' ng-click='goHome()'>foodstream</div>
       <span class='app-header-login-icon' ng-show='pic'  ng-click='goToProfile()'>
         <img ng-src='{{pic}}' class='app-header-profile-pic'></img>
@@ -38,7 +41,6 @@
     <script src="assets/js/pickadate/lib/picker.date.js"></script>
     <script src="assets/js/pickadate/lib/picker.time.js"></script>
     <script src = "assets/js/app.js"></script>
-    <script src='assets/js/star-rating-directive.js'></script>
     <script src='assets/js/loginController.js'></script>
     <script src = "assets/js/signUpController.js"></script>
     <script src='assets/js/editProfileController.js'></script>
@@ -51,7 +53,6 @@
     <script src='assets/js/createdController.js'></script>
     <script src='assets/js/editPostController.js'></script>
     <script src='assets/js/chatController.js'></script>
-
   </body>
 
 </html>
