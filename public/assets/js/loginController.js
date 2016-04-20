@@ -2,7 +2,7 @@ foodStream.controller('loginController', ['$http', '$scope', '$location', 'logge
 
   //log in
   $scope.submitLogin = function(){
-    console.log('click');
+    // console.log('click');
     // console.log($scope.username);
     // console.log($scope.password);
     $http.post( 'https://sheltered-wildwood-38449.herokuapp.com/sessions/login?email='+$scope.username+'&password='+$scope.password

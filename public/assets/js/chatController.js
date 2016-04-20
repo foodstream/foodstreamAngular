@@ -1,5 +1,5 @@
 foodStream.controller('chatController', ['$http', '$scope', '$location', '$timeout', function($http, $scope, $location, $timeout){
-  console.log('你好我叫谈论controller!')
+  // console.log('你好我叫谈论controller!')
   //grab login token and userId and postId from localstorage
   var token = localStorage.getItem('token');
   var userId = localStorage.getItem('userId');
@@ -138,7 +138,7 @@ foodStream.controller('chatController', ['$http', '$scope', '$location', '$timeo
 
   //go to claimed on click of go to post if claimant, go to created if supplier
   $scope.backToPost = function(){
-    console.log(supplierId, claimantId);
+    // console.log(supplierId, claimantId);
     if(userId == supplierId){
       $location.path('/created');
     }else if(userId == claimantId)

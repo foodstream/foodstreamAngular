@@ -17,7 +17,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
     method: 'GET',
     url:' https://sheltered-wildwood-38449.herokuapp.com/posts.json?token='+token
   }).then(function successCallback(response){
-    console.log(response.data);
+    // console.log(response.data);
     //set data for ng-repeat
     $scope.posts = response.data;
     $scope.loadingIcon = false;
@@ -45,7 +45,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
 
   //go to the chat
   $scope.goToChat = function(chatId, claimantId, supplierId, postTitle){
-    console.log(chatId, claimantId, supplierId, postTitle)
+    // console.log(chatId, claimantId, supplierId, postTitle)
     localStorage.setItem('postId', chatId);
     localStorage.setItem('chatClaimantId', claimantId);
     localStorage.setItem('chatSupplierId', supplierId);
@@ -55,7 +55,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
 
   //get the ID of the post a user wants more details on, and take them to claimed if they are the claimer and created if they are the supplier
   $scope.detailsId = function(postId, supplierId, claimantId){
-    console.log(postId, supplierId, claimantId)
+    // console.log(postId, supplierId, claimantId)
     localStorage.setItem('postId', postId);
     if(supplierId == userId){
       $location.path('/created');
