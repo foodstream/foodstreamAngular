@@ -4,7 +4,7 @@ foodStream.controller('homeController', ['$http', '$scope', '$location', 'geoLoc
   var token = localStorage.getItem('token');
   //get userID out of ls
   var userId = localStorage.getItem('userId');
-
+$scope.userId = userId;
 
 
   //define post variables

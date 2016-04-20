@@ -1655,6 +1655,10 @@ body {
         width: 60%;
         font-size: 2.5em;
         padding: 0 0 0 1%; }
+        body .home-content-wrapper .home-card .home-transaction-details .home-claimsupply {
+          color: #e7e7e7;
+          font-size: .75em;
+          line-height: 1.5em; }
       body .home-content-wrapper .home-card .home-chat {
         display: inline-block;
         width: 20%;
