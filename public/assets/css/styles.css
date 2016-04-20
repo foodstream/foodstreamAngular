@@ -765,7 +765,6 @@ body {
     margin: 29% 0 0 0;
     position: absolute;
     width: 100%;
-    border: solid thin black;
     height: 79vh;
     overflow: scroll; }
     body .search-results-content-wrapper .search-results-loading-icon {
