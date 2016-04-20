@@ -740,7 +740,7 @@ body {
     body #search-results-subheader #search-results-search {
       margin: 2% 0 0 2%;
       width: 95%;
-      font-size: 3em; }
+      font-size: 2em; }
     body #search-results-subheader #search-results-subheader-text {
       font-size: 2em;
       margin: 2% 0 0 2%;
@@ -762,10 +762,11 @@ body {
         body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button:hover {
           background-color: #52dad5; }
   body .search-results-content-wrapper {
-    margin: 32% 0 0 0;
+    margin: 29% 0 0 0;
     position: absolute;
     width: 100%;
-    height: 77vh;
+    border: solid thin black;
+    height: 79vh;
     overflow: scroll; }
     body .search-results-content-wrapper .search-results-loading-icon {
       margin-top: 15%;
@@ -930,29 +931,29 @@ body {
     box-sizing: border-box;
     font-size: 4em;
     line-height: 1em;
-    margin: 5% 10% 15% 10%;
+    margin: 5% 10% 8% 10%;
     padding: 3%;
     background: transparent;
     color: white; }
   body .landing-login-btn {
-    width: 50%;
+    width: 80%;
     font-size: 3em;
     text-align: center;
-    margin: 2% 25%;
+    margin: 2% 10%;
     padding: 2%;
-    background-color: #71F79F;
+    background-color: rgba(113, 247, 159, 0.85);
     color: white;
     cursor: pointer;
     box-sizing: border-box; }
     body .landing-login-btn:hover {
-      background-color: #59f68f; }
+      background-color: rgba(89, 246, 143, 0.75); }
   body .landing-signup-btn {
-    width: 50%;
+    width: 80%;
     font-size: 3em;
     text-align: center;
-    margin: 5% 25%;
+    margin: 10% 10% 15% 10%;
     padding: 2%;
-    background-color: #3DD6D0;
+    background-color: rgba(61, 214, 208, 0.85);
     color: white;
     cursor: pointer;
     box-sizing: border-box; }

@@ -679,7 +679,7 @@ body{
     #search-results-search{
       margin: 2% 0 0 2%;
       width: 95%;
-      font-size: 3em;
+      font-size: 2em;
     }
     #search-results-subheader-text{
       font-size: 2em;
@@ -708,11 +708,11 @@ body{
     }
   }
 .search-results-content-wrapper{
-  margin: 32% 0 0 0;
+  margin: 29% 0 0 0;
   position: absolute;
   width: 100%;
-  // border: solid thin black;
-  height: 77vh;
+  border: solid thin black;
+  height: 79vh;
   overflow: scroll;
   .search-results-loading-icon {
     margin-top: 15%;
@@ -877,34 +877,34 @@ body{
     box-sizing: border-box;
     font-size: 4em;
     line-height: 1em;
-    margin: 5% 10% 15% 10%;
+    margin: 5% 10% 8% 10%;
     padding: 3%;
     background: transparent;
     color: white;
   }
 
   .landing-login-btn{
-    width: 50%;
+    width: 80%;
     font-size: 3em;
     text-align: center;
-    margin: 2% 25%;
+    margin: 2% 10%;
     padding: 2%;
-    background-color: $buttonaccent2;
+    background-color: rgba(113, 247, 159, 0.85);
     color: white;
     cursor: pointer;
     box-sizing: border-box;
     &:hover{
-      background-color: darken($buttonaccent2, 5%);
+      background-color: darken(rgba(113, 247, 159, 0.75), 5%);
     }
   }
 
   .landing-signup-btn{
-    width: 50%;
+    width: 80%;
     font-size: 3em;
     text-align: center;
-    margin: 5% 25%;
+    margin: 10% 10% 15% 10%;
     padding: 2%;
-    background-color: $buttonbg;
+    background-color: rgba(61, 214, 208, 0.85);
     color: white;
     cursor: pointer;
     box-sizing: border-box;
