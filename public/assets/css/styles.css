@@ -19,7 +19,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 1000; }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1024px) {
       body .app-header {
         font-size: 3em;
         height: 30px;
@@ -30,7 +30,7 @@ body {
       width: 100px;
       height: 100px;
       padding-left: 2%; }
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 1024px) {
         body .app-header img {
           width: 40px;
           height: 40px; } }
@@ -40,7 +40,7 @@ body {
       padding: 0 0 0 1%;
       margin: 1.85% 0 0 0;
       position: absolute; }
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: 1024px) {
         body .app-header .app-header-txt {
           margin: 0; } }
     body .app-header .app-header-login-icon {
@@ -51,7 +51,7 @@ body {
         width: 100px;
         height: 100px;
         border-radius: 3em; }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: 1024px) {
           body .app-header .app-header-login-icon img {
             width: 50px;
             height: 50px; } }
@@ -164,53 +164,53 @@ body {
     font-weight: 200; }
     body .edit-profile-footer:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-subheader {
       font-size: 2em;
       top: 9.75%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-top-btn-wrap {
       top: 15%;
       font-size: 1.25em; } }
   body .edit-profile-top-btn-wrap .edit-profile-change-email:hover {
     background-color: #f9f9f9; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-content-wrapper {
       margin-top: 12%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-content-wrapper .edit-profile-rating {
       font-size: 2em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-content-wrapper .edit-profile-add-image {
       width: 35%;
       margin: 2% 0 0 32%;
       padding: 6% 0;
       font-size: 2em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-content-wrapper .edit-profile-first-name {
       font-size: 2.5em;
       width: 28vw;
       margin: 2% 1% 2% 20%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-content-wrapper .edit-profile-last-name {
       font-size: 2.5em;
       width: 28vw; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-content-wrapper .edit-profile-organization {
       font-size: 2.5em;
       width: 60vw;
       margin-left: 20%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-content-wrapper .edit-profile-location {
       font-size: 2.5em;
       width: 60vw;
       margin-left: 20%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-content-wrapper .edit-profile-description {
       font-size: 2.5em;
       width: 60vw;
       margin-left: 20%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-profile-footer {
       font-size: 2em;
       font-weight: 600;
@@ -269,19 +269,19 @@ body {
     cursor: pointer; }
     body .sign-up-back-btn:hover {
       background-color: #2ccec8; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .sign-up-title {
       margin-top: 8%;
       font-size: 2.5em;
       font-weight: 600; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .sign-up-input {
       font-size: 1.5em;
       width: 35%;
       margin: 1% 10% 0 33%;
       padding: 1%;
       border: solid 3px black; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .sign-up-submit-btn {
       display: block;
       margin: 3% 0 0 33.25%;
@@ -291,7 +291,7 @@ body {
       font-size: 2em;
       line-height: 1.5em;
       border: 3px solid #59f68f; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .sign-up-back-btn {
       position: fixed;
       font-size: 2em;
@@ -314,6 +314,15 @@ body {
     position: fixed;
     top: 7%;
     z-index: 999; }
+    @media screen and (min-width: 1024px) {
+      body .home-subheader {
+        padding: 1.45% 0 .15% 0;
+        font-size: 1.5em;
+        font-weight: 700;
+        display: block;
+        top: 50px;
+        z-index: 0;
+        height: 4%; } }
     body .home-subheader .home-subheader-see-all {
       line-height: 1.2em;
       text-align: center;
@@ -322,6 +331,10 @@ body {
       cursor: pointer; }
       body .home-subheader .home-subheader-see-all:hover {
         background-color: #78ffc4; }
+      @media screen and (min-width: 1024px) {
+        body .home-subheader .home-subheader-see-all {
+          line-height: 1.4em;
+          width: 33.3%; } }
     body .home-subheader .home-subheader-see-claimed {
       line-height: 1.2em;
       text-align: center;
@@ -332,6 +345,10 @@ body {
       cursor: pointer; }
       body .home-subheader .home-subheader-see-claimed:hover {
         background-color: #78ffc4; }
+      @media screen and (min-width: 1024px) {
+        body .home-subheader .home-subheader-see-claimed {
+          line-height: 1.4em;
+          width: 33.3%; } }
     body .home-subheader .home-subheader-see-provided {
       line-height: 1.2em;
       text-align: center;
@@ -340,6 +357,10 @@ body {
       cursor: pointer; }
       body .home-subheader .home-subheader-see-provided:hover {
         background-color: #78ffc4; }
+      @media screen and (min-width: 1024px) {
+        body .home-subheader .home-subheader-see-provided {
+          line-height: 1.4em;
+          width: 33.3%; } }
   body .home-content-wrapper {
     width: 100%;
     margin: 19.5% 0 0 0;
@@ -347,6 +368,10 @@ body {
     height: 83vh;
     position: absolute;
     overflow: scroll; }
+    @media screen and (min-width: 1024px) {
+      body .home-content-wrapper {
+        margin: 7% 0 0 0;
+        height: 80vh; } }
     body .home-content-wrapper .home-card {
       display: block;
       height: 20vh;
@@ -354,11 +379,22 @@ body {
       background-color: white;
       width: 100%;
       margin: 2.5% 0; }
+      @media screen and (min-width: 1024px) {
+        body .home-content-wrapper .home-card {
+          height: 17vh;
+          border: 2px solid #e7e7e7;
+          width: 95%;
+          margin: 1% 0 1% 2%;
+          z-index: 1; } }
       body .home-content-wrapper .home-card .home-header {
         height: 4vh;
         background-color: #f9f9f9;
         font-size: 3em;
         font-weight: 700; }
+        @media screen and (min-width: 1024px) {
+          body .home-content-wrapper .home-card .home-header {
+            font-size: 1.75em;
+            z-index: 2; } }
         body .home-content-wrapper .home-card .home-header .home-post-title {
           padding: 0 0 0 1%;
           width: 50%;
@@ -372,11 +408,17 @@ body {
           display: inline;
           color: #4d4d4d;
           margin: 1% 1% 0 0; }
+          @media screen and (min-width: 1024px) {
+            body .home-content-wrapper .home-card .home-header .home-post-end {
+              margin: .5% 1% 0 0; } }
       body .home-content-wrapper .home-card .home-transaction-details {
         display: inline-block;
         width: 60%;
         font-size: 2.5em;
         padding: 0 0 0 1%; }
+        @media screen and (min-width: 1024px) {
+          body .home-content-wrapper .home-card .home-transaction-details {
+            font-size: 1.5em; } }
         body .home-content-wrapper .home-card .home-transaction-details .home-claimsupply {
           color: #cecece;
           font-size: .75em;
@@ -389,16 +431,35 @@ body {
         text-align: center;
         cursor: pointer;
         border-left: solid thin #F4F4F4; }
+        @media screen and (min-width: 1024px) {
+          body .home-content-wrapper .home-card .home-chat {
+            height: 13vh;
+            font-size: .4em;
+            width: 12%;
+            margin-left: 11%;
+            border: none; } }
         body .home-content-wrapper .home-card .home-chat .fa-comment {
           margin: 15% 0 0 0;
           color: #b1bbc5;
           font-size: 6em;
           display: block; }
-          body .home-content-wrapper .home-card .home-chat .fa-comment .home-chat-text {
-            font-size: .5em;
-            font-family: 'overpass', sans-serif; }
-        body .home-content-wrapper .home-card .home-chat:hover {
-          background-color: #fcfcfc; }
+          @media screen and (min-width: 1024px) {
+            body .home-content-wrapper .home-card .home-chat .fa-comment {
+              font-size: 6em;
+              margin: 9% 0; }
+              body .home-content-wrapper .home-card .home-chat .fa-comment:hover {
+                background-color: none;
+                color: #7a8b9b; } }
+        body .home-content-wrapper .home-card .home-chat .home-chat-text {
+          font-size: .5em;
+          font-family: 'overpass', sans-serif; }
+          @media screen and (min-width: 1024px) {
+            body .home-content-wrapper .home-card .home-chat .home-chat-text {
+              display: block;
+              font-size: .7em;
+              line-height: 1.2em; }
+              body .home-content-wrapper .home-card .home-chat .home-chat-text:hover {
+                color: #7a8b9b; } }
       body .home-content-wrapper .home-card .home-details {
         display: inline-block;
         width: 20%;
@@ -410,14 +471,33 @@ body {
         border-left: solid thin #F4F4F4; }
         body .home-content-wrapper .home-card .home-details:hover {
           background-color: white; }
+        @media screen and (min-width: 1024px) {
+          body .home-content-wrapper .home-card .home-details {
+            height: 13vh;
+            font-size: .4em;
+            border: none;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 5px;
+            width: 12%;
+            margin-left: 24%; } }
         body .home-content-wrapper .home-card .home-details .fa-info-circle {
           margin: 15% 0 0 0;
           color: #b1bbc5;
           font-size: 6em;
           display: block; }
+          @media screen and (min-width: 1024px) {
+            body .home-content-wrapper .home-card .home-details .fa-info-circle {
+              font-size: 6em;
+              margin: 9% 0; }
+              body .home-content-wrapper .home-card .home-details .fa-info-circle:hover {
+                color: #7a8b9b; } }
           body .home-content-wrapper .home-card .home-details .fa-info-circle .home-details-text {
             font-size: .5em;
             font-family: 'overpass', sans-serif; }
+            @media screen and (min-width: 1024px) {
+              body .home-content-wrapper .home-card .home-details .fa-info-circle .home-details-text {
+                font-size: .7em;
+                display: block; } }
   body .home-search {
     position: fixed;
     bottom: 0;
@@ -434,6 +514,11 @@ body {
     z-index: 999; }
     body .home-search:hover {
       background-color: #59f68f; }
+    @media screen and (min-width: 1024px) {
+      body .home-search {
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em; } }
   body .home-post {
     position: fixed;
     bottom: 0;
@@ -450,87 +535,11 @@ body {
     z-index: 999; }
     body .home-post:hover {
       background-color: #2ccec8; }
-  @media screen and (min-width: 1200px) {
-    body .home-subheader {
-      padding: 1.45% 0 .15% 0;
-      font-size: 1.5em;
-      font-weight: 700;
-      display: block;
-      top: 50px;
-      z-index: 0;
-      height: 4%; } }
-  @media screen and (min-width: 1200px) {
-    body .home-content-wrapper .home-card {
-      height: 16vh;
-      border: 2px solid #e7e7e7;
-      width: 95%;
-      margin: 3% 0 3% 2%;
-      z-index: 1; } }
-  @media screen and (min-width: 1200px) {
-    body .home-content-wrapper .home-card .home-header {
-      font-size: 1.75em;
-      border: 3px solid black;
-      z-index: 2; } }
-  @media screen and (min-width: 1200px) {
-    body .home-content-wrapper .home-card .home-transaction-details {
-      font-size: 1.5em; } }
-  @media screen and (min-width: 1200px) {
-    body .home-content-wrapper .home-card .home-chat {
-      height: 10vh;
-      font-size: .4em;
-      border: none;
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 5px;
-      width: 12%;
-      margin-left: 11%; }
-      body .home-content-wrapper .home-card .home-chat:hover {
-        background-color: #b1bbc5;
-        color: white; } }
-  @media screen and (min-width: 1200px) {
-    body .home-content-wrapper .home-card .home-chat .fa-comment {
-      font-size: 6em;
-      margin: 9% 0; }
-      body .home-content-wrapper .home-card .home-chat .fa-comment:hover {
-        background-color: #b1bbc5;
-        color: white; } }
-  @media screen and (min-width: 1200px) {
-    body .home-content-wrapper .home-card .home-chat .fa-comment .home-chat-text {
-      font-size: .7em; }
-      body .home-content-wrapper .home-card .home-chat .fa-comment .home-chat-text:hover {
-        background-color: #b1bbc5;
-        color: white; } }
-  @media screen and (min-width: 1200px) {
-    body .home-content-wrapper .home-card .home-details {
-      height: 10vh;
-      font-size: .4em;
-      border: none;
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 5px;
-      width: 12%;
-      margin-left: 24%; }
-      body .home-content-wrapper .home-card .home-details:hover {
-        background-color: #b1bbc5;
-        color: white; } }
-  @media screen and (min-width: 1200px) {
-    body .home-content-wrapper .home-card .home-details .fa-info-circle {
-      font-size: 6em;
-      margin: 9% 0; }
-      body .home-content-wrapper .home-card .home-details .fa-info-circle:hover {
-        background-color: #b1bbc5;
-        color: white; } }
-  @media screen and (min-width: 1200px) {
-    body .home-content-wrapper .home-card .home-details .fa-info-circle .home-details-text {
-      font-size: .7em; } }
-  @media screen and (min-width: 1200px) {
-    body .home-search {
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1.75em; } }
-  @media screen and (min-width: 1200px) {
-    body .home-post {
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1.75em; } }
+    @media screen and (min-width: 1024px) {
+      body .home-post {
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em; } }
   body .post-detail-title {
     font-size: 4em;
     font-weight: 700;
@@ -669,7 +678,7 @@ body {
     z-index: 999; }
     body .post-detail-bottom-button:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-title {
       position: fixed;
       top: 65px;
@@ -678,54 +687,54 @@ body {
       color: #00c46f;
       padding: .5% 0;
       font-size: 1.75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-content-wrapper {
       margin-left: 21.5%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-content-wrapper .post-detail-supplier-wrap {
       font-size: 1.5em;
       margin-top: 5%;
       margin-bottom: 1%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name {
       width: 35%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-content-wrapper .post-detail-details {
       font-size: 1.5em;
       margin-top: 1%; } }
   body .post-detail-content-wrapper .post-detail-images {
     width: 100%; }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1024px) {
       body .post-detail-content-wrapper .post-detail-images .post-detail-img {
         height: 300px;
         width: 300px;
         margin: 0 6% 0 2%; } }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1024px) {
       body .post-detail-content-wrapper .post-detail-images #post-detail-map {
         height: 300px;
         width: 300px; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-content-wrapper .post-detail-location {
       margin: 2% 0 5% 2%;
       font-size: 2em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-content-wrapper .post-detail-directions-link {
       width: 53%;
       margin: 2% 0 2% 2%;
       font-size: 3em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-content-wrapper .post-detail-time-wrap {
       margin: 2% 0 8% 2%;
       font-size: 2em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-content-wrapper .post-detail-time-wrap .post-detail-start {
       width: 35%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-claim-button {
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .post-detail-bottom-button {
       font-size: 2em;
       font-weight: 600;
@@ -737,19 +746,47 @@ body {
     background-color: #abffda;
     width: 100%;
     z-index: 999; }
+    @media screen and (min-width: 1024px) {
+      body #search-results-subheader {
+        width: 100%;
+        padding: 4% 0 0 0;
+        margin: 2% 0 0 0;
+        z-index: 0;
+        font-size: 1.75em;
+        text-align: left;
+        color: #00de7e; } }
     body #search-results-subheader #search-results-search {
       margin: 2% 0 0 2%;
       width: 95%;
       font-size: 2em; }
+      @media screen and (min-width: 1024px) {
+        body #search-results-subheader #search-results-search {
+          font-size: .75em;
+          line-height: 1em;
+          margin: 1.5% 0 0 15%;
+          width: 58%;
+          border: none; } }
     body #search-results-subheader #search-results-subheader-text {
       font-size: 2em;
       margin: 2% 0 0 2%;
       padding: 0 0 2% 0;
       line-height: 2em; }
+      @media screen and (min-width: 1024px) {
+        body #search-results-subheader #search-results-subheader-text {
+          font-size: .6em;
+          padding: 0 0 .75% 0;
+          margin: 1.1% 0 0 15%;
+          line-height: 1em; } }
       body #search-results-subheader #search-results-subheader-text #search-results-distance-input {
         width: 7%;
         font-size: 1em;
         border: none; }
+        @media screen and (min-width: 1024px) {
+          body #search-results-subheader #search-results-subheader-text #search-results-distance-input {
+            font-size: 1em;
+            text-align: center;
+            width: 5%;
+            color: #00de7e; } }
       body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button {
         display: inline-block;
         float: right;
@@ -761,6 +798,13 @@ body {
         cursor: pointer; }
         body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button:hover {
           background-color: #52dad5; }
+        @media screen and (min-width: 1024px) {
+          body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button {
+            font-size: .75em;
+            margin: -3.5% 22% 1% 0;
+            padding: .5%;
+            border: 3px solid #52dad5;
+            border-radius: 7px; } }
   body .search-results-content-wrapper {
     margin: 29% 0 0 0;
     position: absolute;
@@ -770,8 +814,15 @@ body {
     body .search-results-content-wrapper .search-results-loading-icon {
       margin-top: 15%;
       font-size: 4em; }
+      @media screen and (min-width: 1024px) {
+        body .search-results-content-wrapper .search-results-loading-icon {
+          margin-top: 0;
+          font-size: 2em; } }
       body .search-results-content-wrapper .search-results-loading-icon i {
         margin-left: 32%; }
+        @media screen and (min-width: 1024px) {
+          body .search-results-content-wrapper .search-results-loading-icon i {
+            margin-left: 43%; } }
       body .search-results-content-wrapper .search-results-loading-icon span {
         display: block;
         text-align: center; }
@@ -855,53 +906,11 @@ body {
     z-index: 999; }
     body .results-footer:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1200px) {
-    body #search-results-subheader {
-      width: 100%;
-      padding: 4% 0 0 0;
-      margin: 2% 0 0 0;
-      z-index: 0;
-      font-size: 1.75em;
-      text-align: left;
-      color: #00de7e; } }
-  @media screen and (min-width: 1200px) {
-    body #search-results-subheader #search-results-search {
-      font-size: .75em;
-      line-height: 1em;
-      margin: 1.5% 0 0 15%;
-      width: 58%;
-      border: none; } }
-  @media screen and (min-width: 1200px) {
-    body #search-results-subheader #search-results-subheader-text {
-      font-size: .6em;
-      padding: 0 0 .75% 0;
-      margin: 1.1% 0 0 15%;
-      line-height: 1em; } }
-  @media screen and (min-width: 1200px) {
-    body #search-results-subheader #search-results-subheader-text #search-results-distance-input {
-      font-size: 1em;
-      text-align: center;
-      width: 5%;
-      color: #00de7e; } }
-  @media screen and (min-width: 1200px) {
-    body #search-results-subheader #search-results-subheader-text #search-results-subheader-search-button {
-      font-size: .75em;
-      margin: -3.5% 22% 1% 0;
-      padding: .5%;
-      border: 3px solid #52dad5;
-      border-radius: 7px; } }
-  @media screen and (min-width: 1200px) {
-    body .search-results-content-wrapper .search-results-loading-icon {
-      margin-top: 0;
-      font-size: 2em; } }
-  @media screen and (min-width: 1200px) {
-    body .search-results-content-wrapper .search-results-loading-icon i {
-      margin-left: 43%; } }
-  @media screen and (min-width: 1200px) {
-    body .results-footer {
-      font-size: 2em;
-      line-height: 1.75em;
-      font-weight: 600; } }
+    @media screen and (min-width: 1024px) {
+      body .results-footer {
+        font-size: 2em;
+        line-height: 1.75em;
+        font-weight: 600; } }
   body .search-error-message {
     text-align: center;
     width: 50%;
@@ -976,25 +985,25 @@ body {
     font-family: 'overpass', sans-serif;
     text-align: center;
     text-decoration: none; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .landing-overlay-content {
       margin-top: 0;
       padding-top: 4%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .landing-login-email-input {
       font-size: 1.5em;
       width: 35%;
       margin: 0 10% 0 31.25%;
       padding: 1%;
       border: solid 3px white; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .landing-login-password-input {
       font-size: 1.5em;
       width: 35%;
       margin: 1% 10% 0 31.25%;
       padding: 1%;
       border: solid 3px white; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .landing-login-btn {
       display: block;
       margin: 2% 0 0 31.25%;
@@ -1003,7 +1012,7 @@ body {
       border-radius: 10px;
       font-size: 2em;
       line-height: .75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .landing-signup-btn {
       display: block;
       margin: 1% 0 0 31.25%;
@@ -1012,13 +1021,13 @@ body {
       border-radius: 10px;
       font-size: 2em;
       line-height: .75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .login-about {
       margin-left: 9%;
       font-size: 3em;
       width: 80%;
       line-height: 1em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .login-legal {
       margin: 0;
       width: 100%;
@@ -1083,53 +1092,53 @@ body {
     font-weight: 200; }
     body .profile-pub-footer .profile-pub-back:hover {
       background-color: #2ccec8; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-public-info {
       top: 10%;
       padding-left: 12%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-public-info .profile-pub-picture {
       width: 35%;
       height: 250px;
       padding: 0 20%;
       margin: 2% 0 0 0;
       text-align: center; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-public-info .profile-pub-name {
       width: 35%;
       padding: 0 20%;
       margin: 2% 0 0 0;
       text-align: center; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-public-info .profile-pub-name .profile-pub-firstname {
       font-size: 2em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-public-info .profile-pub-name .profile-pub-lastname {
       font-size: 2em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-public-info .profile-pub-data {
       width: 35%;
       padding: 0 20%;
       margin: 2% 0 0 0;
       text-align: center; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-public-info .profile-pub-data .profile-pub-org {
       font-size: 1.5em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-public-info .profile-pub-data .profile-pub-location {
       font-size: 1.5em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-public-info .profile-pub-about {
       width: 57%;
       padding: 1% 5%;
       margin: 2% 0 8% 5%;
       font-size: 1.25em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-pub-footer .profile-pub-home {
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .profile-pub-footer .profile-pub-back {
       font-size: 2em;
       font-weight: 600;
@@ -1242,7 +1251,7 @@ body {
     z-index: 999; }
     body .create-submit-button:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .create-subheader {
       position: fixed;
       top: 65px;
@@ -1251,49 +1260,49 @@ body {
       color: #00c46f;
       padding: .5% 0;
       font-size: 1.75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .create-post-add-pic {
       margin: 12% 2% 4% 38%;
       width: 25%;
       font-size: 2.5em;
       text-align: center; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .create-title {
       width: 35.5%;
       font-size: 1.5em;
       margin: 1.5% 0 0 32%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .create-location {
       width: 35.5%;
       font-size: 1.5em;
       margin: 1% 0 0 32%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .create-start-na {
       width: 10%;
       font-size: 1.5em;
       margin: 1% 0 0 37%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .create-start-time-na {
       width: 10%;
       font-size: 1.5em;
       margin: 1% 35% 0 5%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .create-end-na {
       width: 10%;
       font-size: 1.5em;
       margin: 1% 0 0 37%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .create-end-time-na {
       width: 10%;
       font-size: 1.5em;
       margin: 1% 35% 0 5%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .create-description {
       width: 35.5%;
       font-size: 1.5em;
       margin: 1% 0 0 32%;
       height: 15vh; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .create-submit-button {
       position: fixed;
       font-size: 2em;
@@ -1403,7 +1412,7 @@ body {
     z-index: 999; }
     body .edit-post-btn:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-subheader {
       position: fixed;
       top: 65px;
@@ -1412,59 +1421,59 @@ body {
       color: #00c46f;
       padding: .5% 0;
       font-size: 1.75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-content-wrapper {
       margin: 7% 0 0 30%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-content-wrapper .edit-post-image {
       margin: 2% 0 0 14%;
       height: 250px;
       width: 250px; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-add-image {
       width: 50%;
       font-size: 3em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-title {
       width: 50%;
       font-size: 1.5em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-location {
       width: 50%;
       font-size: 1.5em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-start-na {
       width: 20%;
       margin-right: 9%;
       margin-left: 2%;
       font-size: 1.5em;
       text-align: center; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-start-time-na {
       width: 20%;
       margin-right: 25%;
       font-size: 1.5em;
       text-align: center; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-end-na {
       width: 20%;
       margin-right: 9%;
       margin-left: 2%;
       font-size: 1.5em;
       text-align: center; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-end-time-na {
       width: 20%;
       margin-right: 5%;
       text-align: center;
       font-size: 1.5em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-description {
       width: 50%;
       font-size: 1.5em;
       margin: 1% 0 4% 2%;
       height: 15vh; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .edit-post-btn {
       position: fixed;
       font-size: 2em;
@@ -1682,90 +1691,90 @@ body {
     z-index: 999; }
     body .created-post-footer-delete:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-post-title {
       font-size: 2em;
       line-height: 1em;
       margin: 5% 0 0 0;
       padding: .5% 0; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper {
       margin-top: 9%;
       padding-top: 1%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-post-description {
       font-size: 1em;
       margin: 0 3% 0 15%;
       width: 75%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-post-description span {
       padding-bottom: 1%;
       font-size: 1em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-post-images {
       margin-left: 26.5%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-post-images .created-post-photo {
       height: 250px;
       width: 250px;
       margin-right: 5%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-post-images #created-post-gmap {
       height: 250px;
       width: 250px; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-post-address {
       margin: 5% 0 1% 30%;
       font-size: 2.5em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-buttons-wrap {
       width: 90%;
       margin-left: 5%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-buttons-wrap .created-add-cal {
       font-size: 1.25em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-buttons-wrap .created-add-cal .fa-calendar-plus-o {
       font-size: 1.25em;
       margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-buttons-wrap .created-post-chat {
       font-size: 1.25em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-buttons-wrap .created-post-chat .fa-comment {
       font-size: 1.25em;
       margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-buttons-wrap .created-post-directions-btn {
       font-size: 1.25em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-buttons-wrap .created-post-directions-btn .fa-google {
       font-size: 1.25em;
       margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-post-time-wrap {
       width: 75%;
       margin: 3% 0 15% 30%;
       font-size: 1em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-post-time-wrap .created-post-start {
       font-size: 2.5em;
       width: 35%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-content-wrapper .created-post-time-wrap .created-post-end {
       font-size: 2.5em;
       width: 35%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-post-footer-home {
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-post-footer-edit {
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .created-post-footer-delete {
       font-size: 2em;
       font-weight: 600;
@@ -1865,7 +1874,7 @@ body {
     font-weight: 300; }
     body .chat-back-to-post-btn:hover {
       background-color: #2ccec8; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .chat-subheader {
       position: fixed;
       padding: 2% 0 0 0;
@@ -1874,18 +1883,18 @@ body {
       width: 100vw;
       display: block;
       top: 50px; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .chat-content-wrapper {
       overflow: hidden; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .chat-input-block {
       position: fixed;
       bottom: 8%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .chat-home-btn {
       font-size: 2em;
       line-height: 1.75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .chat-back-to-post-btn {
       font-size: 2em;
       line-height: 1.75em; } }
@@ -2052,101 +2061,101 @@ body {
     cursor: pointer; }
     body .claimed-remove-button:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-title {
       margin-top: 5%;
       padding: .5% 0 .2% 0;
       font-size: 2em;
       font-weight: 600; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper {
       margin-top: 9%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-supplier-name-wrap {
       font-size: 3em;
       margin: 1% 0 0 27%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name {
       font-size: .5em;
       line-height: 1em;
       width: 26%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name span {
       font-size: 1em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org {
       font-size: .5em;
       line-height: 1em;
       width: 30%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org span {
       font-size: 1em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-images {
       margin: 0 0 0 27%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-images #claimed-map {
       height: 250px;
       width: 250px;
       margin: 1% 0 0 2%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-images .claimed-post-photo {
       height: 250px;
       width: 250px;
       margin: 1% 0 0 2%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-buttons-wrap {
       width: 90%;
       margin-left: 5%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar {
       font-size: 1.25em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar .fa-calendar-plus-o {
       font-size: 1.25em;
       margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat {
       font-size: 1.25em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat .fa-comment {
       font-size: 1.25em;
       margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions {
       font-size: 1.25em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions .fa-google {
       font-size: 1.25em;
       margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-time-wrap {
       width: 75%;
       margin: 3% 0 15% 30%;
       font-size: 1em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-time-wrap .claimed-start {
       font-size: 2.5em;
       width: 35%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-time-wrap .claimed-end {
       font-size: 2.5em;
       width: 35%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-location {
       margin: 5% 0 1% 30%;
       font-size: 2.5em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-content-wrapper .claimed-details {
       font-size: 2.5em;
       margin: 1% 3% 0 29%;
       width: 75%; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-bottom-button {
       font-size: 2em;
       font-weight: 600;
       line-height: 1.75em; } }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
     body .claimed-remove-button {
       font-size: 2em;
       font-weight: 600;

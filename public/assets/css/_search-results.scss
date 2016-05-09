@@ -1,4 +1,10 @@
 #search-results-subheader{
+  position: fixed;
+  margin: 12% 0 0 0;
+  z-index: 999;
+  background-color:lighten($headerbg, 35%);
+  width: 100%;
+  z-index: 999;
   @media screen and (min-width: $break-large) {
       width: 100%;
       padding: 4% 0 0 0;
@@ -9,6 +15,9 @@
       color: darken($headerbg, 5%);
   }
   #search-results-search{
+    margin: 2% 0 0 2%;
+    width: 95%;
+    font-size: 2em;
     @media screen and (min-width: $break-large) {
         font-size: .75em;
         line-height: 1em;
@@ -18,6 +27,10 @@
     }
   }
   #search-results-subheader-text{
+    font-size: 2em;
+    margin: 2% 0 0 2%;
+    padding: 0 0 2% 0;
+    line-height: 2em;
     @media screen and (min-width: $break-large) {
         font-size: .6em;
         padding: 0 0 .75% 0;
@@ -25,6 +38,9 @@
         line-height: 1em;
     }
     #search-results-distance-input{
+      width: 7%;
+      font-size: 1em;
+      border: none;
       @media screen and (min-width: $break-large) {
           font-size: 1em;
           text-align: center;
@@ -33,6 +49,18 @@
       }
     }
     #search-results-subheader-search-button{
+      display: inline-block;
+      float: right;
+      // border: solid thin black;
+      line-height: 1em;
+      margin: 0 2% 2% 0;
+      background-color: lighten($buttonbg, 10%);
+      padding: 1.5%;
+      color: white;
+      cursor: pointer;
+      &:hover{
+        background-color: lighten($buttonbg, 5%);
+      }
       @media screen and (min-width: $break-large) {
           font-size: .75em;
           margin: -3.5% 22% 1% 0;
@@ -44,43 +72,139 @@
   }
 }
 .search-results-content-wrapper{
+margin: 29% 0 0 0;
+position: absolute;
+width: 100%;
+// border: solid thin black;
+height: 79vh;
+overflow: scroll;
 .search-results-loading-icon {
+  margin-top: 15%;
+  font-size: 4em;
   @media screen and (min-width: $break-large) {
       margin-top: 0;
       font-size: 2em;
   }
   i {
+    margin-left: 32%;
     @media screen and (min-width: $break-large) {
         margin-left: 43%;
     }
   }
   span {
+    display: block;
+    text-align: center;
   }
 }
 .results-card {
+  display: block;
+  height: $cardHeight;
+  border: solid 2px darken($border, 5%);
+  background-color: white;
+  width:99.8%;
+  margin: 2.5% 0;
   .results-header {
+    height: $cardHeight / 5;
+    background-color: lighten($border, 2%);
+    // padding: 2%;
+    font-size: 3em;
+    font-weight: 700;
+    width: 100%;
+    // border: solid thin black;
     .results-card-title {
+      // border: solid thin black;
+      padding: 1% 0 0 1%;
+      width: 59%;
+      white-space: nowrap;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .results-card-end {
+        // border: solid thin black;
+      font-size: .75em;
+      float: right;
+      display: inline-block;
+      padding: 1.5% 1% 0 0;
     }
   }
+  .results-pic-wrap{
+    position: absolute;
+    width: 20%;
+    margin: 2% 0 0 0;
   .results-add-picture{
+    // position: absolute;
+    // margin: -10% 0 0 1%;
+    // display: inline-block;
+    width: 95%;
+    height: 200px;
   }
+  }
+
   .results-transaction-details {
+    margin: 0 0 0 20%;
+    display: inline-block;
+    width: 55%;
+    height: $cardHeight * 0.8;
+    font-size: 2em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
     .results-supplier-name-text{
+      line-height: 1.5em;
+      font-weight: 700;
     }
     .results-transaction-location{
+      line-height: 1.2em;
+      font-weight: 500;
     }
+
   }
-}
+
+
   .results-details {
+    display: inline-block;
+    position: absolute;
+    width: 25%;
+    height: $cardHeight * 0.8;
+    // position: absolute;
+    // margin: -33.25% 0 0 72%;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border-left: solid thin $border;
+    &:hover{
+      background-color: lighten($border, 3%);
+    }
     .fa-info-circle{
+      font-size: 6em;
+      margin: 20% 0 0 0;
+        color: lighten(lightslategray, 20%);
       .search-details-text{
+        display: block;
+        font-family: 'overpass', sans-serif;
+        font-size: .5em;
       }
     }
   }
 }
+
+}
 .results-footer{
+  background-color: $buttonaccent2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 4em;
+  line-height: 1.5em;
+  color: white;
+  cursor: pointer;
+  font-weight: 300;
+  z-index: 999;
+  &:hover{
+    background-color: darken($buttonaccent2, 5%);
+  }
   @media screen and (min-width: $break-large) {
       font-size: 2em;
       line-height: 1.75em;
