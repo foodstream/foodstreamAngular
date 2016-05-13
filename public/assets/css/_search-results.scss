@@ -76,12 +76,16 @@
   }
 }
 .search-results-content-wrapper{
-margin: 9% 0 0 0;
+margin: 29.5% 0 0 0;
 position: absolute;
 width: 100%;
-// border: solid thin black;
-height: 77vh;
+border: solid thin black;
+height: 78vh;
 overflow: scroll;
+@media screen and (min-width: $break-large) {
+  margin: 9% 0 0 0;
+  height: 77vh;
+}
 .search-results-loading-icon {
   margin-top: 15%;
   font-size: 4em;
