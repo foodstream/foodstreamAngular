@@ -123,6 +123,10 @@ overflow: scroll;
     font-weight: 700;
     width: 100%;
     // border: solid thin black;
+    @media screen and (min-width: $break-large) {
+      font-size: 2em;
+
+    }
     .results-card-title {
       // border: solid thin black;
       padding: 1% 0 0 1%;
@@ -131,6 +135,9 @@ overflow: scroll;
       display: inline-block;
       overflow: hidden;
       text-overflow: ellipsis;
+      @media screen and (min-width: $break-large) {
+        padding: 0 0 0 1%;
+      }
     }
     .results-card-end {
         // border: solid thin black;
@@ -138,18 +145,28 @@ overflow: scroll;
       float: right;
       display: inline-block;
       padding: 1.5% 1% 0 0;
+      @media screen and (min-width: $break-large) {
+        padding: 0 1.5% 0 0;
+      }
     }
   }
   .results-pic-wrap{
     position: absolute;
     width: 20%;
     margin: 2% 0 0 0;
+    @media screen and (min-width: $break-large) {
+      width: 15%;
+      margin: .5% 0 0 .5%;
+    }
   .results-add-picture{
     // position: absolute;
     // margin: -10% 0 0 1%;
     // display: inline-block;
     width: 95%;
     height: 200px;
+    @media screen and (min-width: $break-large) {
+      height: 115px;
+    }
   }
   }
 
@@ -162,6 +179,11 @@ overflow: scroll;
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
+    @media screen and (min-width: $break-large) {
+      margin: 0 0 0 17%;
+      font-size: 1.5em;
+
+    }
     .results-supplier-name-text{
       line-height: 1.5em;
       font-weight: 700;
@@ -185,6 +207,9 @@ overflow: scroll;
     color: white;
     cursor: pointer;
     border-left: solid thin $border;
+    @media screen and (min-width: $break-large) {
+      width: 26.5%;
+    }
     &:hover{
       background-color: lighten($border, 3%);
     }
@@ -192,6 +217,10 @@ overflow: scroll;
       font-size: 6em;
       margin: 20% 0 0 0;
         color: lighten(lightslategray, 20%);
+      @media screen and (min-width: $break-large) {
+        margin: 4% 0 0 0;
+        font-size: 4em;
+      }
       .search-details-text{
         display: block;
         font-family: 'overpass', sans-serif;

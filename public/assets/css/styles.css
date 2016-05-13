@@ -852,6 +852,9 @@ body {
         font-size: 3em;
         font-weight: 700;
         width: 100%; }
+        @media screen and (min-width: 1024px) {
+          body .search-results-content-wrapper .results-card .results-header {
+            font-size: 2em; } }
         body .search-results-content-wrapper .results-card .results-header .results-card-title {
           padding: 1% 0 0 1%;
           width: 59%;
@@ -859,18 +862,31 @@ body {
           display: inline-block;
           overflow: hidden;
           text-overflow: ellipsis; }
+          @media screen and (min-width: 1024px) {
+            body .search-results-content-wrapper .results-card .results-header .results-card-title {
+              padding: 0 0 0 1%; } }
         body .search-results-content-wrapper .results-card .results-header .results-card-end {
           font-size: .75em;
           float: right;
           display: inline-block;
           padding: 1.5% 1% 0 0; }
+          @media screen and (min-width: 1024px) {
+            body .search-results-content-wrapper .results-card .results-header .results-card-end {
+              padding: 0 1.5% 0 0; } }
       body .search-results-content-wrapper .results-card .results-pic-wrap {
         position: absolute;
         width: 20%;
         margin: 2% 0 0 0; }
+        @media screen and (min-width: 1024px) {
+          body .search-results-content-wrapper .results-card .results-pic-wrap {
+            width: 15%;
+            margin: .5% 0 0 .5%; } }
         body .search-results-content-wrapper .results-card .results-pic-wrap .results-add-picture {
           width: 95%;
           height: 200px; }
+          @media screen and (min-width: 1024px) {
+            body .search-results-content-wrapper .results-card .results-pic-wrap .results-add-picture {
+              height: 115px; } }
       body .search-results-content-wrapper .results-card .results-transaction-details {
         margin: 0 0 0 20%;
         display: inline-block;
@@ -880,6 +896,10 @@ body {
         display: inline-block;
         overflow: hidden;
         text-overflow: ellipsis; }
+        @media screen and (min-width: 1024px) {
+          body .search-results-content-wrapper .results-card .results-transaction-details {
+            margin: 0 0 0 17%;
+            font-size: 1.5em; } }
         body .search-results-content-wrapper .results-card .results-transaction-details .results-supplier-name-text {
           line-height: 1.5em;
           font-weight: 700; }
@@ -895,12 +915,19 @@ body {
         color: white;
         cursor: pointer;
         border-left: solid thin #F4F4F4; }
+        @media screen and (min-width: 1024px) {
+          body .search-results-content-wrapper .results-card .results-details {
+            width: 26.5%; } }
         body .search-results-content-wrapper .results-card .results-details:hover {
           background-color: #fcfcfc; }
         body .search-results-content-wrapper .results-card .results-details .fa-info-circle {
           font-size: 6em;
           margin: 20% 0 0 0;
           color: #b1bbc5; }
+          @media screen and (min-width: 1024px) {
+            body .search-results-content-wrapper .results-card .results-details .fa-info-circle {
+              margin: 4% 0 0 0;
+              font-size: 4em; } }
           body .search-results-content-wrapper .results-card .results-details .fa-info-circle .search-details-text {
             display: block;
             font-family: 'overpass', sans-serif;
