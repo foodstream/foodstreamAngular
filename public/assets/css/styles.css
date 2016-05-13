@@ -555,20 +555,40 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
+    @media screen and (min-width: 1024px) {
+      body .post-detail-title {
+        position: fixed;
+        top: 65px;
+        line-height: .75em;
+        margin-top: 0;
+        color: #00c46f;
+        padding: .5% 0;
+        font-size: 1.75em; } }
   body .post-detail-content-wrapper {
     width: 100%;
     position: absolute;
     top: 12.5%;
     height: 82vh; }
+    @media screen and (min-width: 1024px) {
+      body .post-detail-content-wrapper {
+        margin-left: 21.5%; } }
     body .post-detail-content-wrapper .post-detail-supplier-wrap {
       margin: 2% 0;
       width: 100%;
       display: block;
       font-size: 4em; }
+      @media screen and (min-width: 1024px) {
+        body .post-detail-content-wrapper .post-detail-supplier-wrap {
+          font-size: 1.5em;
+          margin-top: 5%;
+          margin-bottom: 1%; } }
       body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name {
         width: 47%;
         display: inline-block;
         margin: 0 0 0 2%; }
+        @media screen and (min-width: 1024px) {
+          body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name {
+            width: 35%; } }
         body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name span {
           font-weight: bold;
           font-size: .75em;
@@ -585,6 +605,10 @@ body {
       display: block;
       font-size: 4em;
       margin: 2% 0 2% 2%; }
+      @media screen and (min-width: 1024px) {
+        body .post-detail-content-wrapper .post-detail-details {
+          font-size: 1.5em;
+          margin-top: 1%; } }
       body .post-detail-content-wrapper .post-detail-details span {
         display: block;
         font-weight: bold;
@@ -597,16 +621,29 @@ body {
         width: 450px;
         display: inline-block;
         margin: 0 2%; }
+        @media screen and (min-width: 1024px) {
+          body .post-detail-content-wrapper .post-detail-images .post-detail-img {
+            height: 300px;
+            width: 300px;
+            margin: 0 6% 0 2%; } }
       body .post-detail-content-wrapper .post-detail-images #post-detail-map {
         height: 450px;
         width: 450px;
         display: inline-block; }
+        @media screen and (min-width: 1024px) {
+          body .post-detail-content-wrapper .post-detail-images #post-detail-map {
+            height: 300px;
+            width: 300px; } }
     body .post-detail-content-wrapper .post-detail-location {
       display: block;
       width: 96%;
       margin: 2% 0 2% 2%;
       font-size: 4em;
       font-weight: normal; }
+      @media screen and (min-width: 1024px) {
+        body .post-detail-content-wrapper .post-detail-location {
+          margin: 2% 0 5% 2%;
+          font-size: 2em; } }
       body .post-detail-content-wrapper .post-detail-location span {
         display: block;
         font-size: .75em;
@@ -622,14 +659,26 @@ body {
       line-height: 1.5em;
       color: #595959;
       background-color: #fcfcfc; }
+      @media screen and (min-width: 1024px) {
+        body .post-detail-content-wrapper .post-detail-directions-link {
+          width: 53%;
+          margin: 2% 0 2% 2%;
+          font-size: 3em; } }
     body .post-detail-content-wrapper .post-detail-time-wrap {
       width: 96%;
       margin: 2% 0 2% 2%;
       font-size: 4em;
       font-weight: normal; }
+      @media screen and (min-width: 1024px) {
+        body .post-detail-content-wrapper .post-detail-time-wrap {
+          margin: 2% 0 8% 2%;
+          font-size: 2em; } }
       body .post-detail-content-wrapper .post-detail-time-wrap .post-detail-start {
         display: inline-block;
         width: 49%; }
+        @media screen and (min-width: 1024px) {
+          body .post-detail-content-wrapper .post-detail-time-wrap .post-detail-start {
+            width: 35%; } }
         body .post-detail-content-wrapper .post-detail-time-wrap .post-detail-start span {
           display: block;
           font-weight: bold;
@@ -654,6 +703,11 @@ body {
     width: 50%;
     cursor: pointer;
     z-index: 999; }
+    @media screen and (min-width: 1024px) {
+      body .post-detail-claim-button {
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em; } }
     body .post-detail-claim-button:hover {
       background-color: #2ccec8; }
   body .post-detail-rating {
@@ -676,69 +730,13 @@ body {
     width: 50%;
     cursor: pointer;
     z-index: 999; }
+    @media screen and (min-width: 1024px) {
+      body .post-detail-bottom-button {
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em; } }
     body .post-detail-bottom-button:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-title {
-      position: fixed;
-      top: 65px;
-      line-height: .75em;
-      margin-top: 0;
-      color: #00c46f;
-      padding: .5% 0;
-      font-size: 1.75em; } }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-content-wrapper {
-      margin-left: 21.5%; } }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-content-wrapper .post-detail-supplier-wrap {
-      font-size: 1.5em;
-      margin-top: 5%;
-      margin-bottom: 1%; } }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name {
-      width: 35%; } }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-content-wrapper .post-detail-details {
-      font-size: 1.5em;
-      margin-top: 1%; } }
-  body .post-detail-content-wrapper .post-detail-images {
-    width: 100%; }
-    @media screen and (min-width: 1024px) {
-      body .post-detail-content-wrapper .post-detail-images .post-detail-img {
-        height: 300px;
-        width: 300px;
-        margin: 0 6% 0 2%; } }
-    @media screen and (min-width: 1024px) {
-      body .post-detail-content-wrapper .post-detail-images #post-detail-map {
-        height: 300px;
-        width: 300px; } }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-content-wrapper .post-detail-location {
-      margin: 2% 0 5% 2%;
-      font-size: 2em; } }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-content-wrapper .post-detail-directions-link {
-      width: 53%;
-      margin: 2% 0 2% 2%;
-      font-size: 3em; } }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-content-wrapper .post-detail-time-wrap {
-      margin: 2% 0 8% 2%;
-      font-size: 2em; } }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-content-wrapper .post-detail-time-wrap .post-detail-start {
-      width: 35%; } }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-claim-button {
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1.75em; } }
-  @media screen and (min-width: 1024px) {
-    body .post-detail-bottom-button {
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1.75em; } }
   body #search-results-subheader {
     position: fixed;
     margin: 12% 0 0 0;
