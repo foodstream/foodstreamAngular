@@ -19,7 +19,7 @@
         line-height: .75em;
         margin-top: 0;
         color: darken($headerbg, 10%);
-        padding: .5% 0;
+        padding: 1.5% 0 0 0;
         font-size: 1.75em;
   }
 }
@@ -30,35 +30,43 @@
   top: 12.5%;
   height: 82vh;
   @media screen and (min-width: $break-large) {
-      margin-left: 21.5%;
+
   }
   .post-detail-supplier-wrap{
     margin: 2% 0;
     width: 100%;
     display: block;
-    font-size: 4em;
+    font-size: 5em;
+    // border: solid thin black;
     @media screen and (min-width: $break-large) {
-        font-size: 1.5em;
-        margin-top: 5%;
-        margin-bottom: 1%;
+        font-size: 2.5em;
+        margin: 2% 0 1% 25%;
+        width: 70%;
+
     }
     .post-detail-supplier-name {
       width: 47%;
       display: inline-block;
       margin: 0 0 0 2%;
+      // border: solid thin black;
       @media screen and (min-width: $break-large) {
         //   margin: 2% 0 0 30%;
           width: 35%;
+          margin: -4% 0 0 0;
       }
       span {
         font-weight: bold;
         font-size: .75em;
         display: block;
+        @media screen and (min-width: $break-large) {
+          margin: 0 0 2.5% 0;
+        }
       }
     }
     .post-detail-org{
       width: 49%;
       display: inline-block;
+      // border: solid thin black;
       @media screen and (min-width: $break-large) {
         //   width: 20%;
       }
@@ -74,9 +82,12 @@
     display: block;
     font-size: 4em;
     margin: 2% 0 2% 2%;
+    // border: solid thin black;
     @media screen and (min-width: $break-large) {
-        font-size: 1.5em;
-        margin-top: 1%;
+        font-size: 2.5em;
+        margin: 0 0 1% 25%;
+        width: 74%;
+
     }
     span{
       display: block;
@@ -97,6 +108,9 @@
         height: 300px;
         width: 300px;
         margin: 0 6% 0 2%;
+        position: absolute;
+        top: 5%;
+        left: 1%;
       }
     }
     #post-detail-map{
@@ -106,6 +120,9 @@
       @media screen and (min-width: $break-large) {
           height: 300px;
           width: 300px;
+          position: absolute;
+          top: 52%;
+          left: 3%;
       }
     }
   }
@@ -118,6 +135,9 @@
     @media screen and (min-width: $break-large) {
       margin: 2% 0 5% 2%;
       font-size: 2em;
+      position: absolute;
+      top: 52%;
+      left: 23%;
     }
     span{
       display:block;
@@ -137,9 +157,13 @@
     color: lighten(black, 35%);
     background-color: lighten($border,3%);
     @media screen and (min-width: $break-large) {
-      width: 53%;
+      width: 73%;
       margin: 2% 0 2% 2%;
       font-size: 3em;
+      position: absolute;
+      top: 83%;
+      left: 23%;
+      font-size: 2em;
     }
   }
   .post-detail-time-wrap{
@@ -150,6 +174,10 @@
     @media screen and (min-width: $break-large) {
         margin: 2% 0 8% 2%;
         font-size: 2em;
+        position: absolute;
+        top: 67%;
+        left: 23%;
+        width: 75%;
     }
     .post-detail-start{
       display: inline-block;

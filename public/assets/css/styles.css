@@ -562,37 +562,38 @@ body {
         line-height: .75em;
         margin-top: 0;
         color: #00c46f;
-        padding: .5% 0;
+        padding: 1.5% 0 0 0;
         font-size: 1.75em; } }
   body .post-detail-content-wrapper {
     width: 100%;
     position: absolute;
     top: 12.5%;
     height: 82vh; }
-    @media screen and (min-width: 1024px) {
-      body .post-detail-content-wrapper {
-        margin-left: 21.5%; } }
     body .post-detail-content-wrapper .post-detail-supplier-wrap {
       margin: 2% 0;
       width: 100%;
       display: block;
-      font-size: 4em; }
+      font-size: 5em; }
       @media screen and (min-width: 1024px) {
         body .post-detail-content-wrapper .post-detail-supplier-wrap {
-          font-size: 1.5em;
-          margin-top: 5%;
-          margin-bottom: 1%; } }
+          font-size: 2.5em;
+          margin: 2% 0 1% 25%;
+          width: 70%; } }
       body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name {
         width: 47%;
         display: inline-block;
         margin: 0 0 0 2%; }
         @media screen and (min-width: 1024px) {
           body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name {
-            width: 35%; } }
+            width: 35%;
+            margin: -4% 0 0 0; } }
         body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name span {
           font-weight: bold;
           font-size: .75em;
           display: block; }
+          @media screen and (min-width: 1024px) {
+            body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-supplier-name span {
+              margin: 0 0 2.5% 0; } }
       body .post-detail-content-wrapper .post-detail-supplier-wrap .post-detail-org {
         width: 49%;
         display: inline-block; }
@@ -607,8 +608,9 @@ body {
       margin: 2% 0 2% 2%; }
       @media screen and (min-width: 1024px) {
         body .post-detail-content-wrapper .post-detail-details {
-          font-size: 1.5em;
-          margin-top: 1%; } }
+          font-size: 2.5em;
+          margin: 0 0 1% 25%;
+          width: 74%; } }
       body .post-detail-content-wrapper .post-detail-details span {
         display: block;
         font-weight: bold;
@@ -625,7 +627,10 @@ body {
           body .post-detail-content-wrapper .post-detail-images .post-detail-img {
             height: 300px;
             width: 300px;
-            margin: 0 6% 0 2%; } }
+            margin: 0 6% 0 2%;
+            position: absolute;
+            top: 5%;
+            left: 1%; } }
       body .post-detail-content-wrapper .post-detail-images #post-detail-map {
         height: 450px;
         width: 450px;
@@ -633,7 +638,10 @@ body {
         @media screen and (min-width: 1024px) {
           body .post-detail-content-wrapper .post-detail-images #post-detail-map {
             height: 300px;
-            width: 300px; } }
+            width: 300px;
+            position: absolute;
+            top: 52%;
+            left: 3%; } }
     body .post-detail-content-wrapper .post-detail-location {
       display: block;
       width: 96%;
@@ -643,7 +651,10 @@ body {
       @media screen and (min-width: 1024px) {
         body .post-detail-content-wrapper .post-detail-location {
           margin: 2% 0 5% 2%;
-          font-size: 2em; } }
+          font-size: 2em;
+          position: absolute;
+          top: 52%;
+          left: 23%; } }
       body .post-detail-content-wrapper .post-detail-location span {
         display: block;
         font-size: .75em;
@@ -661,9 +672,13 @@ body {
       background-color: #fcfcfc; }
       @media screen and (min-width: 1024px) {
         body .post-detail-content-wrapper .post-detail-directions-link {
-          width: 53%;
+          width: 73%;
           margin: 2% 0 2% 2%;
-          font-size: 3em; } }
+          font-size: 3em;
+          position: absolute;
+          top: 83%;
+          left: 23%;
+          font-size: 2em; } }
     body .post-detail-content-wrapper .post-detail-time-wrap {
       width: 96%;
       margin: 2% 0 2% 2%;
@@ -672,7 +687,11 @@ body {
       @media screen and (min-width: 1024px) {
         body .post-detail-content-wrapper .post-detail-time-wrap {
           margin: 2% 0 8% 2%;
-          font-size: 2em; } }
+          font-size: 2em;
+          position: absolute;
+          top: 67%;
+          left: 23%;
+          width: 75%; } }
       body .post-detail-content-wrapper .post-detail-time-wrap .post-detail-start {
         display: inline-block;
         width: 49%; }
@@ -1190,6 +1209,15 @@ body {
     margin-top: 11%;
     z-index: 999;
     position: fixed; }
+    @media screen and (min-width: 1024px) {
+      body .create-subheader {
+        position: fixed;
+        top: 65px;
+        line-height: .75em;
+        margin-top: 0;
+        color: #00c46f;
+        padding: .5% 0;
+        font-size: 1.75em; } }
   body .create-upload-verify .fa-check-square-o {
     color: #71F79F;
     font-size: 5em;
@@ -1212,6 +1240,12 @@ body {
       color: #595959;
       background-color: #fcfcfc;
       line-height: 1.2em; }
+      @media screen and (min-width: 1024px) {
+        body .create-content-wrapper .create-post-add-pic {
+          margin: 12% 2% 4% 38%;
+          width: 25%;
+          font-size: 2.5em;
+          text-align: center; } }
       body .create-content-wrapper .create-post-add-pic .fa-camera-retro {
         display: block;
         color: #8c8c8c;
@@ -1226,6 +1260,11 @@ body {
       font-size: 4em;
       margin: 2% 0 0 2.5%;
       color: black; }
+      @media screen and (min-width: 1024px) {
+        body .create-content-wrapper .create-title {
+          width: 35.5%;
+          font-size: 1.5em;
+          margin: 1.5% 0 0 32%; } }
     body .create-content-wrapper .create-location {
       background-color: white;
       width: 95%;
@@ -1233,6 +1272,11 @@ body {
       font-size: 4em;
       margin: 2% 0 2% 2.5%;
       color: black; }
+      @media screen and (min-width: 1024px) {
+        body .create-content-wrapper .create-location {
+          width: 35.5%;
+          font-size: 1.5em;
+          margin: 1% 0 0 32%; } }
     body .create-content-wrapper .create-start-na {
       display: inline-block;
       background-color: white;
@@ -1241,6 +1285,11 @@ body {
       font-size: 4em;
       margin: 2% 2% 2% 2%;
       color: black; }
+      @media screen and (min-width: 1024px) {
+        body .create-content-wrapper .create-start-na {
+          width: 10%;
+          font-size: 1.5em;
+          margin: 1% 0 0 37%; } }
     body .create-content-wrapper .create-start-time-na {
       display: inline-block;
       background-color: white;
@@ -1249,6 +1298,11 @@ body {
       font-size: 4em;
       margin-top: 2%;
       color: black; }
+      @media screen and (min-width: 1024px) {
+        body .create-content-wrapper .create-start-time-na {
+          width: 10%;
+          font-size: 1.5em;
+          margin: 1% 35% 0 5%; } }
     body .create-content-wrapper .create-end-na {
       display: inline-block;
       margin: 2% 2% 2% 2%;
@@ -1257,6 +1311,11 @@ body {
       border: solid 2px #F4F4F4;
       font-size: 4em;
       color: black; }
+      @media screen and (min-width: 1024px) {
+        body .create-content-wrapper .create-end-na {
+          width: 10%;
+          font-size: 1.5em;
+          margin: 1% 0 0 37%; } }
     body .create-content-wrapper .create-end-time-na {
       display: inline-block;
       background-color: white;
@@ -1265,6 +1324,11 @@ body {
       font-size: 4em;
       margin-top: 2%;
       color: black; }
+      @media screen and (min-width: 1024px) {
+        body .create-content-wrapper .create-end-time-na {
+          width: 10%;
+          font-size: 1.5em;
+          margin: 1% 35% 0 5%; } }
     body .create-content-wrapper .create-description {
       display: block;
       height: 40vh;
@@ -1275,6 +1339,12 @@ body {
       margin: 2% 0 0 2.5%;
       color: black;
       z-index: 1; }
+      @media screen and (min-width: 1024px) {
+        body .create-content-wrapper .create-description {
+          width: 35.5%;
+          font-size: 1.5em;
+          margin: 1% 0 0 32%;
+          height: 15vh; } }
   body .create-submit-button {
     background-color: #71F79F;
     position: fixed;
@@ -1289,63 +1359,26 @@ body {
     z-index: 999; }
     body .create-submit-button:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1024px) {
-    body .create-subheader {
-      position: fixed;
-      top: 65px;
-      line-height: .75em;
-      margin-top: 0;
-      color: #00c46f;
-      padding: .5% 0;
-      font-size: 1.75em; } }
-  @media screen and (min-width: 1024px) {
-    body .create-post-add-pic {
-      margin: 12% 2% 4% 38%;
-      width: 25%;
-      font-size: 2.5em;
-      text-align: center; } }
-  @media screen and (min-width: 1024px) {
-    body .create-title {
-      width: 35.5%;
-      font-size: 1.5em;
-      margin: 1.5% 0 0 32%; } }
-  @media screen and (min-width: 1024px) {
-    body .create-location {
-      width: 35.5%;
-      font-size: 1.5em;
-      margin: 1% 0 0 32%; } }
-  @media screen and (min-width: 1024px) {
-    body .create-start-na {
-      width: 10%;
-      font-size: 1.5em;
-      margin: 1% 0 0 37%; } }
-  @media screen and (min-width: 1024px) {
-    body .create-start-time-na {
-      width: 10%;
-      font-size: 1.5em;
-      margin: 1% 35% 0 5%; } }
-  @media screen and (min-width: 1024px) {
-    body .create-end-na {
-      width: 10%;
-      font-size: 1.5em;
-      margin: 1% 0 0 37%; } }
-  @media screen and (min-width: 1024px) {
-    body .create-end-time-na {
-      width: 10%;
-      font-size: 1.5em;
-      margin: 1% 35% 0 5%; } }
-  @media screen and (min-width: 1024px) {
-    body .create-description {
-      width: 35.5%;
-      font-size: 1.5em;
-      margin: 1% 0 0 32%;
-      height: 15vh; } }
-  @media screen and (min-width: 1024px) {
-    body .create-submit-button {
-      position: fixed;
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1.75em; } }
+  body .create-submit-button {
+    background-color: #71F79F;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    line-height: 1.5em;
+    color: white;
+    cursor: pointer;
+    font-weight: 200;
+    z-index: 999; }
+    body .create-submit-button:hover {
+      background-color: #59f68f; }
+    @media screen and (min-width: 1024px) {
+      body .create-submit-button {
+        position: fixed;
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em; } }
   body .edit-post-subheader {
     width: 100%;
     font-size: 4em;
