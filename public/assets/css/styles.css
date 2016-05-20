@@ -1213,24 +1213,17 @@ body {
       body .create-subheader {
         position: fixed;
         top: 65px;
-        line-height: .75em;
+        line-height: 1.2em;
         margin-top: 0;
         color: #00c46f;
         padding: .5% 0;
         font-size: 1.75em; } }
-  body .create-upload-verify .fa-check-square-o {
-    color: #71F79F;
-    font-size: 5em;
-    margin-left: 30%;
-    display: inline; }
-  body .create-upload-verify div {
-    display: inline;
-    font-size: 3em; }
   body .create-content-wrapper {
     width: 100%;
     top: 13%;
     height: 81vh;
-    position: absolute; }
+    position: absolute;
+    border: solid thin black; }
     body .create-content-wrapper .create-post-add-pic {
       border: solid 3px #F4F4F4;
       text-align: center;
@@ -1242,7 +1235,7 @@ body {
       line-height: 1.2em; }
       @media screen and (min-width: 1024px) {
         body .create-content-wrapper .create-post-add-pic {
-          margin: 12% 2% 4% 38%;
+          margin: 1% 2% 1% 38%;
           width: 25%;
           font-size: 2.5em;
           text-align: center; } }
@@ -1251,6 +1244,21 @@ body {
         color: #8c8c8c;
         margin: 2% 0;
         font-size: 2em; }
+    body .create-content-wrapper .create-upload-verify .fa-check-square-o {
+      color: #71F79F;
+      font-size: 5em;
+      margin-left: 30%;
+      display: inline; }
+      @media screen and (min-width: 1024px) {
+        body .create-content-wrapper .create-upload-verify .fa-check-square-o {
+          font-size: 2em;
+          margin: 0 0 0 43%; } }
+    body .create-content-wrapper .create-upload-verify div {
+      display: inline;
+      font-size: 3em; }
+      @media screen and (min-width: 1024px) {
+        body .create-content-wrapper .create-upload-verify div {
+          font-size: 1.5em; } }
     body .create-content-wrapper #file-input {
       display: none; }
     body .create-content-wrapper .create-title {
@@ -1563,40 +1571,75 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
+    @media screen and (min-width: 1024px) {
+      body .created-post-title {
+        font-size: 2em;
+        line-height: 1em;
+        margin: 5% 0 0 0;
+        padding: .5% 0; } }
   body .created-content-wrapper {
     margin-top: 24%;
     overflow: scroll;
     position: absolute;
     width: 100%;
     height: 80vh; }
+    @media screen and (min-width: 1024px) {
+      body .created-content-wrapper {
+        margin-top: 9%;
+        padding-top: 1%; } }
     body .created-content-wrapper .created-post-description {
       width: 95%;
       font-size: 4em;
       margin: 2% 0 0 2.5%;
       color: black;
       display: block; }
+      @media screen and (min-width: 1024px) {
+        body .created-content-wrapper .created-post-description {
+          font-size: 1em;
+          margin: 0 3% 0 15%;
+          width: 75%; } }
       body .created-content-wrapper .created-post-description span {
         font-size: .75em;
         font-weight: 700;
         display: block; }
+        @media screen and (min-width: 1024px) {
+          body .created-content-wrapper .created-post-description span {
+            padding-bottom: 1%;
+            font-size: 1em; } }
     body .created-content-wrapper .created-post-images {
       display: block;
       margin: 2% 0; }
+      @media screen and (min-width: 1024px) {
+        body .created-content-wrapper .created-post-images {
+          margin-left: 26.5%; } }
       body .created-content-wrapper .created-post-images .created-post-photo {
         display: inline-block;
         height: 450px;
         width: 450px;
         margin: 0 1% 0 2%; }
+        @media screen and (min-width: 1024px) {
+          body .created-content-wrapper .created-post-images .created-post-photo {
+            height: 250px;
+            width: 250px;
+            margin-right: 5%; } }
       body .created-content-wrapper .created-post-images #created-post-gmap {
         width: 450px;
         height: 450px;
         display: inline-block;
         margin: 0 1%; }
+        @media screen and (min-width: 1024px) {
+          body .created-content-wrapper .created-post-images #created-post-gmap {
+            height: 250px;
+            width: 250px; } }
     body .created-content-wrapper .created-post-address {
       display: block;
       width: 96%;
       margin: 2% 0 0 2%;
       font-size: 4em; }
+      @media screen and (min-width: 1024px) {
+        body .created-content-wrapper .created-post-address {
+          margin: 5% 0 1% 30%;
+          font-size: 2.5em; } }
       body .created-content-wrapper .created-post-address span {
         font-weight: 700;
         font-size: .75em;
@@ -1607,6 +1650,10 @@ body {
       border: solid thin #c1c1c1;
       display: block;
       color: #a8a8a8; }
+      @media screen and (min-width: 1024px) {
+        body .created-content-wrapper .created-buttons-wrap {
+          width: 90%;
+          margin-left: 5%; } }
       body .created-content-wrapper .created-buttons-wrap .created-add-cal {
         display: inline-block;
         width: 33%;
@@ -1614,10 +1661,17 @@ body {
         border-right: solid thin #c1c1c1;
         height: 100%;
         font-size: 2.5em; }
+        @media screen and (min-width: 1024px) {
+          body .created-content-wrapper .created-buttons-wrap .created-add-cal {
+            font-size: 1.25em; } }
         body .created-content-wrapper .created-buttons-wrap .created-add-cal .fa-calendar-plus-o {
           margin: 5% 0 4% 0;
           display: block;
           font-size: 2.5em; }
+          @media screen and (min-width: 1024px) {
+            body .created-content-wrapper .created-buttons-wrap .created-add-cal .fa-calendar-plus-o {
+              font-size: 1.25em;
+              margin: 4% 0 2% 0; } }
       body .created-content-wrapper .created-buttons-wrap .created-post-chat {
         display: inline-block;
         width: 33%;
@@ -1625,10 +1679,17 @@ body {
         border-right: solid thin #c1c1c1;
         height: 100%;
         font-size: 2.5em; }
+        @media screen and (min-width: 1024px) {
+          body .created-content-wrapper .created-buttons-wrap .created-post-chat {
+            font-size: 1.25em; } }
         body .created-content-wrapper .created-buttons-wrap .created-post-chat .fa-comment {
           margin: 5% 0 4% 0;
           display: block;
           font-size: 2.5em; }
+          @media screen and (min-width: 1024px) {
+            body .created-content-wrapper .created-buttons-wrap .created-post-chat .fa-comment {
+              font-size: 1.25em;
+              margin: 4% 0 2% 0; } }
       body .created-content-wrapper .created-buttons-wrap .created-post-directions-btn {
         color: #a8a8a8;
         display: inline-block;
@@ -1637,18 +1698,34 @@ body {
         height: 100%;
         text-decoration: none;
         font-size: 2.5em; }
+        @media screen and (min-width: 1024px) {
+          body .created-content-wrapper .created-buttons-wrap .created-post-directions-btn {
+            font-size: 1.25em; } }
         body .created-content-wrapper .created-buttons-wrap .created-post-directions-btn .fa-google {
           margin: 5% 0 4% 0;
           display: block;
           font-size: 2.5em; }
+          @media screen and (min-width: 1024px) {
+            body .created-content-wrapper .created-buttons-wrap .created-post-directions-btn .fa-google {
+              font-size: 1.25em;
+              margin: 4% 0 2% 0; } }
     body .created-content-wrapper .created-post-time-wrap {
       width: 96%;
       margin: 2% 0 0 2%;
       display: block; }
+      @media screen and (min-width: 1024px) {
+        body .created-content-wrapper .created-post-time-wrap {
+          width: 75%;
+          margin: 3% 0 15% 30%;
+          font-size: 1em; } }
       body .created-content-wrapper .created-post-time-wrap .created-post-start {
         font-size: 4em;
         display: inline-block;
         width: 48%; }
+        @media screen and (min-width: 1024px) {
+          body .created-content-wrapper .created-post-time-wrap .created-post-start {
+            font-size: 2.5em;
+            width: 35%; } }
         body .created-content-wrapper .created-post-time-wrap .created-post-start span {
           font-size: .75em;
           display: block;
@@ -1657,6 +1734,10 @@ body {
         font-size: 4em;
         display: inline-block;
         width: 48%; }
+        @media screen and (min-width: 1024px) {
+          body .created-content-wrapper .created-post-time-wrap .created-post-end {
+            font-size: 2.5em;
+            width: 35%; } }
         body .created-content-wrapper .created-post-time-wrap .created-post-end span {
           font-size: .75em;
           display: block;
@@ -1732,6 +1813,11 @@ body {
     z-index: 999; }
     body .created-post-footer-home:hover {
       background-color: #59f68f; }
+    @media screen and (min-width: 1024px) {
+      body .created-post-footer-home {
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em; } }
   body .created-post-footer-edit {
     background-color: #3DD6D0;
     position: fixed;
@@ -1747,6 +1833,11 @@ body {
     font-weight: 300; }
     body .created-post-footer-edit:hover {
       background-color: #2ccec8; }
+    @media screen and (min-width: 1024px) {
+      body .created-post-footer-edit {
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em; } }
   body .created-post-footer-delete {
     background-color: #71F79F;
     position: fixed;
@@ -1762,94 +1853,11 @@ body {
     z-index: 999; }
     body .created-post-footer-delete:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1024px) {
-    body .created-post-title {
-      font-size: 2em;
-      line-height: 1em;
-      margin: 5% 0 0 0;
-      padding: .5% 0; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper {
-      margin-top: 9%;
-      padding-top: 1%; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-post-description {
-      font-size: 1em;
-      margin: 0 3% 0 15%;
-      width: 75%; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-post-description span {
-      padding-bottom: 1%;
-      font-size: 1em; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-post-images {
-      margin-left: 26.5%; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-post-images .created-post-photo {
-      height: 250px;
-      width: 250px;
-      margin-right: 5%; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-post-images #created-post-gmap {
-      height: 250px;
-      width: 250px; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-post-address {
-      margin: 5% 0 1% 30%;
-      font-size: 2.5em; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-buttons-wrap {
-      width: 90%;
-      margin-left: 5%; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-buttons-wrap .created-add-cal {
-      font-size: 1.25em; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-buttons-wrap .created-add-cal .fa-calendar-plus-o {
-      font-size: 1.25em;
-      margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-buttons-wrap .created-post-chat {
-      font-size: 1.25em; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-buttons-wrap .created-post-chat .fa-comment {
-      font-size: 1.25em;
-      margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-buttons-wrap .created-post-directions-btn {
-      font-size: 1.25em; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-buttons-wrap .created-post-directions-btn .fa-google {
-      font-size: 1.25em;
-      margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-post-time-wrap {
-      width: 75%;
-      margin: 3% 0 15% 30%;
-      font-size: 1em; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-post-time-wrap .created-post-start {
-      font-size: 2.5em;
-      width: 35%; } }
-  @media screen and (min-width: 1024px) {
-    body .created-content-wrapper .created-post-time-wrap .created-post-end {
-      font-size: 2.5em;
-      width: 35%; } }
-  @media screen and (min-width: 1024px) {
-    body .created-post-footer-home {
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1.75em; } }
-  @media screen and (min-width: 1024px) {
-    body .created-post-footer-edit {
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1.75em; } }
-  @media screen and (min-width: 1024px) {
-    body .created-post-footer-delete {
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1.75em; } }
+    @media screen and (min-width: 1024px) {
+      body .created-post-footer-delete {
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em; } }
   body .chat-subheader {
     background-color: #78ffc4;
     font-size: 4em;
