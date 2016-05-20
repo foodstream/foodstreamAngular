@@ -2037,47 +2037,88 @@ body {
     text-overflow: ellipsis;
     background-color: #abffda;
     z-index: 9999999;
-    height: 5%;
-    color: #009152; }
+    height: 5%; }
+    @media screen and (min-width: 1024px) {
+      body .claimed-title {
+        margin-top: 5%;
+        padding: .5% 0 .2% 0;
+        font-size: 2em;
+        font-weight: 600; } }
   body .claimed-content-wrapper {
     margin-top: 21.5%;
     height: 82vh;
     overflow: scroll;
     position: absolute;
     width: 100%; }
+    @media screen and (min-width: 1024px) {
+      body .claimed-content-wrapper {
+        margin-top: 9%; } }
     body .claimed-content-wrapper .claimed-supplier-name-wrap {
       width: 100%;
       font-size: 4em;
       margin: 2% 0 0 0; }
+      @media screen and (min-width: 1024px) {
+        body .claimed-content-wrapper .claimed-supplier-name-wrap {
+          font-size: 3em;
+          margin: 1% 0 0 27%; } }
       body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name {
         display: inline-block;
         width: 49%;
         padding: 0 0 0 2%; }
+        @media screen and (min-width: 1024px) {
+          body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name {
+            font-size: .5em;
+            line-height: 1em;
+            width: 26%; } }
         body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name span {
           font-size: .75em;
           font-weight: 700;
           display: block; }
+          @media screen and (min-width: 1024px) {
+            body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name span {
+              font-size: 1em; } }
       body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org {
         display: inline-block;
         width: 46%; }
+        @media screen and (min-width: 1024px) {
+          body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org {
+            font-size: .5em;
+            line-height: 1em;
+            width: 30%; } }
         body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org span {
           font-size: .75em;
           font-weight: 700;
           display: block; }
+          @media screen and (min-width: 1024px) {
+            body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org span {
+              font-size: 1em; } }
     body .claimed-content-wrapper .claimed-images {
       margin: 2% 0 0 0;
       width: 100%;
       display: block; }
+      @media screen and (min-width: 1024px) {
+        body .claimed-content-wrapper .claimed-images {
+          margin: 0 0 0 27%; } }
       body .claimed-content-wrapper .claimed-images #claimed-map {
         width: 450px;
         height: 450px;
         margin: 2% 0 2% 2%;
         display: inline-block; }
+        @media screen and (min-width: 1024px) {
+          body .claimed-content-wrapper .claimed-images #claimed-map {
+            height: 250px;
+            width: 250px;
+            margin: 1% 0 0 2%; } }
       body .claimed-content-wrapper .claimed-images .claimed-post-photo {
         width: 450px;
         height: 450px;
         margin: 2% 0 2% 2%;
         display: inline-block; }
+        @media screen and (min-width: 1024px) {
+          body .claimed-content-wrapper .claimed-images .claimed-post-photo {
+            height: 250px;
+            width: 250px;
+            margin: 1% 0 0 2%; } }
     body .claimed-content-wrapper .claimed-buttons-wrap {
       width: 100%;
       display: block;
@@ -2085,6 +2126,10 @@ body {
       border: solid thin #c1c1c1;
       color: #a8a8a8;
       margin: 3% 0 0 0; }
+      @media screen and (min-width: 1024px) {
+        body .claimed-content-wrapper .claimed-buttons-wrap {
+          width: 90%;
+          margin-left: 5%; } }
       body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar {
         display: inline-block;
         width: 33%;
@@ -2093,10 +2138,17 @@ body {
         border-right: solid thin #c1c1c1;
         height: 100%;
         font-size: 2.5em; }
+        @media screen and (min-width: 1024px) {
+          body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar {
+            font-size: 1.25em; } }
         body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar .fa-calendar-plus-o {
           margin: 5% 0 4% 0;
           display: block;
           font-size: 2.5em; }
+          @media screen and (min-width: 1024px) {
+            body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar .fa-calendar-plus-o {
+              font-size: 1.25em;
+              margin: 4% 0 2% 0; } }
       body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat {
         display: inline-block;
         width: 33%;
@@ -2105,10 +2157,17 @@ body {
         border-right: solid thin #c1c1c1;
         height: 100%;
         font-size: 2.5em; }
+        @media screen and (min-width: 1024px) {
+          body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat {
+            font-size: 1.25em; } }
         body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat .fa-comment {
           margin: 5% 0 4% 0;
           display: block;
           font-size: 2.5em; }
+          @media screen and (min-width: 1024px) {
+            body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat .fa-comment {
+              font-size: 1.25em;
+              margin: 4% 0 2% 0; } }
       body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions {
         color: #a8a8a8;
         display: inline-block;
@@ -2122,14 +2181,27 @@ body {
           margin: 5% 0 4% 0;
           display: block;
           font-size: 2.5em; }
+          @media screen and (min-width: 1024px) {
+            body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions .fa-google {
+              font-size: 1.25em;
+              margin: 4% 0 2% 0; } }
     body .claimed-content-wrapper .claimed-time-wrap {
       display: block;
       width: 96%;
       font-size: 4em;
       margin: 2% 0 0 2%; }
+      @media screen and (min-width: 1024px) {
+        body .claimed-content-wrapper .claimed-time-wrap {
+          width: 75%;
+          margin: 3% 0 15% 30%;
+          font-size: 1em; } }
       body .claimed-content-wrapper .claimed-time-wrap .claimed-start {
         width: 49%;
         display: inline-block; }
+        @media screen and (min-width: 1024px) {
+          body .claimed-content-wrapper .claimed-time-wrap .claimed-start {
+            font-size: 2.5em;
+            width: 35%; } }
         body .claimed-content-wrapper .claimed-time-wrap .claimed-start span {
           display: block;
           font-weight: 700;
@@ -2137,6 +2209,10 @@ body {
       body .claimed-content-wrapper .claimed-time-wrap .claimed-end {
         width: 49%;
         display: inline-block; }
+        @media screen and (min-width: 1024px) {
+          body .claimed-content-wrapper .claimed-time-wrap .claimed-end {
+            font-size: 2.5em;
+            width: 35%; } }
         body .claimed-content-wrapper .claimed-time-wrap .claimed-end span {
           display: block;
           font-weight: 700;
@@ -2146,6 +2222,10 @@ body {
       font-size: 4em;
       margin: 2% 0 0 2%;
       display: block; }
+      @media screen and (min-width: 1024px) {
+        body .claimed-content-wrapper .claimed-location {
+          margin: 5% 0 1% 30%;
+          font-size: 2.5em; } }
       body .claimed-content-wrapper .claimed-location span {
         display: block;
         font-size: .75em;
@@ -2154,6 +2234,11 @@ body {
       font-size: 4em;
       margin: 2% 0 0 2%;
       display: block; }
+      @media screen and (min-width: 1024px) {
+        body .claimed-content-wrapper .claimed-details {
+          font-size: 2.5em;
+          margin: 1% 3% 0 29%;
+          width: 75%; } }
       body .claimed-content-wrapper .claimed-details span {
         display: block;
         font-size: .5em;
@@ -2171,6 +2256,11 @@ body {
     cursor: pointer;
     background-color: #3DD6D0;
     cursor: pointer; }
+    @media screen and (min-width: 1024px) {
+      body .claimed-bottom-button {
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em; } }
     body .claimed-bottom-button:hover {
       background-color: #2ccec8; }
   body .claimed-remove-button {
@@ -2186,107 +2276,13 @@ body {
     cursor: pointer;
     background-color: #71F79F;
     cursor: pointer; }
+    @media screen and (min-width: 1024px) {
+      body .claimed-remove-button {
+        font-size: 2em;
+        font-weight: 600;
+        line-height: 1.75em; } }
     body .claimed-remove-button:hover {
       background-color: #59f68f; }
-  @media screen and (min-width: 1024px) {
-    body .claimed-title {
-      margin-top: 5%;
-      padding: .5% 0 .2% 0;
-      font-size: 2em;
-      font-weight: 600; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper {
-      margin-top: 9%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-supplier-name-wrap {
-      font-size: 3em;
-      margin: 1% 0 0 27%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name {
-      font-size: .5em;
-      line-height: 1em;
-      width: 26%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-name span {
-      font-size: 1em; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org {
-      font-size: .5em;
-      line-height: 1em;
-      width: 30%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-supplier-name-wrap .claimed-supplier-org span {
-      font-size: 1em; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-images {
-      margin: 0 0 0 27%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-images #claimed-map {
-      height: 250px;
-      width: 250px;
-      margin: 1% 0 0 2%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-images .claimed-post-photo {
-      height: 250px;
-      width: 250px;
-      margin: 1% 0 0 2%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-buttons-wrap {
-      width: 90%;
-      margin-left: 5%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar {
-      font-size: 1.25em; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-buttons-wrap .claimed-calendar .fa-calendar-plus-o {
-      font-size: 1.25em;
-      margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat {
-      font-size: 1.25em; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-buttons-wrap .claimed-chat .fa-comment {
-      font-size: 1.25em;
-      margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions {
-      font-size: 1.25em; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-buttons-wrap .claimed-directions .fa-google {
-      font-size: 1.25em;
-      margin: 4% 0 2% 0; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-time-wrap {
-      width: 75%;
-      margin: 3% 0 15% 30%;
-      font-size: 1em; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-time-wrap .claimed-start {
-      font-size: 2.5em;
-      width: 35%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-time-wrap .claimed-end {
-      font-size: 2.5em;
-      width: 35%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-location {
-      margin: 5% 0 1% 30%;
-      font-size: 2.5em; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-content-wrapper .claimed-details {
-      font-size: 2.5em;
-      margin: 1% 3% 0 29%;
-      width: 75%; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-bottom-button {
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1.75em; } }
-  @media screen and (min-width: 1024px) {
-    body .claimed-remove-button {
-      font-size: 2em;
-      font-weight: 600;
-      line-height: 1.75em; } }
 
 .no-mobile-overlay-content {
   margin-top: -2%;
