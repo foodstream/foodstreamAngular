@@ -84,218 +84,218 @@ body{
 
 //--------------edit profile page styling---------//
 
-
-  .edit-profile-subheader{
-    background-color: lighten($headerbg, 35%);
-    width: 100vw;
-    height: 5%;
-    display: block;
-    // color: darken($headerbg, 10%);
-    position: fixed;
-    top: 7%;
-    text-align: center;
-    font-size: 5em;
-    // margin-top: 12%;
-    z-index: 999;
-  }
-  .edit-profile-top-btn-wrap{
-    position: fixed;
-    top: 12%;
-    width: 100%;
-    border: solid thin $border;
-    display: block;
-    height: 4%;
-    font-size: 2.5em;
-    background-color: lighten($border, 4%);
-    z-index: 999;
-    .edit-profile-change-email{
-      display: inline-block;
-      width: 33%;
-      height: 100%;
-      border-right: solid thin darken($border, 5%);
-      text-align: center;
-      &:hover{
-        background-color: lighten($border, 2%);
-      }
-    }
-    .edit-profile-change-password{
-      display: inline-block;
-      height: 100%;
-      width: 33%;
-      border-right: solid thin darken($border, 5%);
-      text-align: center;
-    }
-    .edit-profile-logout-btn{
-      display: inline-block;
-      height: 100%;
-      width: 31%;
-      text-align: center;
-    }
-  }
-  .edit-profile-content-wrapper {
-    margin-top: 29%;
-    overflow: scroll;
-    width: 100%;
-    height: 73vh;
-    // border: solid thin black;
-    color: lighten(black, 35%);
-
-    .edit-profile-image{
-      margin: 2% 0 2% 25%;
-    }
-    .edit-profile-rating{
-      width: 100%;
-      text-align: center;
-      font-size: 2em;
-      .actual-stars {
-        font-size: 1.5em;
-        color: lighten(black, 35%);
-      }
-    }
-    .edit-profile-add-image{
-      border: solid 3px $border;
-      width: 95%;
-      background-color: lighten($border,3%);
-      color: white;
-      color: lighten(black, 35%);
-      text-align: center;
-      font-size: 3em;
-      line-height: 1.5em;
-      margin: 2% 0 0 2.5%;
-    }
-    .edit-profile-first-name{
-      margin: 2% 0 2% 2%;
-      width: 40vw;
-      font-size: 4em;
-      border: solid thin darken($border, 5%);
-    }
-    .edit-profile-last-name{
-      margin: 2% 0 0 2%;
-      width: 40vw;
-      font-size: 4em;
-      border: solid thin darken($border, 5%);
-    }
-    .edit-profile-organization{
-      margin: 2%;
-      width: 96vw;
-      font-size: 4em;
-      border: solid thin darken($border, 5%);
-    }
-    .edit-profile-location{
-      margin: 2%;
-      width: 96vw;
-      font-size: 4em;
-      border: solid thin darken($border, 5%);
-    }
-    .edit-profile-description{
-      display: block;
-      margin: 2%;
-      width: 96vw;
-      height: 18vh;
-      font-size: 4em;
-      border: solid thin darken($border, 5%);
-    }
-  }
-  #file-input-edit-profile{
-    display: none;
-  }
-
-  .edit-profile-footer{
-    display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background-color: $buttonaccent2;
-    z-index: 999;
-    position: fixed;
-    text-align: center;
-    font-size: 4em;
-    line-height: 1.5em;
-    color: white;
-    cursor: pointer;
-    font-weight: 200;
-    &:hover{
-      background-color: darken($buttonaccent2, 5%);
-    }
-  }
+  //
+  // .edit-profile-subheader{
+  //   background-color: lighten($headerbg, 35%);
+  //   width: 100vw;
+  //   height: 5%;
+  //   display: block;
+  //   // color: darken($headerbg, 10%);
+  //   position: fixed;
+  //   top: 7%;
+  //   text-align: center;
+  //   font-size: 5em;
+  //   // margin-top: 12%;
+  //   z-index: 999;
+  // }
+  // .edit-profile-top-btn-wrap{
+  //   position: fixed;
+  //   top: 12%;
+  //   width: 100%;
+  //   border: solid thin $border;
+  //   display: block;
+  //   height: 4%;
+  //   font-size: 2.5em;
+  //   background-color: lighten($border, 4%);
+  //   z-index: 999;
+  //   .edit-profile-change-email{
+  //     display: inline-block;
+  //     width: 33%;
+  //     height: 100%;
+  //     border-right: solid thin darken($border, 5%);
+  //     text-align: center;
+  //     &:hover{
+  //       background-color: lighten($border, 2%);
+  //     }
+  //   }
+  //   .edit-profile-change-password{
+  //     display: inline-block;
+  //     height: 100%;
+  //     width: 33%;
+  //     border-right: solid thin darken($border, 5%);
+  //     text-align: center;
+  //   }
+  //   .edit-profile-logout-btn{
+  //     display: inline-block;
+  //     height: 100%;
+  //     width: 31%;
+  //     text-align: center;
+  //   }
+  // }
+  // .edit-profile-content-wrapper {
+  //   margin-top: 29%;
+  //   overflow: scroll;
+  //   width: 100%;
+  //   height: 73vh;
+  //   // border: solid thin black;
+  //   color: lighten(black, 35%);
+  //
+  //   .edit-profile-image{
+  //     margin: 2% 0 2% 25%;
+  //   }
+  //   .edit-profile-rating{
+  //     width: 100%;
+  //     text-align: center;
+  //     font-size: 2em;
+  //     .actual-stars {
+  //       font-size: 1.5em;
+  //       color: lighten(black, 35%);
+  //     }
+  //   }
+  //   .edit-profile-add-image{
+  //     border: solid 3px $border;
+  //     width: 95%;
+  //     background-color: lighten($border,3%);
+  //     color: white;
+  //     color: lighten(black, 35%);
+  //     text-align: center;
+  //     font-size: 3em;
+  //     line-height: 1.5em;
+  //     margin: 2% 0 0 2.5%;
+  //   }
+  //   .edit-profile-first-name{
+  //     margin: 2% 0 2% 2%;
+  //     width: 40vw;
+  //     font-size: 4em;
+  //     border: solid thin darken($border, 5%);
+  //   }
+  //   .edit-profile-last-name{
+  //     margin: 2% 0 0 2%;
+  //     width: 40vw;
+  //     font-size: 4em;
+  //     border: solid thin darken($border, 5%);
+  //   }
+  //   .edit-profile-organization{
+  //     margin: 2%;
+  //     width: 96vw;
+  //     font-size: 4em;
+  //     border: solid thin darken($border, 5%);
+  //   }
+  //   .edit-profile-location{
+  //     margin: 2%;
+  //     width: 96vw;
+  //     font-size: 4em;
+  //     border: solid thin darken($border, 5%);
+  //   }
+  //   .edit-profile-description{
+  //     display: block;
+  //     margin: 2%;
+  //     width: 96vw;
+  //     height: 18vh;
+  //     font-size: 4em;
+  //     border: solid thin darken($border, 5%);
+  //   }
+  // }
+  // #file-input-edit-profile{
+  //   display: none;
+  // }
+  //
+  // .edit-profile-footer{
+  //   display: block;
+  //   width: 100%;
+  //   position: absolute;
+  //   bottom: 0;
+  //   background-color: $buttonaccent2;
+  //   z-index: 999;
+  //   position: fixed;
+  //   text-align: center;
+  //   font-size: 4em;
+  //   line-height: 1.5em;
+  //   color: white;
+  //   cursor: pointer;
+  //   font-weight: 200;
+  //   &:hover{
+  //     background-color: darken($buttonaccent2, 5%);
+  //   }
+  // }
 
 
 @import 'edit-profile';
 
-  .edit-profile-upload-verify {
-    .fa-check-square-o{
-      color: $buttonaccent2;
-      font-size: 5em;
-      margin-left: 30%;
-      display: inline;
-    }
-    div {
-      display: inline;
-      font-size: 3em;
-    }
-  }
+  // .edit-profile-upload-verify {
+  //   .fa-check-square-o{
+  //     color: $buttonaccent2;
+  //     font-size: 5em;
+  //     margin-left: 30%;
+  //     display: inline;
+  //   }
+  //   div {
+  //     display: inline;
+  //     font-size: 3em;
+  //   }
+  // }
 
 //---------sign up page styling------------//
 
-
-  .sign-up-title{
-    margin-top: 10%;
-    padding: 2% 0;
-    font-size: 5em;
-    text-align: center;
-    color: white;
-  }
-
-
-  .sign-up-label {
-    display: block;
-    margin-top: 5%;
-    text-align: left;
-    font-size: 2em;
-    margin: 5% 0 0 10%;
-  }
-  .sign-up-input {
-    width: 80%;
-    margin: 1% 10% 5% 10%;
-    font-size: 4em;
-    line-height: 1em;
-    padding: 3%;
-    box-sizing: border-box;
-    border: solid 5px white;
-    background: transparent;
-    color: white;
-  }
-
-
-  .sign-up-submit-btn{
-    margin: 2% 0 2% 10%;
-    background-color: $buttonaccent2;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    width: 80%;
-    text-align: center;
-    font-size: 4em;
-    line-height: 1.5em;
-    &:hover{
-      background-color: darken($buttonaccent2, 5%);
-    }
-  }
-
-  .sign-up-back-btn{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    font-size: 4em;
-    line-height: 1.5em;
-    color: white;
-    background-color: $buttonbg;
-    text-align: center;
-    cursor: pointer;
-    &:hover{
-      background-color: darken($buttonbg, 5%);
-    }
-  }
+  //
+  // .sign-up-title{
+  //   margin-top: 10%;
+  //   padding: 2% 0;
+  //   font-size: 5em;
+  //   text-align: center;
+  //   color: white;
+  // }
+  //
+  //
+  // .sign-up-label {
+  //   display: block;
+  //   margin-top: 5%;
+  //   text-align: left;
+  //   font-size: 2em;
+  //   margin: 5% 0 0 10%;
+  // }
+  // .sign-up-input {
+  //   width: 80%;
+  //   margin: 1% 10% 5% 10%;
+  //   font-size: 4em;
+  //   line-height: 1em;
+  //   padding: 3%;
+  //   box-sizing: border-box;
+  //   border: solid 5px white;
+  //   background: transparent;
+  //   color: white;
+  // }
+  //
+  //
+  // .sign-up-submit-btn{
+  //   margin: 2% 0 2% 10%;
+  //   background-color: $buttonaccent2;
+  //   color: white;
+  //   font-size: 2em;
+  //   cursor: pointer;
+  //   width: 80%;
+  //   text-align: center;
+  //   font-size: 4em;
+  //   line-height: 1.5em;
+  //   &:hover{
+  //     background-color: darken($buttonaccent2, 5%);
+  //   }
+  // }
+  //
+  // .sign-up-back-btn{
+  //   position: absolute;
+  //   bottom: 0;
+  //   width: 100%;
+  //   font-size: 4em;
+  //   line-height: 1.5em;
+  //   color: white;
+  //   background-color: $buttonbg;
+  //   text-align: center;
+  //   cursor: pointer;
+  //   &:hover{
+  //     background-color: darken($buttonbg, 5%);
+  //   }
+  // }
 
   @import 'signup';
 
@@ -848,92 +848,92 @@ body{
   }
   //------ Login View------ //
 
-  .landing-overlay-content {
-    // margin-top: 15%;
-    // padding-top: 15%;
-    margin-top: -2%;
-    padding: 25% 0 30% 0;
-    z-index: 999;
-    background: url('/assets/images/landing_background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .landing-login-email-input{
-    width: 80%;
-    border: solid 5px white;
-    box-sizing: border-box;
-    font-size: 4em;
-    line-height: 1em;
-    margin: 5% 10%;
-    padding: 3%;
-    background: transparent;
-    color: white;
-  }
-
-  .landing-login-password-input{
-    width: 80%;
-    border: solid 5px white;
-    box-sizing: border-box;
-    font-size: 4em;
-    line-height: 1em;
-    margin: 5% 10% 8% 10%;
-    padding: 3%;
-    background: transparent;
-    color: white;
-  }
-
-  .landing-login-btn{
-    width: 80%;
-    font-size: 3em;
-    text-align: center;
-    margin: 2% 10%;
-    padding: 2%;
-    background-color: rgba(113, 247, 159, 0.85);
-    color: white;
-    cursor: pointer;
-    box-sizing: border-box;
-    &:hover{
-      background-color: darken(rgba(113, 247, 159, 0.75), 5%);
-    }
-  }
-
-  .landing-signup-btn{
-    width: 80%;
-    font-size: 3em;
-    text-align: center;
-    margin: 10% 10% 15% 10%;
-    padding: 2%;
-    background-color: rgba(61, 214, 208, 0.85);
-    color: white;
-    cursor: pointer;
-    box-sizing: border-box;
-    &:hover{
-      background-color: darken($buttonbg, 5%);
-    }
-  }
-
-  .login-about {
-    margin: 50px 2.5%;
-    background-color: transparent;
-    width: 90%;
-    padding: 2% 2%;
-    // border: solid 2px darken($border, 10%);
-    color: white;
-    font-family: "Overpass", sans-serif;
-    text-align: center;
-    font-size: 4.2em;
-    line-height: 1.5em;
-  }
-    .login-legal {
-    	margin: 50px 2.5%;
-    	width: 90%;
-    	padding: 2% 2%;
-    	color: white;
-    	font-family: 'overpass', sans-serif;
-      text-align: center;
-      text-decoration: none;
-    }
+  // .landing-overlay-content {
+  //   // margin-top: 15%;
+  //   // padding-top: 15%;
+  //   margin-top: -2%;
+  //   padding: 25% 0 30% 0;
+  //   z-index: 999;
+  //   background: url('/assets/images/landing_background.jpg');
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  // }
+  //
+  // .landing-login-email-input{
+  //   width: 80%;
+  //   border: solid 5px white;
+  //   box-sizing: border-box;
+  //   font-size: 4em;
+  //   line-height: 1em;
+  //   margin: 5% 10%;
+  //   padding: 3%;
+  //   background: transparent;
+  //   color: white;
+  // }
+  //
+  // .landing-login-password-input{
+  //   width: 80%;
+  //   border: solid 5px white;
+  //   box-sizing: border-box;
+  //   font-size: 4em;
+  //   line-height: 1em;
+  //   margin: 5% 10% 8% 10%;
+  //   padding: 3%;
+  //   background: transparent;
+  //   color: white;
+  // }
+  //
+  // .landing-login-btn{
+  //   width: 80%;
+  //   font-size: 3em;
+  //   text-align: center;
+  //   margin: 2% 10%;
+  //   padding: 2%;
+  //   background-color: rgba(113, 247, 159, 0.85);
+  //   color: white;
+  //   cursor: pointer;
+  //   box-sizing: border-box;
+  //   &:hover{
+  //     background-color: darken(rgba(113, 247, 159, 0.75), 5%);
+  //   }
+  // }
+  //
+  // .landing-signup-btn{
+  //   width: 80%;
+  //   font-size: 3em;
+  //   text-align: center;
+  //   margin: 10% 10% 15% 10%;
+  //   padding: 2%;
+  //   background-color: rgba(61, 214, 208, 0.85);
+  //   color: white;
+  //   cursor: pointer;
+  //   box-sizing: border-box;
+  //   &:hover{
+  //     background-color: darken($buttonbg, 5%);
+  //   }
+  // }
+  //
+  // .login-about {
+  //   margin: 50px 2.5%;
+  //   background-color: transparent;
+  //   width: 90%;
+  //   padding: 2% 2%;
+  //   // border: solid 2px darken($border, 10%);
+  //   color: white;
+  //   font-family: "Overpass", sans-serif;
+  //   text-align: center;
+  //   font-size: 4.2em;
+  //   line-height: 1.5em;
+  // }
+  //   .login-legal {
+  //   	margin: 50px 2.5%;
+  //   	width: 90%;
+  //   	padding: 2% 2%;
+  //   	color: white;
+  //   	font-family: 'overpass', sans-serif;
+  //     text-align: center;
+  //     text-decoration: none;
+  //   }
 
   @import 'landing';
     // .login-background {
@@ -1168,129 +1168,129 @@ body{
 
 
 
-.edit-post-subheader {
-  width: 100%;
-  font-size: 4em;
-  text-align: center;
-  background-color:lighten($headerbg, 35%);
-  line-height: 1.5em;
-  margin-top: 12%;
-  position: fixed;
-  color: black;
-  z-index: 999;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.edit-post-content-wrapper{
-  margin-top: 22%;
-  overflow: scroll;
-  height: 81vh;
-  // border: solid thin black;
-  position: absolute;
-  .edit-post-image{
-    height: 450px;
-    width: 450px;
-    margin: 2% 0 0 28%;
-  }
-}
-#file-input-edit-post{
-  display: none;
-}
-.edit-post-add-image{
-  border: solid 3px $border;
-  text-align: center;
-  width: 95%;
-  margin: 1%  0 2%  2.5%;
-  font-size: 4em;
-  color: lighten(black, 35%);
-  background-color: lighten($border,3%);
-  line-height: 1.2em;
-}
-.edit-post-title {
-  background-color: white;
-  width: 95%;
-  border: solid 2px $border;
-  font-size: 4em;
-  margin: 2% 0 0 2.5%;
-  color: black;
-}
-
-.edit-post-location {
-  background-color: white;
-  width: 95%;
-  border: solid 2px $border;
-  font-size: 1em;
-  margin: 2% 0 2% 2.5%;
-  color: black;
-  font-size: 4em;
-}
-.edit-post-start-na {
-  display: inline-block;
-  background-color: white;
-  width: 40%;
-  border: solid 2px $border;
-  font-size: 4em;
-  margin: 1%;
-  color: black;
-}
-.edit-post-start-time-na{
-  display: inline-block;
-  background-color: white;
-  width: 40%;
-  border: solid 2px $border;
-  font-size: 4em;
-  margin-top: 2%;
-  color: black;
-}
-.edit-post-end-na {
-  display: inline-block;
-  margin: 1%;
-  background-color: white;
-  width: 40%;
-  border: solid 2px $border;
-  font-size: 4em;
-  margin-top: 2%;
-  color: black;
-}
-.edit-post-end-time-na{
-  display: inline-block;
-  background-color: white;
-  width: 40%;
-  border: solid 2px $border;
-  font-size: 4em;
-  margin-top: 2%;
-  color: black
-}
-
-.edit-post-description {
-  display: block;
-  height: 25vh;
-  background-color: white;
-  width: 95%;
-  border: solid 2px $border;
-  margin: 2% 0 0 2.5%;
-  color: black;
-  font-size: 4em;
-}
-
-
-.edit-post-btn {
-background-color: $buttonaccent2;
-position: fixed;
-bottom: 0;
-width: 100%;
-text-align: center;
-font-size: 4em;
-line-height: 1.5em;
-color: white;
-cursor: pointer;
-font-weight: 200;
-z-index: 999;
-&:hover{
- background-color: darken($buttonaccent2, 5%);
-}
-}
+// .edit-post-subheader {
+//   width: 100%;
+//   font-size: 4em;
+//   text-align: center;
+//   background-color:lighten($headerbg, 35%);
+//   line-height: 1.5em;
+//   margin-top: 12%;
+//   position: fixed;
+//   color: black;
+//   z-index: 999;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
+// .edit-post-content-wrapper{
+//   margin-top: 22%;
+//   overflow: scroll;
+//   height: 81vh;
+//   // border: solid thin black;
+//   position: absolute;
+//   .edit-post-image{
+//     height: 450px;
+//     width: 450px;
+//     margin: 2% 0 0 28%;
+//   }
+// }
+// #file-input-edit-post{
+//   display: none;
+// }
+// .edit-post-add-image{
+//   border: solid 3px $border;
+//   text-align: center;
+//   width: 95%;
+//   margin: 1%  0 2%  2.5%;
+//   font-size: 4em;
+//   color: lighten(black, 35%);
+//   background-color: lighten($border,3%);
+//   line-height: 1.2em;
+// }
+// .edit-post-title {
+//   background-color: white;
+//   width: 95%;
+//   border: solid 2px $border;
+//   font-size: 4em;
+//   margin: 2% 0 0 2.5%;
+//   color: black;
+// }
+//
+// .edit-post-location {
+//   background-color: white;
+//   width: 95%;
+//   border: solid 2px $border;
+//   font-size: 1em;
+//   margin: 2% 0 2% 2.5%;
+//   color: black;
+//   font-size: 4em;
+// }
+// .edit-post-start-na {
+//   display: inline-block;
+//   background-color: white;
+//   width: 40%;
+//   border: solid 2px $border;
+//   font-size: 4em;
+//   margin: 1%;
+//   color: black;
+// }
+// .edit-post-start-time-na{
+//   display: inline-block;
+//   background-color: white;
+//   width: 40%;
+//   border: solid 2px $border;
+//   font-size: 4em;
+//   margin-top: 2%;
+//   color: black;
+// }
+// .edit-post-end-na {
+//   display: inline-block;
+//   margin: 1%;
+//   background-color: white;
+//   width: 40%;
+//   border: solid 2px $border;
+//   font-size: 4em;
+//   margin-top: 2%;
+//   color: black;
+// }
+// .edit-post-end-time-na{
+//   display: inline-block;
+//   background-color: white;
+//   width: 40%;
+//   border: solid 2px $border;
+//   font-size: 4em;
+//   margin-top: 2%;
+//   color: black
+// }
+//
+// .edit-post-description {
+//   display: block;
+//   height: 25vh;
+//   background-color: white;
+//   width: 95%;
+//   border: solid 2px $border;
+//   margin: 2% 0 0 2.5%;
+//   color: black;
+//   font-size: 4em;
+// }
+//
+//
+// .edit-post-btn {
+// background-color: $buttonaccent2;
+// position: fixed;
+// bottom: 0;
+// width: 100%;
+// text-align: center;
+// font-size: 4em;
+// line-height: 1.5em;
+// color: white;
+// cursor: pointer;
+// font-weight: 200;
+// z-index: 999;
+// &:hover{
+//  background-color: darken($buttonaccent2, 5%);
+// }
+// }
 
   @import 'edit-post';
 
@@ -1563,119 +1563,119 @@ z-index: 999;
     @import 'created';
 
 //----------chat page styling----------//
-  .chat-subheader{
-    background-color: lighten($headerbg, 25%);
-    font-size: 4em;
-    line-height: 1.5em;
-    position: fixed;
-    top: 7%;
-    width: 100%;
-    display: block;
-    text-align: center;
-    z-index: 999;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    .chat-other-user-text{
-      font-weight: 700;
-    }
-  }
-  .chat-content-wrapper{
-    margin: 25% 0 0 0;
-    // width: 100%;
-    height: 73vh;
-    // border: solid thin black;
-    overflow: scroll;
-    .chat-other-user-response{
-      width: 65%;
-      display: block;
-      font-size: 3em;
-      line-height: 1.2em;
-      background-color: white;
-      border-radius: 0 .3em .3em .3em;
-      margin: 2%;
-      padding: 2% 1%;
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    }
-    .chat-current-user-response{
-      // border: solid thin black;
-      margin: 2% 0 2% 30%;
-      width: 65%;
-      display: block;
-      font-size: 3em;
-      line-height: 1.2em;
-      background-color: white;
-      padding: 2% 1%;
-      border-radius: .3em .3em 0 .3em;
-      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-    }
-  }
-  .chat-input-block{
-    margin: 1% 0 1% 0;
-    position: absolute;
-    bottom: 7%;
-    width: 100%;
-    border-top: darken($border, 30%);
-    display: block;
-    .chat-input{
-      width: 80%;
-      font-size: 3em;
-      line-height: 1.7em;
-      margin: 0 0 0 2%;
-      border: solid 2px $buttonbg;
-      border-right: solid 2px transparent;
-      border-radius: 5px;
-      }
-      .fa-paper-plane-o{
-        display: inline-block;
-        font-size: 3.5em;
-        // margin: 0 0 0 -1%;
-        padding: 2%;
-        color: white;
-        background-color: $buttonbg;
-        border-radius: 5px;
-        &:hover{
-          color: $buttonbg;
-          background-color: white;
-          border: solid 2px $buttonbg;
-        }
-    }
-  }
-
-  .chat-home-btn{
-    display:block;
-    background-color: $buttonaccent2;
-    font-size: 4em;
-    line-height: 1.5em;
-    text-align: center;
-    color: white;
-    width: 50%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    cursor: pointer;
-    font-weight: 300;
-    &:hover{
-      background-color: darken($buttonaccent2, 5%);
-    }
-  }
-  .chat-back-to-post-btn{
-    display:inline-block;
-    background-color: $buttonbg;
-    font-size: 4em;
-    line-height: 1.5em;
-    text-align: center;
-    color: white;
-    width:50%;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    cursor: pointer;
-    font-weight: 300;
-    &:hover{
-      background-color: darken($buttonbg, 5%);
-    }
-  }
+  // .chat-subheader{
+  //   background-color: lighten($headerbg, 25%);
+  //   font-size: 4em;
+  //   line-height: 1.5em;
+  //   position: fixed;
+  //   top: 7%;
+  //   width: 100%;
+  //   display: block;
+  //   text-align: center;
+  //   z-index: 999;
+  //   white-space: nowrap;
+  //   overflow: hidden;
+  //   text-overflow: ellipsis;
+  //   .chat-other-user-text{
+  //     font-weight: 700;
+  //   }
+  // }
+  // .chat-content-wrapper{
+  //   margin: 25% 0 0 0;
+  //   // width: 100%;
+  //   height: 73vh;
+  //   // border: solid thin black;
+  //   overflow: scroll;
+  //   .chat-other-user-response{
+  //     width: 65%;
+  //     display: block;
+  //     font-size: 3em;
+  //     line-height: 1.2em;
+  //     background-color: white;
+  //     border-radius: 0 .3em .3em .3em;
+  //     margin: 2%;
+  //     padding: 2% 1%;
+  //       box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  //   }
+  //   .chat-current-user-response{
+  //     // border: solid thin black;
+  //     margin: 2% 0 2% 30%;
+  //     width: 65%;
+  //     display: block;
+  //     font-size: 3em;
+  //     line-height: 1.2em;
+  //     background-color: white;
+  //     padding: 2% 1%;
+  //     border-radius: .3em .3em 0 .3em;
+  //     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  //   }
+  // }
+  // .chat-input-block{
+  //   margin: 1% 0 1% 0;
+  //   position: absolute;
+  //   bottom: 7%;
+  //   width: 100%;
+  //   border-top: darken($border, 30%);
+  //   display: block;
+  //   .chat-input{
+  //     width: 80%;
+  //     font-size: 3em;
+  //     line-height: 1.7em;
+  //     margin: 0 0 0 2%;
+  //     border: solid 2px $buttonbg;
+  //     border-right: solid 2px transparent;
+  //     border-radius: 5px;
+  //     }
+  //     .fa-paper-plane-o{
+  //       display: inline-block;
+  //       font-size: 3.5em;
+  //       // margin: 0 0 0 -1%;
+  //       padding: 2%;
+  //       color: white;
+  //       background-color: $buttonbg;
+  //       border-radius: 5px;
+  //       &:hover{
+  //         color: $buttonbg;
+  //         background-color: white;
+  //         border: solid 2px $buttonbg;
+  //       }
+  //   }
+  // }
+  //
+  // .chat-home-btn{
+  //   display:block;
+  //   background-color: $buttonaccent2;
+  //   font-size: 4em;
+  //   line-height: 1.5em;
+  //   text-align: center;
+  //   color: white;
+  //   width: 50%;
+  //   position: fixed;
+  //   bottom: 0;
+  //   left: 0;
+  //   cursor: pointer;
+  //   font-weight: 300;
+  //   &:hover{
+  //     background-color: darken($buttonaccent2, 5%);
+  //   }
+  // }
+  // .chat-back-to-post-btn{
+  //   display:inline-block;
+  //   background-color: $buttonbg;
+  //   font-size: 4em;
+  //   line-height: 1.5em;
+  //   text-align: center;
+  //   color: white;
+  //   width:50%;
+  //   position: fixed;
+  //   bottom: 0;
+  //   left: 50%;
+  //   cursor: pointer;
+  //   font-weight: 300;
+  //   &:hover{
+  //     background-color: darken($buttonbg, 5%);
+  //   }
+  // }
 
   @import 'chat';
 
@@ -1879,10 +1879,10 @@ z-index: 999;
 //   }
 // }
 
-  @import 'claimed';
+
 
 }
-
+  @import 'claimed';
 //mobile only styling
 .no-mobile-overlay-content{
   margin-top: -2%;
