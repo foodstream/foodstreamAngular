@@ -1004,11 +1004,6 @@ body {
         font-size: 2em;
         line-height: 1.75em;
         font-weight: 600; } }
-  body .search-error-message {
-    text-align: center;
-    width: 50%;
-    margin: 10% 25%;
-    font-size: 3em; }
   body .landing-overlay-content {
     margin-top: -2%;
     padding: 25% 0 30% 0;
