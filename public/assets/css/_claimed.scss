@@ -87,9 +87,13 @@
         margin: 2% 0 2% 2%;
         display: inline-block;
         @media screen and (min-width: $break-large) {
-            height: 250px;
-            width: 250px;
-            margin: 1% 0 0 2%;
+            height: 300px;
+            width: 300px;
+            margin: 0;
+            position: absolute;
+            top: 47%;
+            left: 1%;
+
         }
       }
       .claimed-post-photo{
@@ -98,9 +102,12 @@
         margin: 2% 0 2% 2%;
         display: inline-block;
         @media screen and (min-width: $break-large) {
-            height: 250px;
-            width: 250px;
-            margin: 1% 0 0 2%;
+            height: 300px;
+            width: 300px;
+            // margin: 1% 0 0 2%;
+            position: absolute;
+            top: -4%;
+            left: -1%;
         }
       }
     }

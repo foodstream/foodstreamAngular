@@ -2106,9 +2106,12 @@ body {
         display: inline-block; }
         @media screen and (min-width: 1024px) {
           body .claimed-content-wrapper .claimed-images #claimed-map {
-            height: 250px;
-            width: 250px;
-            margin: 1% 0 0 2%; } }
+            height: 300px;
+            width: 300px;
+            margin: 0;
+            position: absolute;
+            top: 47%;
+            left: 1%; } }
       body .claimed-content-wrapper .claimed-images .claimed-post-photo {
         width: 450px;
         height: 450px;
@@ -2116,9 +2119,11 @@ body {
         display: inline-block; }
         @media screen and (min-width: 1024px) {
           body .claimed-content-wrapper .claimed-images .claimed-post-photo {
-            height: 250px;
-            width: 250px;
-            margin: 1% 0 0 2%; } }
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top: -4%;
+            left: -1%; } }
     body .claimed-content-wrapper .claimed-buttons-wrap {
       width: 100%;
       display: block;
